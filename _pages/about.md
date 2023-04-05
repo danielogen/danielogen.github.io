@@ -1,12 +1,12 @@
 ---
 layout: about
-title: about
+title: 
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://gu.ac.ug' target="_blank">Gulu Univeristy</a>. P.O Box 166.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: daniel_profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>555 your office number</p>
