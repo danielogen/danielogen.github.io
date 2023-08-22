@@ -2,16 +2,16 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: <a href='https://gu.ac.ug' target="_blank">Gulu Univeristy</a>. P.O Box 166.
+# subtitle: <a href='https://gu.ac.ug' target="_blank">Gulu Univeristy</a>. P.O Box 166.
 
 profile:
   align: right
   image: daniel_profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>(702)-895-4216</p>
+    <p>4217 Science and Engineering Building (SEB)</p>
+    <p>UNLV, Las Vega, Nevada</p>
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -26,8 +26,8 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 ### About me
 
-Hello! I am a Graduate Assistant & PhD student at the [University of Nevada, Las Vegas](https://unlv.edu) in the Department of Computer Science. I work at the Software Evolution (EVOL) Lab headed by [Assistant Professor John Businge](https://johnxu21.github.io). Prior to this position, I was an Assistant Lecturer of Computer Science at [Gulu University](https://gu.ac.ug) and  a Research Fellow [AirQo Project](https://airqo.net) at [Makerere University](https://mak.ac.ug) working with [Prof. Engineer Bainomugisha](https://ibaino.net/). I obtained MSc. Computer Science degree from [Makerere University](https://mak.ac.ug), Uganda, under the mentorship of [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron). 
+Hello! I am a Graduate Assistant & PhD student at the [University of Nevada, Las Vegas](https://unlv.edu) in the Department of Computer Science. I work at the Software Evolution (EVOL) Lab headed by [Professor John Businge](https://johnxu21.github.io). Prior to this position, I was an Assistant Lecturer of Computer Science at [Gulu University](https://gu.ac.ug) and  a Research Fellow at [AirQo Project](https://airqo.net)  working with [Prof. Engineer Bainomugisha](https://ibaino.net/). I obtained MSc. Computer Science degree from [Makerere University](https://mak.ac.ug), Uganda, under the mentorship of [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron). 
 
 ### Research Works
-My research focuses on mining software repositories, software analytics, software maintenance & evolution, clone detection, program analysis, variability management, software integration, and empirical software engineering.
+My research focuses on mining software repositories, software analysis, software maintenance & evolution, patch and clone detection, program analysis, variability management and software integration.
 
