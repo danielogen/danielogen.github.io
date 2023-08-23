@@ -26,6 +26,6 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 Hello! I am a Graduate Assistant & PhD student at the [University of Nevada, Las Vegas](https://unlv.edu) in the Department of Computer Science. I work at the Software Evolution (EVOL) Lab headed by [Professor John Businge](https://johnxu21.github.io). Prior to this position, I was an Assistant Lecturer of Computer Science at [Gulu University](https://gu.ac.ug) and  a Research Fellow at [AirQo Project](https://airqo.net)  working with [Prof. Engineer Bainomugisha](https://ibaino.net/). I obtained MSc. Computer Science degree from [Makerere University](https://mak.ac.ug), Uganda, under the mentorship of [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron). 
 
-### Research Works
+#### Research Works
 My research focuses empirical software research, patch & clone detection, mining software repositories (MSR), software re-engineering and machine learning in software engineering. For complete list of my research publications, go to <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ&hl=en" target="_blank">Google Scholar</a> or <a href="https://orcid.org/0000-0002-0133-8164" target="_blank">ORCID</a>.
 
