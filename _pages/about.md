@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p>Tel: +1 (702)-895-4216</p>
-    <p>Office: 4217 Science and Engineering Building (SEB). UNLV, Las Vega, Nevada</p>
+    <p>Office: Room 4217 SEB</p>
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
