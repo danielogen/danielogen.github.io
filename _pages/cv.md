@@ -2,7 +2,7 @@
 layout: cv
 permalink: /cv/
 title: CV
-nav: true
-nav_order: 2
+nav: false
+nav_order: 4
 cv_pdf: Daniel_CV_09082023.pdf
 ---
