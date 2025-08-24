@@ -28,17 +28,18 @@ Organize your courses by years, topics, or universities, however you like! -->
 ---
 <h5>Masters</h5>
 <ul>
-	<li>Instructor, Database Modeling, 2019,2021,2022, GU</li>
-    <li>Instructor, Mobile Applications Development, 2019,2021,2022, GU</li>
+	<li>Instructor, MID 7104 Database Modeling, 2019,2021,2022, GU</li>
+    <li>Instructor, MID Mobile Applications Development, 2021,2022, GU</li>
 </ul>
 
 <h5>Undergraduate</h5>
 <ul>
-	<li>Instructor, Parallel Computation, 2019,2021,2022, GU</li>
-    <li>Instructor, Integrative Programming, 2019,2021,2022, GU</li>
-    <li>Instructor, Web Systems & Technologies II, 2019,2021,2022, GU</li>
-    <li>Instructor, Mobile Application Development in Java, 2019,2021,2022, GU</li>
-    <li>Instructor, Mobile Application Development, 2019,2021,2022, GU</li>
+	<li>Instructor, GCS 3203 Parallel Computation, 2021, 2022, GU</li>
+    <li>Instructor, GIT 3104 Integrative Programming, 2019,2021,2022, GU</li>
+    <li>Instructor, GIT 3101 Web Systems & Technologies II, 2018, 2019,2021,2022, GU</li>
+    <li>Instructor, GCS Mobile Application Development in Java, 2018, 2019,2021,2022, GU</li>
+    <li>Instructor, GCS Mobile Application Development, 2018, 2019,2021,2022, GU</li>
+    <li>Instructor, GAT 3201 Web Game Development, 2022, GU</li>
 </ul>
 
 ---
@@ -46,7 +47,8 @@ Organize your courses by years, topics, or universities, however you like! -->
 <h2>Teaching Assistant</h2>
 **University of Nevada Las Vegas, Maryland Campus.**
 <ul>
-	<li>Teaching Assistant, CS 472/672 Software Product Design I (Senior Design), Fall 2023, 2024, 2025, UNLV</li>
+	<li>Teaching Assistant, CS 472/672 - 001 Software Product Design I (Senior Design), Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025, UNLV</li>
+    <li>Teaching Assistant, CS 472/672 - 002 Software Product Design I (Senior Design), Spring 2024, Fall 2025, UNLV</li>
 	<li>Teaching Assistant, CS 477/677 Design and Analysis of Algorithms, Summer 2023, UNLV</li>
 	<li>Teaching Assistant, CS 789 Software Re-engineering (Masters/PhD), Fall 2025, UNLV</li>
 </ul>
