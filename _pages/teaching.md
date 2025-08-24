@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: <b>Courses taught at Gulu University</b>.
+description: <b>Courses taught at <a href='https://gu.ac.ug'><u>Gulu University (GU)</u></a></b>.
 nav: true
 nav_order: 2
 ---
@@ -45,10 +45,10 @@ Organize your courses by years, topics, or universities, however you like! -->
 ---
 
 <h2>Teaching Assistant</h2>
-**University of Nevada Las Vegas, Maryland Campus.**
+**[University of Nevada Las Vegas (UNLV)](https://unlv.edu), Maryland Campus, U.S.A.**
 <ul>
-	<li>Teaching Assistant, CS 472/672 - 001 Software Product Design I (Senior Design), Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025, UNLV</li>
-    <li>Teaching Assistant, CS 472/672 - 002 Software Product Design I (Senior Design), Spring 2024, Fall 2025, UNLV</li>
+	<li>Teaching Assistant, CS 472/672 - 1001 Software Product Design I (Senior Design), Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025, UNLV</li>
+    <li>Teaching Assistant, CS 472/672 - 1002 Software Product Design I (Senior Design), Spring 2024, Fall 2025, UNLV</li>
 	<li>Teaching Assistant, CS 477/677 Design and Analysis of Algorithms, Summer 2023, UNLV</li>
 	<li>Teaching Assistant, CS 789 Software Re-engineering (Masters/PhD), Fall 2025, UNLV</li>
 </ul>
