@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-# subtitle: <a href='https://gu.ac.ug' target="_blank">Gulu Univeristy</a>. P.O Box 166.
+# subtitle: <a href='/cv/'>Curriculum Vitae</a>
 
 # profile:
 #   align: right
@@ -22,7 +22,8 @@ profile:
   address: >
     <p>📞: +1 (702)-485-7149</p>
     <p>🏢: Science and Engineering Building (SEB), Room 4217, UNLV, Maryland Campus</p>
-    <p>📧: ogenrwot[at]unlv[dot]nevada[dot]edu</p>
+    <p>📧: ogenrwot[at]unlv[dot]nevada[dot]edu </p>
+    <p><button class='btn'><a href='/cv/'>Curriculum Vitae</a></button></p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
