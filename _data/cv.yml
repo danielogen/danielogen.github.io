@@ -1,97 +1,185 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+# - title: General Information
+#   type: map
+#   contents:
+#     - name: Full Name
+#       value: Albert Einstein
+#     - name: Date of Birth
+#       value: 14th March 1879
+#     - name: Languages
+#       value: English, German
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+# - title: Education
+#   type: time_table
+#   contents:
+#     - title: PhD
+#       institution: University of Nevada Las Vegas (UNLV), Nevada, United States
+#       year: 1905
+#       description:
+#         - Description 1.
+#         - Description 2.
+#         - title: Description 3.
+#           contents:
+#             - Sub-description 1.
+#             - Sub-description 2.
+#     - title: Federal teaching diploma
+#       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+#       year: 1900
+#       description:
+#         - Description 1.
+#         - Description 2.
+
+# \tlcventry{2023}{0}{Graduate Research/Teaching Assistant}{Department of Computer Science}
+# {University of Nevada Las Vegas (UNLV)}{Las Vegas, Nevada, United States}{\url{https://unlv.edu}}
+
+# \tlcventry{2022}{2023}{Assistant Lecturer}{Department of Computer Science}
+# {Gulu University}{}{\url{https://gu.ac.ug}}
+
+# \tlcventry{2023}{0}{Ph.D Research Fellow}{AirQo Project, College of Computing and Information Sciences}
+# {Google.org Impact Challenge Project}{Makerere University}{\url{https://airqo.net}}
+
+# \tlcventry{2019}{2022}{Software Engineer}{AirQo Project, College of Computing and Information Sciences}
+# {Google.org Impact Challenge Project}{Makerere University}{\url{https://airqo.net}}
+
+# \tlcventry{2017}{2021}{Teaching Assistant (Graduate Trainee)}{Department of Computer Science}
+# {Gulu University}{}{\url{https://gu.ac.ug}}
+
+# \tlcventry{2016}{2021}{Head of Technical Department}{Zoom Wireless ISP/SINFA Uganda Ltd.}
+# {\textit{Note: Project officially ended in the year 2020}}{}{}
+
+# \tlcventry{2014}{2016}{Network Operation Centre (NOC) Engineer}{}
+# {}{}{
+# Zoom Wireless ISP/SINFA Uganda Ltd. \\ \textit{Note: Project officially ended in the year 2020}
+# }
+
+# \tlcventry{2012}{2014}{Micro Worker}{Sama Uganda.}
+# {\url{https://www.sama.com}}{}{}
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Graduate Research/Teaching Assistant
+      institution: Department of Computer Science, University of Nevada Las Vegas (UNLV), Las Vegas, Nevada, United States
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - <a href='https://unlv.edu'>https://unlv.edu</a>
+
+    - title: Ph.D Research Fellow
+      institution: AirQo Project, College of Computing and Information Sciences, Makerere University (Google.org Impact Challenge Project)
+      year: 2023 - Present
       description:
-        - Description 1.
-        - Description 2.
+        - <a href='https://airqo.net'>https://airqo.net</a>
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Assistant Lecturer
+      institution: Department of Computer Science, Gulu University
+      year: 2022 - 2023
       description:
+        - <a href='https://gu.ac.ug'>https://gu.ac.ug</a>
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    - title: Software Engineer
+      institution: AirQo Project, College of Computing and Information Sciences, Makerere University (Google.org Impact Challenge Project)
+      year: 2019 - 2022
+      description:
+        - <a href='https://airqo.net'>https://airqo.net</a>
 
-- title: Open Source Projects
+    - title: Teaching Assistant (Graduate Trainee)
+      institution: Department of Computer Science, Gulu University
+      year: 2017 - 2021
+      description:
+        - <a href='https://gu.ac.ug'>https://gu.ac.ug</a>
+
+    - title: Head of Technical Department
+      institution: Zoom Wireless ISP/SINFA Uganda Ltd.
+      year: 2016 - 2017
+      description:
+        - Project officially ended in 2020
+
+    - title: Network Operation Centre (NOC) Engineer
+      institution: Zoom Wireless ISP/SINFA Uganda Ltd.
+      year: 2014 - 2016
+      description:
+        - Project officially ended in 2020
+
+    - title: Micro Worker
+      institution: Sama Uganda
+      year: 2012 - 2014
+      description:
+        - <a href='http://https://www.sama.com'>https://www.sama.com</a>
+
+
+# - title: Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+
+# - title: Honors and Awards
+#   type: time_table
+#   contents:
+#     - year: 1921
+#       items: 
+#         - Nobel Prize in Physics 
+#         - Matteucci Medal
+#     - year: 2029
+#       items: 
+#         - Max Planck Medal
+
+
+- title: Honors & Awards
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: UNLV Access Grant
+      institution: University of Nevada, Las Vegas
+      year: 2024
+      description:
+        - Amount $2,000
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: Roy and Helen Kelsall Scholarship Fund
+      institution: College of Engineering, University of Nevada, Las Vegas
+      year: 2024
+      description:
+        - Amount $1,000
+        - Awarded for academic excellence
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+    - title: GPSA Research Grant
+      institution: Graduate & Professional Student Association (GPSA), UNLV
+      year: 2024
+      description:
+        - Amount $1,456
+        - Conference travel support
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: MTN MoMo Open API Challenge — 1st Runner-up (Transport)
+      institution: MTN Mobile Money (MoMo)
+      year: 2019
+      description:
+        - Prize $2,000
+
+    - title: Mak–Sida Bilateral Program Scholarship (MSc, Computer Science)
+      institution: Makerere University / Sida (Swedish Government)
+      year: 2018
+      description:
+        - Two-year scholarship
+        - Total value $15,000
+
+    - title: First-Class Honours, BSc Computer Science
+      institution: Gulu University, Uganda
+      year: 2013
+      description:
+        - Offered a Teaching Assistant position in recognition of performance
+
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items: 
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
+
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
