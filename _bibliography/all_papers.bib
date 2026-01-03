@@ -3,7 +3,34 @@
 
 @string{aps = {American Physical Society,}}
 
-@inproceedings{DGK+:FAMECSE22,
+@techreport{okure2023data,
+  title={Data management in resource-limited settings: Unpacking the role of robust digital solutions for air quality data management in African cities.},
+  author={Okure, Deo and Ogenrwot, Daniel and Nsimbe, Noah and Muyama, Lillian and Adong, Priscilla and Sserunjogi, Richard and Bbaale, Martin and Bainomugisha, Engineer},
+  year={2023},
+  institution={Copernicus Meetings},
+  selected={true},
+  publisher={EGU23},
+  type={EGU General Assembly 2023, Vienna, Austria, 24-28 April 2023},
+  url={https://doi.org/10.5194/egusphere-egu23-18648},
+  abbr={EGU},
+  bibtex_show={true},
+}
+@article{Sserunjogi2022datainbrief,
+title = {Seeing the air in detail: Hyperlocal air quality dataset collected from spatially distributed AirQo network},
+journal = {Data in Brief},
+volume = {44},
+pages = {108512},
+year = {2022},
+issn = {2352-3409},
+doi = {https://doi.org/10.1016/j.dib.2022.108512},
+url = {https://www.sciencedirect.com/science/article/pii/S2352340922007065},
+author = {Richard Sserunjogi and Joel Ssematimba and Deo Okure and Daniel Ogenrwot and Priscilla Adong and Lillian Muyama and Noah Nsimbe and Martin Bbaale and Engineer Bainomugisha},
+keywords = {Air quality dataset, Sub-Saharan Africa, Air pollution, PM, PM, Particulate matter},
+abstract = {Air pollution is a major global challenge associated with an increasing number of morbidity and mortality from lung cancer, cardiovascular and respiratory diseases, among others. However, there is scarcity of ground monitoring air quality data from Sub-Saharan Africa that can be used to quantify the level of pollution. This has resulted in limited targeted air pollution research and interventions e.g. health impacts, key drivers and sources, economic impacts, among others; ultimately hindering the establishment of effective management strategies. This paper presents a dataset of air quality observations collected from 68 spatially distributed monitoring stations across Uganda. The dataset includes hourly PM2.5 and PM10 data collected from low-cost air quality monitoring devices and one reference grade monitoring device over a period ranging from 2019 to 2020. This dataset contributes towards filling some of the data gaps witnessed over the years in ground level monitored ambient air quality in Sub-Saharan Africa and it can be useful to various policy makers and researchers.},
+abbr={DIB},
+bibtex_show={true},
+}
+@inproceedings{ogenrwot2022capstone,
 author = {Ogenrwot, Daniel and Tabo, Geoffrey Olok and Aber, Kevin and Nakatumba-Nabende, Joyce},
 title = {From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning},
 year = {2022},
@@ -22,7 +49,7 @@ series = {FAMECSE '22},
 abbr={FAMECSE},
 bibtex_show={true},
 }
-@article{DJM:ACSE20,
+@article{ogenrwot2020comparison,
   title={Comparison of Occurrence of Design Smells in Desktop and Mobile Applications},
   author={Ogenrwot, Daniel and Nakatumba-Nabende, Joyce and Chaudron, Michel RV},
   year={2020},
@@ -34,7 +61,7 @@ bibtex_show={true},
   abbr={ACSE},
   bibtex_show={true},
 }
-@inproceedings{DJ:ASE24,
+@inproceedings{ogenrwot2024patchtrackASE,
 author = {Ogenrwot, Daniel and Businge, John},
 title = {PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests},
 year = {2024},
@@ -51,9 +78,8 @@ location = {Sacramento, CA, USA},
 series = {ASE '24},
 abbr={ASE},
 bibtex_show={true},
-html={https://dl.acm.org/doi/10.1145/3691620.3695338},
 }
-@article{DJM:DIB21,
+@article{ogenrwotdatainbrief2021,
 title = {Integration of design smells and role-stereotypes classification dataset},
 journal = {Data in Brief},
 volume = {36},
@@ -68,71 +94,58 @@ abstract = {Design smells are recurring patterns of poorly designed (fragments o
 abbr={DIB},
 bibtex_show={true},
 }
-
-@INPROCEEDINGS{DJ:SCAM25,
-  author={Ogenrwot, Daniel and Businge, John},
-  booktitle={2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)}, 
-  title={Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks}, 
-  abstract={While most forks on platforms like GitHub are short-lived and used for social collaboration, a smaller but impactful subset evolve into long-lived forks, referred to here as variants, that maintain independent development trajectories. Integrating bug-fix patches across such divergent variants poses challenges due to structural drift, including refactorings that rename, relocate, or reorganize code elements and obscure semantic correspondence. This paper presents an empirical study of patch integration failures in 14 divergent pair of variants and introduces RePatch, a refactoring-aware integration system for Java repositories. RePatch extends the RefMerge framework, originally designed for symmetric merges, by supporting asymmetric patch transfer. RePatch inverts refactorings in both the source and target to realign the patch context, applies the patch, and replays the transformations to preserve the intent of the variant. In our evaluation of 478 bug-fix pull requests, Git cherry-pick fails in 64.4% of cases due to structural misalignments, while RePatch successfully integrates 52.8% of the previously failing patches. These results highlight the limitations of syntax-based tools and the need for semantic reasoning in variant-aware patch propagation.},
+@article{okure2025case,
+  title={Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda},
+  author={Okure, Deo and Bainomugisha, Engineer and Ogenrwot, Daniel and Sserunjogi, Richard and Adrine, Priscah and Okello, Gabriel},
+  journal={Urban Health in Africa},
+  pages={255},
   year={2025},
-  volume={},
-  number={},
-  pages={25-36},
-  keywords={Java;Semantics;Pipelines;Prototypes;Collaboration;Syntactics;Cognition;Software;Trajectory;Software development management;Patch Integration;Refactoring-aware Tools;Software Variants;Cherry-pick Failure;Structural Divergence;Semantic Conflict Resolution},
-  doi={10.1109/SCAM67354.2025.00010},
+  publisher={JHU Press},
+  abbr={JHU},
   bibtex_show={true},
-  abbr={SCAM},
-  note={<a href="https://conf.researchr.org/info/icsme-2025/icsme-2025-awards"><span class="badge badge-danger">Distinguished Artifact Award</span></a>},
-  code={https://github.com/unlv-evol/RePatch}
-  }
-@InProceedings{DJS:AIDSE26,
-author={Ogenrwot, Daniel
-and Businge, John
-and Arifuzzaman, Shaikh},
-editor={Rahimi, Nick
-and Margapuri, Venkat
-and Golilarz, Noor Amiri},
-title={Structural and Connectivity Patterns in the Maven Central Software Dependency Network},
-booktitle={Software and Data Engineering},
-year={2026},
-publisher={Springer Nature Switzerland},
-address={Cham},
-pages={129--151},
-abstract={Understanding the structural characteristics and connectivity patterns of large-scale software ecosystems is critical for enhancing software reuse, improving ecosystem resilience, and mitigating security risks. In this paper, we investigate the Maven Central ecosystem, one of the largest repositories of Java libraries, by applying network science techniques to its dependency graph. Leveraging the Goblin framework, we extracted a sample consisting of the top 5,000 highly connected artifacts based on their degree centrality and then performed breadth-first search (BFS) expansion from each selected artifact as a seed node, traversing the graph outward to capture all libraries and releases reachable from  those seed nodes. This sampling strategy captured the immediate structural context surrounding these libraries resulted in a curated graph comprising of 1.3 million nodes and 20.9 million edges. We conducted a comprehensive analysis of this graph, computing degree distributions, betweenness centrality, PageRank centrality, and connected components graph-theoretic metrics. Our results reveal that Maven Central exhibits a highly interconnected, scale-free, and small-world topology, characterized by a small number of infrastructural hubs that support the majority of projects. Further analysis using PageRank and betweenness centrality shows that these hubs predominantly consist of core ecosystem infrastructure, including testing frameworks and general-purpose utility libraries. While these hubs facilitate efficient software reuse and integration, they also pose systemic risks; failures or vulnerabilities affecting these critical nodes can have widespread and cascading impacts throughout the ecosystem.},
-isbn={978-3-032-08649-5},
-abbr={SEDE},
-bibtex_show={true},
 }
-
-@InProceedings{RDN+:SEDE26,
-author={Sserunjogi, Richard
-and Ogenrwot, Daniel
-and Niwamanya, Nicholas
-and Nsimbe, Noah
-and Bbaale, Martin
-and Ssempala, Benjamin
-and Mutabazi, Noble
-and Wabinyai, Raja Fidel
-and Okure, Deo
-and Bainomugisha, Engineer},
-editor={Rahimi, Nick
-and Margapuri, Venkat
-and Golilarz, Noor Amiri},
-title={Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings},
-booktitle={Software and Data Engineering},
-year={2026},
-publisher={Springer Nature Switzerland},
-address={Cham},
-pages={212--231},
-abstract={The increasing adoption of low-cost environmental sensors and AI-enabled applications has accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce and resource-constrained regions. This paper presents the design, implementation, and evaluation of the AirQo data pipeline -- a modular, cloud-native Extract-Transform-Load (ETL) system engineered to support both real-time and batch processing of heterogeneous air quality data across urban deployments in Africa. It is Built using open-source technologies such as Apache Airflow, Apache Kafka, and Google BigQuery. The pipeline integrates diverse data streams from low-cost sensors, third-party weather APIs, and reference-grade monitors to enable automated calibration, forecasting, and accessible analytics. We demonstrate the pipeline's ability to ingest, transform, and distribute millions of air quality measurements monthly from over 400 monitoring devices while achieving low latency, high throughput, and robust data availability, even under constrained power and connectivity conditions. The paper details key architectural features, including workflow orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and observability frameworks. Performance is evaluated across operational metrics such as resource utilization, ingestion throughput, calibration accuracy, and data availability, offering practical insights into building sustainable environmental data platforms. By open-sourcing the platform and documenting deployment experiences, this work contributes a reusable blueprint for similar initiatives seeking to advance environmental intelligence through data engineering in low-resource settings.},
-isbn={978-3-032-08649-5},
-abbr={SEDE},
-bibtex_show={true}
+@misc{ogenrwot2025refactoringawarepatchintegrationstructurally,
+      title={Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks}, 
+      author={Daniel Ogenrwot and John Businge},
+      year={2025},
+      eprint={2508.06718},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      pdf={example_pdf.pdf},   
+      url={https://arxiv.org/abs/2508.06718}, 
+      abbr={arXiv},
+      bibtex_show={true},
+      award={The 25th IEEE International Conference on Source Code Analysis and Manipulation (SCAM 2025), to be held in Auckland, New Zealand! },
+      award_name={PREPRINT}
 }
-
+@misc{ogenrwot2025structuralconnectivitypatternsmaven,
+      title={Structural and Connectivity Patterns in the Maven Central Software Dependency Network}, 
+      author={Daniel Ogenrwot and John Businge and Shaikh Arifuzzaman},
+      year={2025},
+      eprint={2508.13819},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2508.13819}, 
+      abbr={arXiv},
+      bibtex_show={true},
+      award={The 34th International Conference on Software and Data Engineering (SEDE 2025), to be held in New Orleans, Louisiana! },
+      award_name={PREPRINT} 
+}
+@misc{sserujongi2025designevaluationscalabledata,
+      title={Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings}, 
+      author={Richard Sserujongi and Daniel Ogenrwot and Nicholas Niwamanya and Noah Nsimbe and Martin Bbaale and Benjamin Ssempala and Noble Mutabazi and Raja Fidel Wabinyai and Deo Okure and Engineer Bainomugisha},
+      year={2025},
+      eprint={2508.14451},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2508.14451}, 
+      abbr={arXiv},
+      bibtex_show={true},
+      award={The 34th International Conference on Software and Data Engineering (SEDE 2025), to be held in New Orleans, Louisiana! },
+      award_name={PREPRINT}
+}
 @misc{ogenrwot2025patchtrackcomprehensiveanalysischatgpts,
       title={PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes}, 
-      abstract={The rapid adoption of large language models (LLMs) like ChatGPT has introduced new dynamics in software development, particularly within pull request workflows. While prior research has examined the quality of AI-generated code, little is known about how developers actually use these suggestions in real-world collaboration. We analyze 338 pull requests from 255 GitHub repositories containing self-admitted ChatGPT usage, including 645 AI-generated snippets and 3,486 developer-authored patches. We introduce PatchTrack, a tool that classifies whether ChatGPT patches were applied, not applied, or not suggested, enabling fine-grained analysis of AI-assisted decisions. Full adoption of ChatGPT code is rare: the median integration rate was 25%. A qualitative analysis of 89 pull requests with integrated patches revealed recurring patterns of structural integration, selective extraction, and iterative refinement, showing that developers typically treat ChatGPT’s output as a starting point rather than a final implementation. Even when code was not directly adopted, ChatGPT influenced workflows through conceptual guidance, documentation, and debugging strategies. Integration decisions were shaped by scope, architectural fit, contributor role, and review norms. This study offers empirical insight into how generative AI is used in collaborative software development, showing that its impact extends beyond patch generation to broader decision-making. Our findings inform the design of AI-assisted tools, clarify patch adoption behavior, and support more transparent and effective use of LLMs in practice.},
       author={Daniel Ogenrwot and John Businge},
       year={2025},
       eprint={2505.07700},
@@ -141,7 +154,6 @@ bibtex_show={true}
       url={https://arxiv.org/abs/2505.07700},
       abbr={arXiv},
       bibtex_show={true},
-      html={https://arxiv.org/abs/2505.07700},
 }
 @misc{ogenrwot2024empiricalinvestigationrelationshipdesign,
       title={Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes}, 
@@ -152,7 +164,6 @@ bibtex_show={true}
       primaryClass={cs.SE},
       url={https://arxiv.org/abs/2406.19254},
       abbr={arXiv},
-      arxiv_show={true},
       bibtex_show={true},
 }
 @article{ashaba2019rule,

@@ -21,26 +21,22 @@ _ _ _
 	<li>TBA</li>
 </ul>
 
-
-<h4>PC Member</h4>
-<ul>
-	<li>TBA</li>
-</ul>
-
-
 <h4>Conference Reviewer</h4>
 <ul>
-	<li>TBA</li>
+	<li>Junior PC Member MSR 2026</li>
 </ul>
 
 
 <h4>Journal Reviewer</h4>
-<ul>   
-	<li>Springer Scientific Reports</li>
+<ul>
+	<li>Springer Nature Scientific Reports</li>
+	<li>Data in Brief Elsevier Journal</li>
+	<li>Journal of Advances in Information Technology</li>
 </ul>
 
 <h4>Membership</h4>
 <ul>
 <li>Member of ACM</li>
+<li>Member of IEEE</li>
 <li>Member of <a href="https://us-rse.org/">The United States Research Software Engineer Association (US-RSE)</a></li>
 </ul>

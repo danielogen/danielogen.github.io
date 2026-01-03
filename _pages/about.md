@@ -16,14 +16,10 @@ profile:
   image: daniel_profile.jpg
   image_circular: false
   name: Daniel Ogenrwot
-  title: Graduate Assistant & PhD Student
+  title: Graduate Research Assistant & PhD Student
   affiliation: University of Nevada, Las Vegas – Software Evolution (EVOL) Lab
   tagline: Empirical Software Engineering & AI for Software Design
-  address: >
-    <p>📞: +1 (702)-485-7149</p>
-    <p>🏢: Science and Engineering Building (SEB), Room 4217, UNLV, Maryland Campus</p>
-    <p>📧: ogenrwot[at]unlv[dot]nevada[dot]edu </p>
-    <p><button class='btn'><a href='/cv/'>Curriculum Vitae</a></button></p>
+  address: <p><button class='btn'><a href='/cv/'>Curriculum Vitae</a></button></p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -38,26 +34,97 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 
 <blockquote>
-  <em>“And you will know the truth, and the truth will set you free.”</em><br>
+  <em>"And you will know the truth, and the truth will set you free."</em><br>
   <strong>— John 8:32</strong>
 </blockquote>
-
 ---
-Hello! I am a Graduate Assistant and PhD student in the Department of Computer Science at the [University of Nevada, Las Vegas](https://unlv.edu), where I work in the Software Evolution (EVOL) Lab led by [Professor John Businge](https://johnxu21.github.io).
+Hello! I am a Graduate Assistant and PhD Candidate in the Department of Computer Science at the [University of Nevada, Las Vegas](https://unlv.edu), where I work in the Software Evolution (EVOL) Lab led by [Professor John Businge](https://johnxu21.github.io).
 
-Previously, I served as an Assistant Lecturer at [Gulu University](https://gu.ac.ug) and as a Research Fellow with the [AirQo Project](https://airqo.net), collaborating with [Prof. Engineer Bainomugisha](https://ibaino.net/). I hold an MSc in Computer Science from [Makerere University](https://mak.ac.ug), Uganda, where I was mentored by [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron).
+<!-- Previously, I served as an Assistant Lecturer at [Gulu University](https://gu.ac.ug) and as a Research Fellow with the [AirQo Project](https://airqo.net), collaborating with [Prof. Engineer Bainomugisha](https://ibaino.net/). I hold an MSc in Computer Science from [Makerere University](https://mak.ac.ug), Uganda, where I was mentored by [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron). -->
 
 ### Research Interests
+My primary research interests are in Empirical Software Engineering and AI for Software Engineering.
 
-My research centers on empirical software engineering, including:
-- Clone detection 
-- Patch integration
-- Program Comprehension
-- Mining software repositories
-- Software re-engineering
-- AI4SE & SE4AI
-- Air quality monitoring - Software design
+<ul class="cv-list">
+  <li>
+    <strong>Software Analytics</strong>
+    <ul>
+      <li>Software bug localization &amp; patching </li>
+      <li>Software maintenance and reuse</li>
+      <li>Software variants (social forks and divergent forks)</li>
+      <li>Code &amp; design smells detection</li>
+    </ul>
+  </li>
 
-For a complete list of my publications, please visit my profiles on [Google Scholar](https://scholar.google.com/citations?user=ZpCrmOQAAAAJ&hl=en) or [ORCID](https://orcid.org/0000-0002-0133-8164). Feel free to reach out if you’re interested in collaboration or learning more about my work!
+  <li>
+    <strong>ML/AI</strong>
+    <ul>
+      <li>Automatic program repair</li>
+      <li>Agentic LLM for software systems</li>
+    </ul>
+  </li>
 
+  <li>
+    <strong>Data Mining</strong>
+    <ul>
+      <li>Mining Software Repositories</li>
+      <li>Graph mining</li>
+      <li>Dependency network analysis</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Others</strong>
+    <ul>
+      <li>Software for AirQuality Monitoring</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 50%; padding-bottom: 20px;">
+        <strong>Software Analytics</strong>
+        <ul style="margin-top: 5px;">
+          <li>Software bug localization &amp; patching</li>
+          <li>Software vulnerability analysis</li>
+          <li>Software maintenance and reuse</li>
+          <li>Software variants (social forks and divergent forks)</li>
+          <li>Software evolution</li>
+          <li>Code &amp; design smells detection</li>
+          <li>Program comprehension</li>
+        </ul>
+      </td>
+
+      <td style="vertical-align: top; width: 50%; padding-bottom: 20px;">
+        <strong>ML/AI</strong>
+        <ul style="margin-top: 5px;">
+          <li>Automatic program repair</li>
+          <li>Agentic LLM for software systems</li>
+          <li>Generative Adversarial Networks (GANs)</li>
+          <li>AI4Science</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top; width: 50%;">
+        <strong>Data Mining</strong>
+        <ul style="margin-top: 5px;">
+          <li>Mining Software Repositories</li>
+          <li>Graph mining</li>
+          <li>Dependency network analysis</li>
+        </ul>
+      </td>
+
+      <td style="vertical-align: top; width: 50%;">
+        <strong>Others</strong>
+        <ul style="margin-top: 5px;">
+          <li>Software for AirQuality Monitoring</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
 ---
