@@ -128,6 +128,18 @@
 - title: Honors & Awards
   type: time_table
   contents:
+    - title: Distinguished Artifact Award
+      institution: The 25th IEEE International Conference on Source Code Analysis and Manipulation (SCAM) Co-located with ICSME 2025
+      year: 2025
+      description:
+        - <a href='https://conf.researchr.org/info/icsme-2025/icsme-2025-awards'>https://conf.researchr.org/info/icsme-2025/icsme-2025-awards</a>
+
+    - title: GPSA Research Grant
+      institution: Graduate & Professional Student Association (GPSA), UNLV
+      year: 2025
+      description:
+        - Amount $1,249.61
+        - Conference travel support
     - title: UNLV Access Grant
       institution: University of Nevada, Las Vegas
       year: 2024

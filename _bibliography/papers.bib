@@ -3,6 +3,71 @@
 
 @string{aps = {American Physical Society,}}
 
+@InProceedings{DJS:AIDSE26,
+author={Ogenrwot, Daniel
+and Businge, John
+and Arifuzzaman, Shaikh},
+editor={Rahimi, Nick
+and Margapuri, Venkat
+and Golilarz, Noor Amiri},
+title={Structural and Connectivity Patterns in the Maven Central Software Dependency Network},
+booktitle={Software and Data Engineering},
+year={2026},
+publisher={Springer Nature Switzerland},
+address={Cham},
+pages={129--151},
+abstract={Understanding the structural characteristics and connectivity patterns of large-scale software ecosystems is critical for enhancing software reuse, improving ecosystem resilience, and mitigating security risks. In this paper, we investigate the Maven Central ecosystem, one of the largest repositories of Java libraries, by applying network science techniques to its dependency graph. Leveraging the Goblin framework, we extracted a sample consisting of the top 5,000 highly connected artifacts based on their degree centrality and then performed breadth-first search (BFS) expansion from each selected artifact as a seed node, traversing the graph outward to capture all libraries and releases reachable from  those seed nodes. This sampling strategy captured the immediate structural context surrounding these libraries resulted in a curated graph comprising of 1.3 million nodes and 20.9 million edges. We conducted a comprehensive analysis of this graph, computing degree distributions, betweenness centrality, PageRank centrality, and connected components graph-theoretic metrics. Our results reveal that Maven Central exhibits a highly interconnected, scale-free, and small-world topology, characterized by a small number of infrastructural hubs that support the majority of projects. Further analysis using PageRank and betweenness centrality shows that these hubs predominantly consist of core ecosystem infrastructure, including testing frameworks and general-purpose utility libraries. While these hubs facilitate efficient software reuse and integration, they also pose systemic risks; failures or vulnerabilities affecting these critical nodes can have widespread and cascading impacts throughout the ecosystem.},
+isbn={978-3-032-08649-5},
+abbr={SEDE},
+html={https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9},
+bibtex_show={true},
+}
+
+@InProceedings{RDN+:SEDE26,
+author={Sserunjogi, Richard
+and Ogenrwot, Daniel
+and Niwamanya, Nicholas
+and Nsimbe, Noah
+and Bbaale, Martin
+and Ssempala, Benjamin
+and Mutabazi, Noble
+and Wabinyai, Raja Fidel
+and Okure, Deo
+and Bainomugisha, Engineer},
+editor={Rahimi, Nick
+and Margapuri, Venkat
+and Golilarz, Noor Amiri},
+title={Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings},
+booktitle={Software and Data Engineering},
+year={2026},
+publisher={Springer Nature Switzerland},
+address={Cham},
+pages={212--231},
+abstract={The increasing adoption of low-cost environmental sensors and AI-enabled applications has accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce and resource-constrained regions. This paper presents the design, implementation, and evaluation of the AirQo data pipeline -- a modular, cloud-native Extract-Transform-Load (ETL) system engineered to support both real-time and batch processing of heterogeneous air quality data across urban deployments in Africa. It is Built using open-source technologies such as Apache Airflow, Apache Kafka, and Google BigQuery. The pipeline integrates diverse data streams from low-cost sensors, third-party weather APIs, and reference-grade monitors to enable automated calibration, forecasting, and accessible analytics. We demonstrate the pipeline's ability to ingest, transform, and distribute millions of air quality measurements monthly from over 400 monitoring devices while achieving low latency, high throughput, and robust data availability, even under constrained power and connectivity conditions. The paper details key architectural features, including workflow orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and observability frameworks. Performance is evaluated across operational metrics such as resource utilization, ingestion throughput, calibration accuracy, and data availability, offering practical insights into building sustainable environmental data platforms. By open-sourcing the platform and documenting deployment experiences, this work contributes a reusable blueprint for similar initiatives seeking to advance environmental intelligence through data engineering in low-resource settings.},
+isbn={978-3-032-08649-5},
+abbr={SEDE},
+html={https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14},
+bibtex_show={true}
+}
+
+@INPROCEEDINGS{DJ:SCAM25,
+  author={Ogenrwot, Daniel and Businge, John},
+  booktitle={2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)}, 
+  title={Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks}, 
+  abstract={While most forks on platforms like GitHub are short-lived and used for social collaboration, a smaller but impactful subset evolve into long-lived forks, referred to here as variants, that maintain independent development trajectories. Integrating bug-fix patches across such divergent variants poses challenges due to structural drift, including refactorings that rename, relocate, or reorganize code elements and obscure semantic correspondence. This paper presents an empirical study of patch integration failures in 14 divergent pair of variants and introduces RePatch, a refactoring-aware integration system for Java repositories. RePatch extends the RefMerge framework, originally designed for symmetric merges, by supporting asymmetric patch transfer. RePatch inverts refactorings in both the source and target to realign the patch context, applies the patch, and replays the transformations to preserve the intent of the variant. In our evaluation of 478 bug-fix pull requests, Git cherry-pick fails in 64.4% of cases due to structural misalignments, while RePatch successfully integrates 52.8% of the previously failing patches. These results highlight the limitations of syntax-based tools and the need for semantic reasoning in variant-aware patch propagation.},
+  year={2025},
+  volume={},
+  number={},
+  pages={25-36},
+  keywords={Java;Semantics;Pipelines;Prototypes;Collaboration;Syntactics;Cognition;Software;Trajectory;Software development management;Patch Integration;Refactoring-aware Tools;Software Variants;Cherry-pick Failure;Structural Divergence;Semantic Conflict Resolution},
+  doi={10.1109/SCAM67354.2025.00010},
+  bibtex_show={true},
+  abbr={SCAM},
+  note={<a href="https://conf.researchr.org/info/icsme-2025/icsme-2025-awards"><span class="badge badge-danger">Distinguished Artifact Award</span></a>},
+  code={https://github.com/unlv-evol/RePatch},
+  html={https://ieeexplore.ieee.org/document/11190222},
+  }
+
 @inproceedings{DGK+:FAMECSE22,
 author = {Ogenrwot, Daniel and Tabo, Geoffrey Olok and Aber, Kevin and Nakatumba-Nabende, Joyce},
 title = {From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning},
@@ -11,6 +76,7 @@ isbn = {9781450396639},
 publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3531056.3542775},
+html = {https://dl.acm.org/doi/10.1145/3531056.3542775},
 doi = {10.1145/3531056.3542775},
 abstract = {The capstone project is a fundamental part of almost all science and engineering degrees. It is not only a requirement for the partial fulfillment of an accredited university programme but also a method of assessing the students’ general mastery of concepts, critical thinking, problem-solving, and transferable skills. Annually, final-year undergraduate students offering computing programmes in Uganda build innovative software solutions to real-world problems within and outside their community. Anecdotal evidence indicates that most of those innovations have the potential for commercialization and transformation into technology-based businesses. However, limited progress has been made to commercialize students’ projects, and promising solutions are “buried” within academic reports. To this end, our research aims to explain the challenges and opportunities in the commercialization of students’ capstone projects across two (2) undergraduate computing programmes (Bachelor of Science in Computer Science and Bachelor of Information Technology) offered at Gulu University in Uganda. Using exploratory research design, we reviewed eighty-six (86) capstone projects, curricula, and a facilitated students \& stakeholders’ workshop report. This paper articulates factors hindering the commercialization of undergraduate software capstone projects and recommends mitigating measures. It also proposes a framework for extending capstone course design from a traditional curriculum structure to an inclusive industry and community-oriented approach capable of turning ideas into business start-ups. The findings from this research are expected to inform higher institutions of learning in Africa in developing novel pedagogical approaches for orchestrating (software) capstone project courses that are inclusive and profitable beyond the academic setting.},
 booktitle = {Proceedings of the Federated Africa and Middle East Conference on Software Engineering},
@@ -32,6 +98,7 @@ bibtex_show={true},
   abstract={Design smells are symptoms of poor solutions to recurring design problems in a software system. Those symptoms have a direct negative impact on software quality by making it difficult to comprehend and maintain. In this paper we compare the occurrence of design smells between different technological ecosystems: windows/desktop and android/mobile. This knowledge is significant for various software maintenance activities such as program quality assurance and refactoring. To supplement previous findings, our study aimed at (a) under- standing if and how the relationship among design smells differs across windows and mobile applications and (b) determining the groups of design smells that tend to occur frequently together and the magnitude of their occurrence in windows and mobile applications. In this study, we explored the use of statistics and unsupervised learning on a dataset consisting of twelve (12) Java- based open-source projects mined from GitHub. We identified fifteen (15) most frequent design smells across desktop and mobile applications. Additionally, a clustering technique revealed which groups of design smells that often co-occur. Specifically, {SpeculativeGenerality, SwissArmyKnife} and {LongParameterList, ClassDataShouldBePrivate} are observed to occur frequently together in desktop and mobile applications.},  
   journal={Proceedings of the 2020 African Conference on Software Engineering (ACSE)},
   abbr={ACSE},
+  pdf={https://ceur-ws.org/Vol-2689/paper2.pdf},
   bibtex_show={true},
 }
 @inproceedings{DJ:ASE24,
@@ -66,68 +133,8 @@ author = {Daniel Ogenrwot and Joyce Nakatumba-Nabende and Michel R.V. Chaudron},
 keywords = {Software design, Role-stereotype, Design smells, Software quality},
 abstract = {Design smells are recurring patterns of poorly designed (fragments of) software systems that may hinder maintainability. Role-stereotypes indicate generic responsibilities that classes play in system design. Although the concepts of role-stereotypes and design smells are widely divergent, both are significant contributors to the design and maintenance of software systems. To improve software design and maintainability, there is a need to understand the relationship between design smells and role stereotypes. This paper presents a fine-grained dataset of systematically integrated design smells detection and role-stereotypes classification data. The dataset was created from a collection of twelve (12) real-life open-source Java projects mined from GitHub. The dataset consists of 18 design smells columns and 2,513 Java classes (rows) classified into six (6) role-stereotypes taxonomy. We also clustered the dataset into ten (10) different clusters using an unsupervised learning algorithm. Those clusters are useful for understanding the groups of design smells that often co-occur in a particular role-stereotype category. The dataset is significant for understanding the non-innate relationship between design smells and role-stereotypes.},
 abbr={DIB},
+html={https://www.sciencedirect.com/science/article/pii/S2352340921004091},
 bibtex_show={true},
-}
-
-@INPROCEEDINGS{DJ:SCAM25,
-  author={Ogenrwot, Daniel and Businge, John},
-  booktitle={2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)}, 
-  title={Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks}, 
-  abstract={While most forks on platforms like GitHub are short-lived and used for social collaboration, a smaller but impactful subset evolve into long-lived forks, referred to here as variants, that maintain independent development trajectories. Integrating bug-fix patches across such divergent variants poses challenges due to structural drift, including refactorings that rename, relocate, or reorganize code elements and obscure semantic correspondence. This paper presents an empirical study of patch integration failures in 14 divergent pair of variants and introduces RePatch, a refactoring-aware integration system for Java repositories. RePatch extends the RefMerge framework, originally designed for symmetric merges, by supporting asymmetric patch transfer. RePatch inverts refactorings in both the source and target to realign the patch context, applies the patch, and replays the transformations to preserve the intent of the variant. In our evaluation of 478 bug-fix pull requests, Git cherry-pick fails in 64.4% of cases due to structural misalignments, while RePatch successfully integrates 52.8% of the previously failing patches. These results highlight the limitations of syntax-based tools and the need for semantic reasoning in variant-aware patch propagation.},
-  year={2025},
-  volume={},
-  number={},
-  pages={25-36},
-  keywords={Java;Semantics;Pipelines;Prototypes;Collaboration;Syntactics;Cognition;Software;Trajectory;Software development management;Patch Integration;Refactoring-aware Tools;Software Variants;Cherry-pick Failure;Structural Divergence;Semantic Conflict Resolution},
-  doi={10.1109/SCAM67354.2025.00010},
-  bibtex_show={true},
-  abbr={SCAM},
-  note={<a href="https://conf.researchr.org/info/icsme-2025/icsme-2025-awards"><span class="badge badge-danger">Distinguished Artifact Award</span></a>},
-  code={https://github.com/unlv-evol/RePatch}
-  }
-@InProceedings{DJS:AIDSE26,
-author={Ogenrwot, Daniel
-and Businge, John
-and Arifuzzaman, Shaikh},
-editor={Rahimi, Nick
-and Margapuri, Venkat
-and Golilarz, Noor Amiri},
-title={Structural and Connectivity Patterns in the Maven Central Software Dependency Network},
-booktitle={Software and Data Engineering},
-year={2026},
-publisher={Springer Nature Switzerland},
-address={Cham},
-pages={129--151},
-abstract={Understanding the structural characteristics and connectivity patterns of large-scale software ecosystems is critical for enhancing software reuse, improving ecosystem resilience, and mitigating security risks. In this paper, we investigate the Maven Central ecosystem, one of the largest repositories of Java libraries, by applying network science techniques to its dependency graph. Leveraging the Goblin framework, we extracted a sample consisting of the top 5,000 highly connected artifacts based on their degree centrality and then performed breadth-first search (BFS) expansion from each selected artifact as a seed node, traversing the graph outward to capture all libraries and releases reachable from  those seed nodes. This sampling strategy captured the immediate structural context surrounding these libraries resulted in a curated graph comprising of 1.3 million nodes and 20.9 million edges. We conducted a comprehensive analysis of this graph, computing degree distributions, betweenness centrality, PageRank centrality, and connected components graph-theoretic metrics. Our results reveal that Maven Central exhibits a highly interconnected, scale-free, and small-world topology, characterized by a small number of infrastructural hubs that support the majority of projects. Further analysis using PageRank and betweenness centrality shows that these hubs predominantly consist of core ecosystem infrastructure, including testing frameworks and general-purpose utility libraries. While these hubs facilitate efficient software reuse and integration, they also pose systemic risks; failures or vulnerabilities affecting these critical nodes can have widespread and cascading impacts throughout the ecosystem.},
-isbn={978-3-032-08649-5},
-abbr={SEDE},
-bibtex_show={true},
-}
-
-@InProceedings{RDN+:SEDE26,
-author={Sserunjogi, Richard
-and Ogenrwot, Daniel
-and Niwamanya, Nicholas
-and Nsimbe, Noah
-and Bbaale, Martin
-and Ssempala, Benjamin
-and Mutabazi, Noble
-and Wabinyai, Raja Fidel
-and Okure, Deo
-and Bainomugisha, Engineer},
-editor={Rahimi, Nick
-and Margapuri, Venkat
-and Golilarz, Noor Amiri},
-title={Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings},
-booktitle={Software and Data Engineering},
-year={2026},
-publisher={Springer Nature Switzerland},
-address={Cham},
-pages={212--231},
-abstract={The increasing adoption of low-cost environmental sensors and AI-enabled applications has accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce and resource-constrained regions. This paper presents the design, implementation, and evaluation of the AirQo data pipeline -- a modular, cloud-native Extract-Transform-Load (ETL) system engineered to support both real-time and batch processing of heterogeneous air quality data across urban deployments in Africa. It is Built using open-source technologies such as Apache Airflow, Apache Kafka, and Google BigQuery. The pipeline integrates diverse data streams from low-cost sensors, third-party weather APIs, and reference-grade monitors to enable automated calibration, forecasting, and accessible analytics. We demonstrate the pipeline's ability to ingest, transform, and distribute millions of air quality measurements monthly from over 400 monitoring devices while achieving low latency, high throughput, and robust data availability, even under constrained power and connectivity conditions. The paper details key architectural features, including workflow orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and observability frameworks. Performance is evaluated across operational metrics such as resource utilization, ingestion throughput, calibration accuracy, and data availability, offering practical insights into building sustainable environmental data platforms. By open-sourcing the platform and documenting deployment experiences, this work contributes a reusable blueprint for similar initiatives seeking to advance environmental intelligence through data engineering in low-resource settings.},
-isbn={978-3-032-08649-5},
-abbr={SEDE},
-bibtex_show={true}
 }
 
 @misc{ogenrwot2025patchtrackcomprehensiveanalysischatgpts,
@@ -145,6 +152,7 @@ bibtex_show={true}
 }
 @misc{ogenrwot2024empiricalinvestigationrelationshipdesign,
       title={Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes}, 
+      abstract={During software development, poor design and implementation choices can detrimentally impact software maintainability. Design smells, recurring patterns of poorly designed fragments, signify these issues. Role-stereotypes denote the generic responsibilities that classes assume in system design. Although the concepts of role-stereotypes and design smells differ, both significantly contribute to the design and maintenance of software systems. Understanding the relationship between these aspects is crucial for enhancing software maintainability, code quality, efficient code review, guided refactoring, and the design of role-specific metrics. This paper employs an exploratory approach, combining statistical analysis and unsupervised learning methods, to understand how design smells relate to role-stereotypes across desktop and mobile applications. Analyzing 11,350 classes from 30 GitHub repositories, we identified several design smells that frequently co-occur within certain role-stereotypes. Specifically, three (3) out of six (6) role-stereotypes we studied are more prone to design smells. We also examined the variation of design smells across the two ecosystems, driven by notable differences in their underlying architecture. Findings revealed that design smells are more prevalent in desktop than in mobile applications, especially within the Service Provider and Information Holder role-stereotypes. Additionally, the unsupervised learning method showed that certain pairs or groups of role-stereotypes are prone to similar types of design smells. We believe these relationships are associated with the characteristic and collaborative properties between role-stereotypes. The insights from this research provide valuable guidance for software teams on implementing design smell prevention and correction mechanisms, ensuring conceptual integrity during design and maintenance phases.},
       author={Daniel Ogenrwot and Joyce Nakatumba-Nabende and John Businge and Michel R. V. Chaudron},
       year={2024},
       eprint={2406.19254},
@@ -152,11 +160,15 @@ bibtex_show={true}
       primaryClass={cs.SE},
       url={https://arxiv.org/abs/2406.19254},
       abbr={arXiv},
+      html={https://arxiv.org/html/2406.19254v1},
       arxiv_show={true},
       bibtex_show={true},
 }
 @article{ashaba2019rule,
   title={A Rule Induction Attribution Selection Algorithm for Intrusion Detection Systems},
+  abstract={
+  The high level of dependence of computer users on communication network infrastructures such as Internet and intranet is associated with increased level of threats to security resulting into outcomes such as interference to valid communication channels and loss of valuable information. Several network security tools have been developed over the past years, one being Intrusion Detection Systems (IDS). IDS use attributes to differentiate between normal and intrusive activities based on the behavior of users, networks or computer systems. However, with IDS, the expert’s guess, experience and knowledge are central when choosing the features for detection which often results to false alarms and insufficiency of the detection system. This study investigated the possibility of enhancing the performance of IDS using data mining techniques. This study proposed Rule Induction technique of data mining to remove redundant or irrelevant attributes of IDS thereby enhancing accuracy, speeding up the computation time and minimizing false alarms. For effective generalization of Rule Induction Attribution Selection (RIAS), the algorithm was tested on KDD Cup99 dataset. Accuracy results from RIAS (53.98) were higher than that of Repeated Incremental Pruning to Produce Error Reduction (RIPPER) (0.48) while RIAS’s (56121.53) computation time fell below that of RIPPER (902.47). The high accuracy results of RIAS indicate its capability to minimizing false alarms more than RIPPER. Clustering based on weighted support was applied to test the effectiveness of RIAS. Findings indicated that integrating data mining with IDS is effective in identifying useful information, hidden trends and associations from bulky of information.
+  },
   author={Ashaba, Anthony A and Mirembe, Drake Patrick and Ogenrwot, Daniel and Tumusiime, Robert},
   journal={International Journal of Technology and Management},
   volume={4},
@@ -164,5 +176,6 @@ bibtex_show={true}
   pages={1--14},
   year={2019},
   abbr={IJTM},
+  html={https://ijotm.utamu.ac.ug/index.php/ijotm/article/view/43},
   bibtex_show={true},
 }
