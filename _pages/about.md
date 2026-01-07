@@ -16,14 +16,14 @@ profile:
   image: daniel_profile.jpg
   image_circular: false
   name: Daniel Ogenrwot
-  title: Graduate Research Assistant & PhD Student
+  title: Graduate Research Assistant & PhD Candidate
   affiliation: University of Nevada, Las Vegas – Software Evolution (EVOL) Lab
   tagline: Empirical Software Engineering & AI for Software Design
-  address: <p><button class='btn'><a href='/cv/'>Curriculum Vitae</a></button></p>
+  # address: <p><button class='btn'><a href='/cv/'>Curriculum Vitae</a></button></p>
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
@@ -40,7 +40,7 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 ---
 Hello! I am a Graduate Assistant and PhD Candidate in the Department of Computer Science at the [University of Nevada, Las Vegas](https://unlv.edu), where I work in the Software Evolution (EVOL) Lab led by [Professor John Businge](https://johnxu21.github.io).
 
-<!-- Previously, I served as an Assistant Lecturer at [Gulu University](https://gu.ac.ug) and as a Research Fellow with the [AirQo Project](https://airqo.net), collaborating with [Prof. Engineer Bainomugisha](https://ibaino.net/). I hold an MSc in Computer Science from [Makerere University](https://mak.ac.ug), Uganda, where I was mentored by [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron). -->
+Previously, I served as an Assistant Lecturer at [Gulu University](https://gu.ac.ug) and as a Research Fellow with the [AirQo Project](https://airqo.net), collaborating with [Prof. Engineer Bainomugisha](https://ibaino.net/). I hold an MSc in Computer Science from [Makerere University](https://mak.ac.ug), Uganda, where I was mentored by [Dr. Joyce Nakatumba-Nabende](https://sites.google.com/view/jnabende/home) and [Prof. Michel R.V. Chaudron](https://research.tue.nl/en/persons/michel-rv-chaudron).
 
 ### Research Interests
 My primary research interests are in Empirical Software Engineering and AI for Software Engineering.
