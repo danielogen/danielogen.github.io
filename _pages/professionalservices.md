@@ -23,7 +23,8 @@ _ _ _
 
 <h4>Conference Reviewer</h4>
 <ul>
-	<li>Junior PC Member MSR 2026</li>
+	<li>MSR 2026 PC Member</li>
+	<li>ESEC/FSE 2026 PC Member</li>
 </ul>
 
 
