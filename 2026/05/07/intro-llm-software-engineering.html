@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Template: https://github.com/luost26/academic-homepage -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Introduction to Large Language Models for Software Engineering - Daniel Ogenrwot</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- Math and Code -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100" >
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
+    <div class="container-lg">
+        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
+        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-map"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/publications">Publications</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/teaching">Teaching</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services">Services</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/showcase">Showcase</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="flex-grow-1">
+        <div class="blog-layout-wrapper">
+            <div class="blog-main">
+                <article class="bg-white rounded-xl p-4 mb-4" style="border: 1px solid #f0f0f0;">
+                    <header class="mb-4">
+                        <h1 class="display-4 mb-3">Introduction to Large Language Models for Software Engineering</h1>
+                        <div class="text-muted mb-3">
+                            <i class="fas fa-calendar-alt"></i> May 07, 2026
+                            
+                                <span class="ml-3">
+                                    <i class="fas fa-tags"></i>
+                                    
+                                        <span class="badge badge-light">LLMs</span>
+                                    
+                                        <span class="badge badge-light">Software Engineering</span>
+                                    
+                                        <span class="badge badge-light">AI4SE</span>
+                                    
+                                        <span class="badge badge-light">Empirical SE</span>
+                                    
+                                </span>
+                            
+                        </div>
+                    </header>
+
+                    <div class="blog-content">
+                        <p>Large Language Models (LLMs) have rapidly moved from research curiosity to everyday tooling in software development. Tools like GitHub Copilot, Cursor, and ChatGPT are already embedded in millions of developers’ workflows — yet many practitioners and researchers are still grappling with a fundamental question: <em>what can these models actually do for software engineering, and where do they fall short?</em></p>
+
+<p>This post offers a grounded introduction to LLMs in the context of Software Engineering (SE): what they are, how they are applied, what the empirical evidence says, and what open problems remain.</p>
+
+<h1 id="what-is-a-large-language-model">What is a Large Language Model?</h1>
+
+<p>A Large Language Model is a neural network trained on vast corpora of text — including source code from public repositories like GitHub — to predict the next token in a sequence. Through this deceptively simple objective, models such as GPT-4, Claude, Llama, and CodeLlama develop emergent capabilities: they can generate syntactically correct code, explain logic, translate between programming languages, and reason about software artifacts.</p>
+
+<p>At their core, LLMs are <strong>probabilistic text generators</strong>. They do not “understand” code in the way a compiler does; they model statistical patterns over tokens. This distinction matters enormously when reasoning about their reliability in SE tasks.</p>
+
+<h2 id="key-architectural-ideas">Key architectural ideas</h2>
+
+<p>Modern LLMs share a few common properties relevant to SE use:</p>
+
+<ul>
+  <li><strong>Scale</strong>: billions of parameters trained on trillions of tokens, including large fractions of public code (The Stack, CodeSearchNet, etc.)</li>
+  <li><strong>In-context learning</strong>: the ability to adapt behavior from examples provided in the prompt, without weight updates</li>
+  <li><strong>Instruction tuning</strong>: fine-tuning on (instruction, response) pairs to make models follow natural-language directives</li>
+  <li><strong>Retrieval Augmented Generation (RAG)</strong>: grounding model outputs in retrieved documents — especially useful for codebase-aware assistants</li>
+</ul>
+
+<h1 id="llms-across-the-software-engineering-lifecycle">LLMs Across the Software Engineering Lifecycle</h1>
+
+<p>LLMs are not a single tool for a single task. They cut across nearly every phase of the SE lifecycle.</p>
+
+<h2 id="code-generation">Code generation</h2>
+
+<p>The most visible application. Given a natural-language description — or a partial code context — LLMs generate code completions or full implementations.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prompt: Write a function to check if a string is a palindrome
+</span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Empirical studies show that LLMs achieve high pass rates on competitive programming benchmarks (HumanEval, MBPP), but performance degrades sharply on real-world tasks requiring deep repository context, uncommon APIs, or security awareness.</p>
+
+<h2 id="automated-program-repair">Automated program repair</h2>
+
+<p>Automated Program Repair (APR) aims to fix bugs without human intervention. LLMs have become dominant here, surpassing prior template-based and search-based approaches on benchmarks like Defects4J. The intuition is straightforward: a model trained on millions of commit diffs has seen many patterns of “broken code → fixed code.”</p>
+
+<p>My own work — <a href="https://ieeexplore.ieee.org/document/11190222">RePatch</a> — explores a related challenge: <strong>patch integration across structurally divergent forks</strong>. When two software variants have drifted apart through independent refactoring, simply replaying a patch fails. We showed that refactoring-aware strategies can recover 52.8% of previously failing patches, a problem where LLMs alone struggle due to the structural mismatch.</p>
+
+<h2 id="code-review-and-pull-request-analysis">Code review and pull request analysis</h2>
+
+<p>LLMs are increasingly used to assist code review — summarising changes, flagging potential issues, and suggesting improvements. In <a href="https://dl.acm.org/doi/10.1145/3691620.3695338">PatchTrack</a>, we studied how ChatGPT-generated patches influence pull request outcomes across open-source projects. We found a median code adoption rate of just 25%, with developers frequently engaging in iterative refinement rather than direct acceptance — suggesting that LLM suggestions function more as a <strong>starting point</strong> than a final answer.</p>
+
+<h2 id="test-generation">Test generation</h2>
+
+<p>LLMs can generate unit tests from function signatures and docstrings. Tools like CodiumAI and EvoSuite-LLM combine evolutionary search with LLM-generated test seeds. The challenge is achieving meaningful coverage rather than trivially passing tests.</p>
+
+<h2 id="documentation-and-code-summarisation">Documentation and code summarisation</h2>
+
+<p>Generating docstrings, README files, and inline comments from code is a task LLMs handle well. Unlike generation (where correctness must be verified), summarisation is easier to evaluate qualitatively.</p>
+
+<h2 id="bug-localisation">Bug localisation</h2>
+
+<p>Given a bug report and a codebase, can an LLM identify the faulty file or function? Recent work (SWE-bench) shows that frontier models can resolve a fraction of real GitHub issues end-to-end — a significant milestone, though far from reliable for production use.</p>
+
+<h1 id="what-the-empirical-evidence-says">What the Empirical Evidence Says</h1>
+
+<p>A growing body of empirical SE research examines LLMs rigorously rather than treating benchmark scores as ground truth. A few key findings worth noting:</p>
+
+<p><strong>1. Benchmark saturation is not capability saturation.</strong><br />
+Models that score &gt;90% on HumanEval often fail on slightly reformulated problems. Benchmarks measure narrow proxies; real-world SE tasks require repository navigation, understanding of implicit constraints, and awareness of deployment context.</p>
+
+<p><strong>2. Code adoption rates are lower than generated code quality suggests.</strong><br />
+Our PatchTrack study and related work consistently find that developers accept AI-generated patches at rates well below what static analysis of correctness would predict. Trust, style consistency, and perceived ownership all factor into integration decisions.</p>
+
+<p><strong>3. LLMs introduce new categories of bugs.</strong><br />
+Generated code can be syntactically correct and pass tests while containing subtle logic errors, security vulnerabilities, or license-incompatible snippets. Studies of Copilot-generated code found CWE-class vulnerabilities in a non-trivial fraction of security-sensitive completions.</p>
+
+<p><strong>4. Prompt sensitivity is a reliability concern.</strong><br />
+Small changes in prompt phrasing can cause dramatically different — and sometimes opposite — outputs. This brittleness complicates reproducibility and deployment in automated pipelines.</p>
+
+<h1 id="agentic-llm-systems-for-se">Agentic LLM Systems for SE</h1>
+
+<p>The frontier is moving beyond single-turn prompting toward <strong>agentic systems</strong>: LLMs equipped with tools (code execution, file read/write, search) that can autonomously plan and execute multi-step SE tasks.</p>
+
+<p>SWE-agent, Devin, and similar systems attempt to resolve GitHub issues end-to-end — writing code, running tests, and iterating on failures. These systems expose a new set of empirical questions:</p>
+
+<ul>
+  <li>How do we evaluate <strong>partial progress</strong> on complex tasks?</li>
+  <li>What <strong>safeguards</strong> prevent agents from making irreversible changes to production systems?</li>
+  <li>How do agents handle <strong>ambiguous or underspecified</strong> requirements?</li>
+</ul>
+
+<p>These are active research questions in my current work.</p>
+
+<h1 id="open-problems">Open Problems</h1>
+
+<p>Despite rapid progress, several fundamental problems remain open:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problem</th>
+      <th>Why it’s hard</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Long-context reasoning</td>
+      <td>Most SE tasks require understanding hundreds of interdependent files</td>
+    </tr>
+    <tr>
+      <td>Correctness verification</td>
+      <td>LLMs cannot reliably verify their own outputs</td>
+    </tr>
+    <tr>
+      <td>Security-aware generation</td>
+      <td>Models trained on insecure code reproduce insecure patterns</td>
+    </tr>
+    <tr>
+      <td>Fork-aware patching</td>
+      <td>Structural divergence breaks naive patch replay</td>
+    </tr>
+    <tr>
+      <td>Evaluation methodology</td>
+      <td>Benchmarks don’t reflect real developer tasks or acceptance criteria</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<p>If you want to explore LLMs for SE in your own research or practice, a few practical entry points:</p>
+
+<ol>
+  <li><strong>SWE-bench</strong> — the most realistic benchmark for evaluating LLM agents on real GitHub issues</li>
+  <li><strong>The Stack</strong> — a deduplicated dataset of permissively licensed code for training and analysis</li>
+  <li><strong>LangChain / LlamaIndex</strong> — frameworks for building RAG-based code assistants</li>
+  <li><strong>RepoBench</strong> — benchmarks for repository-level code completion</li>
+</ol>
+
+<p>For empirical work, the MSR and ICSE communities have active tracks on AI-assisted SE — a good place to find rigorous evaluations beyond vendor benchmarks.</p>
+
+<hr />
+
+<p><em>This post reflects my perspective as a researcher working at the intersection of Empirical SE and AI for SE. I am always happy to discuss these topics — feel free to reach out via email.</em></p>
+
+                    </div>
+                </article>
+            </div>
+            <div class="blog-toc-sidebar">
+                <nav id="blog-toc" class="blog-toc-nav">
+                    <div class="blog-toc-title">Table of Contents</div>
+                    <ul class="blog-toc-list"></ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer border-top py-2 mt-5 bg-white small">
+    <div class="container-lg">
+        <div class="row my-3">
+            <div class="col-6">
+                <div class="text-muted">
+                    <i>Last updated: Jun 2026</i>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="text-right text-muted">
+                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+              delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false}
+              ],
+              throwOnError : false
+            });
+
+            Prism.highlightAll();
+        });
+    </script>
+    <script src="/assets/js/blog.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/bubble_visual_hash.js"></script>
+    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+</body>
+</html>

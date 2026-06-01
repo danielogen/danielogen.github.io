@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://danielogen.github.io/sitemap.xml
