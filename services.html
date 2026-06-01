@@ -1,0 +1,88 @@
+---
+layout: default
+title: Services
+navbar_title: Services
+---
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="pt-2 pb-3">Professional Services</h2>
+
+        <!-- Program Committee -->
+        {% if site.data.services.program_committee %}
+        <div class="my-3 bg-white shadow-sm rounded-xl">
+            <h6 class="p-3 mb-0 border-bottom border-gray">
+                <i class="fas fa-users mr-1"></i> Program Committee
+            </h6>
+            <div class="px-4 py-2">
+                {% for item in site.data.services.program_committee %}
+                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
+                    <div class="flex-grow-1">
+                        <div><strong>{{ item.venue }}</strong></div>
+                        {% if item.track %}
+                        <div class="small text-muted">{{ item.track }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mx-3 text-muted small no-break">{{ item.year }}</div>
+                    <div class="no-break">
+                        <span class="badge badge-pill badge-light border">{{ item.role }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Journal Reviewing -->
+        {% if site.data.services.journal_reviewing %}
+        <div class="my-3 bg-white shadow-sm rounded-xl">
+            <h6 class="p-3 mb-0 border-bottom border-gray">
+                <i class="fas fa-book-open mr-1"></i> Journal Reviewing
+            </h6>
+            <div class="px-4 py-2">
+                {% for item in site.data.services.journal_reviewing %}
+                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
+                    <div class="flex-grow-1">
+                        <div>{{ item.name }}</div>
+                        {% if item.publisher %}
+                        <div class="small text-muted">{{ item.publisher }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="no-break">
+                        <span class="badge badge-pill badge-light border">Reviewer</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Professional Memberships -->
+        {% if site.data.services.memberships %}
+        <div class="my-3 bg-white shadow-sm rounded-xl">
+            <h6 class="p-3 mb-0 border-bottom border-gray">
+                <i class="fas fa-id-card mr-1"></i> Professional Memberships
+            </h6>
+            <div class="px-4 py-2">
+                {% for item in site.data.services.memberships %}
+                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
+                    <div class="flex-grow-1">
+                        <div>
+                            {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank">{{ item.full_name }}</a>
+                            {% else %}
+                            {{ item.full_name }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="no-break">
+                        <span class="badge badge-pill badge-secondary">{{ item.name }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>

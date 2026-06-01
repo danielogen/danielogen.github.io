@@ -1,0 +1,106 @@
+primary_name: "Daniel Ogenrwot"
+secondary_name: ""
+navbar_name: "Daniel Ogenrwot"
+
+positions:
+- name: PhD Candidate & Graduate Assistant
+- name: Department of Computer Science
+- name: University of Nevada, Las Vegas
+  logo: /assets/images/badges/unlv.svg
+
+email: "ogenrwot@unlv.nevada.edu"
+cv_link: https://danielogen.github.io/assets/pdf/DanielOgenrwot-CV-20260105.pdf
+gscholar: ZpCrmOQAAAAJ
+github: danielogen
+dblp: https://dblp.org/pid/275/0016.html
+# twitter: your_twitter_id
+linkedin: daniel-ogenrwot
+orcid: 0000-0002-0133-8164
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am a PhD Candidate and Graduate Assistant in the
+    <a href="https://www.cs.unlv.edu/" target="_blank">Department of Computer Science</a>
+    at the <a href="https://www.unlv.edu/" target="_blank">University of Nevada, Las Vegas (UNLV)</a>,
+    working in the <a href="https://github.com/unlv-evol" target="_blank">Software Evolution (EVOL) Lab</a>
+    under the supervision of <a href="https://www.cs.unlv.edu/~busing/" target="_blank">Professor John Businge</a>.
+    I hold an MSc in Computer Science from Makerere University, Uganda (advised by
+    <a href="https://scholar.google.com/citations?user=jnFtPmIAAAAJ" target="_blank">Dr. Joyce Nakatumba-Nabende</a>
+    and <a href="https://scholar.google.com/citations?user=3nyGpX4AAAAJ" target="_blank">Prof. Michel R.V. Chaudron</a>)
+    and a BSc in Computer Science from Gulu University, Uganda.
+    My research lies at the intersection of <strong>Empirical Software Engineering</strong> and
+    <strong>AI for Software Engineering</strong>, with publications in venues including
+    ASE, SCAM, MSR, AIware (co-located with FSE), the <em>Empirical Software Engineering</em> (EMSE) journal, and SEDE.
+    I serve the research community as a Junior PC member for MSR 2026, a PC member for ESEC/FSE 2026
+    (Ideas, Visions, and Reflections track), and a reviewer for Springer Nature Scientific Reports,
+    Elsevier Data in Brief, and the Journal of Advances in Information Technology.
+  </p>
+  <p>
+    <em>"And you will know the truth, and the truth will set you free."</em> — John 8:32
+  </p>
+
+# research_interests:
+#   - Empirical SE
+#   - AI for SE
+#   - Agentic AI
+#   - Software Analytics
+#   - Mining Software Repos
+#   - Program Repair
+#   - Bug Localization
+
+portrait_url: /assets/images/photos/portrait.jpg
+# portrait_caption: >-
+#   Photo caption here (optional)
+
+education:
+- name: University of Nevada, Las Vegas
+  logo: /assets/images/badges/unlv.svg
+  dept: Department of Computer Science
+  position: PhD Candidate
+  date: Aug. 2023 - present
+- name: Makerere University, Uganda
+  logo: /assets/images/badges/makerere.svg
+  dept: College of Computing and Information Sciences
+  position: MSc in Computer Science
+  date: 2019 - 2021
+- name: Gulu University, Uganda
+  logo: /assets/images/badges/gulu.svg
+  dept: Department of Computer Science
+  position: BSc in Computer Science
+  date: 2010 - 2013
+
+experience:
+- name: University of Nevada, Las Vegas (UNLV)
+  logo: /assets/images/badges/unlv.svg
+  dept: Department of Computer Science
+  position: Graduate Research/Teaching Assistant
+  date: 2023 - present
+- name: AirQo Project, Makerere University
+  logo: /assets/images/badges/airqo.svg
+  dept: Google.org funded
+  position: Ph.D. Research Fellow
+  date: 2023 - present
+- name: Gulu University, Uganda
+  logo: /assets/images/badges/gulu.svg
+  dept: Department of Computer Science
+  position: Assistant Lecturer
+  date: 2022 - 2023
+
+awards:
+- name: Distinguished Artifact Award, IEEE SCAM 2025
+  date: 2025
+- name: GPSA Research Grant ($1,249.61)
+  date: 2025
+- name: UNLV Access Grant ($2,000)
+  date: 2024
+- name: Roy and Helen Kelsall Scholarship Fund ($1,000)
+  date: 2024
+- name: GPSA Research Grant ($1,456)
+  date: 2024
+- name: MTN MoMo Open API Challenge — 1st Runner-up ($2,000)
+  date: 2019
+- name: Mak–Sida Bilateral Program Scholarship ($15,000)
+  date: 2018
+- name: First-Class Honours, BSc Computer Science
+  date: 2013

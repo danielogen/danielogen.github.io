@@ -1,0 +1,23 @@
+program_committee:
+  - venue: ESEC/FSE 2026
+    role: PC Member
+    track: Ideas, Visions, and Reflections
+    year: 2026
+  - venue: MSR 2026
+    role: Junior PC Member
+    year: 2026
+
+journal_reviewing:
+  - name: Springer Nature Scientific Reports
+  - name: Data in Brief
+    publisher: Elsevier
+  - name: Journal of Advances in Information Technology
+
+memberships:
+  - name: ACM
+    full_name: Association for Computing Machinery
+  - name: IEEE
+    full_name: Institute of Electrical and Electronics Engineers
+  - name: US-RSE
+    full_name: United States Research Software Engineer Association
+    url: https://us-rse.org
