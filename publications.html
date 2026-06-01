@@ -1,0 +1,46 @@
+---
+layout: default
+title : Publications
+navbar_title: Publications
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+{% assign all_pubs = site.publications | sort: "date" | reverse %}
+{% assign filtered_pubs = all_pubs | where_exp: "item", "item.pub_date >= '2022'" %}
+{% assign pubs_by_year = filtered_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+
+        <div class="my-3 px-1 d-flex align-items-center justify-content-between flex-wrap" style="gap: 0.5rem;">
+            <p class="mb-0 text-muted small">
+                <!-- Showing <strong>{{ filtered_pubs | size }}</strong> publications from 2022 onwards
+                ({{ all_pubs | size }} total) &mdash; -->
+                <b Showing <strong>{{ filtered_pubs | size }}</strong> publications from 2022 onwards &mdash;
+                <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank">
+                    For the latest publication list, please refer to Googe Scholar <i class="fas fa-external-link-alt fa-xs"></i></b>
+                </a>
+            </p>
+        </div>
+
+        {% for year in pubs_by_year %}
+        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+            {% for item in year.items %}
+                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for year in pubs_by_year %}
+            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

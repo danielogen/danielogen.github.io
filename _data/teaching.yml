@@ -1,0 +1,67 @@
+- institution: University of Nevada, Las Vegas (UNLV)
+  location: Las Vegas, NV, United States
+  url: https://unlv.edu
+  logo: /assets/images/badges/unlv.svg
+  courses:
+    - code: CS472/672-1001
+      name: Software Product Design I (Senior Design)
+      role: Teaching Assistant
+      terms: Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025
+    - code: CS472/672-1002
+      name: Software Product Design I (Senior Design)
+      role: Teaching Assistant
+      terms: Spring 2024, Fall 2025
+    - code: CS477/677
+      name: Design and Analysis of Algorithms
+      role: Teaching Assistant
+      terms: Summer 2023
+    - code: CS789
+      name: Software Re-engineering (Masters/PhD)
+      role: Teaching Assistant
+      terms: Fall 2025
+
+- institution: Gulu University
+  location: Main Campus, Uganda
+  url: https://gu.ac.ug
+  logo: /assets/images/badges/gulu.svg
+  courses:
+    - code: MID7104
+      name: Database Modeling
+      role: Instructor
+      level: Masters
+      terms: "2019, 2021, 2022"
+    - code: MID7109
+      name: Mobile Applications Development
+      role: Instructor
+      level: Masters
+      terms: "2021, 2022"
+    - code: GCS3203
+      name: Parallel Computation
+      role: Instructor
+      level: Undergraduate
+      terms: "2021, 2022"
+    - code: GIT3104
+      name: Integrative Programming
+      role: Instructor
+      level: Undergraduate
+      terms: "2019, 2021, 2022"
+    - code: GIT3101
+      name: Web Systems & Technologies II
+      role: Instructor
+      level: Undergraduate
+      terms: "2018, 2019, 2021, 2022"
+    - code: GCS
+      name: Mobile Web Application Development in Java
+      role: Instructor
+      level: Undergraduate
+      terms: "2018, 2019, 2021, 2022"
+    - code: GCS
+      name: Mobile Web Application Development
+      role: Instructor
+      level: Undergraduate
+      terms: "2018, 2019, 2021, 2022"
+    - code: GAT3201
+      name: Web Game Development
+      role: Instructor
+      level: Undergraduate
+      terms: "2022"

@@ -1,0 +1,109 @@
+---
+layout: default
+title: Research
+navbar_title: Research
+description: "Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping development."
+---
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="pt-2 pb-2">Research</h2>
+        <p class="text-muted mb-4">
+            I study how software evolves, how defects propagate through codebases and ecosystems, and how
+            AI is changing the way software is built, through large-scale repository mining, program analysis,
+            and empirical methods. My work is grounded in two broad areas:
+            <strong>Empirical Software Engineering</strong> and <strong>AI for Software Engineering</strong>.
+            I work in the <a href="https://github.com/unlv-evol" target="_blank">Software Evolution (EVOL) Lab</a>
+            at UNLV, advised by <a href="https://www.cs.unlv.edu/~busing/" target="_blank">Prof. John Businge</a>.
+        </p>
+
+        <!-- Theme 1 -->
+        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
+            <h5 class="mb-2">
+                <i class="fas fa-code-branch mr-2" style="color: #B4975A;"></i>
+                Patch Integration in Software Variants
+            </h5>
+            <p class="mb-2">
+                When a bug is fixed in one fork of a software project, that fix rarely makes it automatically
+                into related forks, even when they share the same vulnerable code. The problem worsens over
+                time as forks diverge through independent refactoring: renamed methods, moved classes, and
+                restructured hierarchies cause patch replay to fail silently, leaving users of downstream
+                variants exposed to known bugs.
+            </p>
+            <p class="mb-0 text-muted">
+                My work in this area asks: <em>how do patches propagate across structurally divergent variants,
+                and how can we make that propagation reliable and automated?</em> I build tools and datasets
+                that make patch integration refactoring-aware, and study AI-generated patch adoption at scale
+                across real GitHub fork networks.
+            </p>
+        </div>
+
+        <!-- Theme 2 -->
+        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
+            <h5 class="mb-2">
+                <i class="fas fa-search-minus mr-2" style="color: #B4975A;"></i>
+                Code Smells &amp; Software Quality
+            </h5>
+            <p class="mb-2">
+                Design smells (structural anti-patterns like God Classes, Long Methods, and Feature Envy)
+                accumulate quietly as software grows, increasing maintenance cost and bug density long before
+                they trigger visible failures. Understanding <em>where</em> smells appear, <em>why</em> they
+                persist, and what role they play in software evolution is essential to building practical
+                detection and remediation tools.
+            </p>
+            <p class="mb-0 text-muted">
+                My work examines how design smells manifest and evolve across desktop and mobile platforms,
+                characterizes the structural roles smells play during software change, and produces reusable
+                benchmark datasets that enable reproducible smell detection research.
+            </p>
+        </div>
+
+        <!-- Theme 3 -->
+        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
+            <h5 class="mb-2">
+                <i class="fas fa-robot mr-2" style="color: #B4975A;"></i>
+                AI Coding Agents &amp; LLMs for Software Engineering
+            </h5>
+            <p class="mb-2">
+                AI coding agents are systems like GitHub Copilot, Devin, and Cursor that autonomously write,
+                test, and submit code, moving from assistants to active contributors in real codebases.
+                Yet we have little empirical understanding of how their contributions differ from human work,
+                what failure modes emerge when multiple agents collaborate, or how developers actually integrate
+                AI-generated code into production.
+            </p>
+            <p class="mb-0 text-muted">
+                My research characterizes agent-generated pull requests at scale, covering commit patterns,
+                code change semantics, and merge conflict rates, and studies the new class of coordination
+                problems that arise when autonomous agents concurrently modify shared repositories.
+            </p>
+        </div>
+
+        <!-- Theme 4 -->
+        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
+            <h5 class="mb-2">
+                <i class="fas fa-project-diagram mr-2" style="color: #B4975A;"></i>
+                Software Ecosystems &amp; Data Infrastructure
+            </h5>
+            <p class="mb-2">
+                No package exists in isolation. Library updates ripple through dependency graphs, security
+                vulnerabilities propagate across ecosystems, and the health of a single widely-used artifact
+                can affect thousands of downstream projects. Understanding these ecosystem-level dynamics
+                requires treating software not as individual repositories but as interconnected networks.
+            </p>
+            <p class="mb-0 text-muted">
+                I apply graph mining and repository analysis to map how package ecosystems evolve structurally
+                over time. Separately, I contribute to the <a href="https://www.airqo.net/" target="_blank">AirQo</a>
+                project, where the focus is on building and evaluating reliable data pipelines for
+                large-scale environmental monitoring across Africa.
+            </p>
+        </div>
+
+        <p class="text-muted mt-4 small">
+            For the full list of papers and artifacts, see the
+            <a href="{{ '/publications' | relative_url }}">Publications</a> page.
+            Visual highlights of selected projects are on the
+            <a href="{{ '/showcase' | relative_url }}">Showcase</a> page.
+        </p>
+
+    </div>
+</div>
