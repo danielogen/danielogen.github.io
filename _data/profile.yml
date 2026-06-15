@@ -30,11 +30,9 @@ short_bio: >-
     and <a href="https://scholar.google.com/citations?user=3nyGpX4AAAAJ" target="_blank">Prof. Michel R.V. Chaudron</a>)
     and a BSc in Computer Science from Gulu University, Uganda.
     My research lies at the intersection of <strong>Empirical Software Engineering</strong> and
-    <strong>AI for Software Engineering</strong>, with publications in venues including
-    ASE, SCAM, MSR, AIware (co-located with FSE), the <em>Empirical Software Engineering</em> (EMSE) journal, and SEDE.
-    I serve the research community as a Junior PC member for MSR 2026, a PC member for ESEC/FSE 2026
-    (Ideas, Visions, and Reflections track), and a reviewer for Springer Nature Scientific Reports,
-    Elsevier Data in Brief, and the Journal of Advances in Information Technology.
+    <strong>Agentic AI</strong>, with publications in venues including
+    ASE, SCAM, MSR, AIware, MSR, EMSE.
+    I also serve the research community as a reviewer in several top tier software engineering conferences and journals e.g MSR, ESEC/FSE, ICSME, ISSAT, ASE, ACM TOCE, Springer Nature Scientific Reports, Elsevier Data in Brief, the Journal of Advances in Information Technology, etc.
   </p>
   <p>
     <em>"And you will know the truth, and the truth will set you free."</em> — John 8:32
@@ -88,19 +86,21 @@ experience:
   date: 2022 - 2023
 
 awards:
+- name: UNLV College of Engineering Marjorie & Victor Kunkel Engineering Scholarship
+  date: 2026
 - name: Distinguished Artifact Award, IEEE SCAM 2025
   date: 2025
-- name: GPSA Research Grant ($1,249.61)
+- name: UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,249.61)
   date: 2025
 - name: UNLV Access Grant ($2,000)
   date: 2024
-- name: Roy and Helen Kelsall Scholarship Fund ($1,000)
+- name: UNLV College of Engineering Roy and Helen Kelsall Scholarship Fund ($1,000)
   date: 2024
-- name: GPSA Research Grant ($1,456)
+- name: UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,456)
   date: 2024
 - name: MTN MoMo Open API Challenge — 1st Runner-up ($2,000)
   date: 2019
-- name: Mak–Sida Bilateral Program Scholarship ($15,000)
+- name: Makerere University Mak–Sida Bilateral Program Scholarship (~$15,000)
   date: 2018
-- name: First-Class Honours, BSc Computer Science
+- name: Gulu University First-Class Honours, BSc Computer Science
   date: 2013

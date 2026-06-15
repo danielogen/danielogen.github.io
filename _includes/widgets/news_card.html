@@ -1,26 +1,39 @@
-{% assign news_by_year = site.news | sort: "date" | reverse | slice: 0, include.limit | group_by_exp: "item", "item.date | date: '%Y'" -%}
+{%- comment -%}
+News are stored one file per year in _news/<year>.md, each with a `year` field
+and a `news` list of { date, title } items. We render years newest-first and,
+within each year, items newest-first, stopping once `include.limit` items shown.
+{%- endcomment -%}
+{% assign limit = include.limit | default: 9999 %}
+{% assign year_docs = site.news | sort: "year" | reverse %}
 
 <div class="my-3 bg-white shadow-sm rounded-xl">
     <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-rss"></i> News</h6>
     <div class="px-3 pb-1 small">
-        {% for year in news_by_year %}
-        <div class="media py-1 {% if not_first -%}border-top border-gray{%- endif %}">
-            {% assign not_first = true %}
-            <div class="mr-3 text-muted my-1">{{ year.name }}</div>
+        {% assign shown = 0 %}
+        {% assign first_year = true %}
+        {% for year_doc in year_docs %}
+        {% if shown >= limit %}{% break %}{% endif %}
+        {% assign items = year_doc.news | sort: "date" | reverse %}
+        {% if items.size == 0 %}{% continue %}{% endif %}
+        <div class="media py-1 {% unless first_year %}border-top border-gray{% endunless %}">
+            <div class="mr-3 text-muted my-1">{{ year_doc.year }}</div>
             <div class="media-body">
-                {% for item in year.items %}
+                {% for item in items %}
+                {% if shown >= limit %}{% break %}{% endif %}
                 <div class="my-1 d-flex">
                     <div>
-                        {% if forloop.first and forloop.parentloop.first %}
+                        {% if forloop.first and first_year %}
                         <span class="badge badge-pill badge-success mr-1">Latest</span>
                         {% endif %}
                         {{ item.title }}
                     </div>
                     <div class="ml-auto mt-auto text-muted no-break"><i>{{ item.date | date: "%b %d" }}</i></div>
                 </div>
+                {% assign shown = shown | plus: 1 %}
                 {% endfor %}
             </div>
         </div>
+        {% assign first_year = false %}
         {% endfor %}
     </div>
 </div>

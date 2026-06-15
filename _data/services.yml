@@ -1,17 +1,30 @@
 program_committee:
+  - venue: ISSAT 2026
+    role: PC Member
+    track: Artifact Evaluation
+    year: 2026
+  - venue: ICSME 2026
+    role: PC Member
+    track: Industry Track
+    year: 2026
   - venue: ESEC/FSE 2026
     role: PC Member
     track: Ideas, Visions, and Reflections
     year: 2026
   - venue: MSR 2026
     role: Junior PC Member
+    track: Technical Track
     year: 2026
 
 journal_reviewing:
-  - name: Springer Nature Scientific Reports
+  - name: ACM Transactions on Computing Education
+    publisher: ACM
+  - name: Scientific Reports
+    publisher: Springer Nature
   - name: Data in Brief
     publisher: Elsevier
   - name: Journal of Advances in Information Technology
+    publisher: Unknown
 
 memberships:
   - name: ACM
