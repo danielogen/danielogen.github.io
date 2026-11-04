@@ -3,260 +3,488 @@
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Publications - Daniel Ogenrwot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Publications | Daniel Ogenrwot</title>
 
-    <!-- SEO -->
-    <meta name="description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="author" content="Daniel Ogenrwot">
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Publications - Daniel Ogenrwot">
-    <meta property="og:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielogen.github.io/publications.html">
-    <meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
-    <meta property="og:site_name" content="Daniel Ogenrwot">
+<!-- SEO -->
+<meta name="description" content="Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality.">
+<meta name="author" content="Daniel Ogenrwot">
+<link rel="canonical" href="https://danielogen.github.io/publications.html">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Publications - Daniel Ogenrwot">
-    <meta name="twitter:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Publications | Daniel Ogenrwot">
+<meta property="og:description" content="Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://danielogen.github.io/publications.html">
+<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:site_name" content="Daniel Ogenrwot">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/global.css">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Publications | Daniel Ogenrwot">
+<meta name="twitter:description" content="Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality.">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
 </head>
-<body class="bg-light" data-spy="scroll" data-target="#navbar-year" data-offset="100">
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
+<body >
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
     <div class="container-lg">
-        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
+                
+                
                 <li class="nav-item ">
-                    <a class="nav-link" href="/">About</a>
+                    <a class="nav-link" href="/" >About</a>
                 </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/research" >Research</a>
+                </li>
+                
+                
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/publications">Publications</a>
+                    <a class="nav-link" href="/publications" aria-current="page">Publications</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/teaching">Teaching</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/services">Services</a>
+                    <a class="nav-link" href="/services" >Service</a>
                 </li>
                 
+                
+                
                 <li class="nav-item ">
-                    <a class="nav-link" href="/showcase">Showcase</a>
+                    <a class="nav-link" href="/teaching" >Teaching</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/showcase" >Showcase</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog" >Blog</a>
                 </li>
                 
             </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down"></i> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-    <div class="container-lg">
+    <main id="main" class="container-lg">
         
 
 
 
-<div class="row">
-    <div class="col-12 col-lg-10">
+<header class="page-header">
+    <span class="eyebrow">Research output</span>
+    <h1>Publications</h1>
+    <p class="lead">
+        19 papers, datasets, and preprints. Citation counts are synced weekly from
+        <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+        Also on <a href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener">DBLP</a>.
+    </p>
+</header>
 
-        <div class="my-3 px-1 d-flex align-items-center justify-content-between flex-wrap" style="gap: 0.5rem;">
-            <p class="mb-0 text-muted small">
-                <!-- Showing <strong>10</strong> publications from 2022 onwards
-                (13 total) &mdash; -->
-                <b Showing <strong>10</strong> publications from 2022 onwards &mdash;
-                <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank">
-                    For the latest publication list, please refer to Googe Scholar <i class="fas fa-external-link-alt fa-xs"></i></b>
-                </a>
-            </p>
+<div class="pub-toolbar">
+    <div class="d-flex flex-wrap align-items-center" style="gap: .75rem;">
+        <label class="pub-search mb-0">
+            <span class="sr-only">Search publications</span>
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="search" id="pub-search" placeholder="Search by title, author, or venue…" autocomplete="off">
+        </label>
+        <div class="filter-group" role="group" aria-label="Filter by type">
+            <button class="filter-btn active" type="button" data-filter="all">All <span class="count">19</span></button>
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="conference">Conference <span class="count">6</span></button>
+            
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="journal">Journal <span class="count">4</span></button>
+            
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="dataset">Dataset <span class="count">3</span></button>
+            
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="poster">Poster <span class="count">1</span></button>
+            
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="chapter">Book Chapter <span class="count">1</span></button>
+            
+            
+            
+            
+            
+            <button class="filter-btn" type="button" data-filter="preprint">Preprint <span class="count">4</span></button>
+            
+            
         </div>
-
-        
-        <h2 class="pt-4" id="year-2026">2026</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/patchtrack" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Patchtrack: a comprehensive analysis of chatgpt’s influence on pull request outcomes</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">The rapid adoption of large language models (LLMs) like ChatGPT has introduced new dynamics in software development, particularly within pull request workflows. We analyze 338 pull requests from 255 GitHub repositories containing self-admitted ChatGPT usage, comprising 645 AI-generated snippets and 3,486 developer-authored patches.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                
-                
-                
-                <a target="_blank" href="https://github.com/unlv-evol/PatchTrack">[Dataset & Code]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none border-bottom border-gray rounded-xl-top  " data-src="">
-    <div class="w-100 rounded-xl-top " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Patchtrack: a comprehensive analysis of chatgpt’s influence on pull request outcomes</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">The rapid adoption of large language models (LLMs) like ChatGPT has introduced new dynamics in software development, particularly within pull request workflows. We analyze 338 pull requests from 255 GitHub repositories containing self-admitted ChatGPT usage, comprising 645 AI-generated snippets and 3,486 developer-authored patches.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://github.com/unlv-evol/PatchTrack">[Dataset & Code]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/aiware-agenticflict" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Large-scale dataset of 142K+ agentic pull requests from 59K+ repositories, identifying 29K PRs with merge conflicts and extracting 336K+ fine-grained conflict regions across AI coding agents (Copilot, Devin, Cursor, and others).</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://arxiv.org/abs/2604.03551">[Preprint]</a>
-                
-                
-                
-                <a target="_blank" href="https://zenodo.org/records/19396917">[Dataset & Code]</a>
-                
-                
-            </p>
-
+        <div class="filter-group ml-lg-auto" role="group" aria-label="Sort order">
+            <button class="filter-btn sort-btn active" type="button" data-sort="year"><i class="fas fa-calendar"></i> Newest</button>
+            <button class="filter-btn sort-btn" type="button" data-sort="cited"><i class="fas fa-arrow-trend-up"></i> Most cited</button>
         </div>
     </div>
 </div>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Large-scale dataset of 142K+ agentic pull requests from 59K+ repositories, identifying 29K PRs with merge conflicts and extracting 336K+ fine-grained conflict regions across AI coding agents (Copilot, Devin, Cursor, and others).</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://arxiv.org/abs/2604.03551">[Preprint]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://zenodo.org/records/19396917">[Dataset & Code]</a>
-                    
-                    
-                </p>
-            </div>
+<div id="pub-list">
+    
+    <section class="pub-year-group" data-year="2026">
+        <div class="pub-year" id="year-2026"><h2>2026</h2></div>
+        <div class="panel">
+            
+            <article class="pub-item" data-type="preprint" data-citations="0" data-search="pyreprism: a shared lexical foundation for polyglot code analysis daniel ogenrwot jorge gonzalo delgado cervantes richard sserunjogi john businge arxiv preprint arxiv:2610.39224 arxiv 2026 2026">
+    <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener">PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>arXiv preprint arXiv:2610.39224</i>, 2026
+            
+        </div>
+        <p class="pub-abstract">An open-source Python library and CLI that defines each language's lexical rules once and runs shared analyses on the token stream, supporting 187 languages. Comment and string classification reach F1 of 0.994 and 0.958 on 1,412 files in 12 languages, running 3x faster than assembled per-language tools.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@misc{ogenrwot2026pyreprism,
+  title = {PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis},
+  author = {Daniel Ogenrwot and Jorge Gonzalo Delgado Cervantes and Richard Sserunjogi and John Businge},
+  howpublished = {arXiv preprint arXiv:2610.39224},
+  year = {2026},
+  url = {https://arxiv.org/abs/2610.39224}
+}
+</pre>
         </div>
     </div>
+</article>
 
-</div>
             
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/msr-ai-coding-agents" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>MSR 2026 — Mining Challenge Track</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Large-scale empirical comparison of ~24,000 merged agentic pull requests against 5,000 human-authored PRs using the AIDev dataset, examining additions, deletions, commits, and files modified. Finds that AI-generated PRs show substantially higher commit counts and slightly superior description-to-code alignment across multiple similarity measures.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests">[Paper]</a>
-                
-                
-            </p>
-
+            <article class="pub-item" data-type="preprint" data-citations="1" data-search="prompt quality and pull request outcomes: a stage-based empirical study of llm-assisted development richard sserunjogi daniel ogenrwot john businge arxiv preprint arxiv:2606.19644 arxiv 2026 2026">
+    <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener">Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development</a></h3>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>arXiv preprint arXiv:2606.19644</i>, 2026
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:4JMBOYKVnBMC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 1 citation</a>
+        </div>
+        <p class="pub-abstract">Using 265 manually validated developer–ChatGPT interactions from open-source pull requests, finds that prompt Specificity and Context relate most to actionable code generation, while Verification is the strongest predictor of code adoption.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@misc{sserunjogi2026prompt,
+  title = {Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development},
+  author = {Richard Sserunjogi and Daniel Ogenrwot and John Businge},
+  howpublished = {arXiv preprint arXiv:2606.19644},
+  year = {2026},
+  url = {https://arxiv.org/abs/2606.19644}
+}
+</pre>
         </div>
     </div>
-</div>
+</article>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>MSR 2026 — Mining Challenge Track</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Large-scale empirical comparison of ~24,000 merged agentic pull requests against 5,000 human-authored PRs using the AIDev dataset, examining additions, deletions, commits, and files modified. Finds that AI-generated PRs show substantially higher commit counts and slightly superior description-to-code alignment across multiple similarity measures.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
+            
+            <article class="pub-item" data-type="journal" data-citations="19" data-search="patchtrack: a comprehensive analysis of chatgpt&#39;s influence on pull request outcomes daniel ogenrwot john businge empirical software engineering (emse) emse 2026 2026">
+    <div class="pub-venue ">EMSE 2026<span class="pub-type">Journal</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>Empirical Software Engineering (EMSE)</i>, 31(5), 136, 2026
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19 citations</a>
+        </div>
+        <p class="pub-abstract">Analyzes 338 pull requests from 255 GitHub repositories with self-admitted ChatGPT usage, comprising 645 AI-generated snippets and 3,486 developer-authored patches. Full adoption of AI-generated code is infrequent (median integration rate of 25%); developers rely on selective extraction and iterative refinement.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <a class="pub-link" href="https://arxiv.org/abs/2505.07700" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <a class="pub-link" href="https://github.com/unlv-evol/PatchTrack" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@article{ogenrwot2026patchtrack,
+  title = {PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes},
+  author = {Daniel Ogenrwot and John Businge},
+  journal = {Empirical Software Engineering (EMSE)},
+  year = {2026},
+  url = {https://link.springer.com/article/10.1007/s10664-026-10869-5}
+}
+</pre>
         </div>
     </div>
+</article>
 
-</div>
             
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/sede-airqo-pipeline" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</h5>
-            <p class="mt-0 mb-0 small"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            <article class="pub-item" data-type="dataset" data-citations="7" data-search="agenticflict: a large-scale dataset of merge conflicts in ai coding agent pull requests on github daniel ogenrwot john businge 3rd acm international conference on ai-powered software (aiware), benchmark &amp; dataset track aiware 2026 2026">
+    <div class="pub-venue ">AIware 2026<span class="pub-type">Dataset</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>3rd ACM International Conference on AI-Powered Software (AIware), Benchmark & Dataset Track</i>, 2026
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 7 citations</a>
+        </div>
+        <p class="pub-abstract">Large-scale dataset of 142K+ agentic pull requests from 59K+ repositories, identifying 29K PRs with merge conflicts and extracting 336K+ fine-grained conflict regions across AI coding agents (Copilot, Devin, Cursor, and others).</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <a class="pub-link" href="https://zenodo.org/records/19396917" target="_blank" rel="noopener"><i class="fas fa-database"></i> Dataset & Code</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2026agenticflict,
+  title = {AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub},
+  author = {Daniel Ogenrwot and John Businge},
+  booktitle = {3rd ACM International Conference on AI-Powered Software (AIware), Benchmark & Dataset Track},
+  year = {2026},
+  url = {https://arxiv.org/abs/2604.03551}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="preprint" data-citations="0" data-search="movis: a visual analytics tool for surfacing missed patches across software variants jorge gonzalo delgado cervantes john businge daniel ogenrwot arxiv preprint arxiv:2604.01494 arxiv 2026 2026">
+    <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2604.01494" target="_blank" rel="noopener">MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants</a></h3>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong></span></div>
+        <div class="pub-meta">
+            <i>arXiv preprint arXiv:2604.01494</i>, 2026
+            
+        </div>
+        <p class="pub-abstract">An interactive desktop tool that surfaces missed-opportunity patches between a source and a target software variant, placing patched and buggy code side by side so developers can find overlooked fixes.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2604.01494" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@misc{cervantes2026movis,
+  title = {MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants},
+  author = {Jorge Gonzalo Delgado Cervantes and John Businge and Daniel Ogenrwot},
+  howpublished = {arXiv preprint arXiv:2604.01494},
+  year = {2026},
+  url = {https://arxiv.org/abs/2604.01494}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="conference" data-citations="19" data-search="how ai coding agents modify code: a large-scale study of github pull requests daniel ogenrwot john businge 23rd international conference on mining software repositories (msr), mining challenge track msr 2026 2026">
+    <div class="pub-venue ">MSR 2026<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>23rd International Conference on Mining Software Repositories (MSR), Mining Challenge Track</i>, 2026
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:-f6ydRqryjwC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19 citations</a>
+        </div>
+        <p class="pub-abstract">Large-scale empirical comparison of ~24,000 merged agentic pull requests against 5,000 human-authored PRs using the AIDev dataset, examining additions, deletions, commits, and files modified. Finds that AI-generated PRs show substantially higher commit counts and slightly superior description-to-code alignment across multiple similarity measures.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2026how,
+  title = {How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests},
+  author = {Daniel Ogenrwot and John Businge},
+  booktitle = {23rd International Conference on Mining Software Repositories (MSR), Mining Challenge Track},
+  year = {2026},
+  url = {https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="journal" data-citations="2" data-search="a low-cost modular precision irrigation system for resource-constrained environments b oyo aj asiku daniel ogenrwot vp kawagga j byabazaire ck akello smart agricultural technology smartagtech 2026 2026">
+    <div class="pub-venue ">SmartAgTech 2026<span class="pub-type">Journal</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title">A Low-Cost Modular Precision Irrigation System for Resource-Constrained Environments</h3>
+        <div class="pub-authors"><span class="text-body">
+            B Oyo, </span><span class="text-body">
+            AJ Asiku, </span><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
+            VP Kawagga, </span><span class="text-body">
+            J Byabazaire, </span><span class="text-body">
+            CK Akello</span></div>
+        <div class="pub-meta">
+            <i>Smart Agricultural Technology</i>, 102309, 2026
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:RHpTSmoSYBkC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://scholar.google.com/scholar?q=%22A+low-cost+modular+precision+irrigation+system+for+resource-constrained+environments%22" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@article{oyo2026a,
+  title = {A Low-Cost Modular Precision Irrigation System for Resource-Constrained Environments},
+  author = {B Oyo and AJ Asiku and Daniel Ogenrwot and VP Kawagga and J Byabazaire and CK Akello},
+  journal = {Smart Agricultural Technology},
+  year = {2026}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+        </div>
+    </section>
+    
+    <section class="pub-year-group" data-year="2025">
+        <div class="pub-year" id="year-2025"><h2>2025</h2></div>
+        <div class="panel">
+            
+            <article class="pub-item" data-type="conference" data-citations="6" data-search="refactoring-aware patch integration across structurally divergent java forks daniel ogenrwot john businge 2025 ieee international conference on source code analysis &amp; manipulation (scam) scam 2025 2025">
+    <div class="pub-venue is-award"><i class="fas fa-trophy" aria-hidden="true"></i> SCAM 2025<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i>, 2025 <span class="award-badge"><i class="fas fa-award"></i> Distinguished Artifact Award</span>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:QIV2ME_5wuYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 6 citations</a>
+        </div>
+        <p class="pub-abstract">RePatch addresses structural drift in divergent software variants through refactoring-aware patch integration, achieving 52.8% success on previously failing patches.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <a class="pub-link" href="https://github.com/unlv-evol/RePatch" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2025refactoring,
+  title = {Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks},
+  author = {Daniel Ogenrwot and John Businge},
+  booktitle = {2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)},
+  year = {2025},
+  url = {https://ieeexplore.ieee.org/document/11190222}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="conference" data-citations="11" data-search="design and evaluation of a scalable data pipeline for ai-driven air quality monitoring in low-resource settings richard sserunjogi daniel ogenrwot nicholas niwamanya noah nsimbe martin bbaale benjamin ssempala noble mutabazi raja fidel wabinyai deo okure engineer bainomugisha 34th international conference on software engineering and data engineering (sede) sede 2025 2025">
+    <div class="pub-venue ">SEDE 2025<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</a></h3>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
             Nicholas Niwamanya, </span><span class="text-body">
             Noah Nsimbe, </span><span class="text-body">
@@ -264,431 +492,433 @@
             Benjamin Ssempala, </span><span class="text-body">
             Noble Mutabazi, </span><span class="text-body">
             Raja Fidel Wabinyai, </span><span class="text-body">
-            Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Engineer-Bainomugisha">Engineer Bainomugisha</a></p>
-            <p class="mt-0 mb-0 small"><i>Software and Data Engineering (SEDE)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Cloud-native ETL system leveraging Apache Airflow, Kafka, and BigQuery for processing air quality data across African urban deployments.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14">[Paper]</a>
-                
-                
-            </p>
-
+            Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Engineer-Bainomugisha">Engineer Bainomugisha</a></div>
+        <div class="pub-meta">
+            <i>34th International Conference on Software Engineering and Data Engineering (SEDE)</i>, 2025
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:dhFuZR0502QC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 11 citations</a>
+        </div>
+        <p class="pub-abstract">Cloud-native ETL system leveraging Apache Airflow, Kafka, and BigQuery for processing air quality data across African urban deployments.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{sserunjogi2025design,
+  title = {Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings},
+  author = {Richard Sserunjogi and Daniel Ogenrwot and Nicholas Niwamanya and Noah Nsimbe and Martin Bbaale and Benjamin Ssempala and Noble Mutabazi and Raja Fidel Wabinyai and Deo Okure and Engineer Bainomugisha},
+  booktitle = {34th International Conference on Software Engineering and Data Engineering (SEDE)},
+  year = {2025},
+  url = {https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14}
+}
+</pre>
         </div>
     </div>
-</div>
+</article>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</h5>
-                <p class="mt-0 mb-0 small"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            
+            <article class="pub-item" data-type="conference" data-citations="2" data-search="structural and connectivity patterns in the maven central software dependency network daniel ogenrwot john businge shaikh arifuzzaman 34th international conference on software engineering and data engineering (sede) sede 2025 2025">
+    <div class="pub-venue ">SEDE 2025<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~arifuzza/">Shaikh Arifuzzaman</a></div>
+        <div class="pub-meta">
+            <i>34th International Conference on Software Engineering and Data Engineering (SEDE)</i>, 2025
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:7PzlFSSx8tAC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
+        </div>
+        <p class="pub-abstract">Study of the Maven Central ecosystem using network science, analyzing 1.3M nodes and 20.9M edges to reveal scale-free topology and systemic risks from critical infrastructure hubs.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2025structural,
+  title = {Structural and Connectivity Patterns in the Maven Central Software Dependency Network},
+  author = {Daniel Ogenrwot and John Businge and Shaikh Arifuzzaman},
+  booktitle = {34th International Conference on Software Engineering and Data Engineering (SEDE)},
+  year = {2025},
+  url = {https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="chapter" data-citations="2" data-search="case study of participatory data-driven approaches to improve urban air quality in kampala, uganda deo okure engineer bainomugisha daniel ogenrwot richard sserunjogi p adrine g okello urban health in africa jhu press 2025 2025">
+    <div class="pub-venue ">JHU Press 2025<span class="pub-type">Book Chapter</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title">Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda</h3>
+        <div class="pub-authors"><span class="text-body">
+            Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Engineer-Bainomugisha">Engineer Bainomugisha</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            P Adrine, </span><span class="text-body">
+            G Okello</span></div>
+        <div class="pub-meta">
+            <i>Urban Health in Africa</i> (Book chapter), Johns Hopkins University Press, 2025
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:eQOLeE2rZwMC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://scholar.google.com/scholar?q=%22Case+study+of+participatory+data-driven+approaches+to+improve+urban+air+quality+in+Kampala%22" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@incollection{okure2025case,
+  title = {Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda},
+  author = {Deo Okure and Engineer Bainomugisha and Daniel Ogenrwot and Richard Sserunjogi and P Adrine and G Okello},
+  booktitle = {Urban Health in Africa},
+  year = {2025}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+            <article class="pub-item" data-type="journal" data-citations="0" data-search="a collaborative digital platform for green charcoal production data management kevin aber daniel ogenrwot b oyo geoffrey olok tabo l dirckinck-holmfeld international journal of business, engineering &amp; technology (ijbest) ijbest 2025 2025">
+    <div class="pub-venue ">IJBEST 2025<span class="pub-type">Journal</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title">A Collaborative Digital Platform for Green Charcoal Production Data Management</h3>
+        <div class="pub-authors"><span class="text-body">
+            Kevin Aber, </span><span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
-            Nicholas Niwamanya, </span><span class="text-body">
-            Noah Nsimbe, </span><span class="text-body">
-            Martin Bbaale, </span><span class="text-body">
-            Benjamin Ssempala, </span><span class="text-body">
-            Noble Mutabazi, </span><span class="text-body">
-            Raja Fidel Wabinyai, </span><span class="text-body">
-            Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Engineer-Bainomugisha">Engineer Bainomugisha</a></p>
-                <p class="mt-0 mb-0 small"><i>Software and Data Engineering (SEDE)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Cloud-native ETL system leveraging Apache Airflow, Kafka, and BigQuery for processing air quality data across African urban deployments.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
+            B Oyo, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Geoffrey-Olok-Tabo">Geoffrey Olok Tabo</a>, <span class="text-body">
+            L Dirckinck-Holmfeld</span></div>
+        <div class="pub-meta">
+            <i>International Journal of Business, Engineering & Technology (IJBEST)</i>, 1(1), 2025
+            
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://scholar.google.com/scholar?q=%22A+Collaborative+Digital+Platform+for+Green+Charcoal+Production+Data+Management%22" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Scholar</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@article{aber2025a,
+  title = {A Collaborative Digital Platform for Green Charcoal Production Data Management},
+  author = {Kevin Aber and Daniel Ogenrwot and B Oyo and Geoffrey Olok Tabo and L Dirckinck-Holmfeld},
+  journal = {International Journal of Business, Engineering & Technology (IJBEST)},
+  year = {2025}
+}
+</pre>
         </div>
     </div>
+</article>
 
-</div>
             
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters  border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/sede-maven-network" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~arifuzza/">Shaikh Arifuzzaman</a></p>
-            <p class="mt-0 mb-0 small"><i>Software and Data Engineering (SEDE)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Study of the Maven Central ecosystem using network science, analyzing 1.3M nodes and 20.9M edges to reveal scale-free topology and systemic risks from critical infrastructure hubs.</p>
+        </div>
+    </section>
+    
+    <section class="pub-year-group" data-year="2024">
+        <div class="pub-year" id="year-2024"><h2>2024</h2></div>
+        <div class="panel">
             
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9">[Paper]</a>
-                
-                
-            </p>
-
+            <article class="pub-item" data-type="poster" data-citations="14" data-search="patchtrack: analyzing chatgpt&#39;s impact on software patch decision-making in pull requests daniel ogenrwot john businge 39th ieee/acm international conference on automated software engineering (ase), posters track ase 2024 2024">
+    <div class="pub-venue ">ASE 2024<span class="pub-type">Poster</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE), Posters Track</i>, 2024
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 14 citations</a>
+        </div>
+        <p class="pub-abstract">Empirical study investigating how ChatGPT-generated patches influence pull request acceptance decisions, examining 338 pull requests across open-source projects.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2024patchtrack,
+  title = {PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests},
+  author = {Daniel Ogenrwot and John Businge},
+  booktitle = {39th IEEE/ACM International Conference on Automated Software Engineering (ASE), Posters Track},
+  year = {2024},
+  url = {https://dl.acm.org/doi/10.1145/3691620.3695338}
+}
+</pre>
         </div>
     </div>
-</div>
+</article>
 
-<div class="row no-gutters d-md-none  border-gray  rounded-xl-bottom " data-src="">
-    <div class="w-100  rounded-xl-bottom" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~arifuzza/">Shaikh Arifuzzaman</a></p>
-                <p class="mt-0 mb-0 small"><i>Software and Data Engineering (SEDE)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Study of the Maven Central ecosystem using network science, analyzing 1.3M nodes and 20.9M edges to reveal scale-free topology and systemic risks from critical infrastructure hubs.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
+            
+            <article class="pub-item" data-type="preprint" data-citations="2" data-search="empirical investigation of the relationship between design smells and role stereotypes daniel ogenrwot joyce nakatumba-nabende john businge michel r.v. chaudron arxiv arxiv 2024 2024">
+    <div class="pub-venue ">arXiv 2024<span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/html/2406.19254v1" target="_blank" rel="noopener">Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Michel-Chaudron">Michel R.V. Chaudron</a></div>
+        <div class="pub-meta">
+            <i>arXiv</i>, 2024
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:Tyk-4Ss8FVUC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
+        </div>
+        <p class="pub-abstract">Analysis of 11,350 classes from 30 repositories revealing that design smell prevalence varies across role-stereotypes and application ecosystems.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/html/2406.19254v1" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@misc{ogenrwot2024empirical,
+  title = {Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes},
+  author = {Daniel Ogenrwot and Joyce Nakatumba-Nabende and John Businge and Michel R.V. Chaudron},
+  howpublished = {arXiv},
+  year = {2024},
+  url = {https://arxiv.org/html/2406.19254v1}
+}
+</pre>
         </div>
     </div>
+</article>
 
-</div>
             
         </div>
-        
-        <h2 class="pt-4" id="year-2025">2025</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+    </section>
+    
+    <section class="pub-year-group" data-year="2022">
+        <div class="pub-year" id="year-2022"><h2>2022</h2></div>
+        <div class="panel">
             
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2025/scam-repatch" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i> 2025  <span class="badge badge-pill badge-publication badge-warning">Distinguished Artifact Award</span> <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">RePatch addresses structural drift in divergent software variants through refactoring-aware patch integration, achieving 52.8% success on previously failing patches.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://ieeexplore.ieee.org/document/11190222">[Paper]</a>
-                
-                
-                
-                <a target="_blank" href="https://github.com/unlv-evol/RePatch">[Code]</a>
-                
-                
-            </p>
-
+            <article class="pub-item" data-type="dataset" data-citations="25" data-search="seeing the air in detail: hyperlocal air quality dataset collected from spatially distributed airqo network richard sserunjogi j ssematimba deo okure daniel ogenrwot p adong l muyama et al. data in brief data in brief 2022 2022">
+    <div class="pub-venue ">Data in Brief 2022<span class="pub-type">Dataset</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener">Seeing the Air in Detail: Hyperlocal Air Quality Dataset Collected from Spatially Distributed AirQo Network</a></h3>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Richard-Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            J Ssematimba, </span><span class="text-body">
+            Deo Okure, </span><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
+            P Adong, </span><span class="text-body">
+            L Muyama, </span><span class="text-body">
+            et al.</span></div>
+        <div class="pub-meta">
+            <i>Data in Brief</i>, 44, 108512, 2022
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 25 citations</a>
+        </div>
+        <p class="pub-abstract">A hyperlocal air quality dataset collected from the spatially distributed low-cost sensor network of the AirQo project across Ugandan cities.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{sserunjogi2022seeing,
+  title = {Seeing the Air in Detail: Hyperlocal Air Quality Dataset Collected from Spatially Distributed AirQo Network},
+  author = {Richard Sserunjogi and J Ssematimba and Deo Okure and Daniel Ogenrwot and P Adong and L Muyama and others},
+  booktitle = {Data in Brief},
+  year = {2022},
+  url = {https://doi.org/10.1016/j.dib.2022.108512}
+}
+</pre>
         </div>
     </div>
-</div>
+</article>
 
-<div class="row no-gutters d-md-none border-bottom border-gray rounded-xl-top  " data-src="">
-    <div class="w-100 rounded-xl-top " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i> 2025  <span class="badge badge-pill badge-publication badge-warning">Distinguished Artifact Award</span> <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">RePatch addresses structural drift in divergent software variants through refactoring-aware patch integration, achieving 52.8% success on previously failing patches.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11190222">[Paper]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://github.com/unlv-evol/RePatch">[Code]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
+            
+            <article class="pub-item" data-type="conference" data-citations="11" data-search="from undergraduate (software) capstone projects to start-ups: challenges and opportunities in higher institutions of learning daniel ogenrwot geoffrey olok tabo kevin aber joyce nakatumba-nabende federated africa and middle east conference on software engineering (famecse) famecse 2022 2022">
+    <div class="pub-venue ">FAMECSE 2022<span class="pub-type">Conference</span>
     </div>
-
-</div>
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters  border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2025/arxiv-patchtrack-extended" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>Empirical Software Engineering (EMSE)</i> 2025  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Analysis of 338 pull requests examining AI-generated code integration, revealing a median adoption rate of 25% and iterative refinement patterns in software development workflows.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                
-                
-                
-                <a target="_blank" href="https://arxiv.org/abs/2505.07700">[Preprint]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none  border-gray  rounded-xl-bottom " data-src="">
-    <div class="w-100  rounded-xl-bottom" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>Empirical Software Engineering (EMSE)</i> 2025  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Analysis of 338 pull requests examining AI-generated code integration, revealing a median adoption rate of 25% and iterative refinement patterns in software development workflows.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://arxiv.org/abs/2505.07700">[Preprint]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-            
-        </div>
-        
-        <h2 class="pt-4" id="year-2024">2024</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2024/ase-patchtrack" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE)</i> 2024  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Empirical study investigating how ChatGPT-generated patches influence pull request acceptance decisions, examining 338 pull requests across open-source projects.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://dl.acm.org/doi/10.1145/3691620.3695338">[Paper]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none border-bottom border-gray rounded-xl-top  " data-src="">
-    <div class="w-100 rounded-xl-top " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE)</i> 2024  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Empirical study investigating how ChatGPT-generated patches influence pull request acceptance decisions, examining 338 pull requests across open-source projects.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://dl.acm.org/doi/10.1145/3691620.3695338">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters  border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2024/arxiv-design-smells-roles" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Michel-Chaudron">Michel R.V. Chaudron</a></p>
-            <p class="mt-0 mb-0 small"><i>arXiv</i> 2024  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Analysis of 11,350 classes from 30 repositories revealing that design smell prevalence varies across role-stereotypes and application ecosystems.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://arxiv.org/html/2406.19254v1">[Paper]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none  border-gray  rounded-xl-bottom " data-src="">
-    <div class="w-100  rounded-xl-bottom" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Michel-Chaudron">Michel R.V. Chaudron</a></p>
-                <p class="mt-0 mb-0 small"><i>arXiv</i> 2024  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Analysis of 11,350 classes from 30 repositories revealing that design smell prevalence varies across role-stereotypes and application ecosystems.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://arxiv.org/html/2406.19254v1">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-            
-        </div>
-        
-        <h2 class="pt-4" id="year-2022">2022</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
-            
-                
-<div class="d-none d-md-block">
-    <div class="row no-gutters  border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2022/famecse-capstone" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener">From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning</a></h3>
+        <div class="pub-authors"><span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Geoffrey-Olok-Tabo">Geoffrey Olok Tabo</a>, <span class="text-body">
-            Kevin Aber, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a></p>
-            <p class="mt-0 mb-0 small"><i>Federated Africa and Middle East Conference on Software Engineering (FAMECSE)</i> 2022  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted"></p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://dl.acm.org/doi/10.1145/3531056.3542775">[Paper]</a>
-                
-                
-            </p>
-
+            Kevin Aber, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a></div>
+        <div class="pub-meta">
+            <i>Federated Africa and Middle East Conference on Software Engineering (FAMECSE)</i>, 2022
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 11 citations</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2022from,
+  title = {From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning},
+  author = {Daniel Ogenrwot and Geoffrey Olok Tabo and Kevin Aber and Joyce Nakatumba-Nabende},
+  booktitle = {Federated Africa and Middle East Conference on Software Engineering (FAMECSE)},
+  year = {2022},
+  url = {https://dl.acm.org/doi/10.1145/3531056.3542775}
+}
+</pre>
         </div>
     </div>
+</article>
+
+            
+        </div>
+    </section>
+    
+    <section class="pub-year-group" data-year="2021">
+        <div class="pub-year" id="year-2021"><h2>2021</h2></div>
+        <div class="panel">
+            
+            <article class="pub-item" data-type="dataset" data-citations="2" data-search="integration of design smells and role-stereotypes classification dataset daniel ogenrwot joyce nakatumba-nabende michel r.v. chaudron data in brief data in brief 2021 2021">
+    <div class="pub-venue ">Data in Brief 2021<span class="pub-type">Dataset</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener">Integration of design smells and role-stereotypes classification dataset</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Michel-Chaudron">Michel R.V. Chaudron</a></div>
+        <div class="pub-meta">
+            <i>Data in Brief</i>, 2021
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
+        </div>
+        <p class="pub-abstract">Dataset of 2,513 Java classes classified into 6 role-stereotypes with 18 design smell metrics from 12 open-source projects.</p>
+        <div class="pub-links">
+            <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2021integration,
+  title = {Integration of design smells and role-stereotypes classification dataset},
+  author = {Daniel Ogenrwot and Joyce Nakatumba-Nabende and Michel R.V. Chaudron},
+  booktitle = {Data in Brief},
+  year = {2021},
+  url = {https://www.sciencedirect.com/science/article/pii/S2352340921004091}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+        </div>
+    </section>
+    
+    <section class="pub-year-group" data-year="2020">
+        <div class="pub-year" id="year-2020"><h2>2020</h2></div>
+        <div class="panel">
+            
+            <article class="pub-item" data-type="conference" data-citations="4" data-search="comparison of occurrence of design smells in desktop and mobile applications daniel ogenrwot joyce nakatumba-nabende michel rv chaudron 2020 african conference on software engineering (acse) acse 2020 2020">
+    <div class="pub-venue ">ACSE 2020<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" rel="noopener">Comparison of Occurrence of Design Smells in Desktop and Mobile Applications</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Michel-Chaudron">Michel R.V. Chaudron</a></div>
+        <div class="pub-meta">
+            <i>2020 African Conference on Software Engineering (ACSE)</i>, 2020
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 4 citations</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2020comparison,
+  title = {Comparison of Occurrence of Design Smells in Desktop and Mobile Applications},
+  author = {Daniel Ogenrwot and Joyce Nakatumba-Nabende and Michel RV Chaudron},
+  booktitle = {2020 African Conference on Software Engineering (ACSE)},
+  year = {2020},
+  url = {https://ceur-ws.org/Vol-2689/paper2.pdf}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+        </div>
+    </section>
+    
+    <section class="pub-year-group" data-year="2019">
+        <div class="pub-year" id="year-2019"><h2>2019</h2></div>
+        <div class="panel">
+            
+            <article class="pub-item" data-type="journal" data-citations="1" data-search="a rule induction attribution selection algorithm for intrusion detection systems anthony a ashaba drake patrick mirembe daniel ogenrwot robert tumusiime international journal of technology and management ijotm 2019 2019">
+    <div class="pub-venue ">IJOTM 2019<span class="pub-type">Journal</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://ijotm.utamu.ac.ug/index.php/ijotm/article/view/43" target="_blank" rel="noopener">A Rule Induction Attribution Selection Algorithm for Intrusion Detection Systems</a></h3>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Anthony-Ashaba">Anthony A Ashaba</a>, <span class="text-body">
+            Drake Patrick Mirembe, </span><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
+            Robert Tumusiime</span></div>
+        <div class="pub-meta">
+            <i>International Journal of Technology and Management</i>, 2019
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 1 citation</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://ijotm.utamu.ac.ug/index.php/ijotm/article/view/43" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@article{ashaba2019a,
+  title = {A Rule Induction Attribution Selection Algorithm for Intrusion Detection Systems},
+  author = {Anthony A Ashaba and Drake Patrick Mirembe and Daniel Ogenrwot and Robert Tumusiime},
+  journal = {International Journal of Technology and Management},
+  year = {2019},
+  url = {https://ijotm.utamu.ac.ug/index.php/ijotm/article/view/43}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
+        </div>
+    </section>
+    
+    <div class="panel" id="pub-flat" style="display: none;"></div>
+    <div class="pub-empty panel" id="pub-empty"><i class="fas fa-magnifying-glass fa-2x mb-3 d-block"></i>No publications match your search.</div>
 </div>
 
-<div class="row no-gutters d-md-none  border-gray rounded-xl-top rounded-xl-bottom " data-src="">
-    <div class="w-100 rounded-xl-top rounded-xl-bottom" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Geoffrey-Olok-Tabo">Geoffrey Olok Tabo</a>, <span class="text-body">
-            Kevin Aber, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a></p>
-                <p class="mt-0 mb-0 small"><i>Federated Africa and Middle East Conference on Software Engineering (FAMECSE)</i> 2022  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted"></p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://dl.acm.org/doi/10.1145/3531056.3542775">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-            
-        </div>
-        
-
-    </div>
-
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            
-            <a class="nav-link d-block" href="#year-2026">2026</a>
-            
-            <a class="nav-link d-block" href="#year-2025">2025</a>
-            
-            <a class="nav-link d-block" href="#year-2024">2024</a>
-            
-            <a class="nav-link d-block" href="#year-2022">2022</a>
-            
-        </div>
-    </div>
-
-</div>
-
-    </div>
-    <footer class="footer border-top py-2 mt-5 bg-white small">
+    </main>
+    <footer class="site-footer">
     <div class="container-lg">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
                 </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
-                </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
+</div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a><a href="/blog">Blog</a>
+                </nav>
             </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                <div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
         </div>
     </div>
 </footer>
 
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/bubble_visual_hash.js"></script>
-    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script src="/assets/js/common.js"></script>
+
 </body>
 </html>

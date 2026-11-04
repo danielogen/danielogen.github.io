@@ -3,353 +3,562 @@
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Showcase - Daniel Ogenrwot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Showcase | Daniel Ogenrwot</title>
 
-    <!-- SEO -->
-    <meta name="description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="author" content="Daniel Ogenrwot">
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Showcase - Daniel Ogenrwot">
-    <meta property="og:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielogen.github.io/showcase.html">
-    <meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
-    <meta property="og:site_name" content="Daniel Ogenrwot">
+<!-- SEO -->
+<meta name="description" content="Research projects and open artifacts by Daniel Ogenrwot: AgenticFlict, PatchTrack, RePatch, PyReprism, and datasets for empirical software engineering.">
+<meta name="author" content="Daniel Ogenrwot">
+<link rel="canonical" href="https://danielogen.github.io/showcase.html">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Showcase - Daniel Ogenrwot">
-    <meta name="twitter:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Showcase | Daniel Ogenrwot">
+<meta property="og:description" content="Research projects and open artifacts by Daniel Ogenrwot: AgenticFlict, PatchTrack, RePatch, PyReprism, and datasets for empirical software engineering.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://danielogen.github.io/showcase.html">
+<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:site_name" content="Daniel Ogenrwot">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/global.css">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Showcase | Daniel Ogenrwot">
+<meta name="twitter:description" content="Research projects and open artifacts by Daniel Ogenrwot: AgenticFlict, PatchTrack, RePatch, PyReprism, and datasets for empirical software engineering.">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
 </head>
-<body class="bg-light" >
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
-    <div class="container-xl">
-        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+<body >
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+    <div class="container-lg">
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">About</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/publications">Publications</a>
+                    <a class="nav-link" href="/" >About</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/teaching">Teaching</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/services">Services</a>
+                    <a class="nav-link" href="/research" >Research</a>
                 </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/publications" >Publications</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services" >Service</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/teaching" >Teaching</a>
+                </li>
+                
+                
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/showcase">Showcase</a>
+                    <a class="nav-link" href="/showcase" aria-current="page">Showcase</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog" >Blog</a>
                 </li>
                 
             </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down"></i> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-    <div class="container-xl">
+    <main id="main" class="container-lg">
+        <header class="page-header">
+    <span class="eyebrow">Projects &amp; artifacts</span>
+    <h1>Showcase</h1>
+    <p class="lead">
+        The questions behind my research, what we found, and the tools and datasets we released so others can build on them.
+    </p>
+</header>
+
+<div class="panel stats stats-4 mb-5">
+    <div class="stat"><div class="stat-value">7</div><div class="stat-label">Projects</div></div>
+    <div class="stat"><div class="stat-value">3</div><div class="stat-label">Open tools &amp; code</div></div>
+    <div class="stat"><div class="stat-value">3</div><div class="stat-label">Public datasets</div></div>
+    <div class="stat"><div class="stat-value">1</div><div class="stat-label">Awards</div></div>
+</div>
+
+<!-- Spotlight projects -->
+<section class="mb-5">
+    <article class="spotlight reveal" id="agenticflict">
+        <figure class="spotlight-figure">
+            <img src="/assets/images/covers/agenticflict-overview.png" alt="AgenticFlict: Dataset curation workflow" loading="lazy">
+            <figcaption>Fig. 1: Dataset curation workflow</figcaption>
+        </figure>
+        <div class="spotlight-body">
+            <div class="spotlight-tags">
+                <a class="chip" href="/research#ai4se"><i class="fas fa-robot"></i> AI Coding Agents & LLMs</a>
+                <span class="chip chip-accent">AIware 2026</span>
+                
+            </div>
+            <h2 class="spotlight-name">AgenticFlict</h2>
+            <p class="spotlight-tagline">Merge conflicts in pull requests written by AI coding agents</p>
+            <p class="spotlight-problem">AI coding agents such as Copilot, Devin, and Cursor now open pull requests in real repositories. When several of them touch the same code, their changes collide, but nobody had measured how often or how badly.</p>
+            <div class="spotlight-numbers">
+                
+                <div><div class="num">142K+</div><div class="num-label">agentic pull requests</div></div>
+                
+                <div><div class="num">29K</div><div class="num-label">PRs with merge conflicts</div></div>
+                
+                <div><div class="num">336K+</div><div class="num-label">conflict regions extracted</div></div>
+                
+            </div>
+            <ul class="spotlight-findings">
+                <li>Mined from 59K+ GitHub repositories, giving a large-scale view of agent-authored merge conflicts.</li><li>Conflicts in agentic PRs are both frequent and often substantial in size.</li><li>Released openly with the full curation pipeline for follow-up research.</li>
+            </ul>
+            <div class="spotlight-links">
+                <a class="btn-ghost btn-sm" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+                <a class="btn-ghost btn-sm" href="https://zenodo.org/records/19396917" target="_blank" rel="noopener"><i class="fas fa-database"></i> Dataset & Code</a>
+                <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 7 citations</a>
+            </div>
+        </div>
+    </article>
+    <article class="spotlight reveal is-flipped" id="patchtrack">
+        <figure class="spotlight-figure">
+            <img src="/assets/images/covers/patchtrack-overview-figure.png" alt="PatchTrack: Overview of the study method" loading="lazy">
+            <figcaption>Fig. 2: Overview of the study method</figcaption>
+        </figure>
+        <div class="spotlight-body">
+            <div class="spotlight-tags">
+                <a class="chip" href="/research#ai4se"><i class="fas fa-robot"></i> AI Coding Agents & LLMs</a>
+                <span class="chip chip-accent">EMSE 2026</span>
+                
+            </div>
+            <h2 class="spotlight-name">PatchTrack</h2>
+            <p class="spotlight-tagline">How developers actually use ChatGPT-generated code in pull requests</p>
+            <p class="spotlight-problem">Developers increasingly paste ChatGPT suggestions into their pull requests. Is that code merged as is, reworked, or thrown away, and what does it do to code review?</p>
+            <div class="spotlight-numbers">
+                
+                <div><div class="num">338</div><div class="num-label">pull requests studied</div></div>
+                
+                <div><div class="num">255</div><div class="num-label">GitHub repositories</div></div>
+                
+                <div><div class="num">25%</div><div class="num-label">median integration rate</div></div>
+                
+            </div>
+            <ul class="spotlight-findings">
+                <li>Full adoption of AI-generated code is rare; developers extract parts and refine them iteratively.</li><li>ChatGPT shapes the whole review conversation, not just the patch itself.</li><li>Extends the ASE 2024 poster into a full EMSE journal study.</li>
+            </ul>
+            <div class="spotlight-links">
+                <a class="btn-ghost btn-sm" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+                <a class="btn-ghost btn-sm" href="https://arxiv.org/abs/2505.07700" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+                <a class="btn-ghost btn-sm" href="https://github.com/unlv-evol/PatchTrack" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19 citations</a>
+            </div>
+        </div>
+    </article>
+    <article class="spotlight reveal" id="repatch">
+        <figure class="spotlight-figure">
+            <img src="/assets/images/covers/repatch-divergence.png" alt="RePatch: Patch integration from a source variant to a diverged target variant" loading="lazy">
+            <figcaption>Fig. 3: Patch integration from a source variant to a diverged target variant</figcaption>
+        </figure>
+        <div class="spotlight-body">
+            <div class="spotlight-tags">
+                <a class="chip" href="/research#patch"><i class="fas fa-code-branch"></i> Patch Integration Across Forks</a>
+                <span class="chip chip-accent">SCAM 2025</span>
+                <span class="award-badge"><i class="fas fa-award"></i> Distinguished Artifact Award</span>
+            </div>
+            <h2 class="spotlight-name">RePatch</h2>
+            <p class="spotlight-tagline">Refactoring-aware patch integration across divergent Java forks</p>
+            <p class="spotlight-problem">A bug fixed in one fork rarely reaches its sibling forks. Once forks refactor independently, renamed methods and moved classes make cherry-picking fail, leaving users exposed to bugs that are already fixed elsewhere.</p>
+            <div class="spotlight-numbers">
+                
+                <div><div class="num">52.8%</div><div class="num-label">failing patches recovered</div></div>
+                
+                <div><div class="num">Award</div><div class="num-label">Distinguished Artifact, SCAM 2025</div></div>
+                
+            </div>
+            <ul class="spotlight-findings">
+                <li>Detects structural drift between forks and inverts refactorings on both sides before replaying the patch.</li><li>Evaluated on a benchmark of real cross-fork patches that naive cherry-pick could not apply.</li><li>The tool and benchmark are open source and fully reproducible.</li>
+            </ul>
+            <div class="spotlight-links">
+                <a class="btn-ghost btn-sm" href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+                <a class="btn-ghost btn-sm" href="https://github.com/unlv-evol/RePatch" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:QIV2ME_5wuYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 6 citations</a>
+            </div>
+        </div>
+    </article>
+    
+</section>
+
+<!-- More projects -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">More work</span><h2 class="section-title">Other projects</h2></div>
+        <a class="section-link" href="/publications">All publications <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="project-grid">
+        <a class="panel hover-lift project-card" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">
+            <div class="project-meta"><i class="fas fa-robot"></i> MSR 2026</div>
+            <div class="project-name">AI Agents vs. Humans</div>
+            <p class="project-tagline">How AI coding agents modify code compared with human developers</p>
+            <div class="project-number"><span class="num">~24K</span> <span class="num-label">merged agentic PRs vs. 5K human PRs</span></div>
+        </a>
+        <a class="panel hover-lift project-card" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener">
+            <div class="project-meta"><i class="fas fa-robot"></i> arXiv 2026</div>
+            <div class="project-name">PyReprism</div>
+            <p class="project-tagline">One lexical foundation for code analysis in many languages</p>
+            <div class="project-number"><span class="num">187</span> <span class="num-label">languages, 3x faster than per-language tools</span></div>
+        </a>
+        <a class="panel hover-lift project-card" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener">
+            <div class="project-meta"><i class="fas fa-project-diagram"></i> SEDE 2025</div>
+            <div class="project-name">Maven Central Network</div>
+            <p class="project-tagline">Structural risk in the Maven dependency network</p>
+            <div class="project-number"><span class="num">20.9M</span> <span class="num-label">dependency edges across 1.3M artifacts</span></div>
+        </a>
+        <a class="panel hover-lift project-card" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener">
+            <div class="project-meta"><i class="fas fa-microscope"></i> Data in Brief 2021</div>
+            <div class="project-name">Design Smells & Roles</div>
+            <p class="project-tagline">How design smells relate to the role a class plays</p>
+            <div class="project-number"><span class="num">2513</span> <span class="num-label">Java classes from 12 open-source projects</span></div>
+        </a>
         
+    </div>
+</section>
 
-
-<h1>Research Highlights</h1>
-<div class="row grid mb-4">
-    <div class="grid-sizer col-1"></div>
-    
-    <div class="p-2 grid-item col-md-8 col-sm-12 col-12">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <div class="d-flex align-items-start justify-content-between flex-wrap mb-2">
-        <div>
-            <span class="badge badge-pill badge-danger mr-1">SCAM 2025</span>
-            <span class="badge badge-pill badge-warning">
-                <i class="fas fa-trophy mr-1"></i>Distinguished Artifact Award
-            </span>
-        </div>
-        <small class="text-muted mt-1">Oct 2025</small>
+<!-- Open artifacts -->
+<section class="section reveal" id="artifacts">
+    <div class="section-head">
+        <div><span class="eyebrow">Open science</span><h2 class="section-title">Tools &amp; datasets</h2></div>
+        <a class="section-link" href="https://github.com/danielogen" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
     </div>
-
-    <h5 class="mt-2 mb-1">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</h5>
-    <p class="small text-muted mb-3">Daniel Ogenrwot &middot; John Businge</p>
-
-    <p class="mb-3">
-        When two software variants diverge through independent refactoring, replaying patches from one fork to another
-        fails silently — renamed methods, moved classes, and restructured call hierarchies cause integration to break
-        even when the underlying logic is sound.
-    </p>
-    <p class="mb-3">
-        <strong>RePatch</strong> addresses this by making patch integration <em>refactoring-aware</em>: it detects
-        structural drift between forks and resolves mismatches before applying patches. On a benchmark of previously
-        failing cross-fork patches, RePatch recovered <strong>52.8%</strong> of integrations that naive replay could
-        not handle.
-    </p>
-
-    <h6 class="mb-1 mt-3">Fig. 1 — Patch Integration from Source to Target Variant</h6>
-    <p class="small text-muted mb-2">
-        Source and target variants share a common codebase up to the <em>fork date</em>, then synchronize
-        until the <em>divergent date</em>, after which they evolve independently. Structural drift causes
-        cherry-pick to fail; RePatch inverts refactorings on both sides before replaying the patch.
-    </p>
-    <img data-src="/assets/images/covers/repatch-divergence.png" src="/assets/css/images/loading.gif" class="lazy w-100 rounded mb-3" alt="Fig. 1: Illustration of patch integration from source to target variant" style="background: #f8f9fa;" />
-
-    <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-        <a href="https://ieeexplore.ieee.org/document/11190222" target="_blank" class="btn btn-sm btn-outline-danger">
-            <i class="fas fa-file-pdf mr-1"></i>Paper
-        </a>
-        <a href="https://github.com/unlv-evol/RePatch" target="_blank" class="btn btn-sm btn-outline-dark">
-            <i class="fab fa-github mr-1"></i>Code
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-    <div class="p-2 grid-item col-md-4 col-sm-6 col-6">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <h6 class="mb-3"><i class="fab fa-github mr-1"></i>Artifact</h6>
-
-    <ul class="list-unstyled small mb-3">
-        <li class="mb-2">
-            <i class="fas fa-check-circle text-success mr-1"></i>
-            <strong>Open-source</strong> — fully reproducible on GitHub
-        </li>
-        <li class="mb-2">
-            <i class="fas fa-check-circle text-success mr-1"></i>
-            <strong>Benchmark dataset</strong> — cross-fork Java patch corpus
-        </li>
-        <li class="mb-2">
-            <i class="fas fa-check-circle text-success mr-1"></i>
-            <strong>Tool</strong> — refactoring-aware patch integrator
-        </li>
-        <li class="mb-2">
-            <i class="fas fa-trophy text-warning mr-1"></i>
-            <strong>Distinguished Artifact Award</strong>, IEEE SCAM 2025
-        </li>
-    </ul>
-
-    <div class="border-top pt-3 small text-muted">
-        <div class="mb-1"><strong>Keywords</strong></div>
-        <span class="badge badge-light border mr-1 mb-1">Software Variants</span>
-        <span class="badge badge-light border mr-1 mb-1">Patch Integration</span>
-        <span class="badge badge-light border mr-1 mb-1">Refactoring</span>
-        <span class="badge badge-light border mr-1 mb-1">APR</span>
-        <span class="badge badge-light border mr-1 mb-1">Empirical SE</span>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-    <div class="p-2 grid-item col-md-6 col-sm-12 col-12">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <div class="d-flex align-items-start justify-content-between flex-wrap mb-2">
-        <div>
-            <span class="badge badge-pill badge-primary mr-1">AIware 2026</span>
-            <span class="badge badge-pill badge-info mr-1">FSE 2026</span>
-            <span class="badge badge-pill badge-secondary">Dataset Track</span>
-        </div>
-        <small class="text-muted mt-1">2026</small>
-    </div>
-    <h5 class="mt-2 mb-1">AgenticFlict: Merge Conflicts in AI Coding Agent Pull Requests</h5>
-    <p class="small text-muted mb-2">Daniel Ogenrwot &middot; John Businge</p>
-    <p class="small mb-3">
-        AI coding agents (Copilot, Devin, Cursor, etc.) are increasingly submitting pull requests to
-        real repositories. AgenticFlict mines <strong>142K+ agentic PRs</strong> from 59K+ repositories,
-        identifying <strong>29K PRs with merge conflicts</strong> and extracting
-        <strong>336K+ fine-grained conflict regions</strong>, revealing that conflicts are both frequent
-        and often substantial in AI-generated contributions.
-    </p>
-    <img data-src="/assets/images/covers/agenticflict-overview.png" src="/assets/css/images/loading.gif" class="lazy w-100 rounded mb-3" alt="AgenticFlict dataset curation workflow" style="background: #f8f9fa;" />
-    <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-        <a href="https://arxiv.org/abs/2604.03551" target="_blank" class="btn btn-sm btn-outline-primary">
-            <i class="fas fa-file-pdf mr-1"></i>Preprint
-        </a>
-        <a href="https://zenodo.org/records/19396917" target="_blank" class="btn btn-sm btn-outline-secondary">
-            <i class="fas fa-download mr-1"></i>Dataset &amp; Code
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-    <div class="p-2 grid-item col-md-6 col-sm-12 col-12">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <div class="d-flex align-items-start justify-content-between flex-wrap mb-2">
-        <div>
-            <span class="badge badge-pill badge-success mr-1">EMSE Journal</span>
-            <span class="badge badge-pill badge-secondary">ASE 2024</span>
-        </div>
-        <small class="text-muted mt-1">2024 &ndash; 2025</small>
-    </div>
-    <h5 class="mt-2 mb-1">PatchTrack: ChatGPT's Influence on Pull Request Outcomes</h5>
-    <p class="small text-muted mb-2">Daniel Ogenrwot &middot; John Businge</p>
-    <p class="small mb-3">
-        Studying <strong>338 pull requests</strong> from 255 GitHub repositories with self-admitted
-        ChatGPT usage, PatchTrack finds that full adoption of AI-generated code is infrequent, with a
-        median integration rate of <strong>25%</strong>. Developers use selective extraction and iterative
-        refinement rather than direct acceptance, showing AI's influence extends beyond patch generation
-        to the entire code review process.
-    </p>
-    <img data-src="/assets/images/covers/patchtrack-overview.png" src="/assets/css/images/loading.gif" class="lazy w-100 rounded mb-3" alt="PatchTrack study method overview" style="background: #f8f9fa;" />
-    <div class="d-flex flex-wrap" style="gap: 0.5rem;">
-        <a href="https://link.springer.com/epdf/10.1007/s10664-026-10869-5?sharing_token=mD5opNwR77D4ukrUIIYD__e4RwlQNchNByi7wbcMAY7xh1s4CXXz38H72KxsIoYCtfkP67vK30Jh-x17Yoy23dky9NHrVQmUKPQNp8AgN_JbqNPTJu2d82UYgsMc8UDm4ie8ksro1fVQDnxpA33ru3yRyaoIhaLmj-JQ04-WPow%3D" target="_blank" class="btn btn-sm btn-outline-success">
-            <i class="fas fa-file-pdf mr-1"></i>Paper (EMSE)
-        </a>
-        <a href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" class="btn btn-sm btn-outline-secondary">
-            <i class="fas fa-external-link-alt mr-1"></i>ASE Paper
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-    <div class="p-2 grid-item col-md-6 col-sm-12 col-12">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <div class="d-flex align-items-start justify-content-between flex-wrap mb-2">
-        <div>
-            <span class="badge badge-pill badge-secondary mr-1">ACSE 2020</span>
-            <span class="badge badge-pill badge-light border mr-1">Dataset 2021</span>
-            <span class="badge badge-pill badge-light border">arXiv 2024</span>
-        </div>
-        <small class="text-muted mt-1">2020 &ndash; present</small>
-    </div>
-    <h5 class="mt-2 mb-2">Code Smells &amp; Software Quality</h5>
-    <p class="small mb-3">
-        Design smells (structural anti-patterns like God Classes and Feature Envy) accumulate quietly in
-        growing codebases, increasing maintenance cost and bug density. This research line compares smell
-        occurrence across desktop and mobile platforms, characterizes the structural roles smells play
-        during software evolution, and releases benchmark datasets for reproducible detection research.
-    </p>
-    <div class="border-top pt-3 small">
-        <div class="text-muted mb-2"><strong>Topics</strong></div>
-        <span class="badge badge-light border mr-1 mb-1">Design Smells</span>
-        <span class="badge badge-light border mr-1 mb-1">Code Quality</span>
-        <span class="badge badge-light border mr-1 mb-1">Mobile Apps</span>
-        <span class="badge badge-light border mr-1 mb-1">Software Evolution</span>
-        <span class="badge badge-light border mr-1 mb-1">Benchmark Datasets</span>
-    </div>
-    <div class="d-flex flex-wrap mt-3" style="gap: 0.5rem;">
-        <a href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary">
-            <i class="fas fa-file-pdf mr-1"></i>ACSE 2020 Paper
-        </a>
-        <a href="/publications" class="btn btn-sm btn-outline-light border">
-            <i class="fas fa-book mr-1"></i>All Papers
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-    <div class="p-2 grid-item col-md-6 col-sm-12 col-12">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="p-4">
-    <div class="d-flex align-items-start justify-content-between flex-wrap mb-2">
-        <div>
-            <span class="badge badge-pill badge-info mr-1">SEDE 2026</span>
-            <span class="badge badge-pill badge-light border">Network Science</span>
-        </div>
-        <small class="text-muted mt-1">2026</small>
-    </div>
-    <h5 class="mt-2 mb-2">Software Ecosystems &amp; Dependency Networks</h5>
-    <p class="small mb-3">
-        Analyzing the Maven Central ecosystem as a network of <strong>1.3M nodes and 20.9M edges</strong>,
-        this work reveals scale-free topology and identifies critical infrastructure hubs whose failure
-        could cascade across thousands of downstream projects. A companion study examines the
-        <a href="https://www.airqo.net/" target="_blank">AirQo</a> data pipeline serving environmental
-        monitoring across Africa.
-    </p>
-    <div class="border-top pt-3 small">
-        <div class="text-muted mb-2"><strong>Topics</strong></div>
-        <span class="badge badge-light border mr-1 mb-1">Dependency Networks</span>
-        <span class="badge badge-light border mr-1 mb-1">Graph Mining</span>
-        <span class="badge badge-light border mr-1 mb-1">Maven Ecosystem</span>
-        <span class="badge badge-light border mr-1 mb-1">Software Supply Chain</span>
-        <span class="badge badge-light border mr-1 mb-1">Data Pipelines</span>
-    </div>
-    <div class="d-flex flex-wrap mt-3" style="gap: 0.5rem;">
-        <a href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" class="btn btn-sm btn-outline-info">
-            <i class="fas fa-file-pdf mr-1"></i>Maven Paper
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
-    
-</div>
-
-    </div>
-    <footer class="footer border-top py-2 mt-5 bg-white small">
-    <div class="container-xl">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
+    <p class="text-muted mb-4">Everything below is publicly available. If you use one in your work, please cite the accompanying paper.</p>
+    <div class="artifact-grid">
+        
+        <a class="panel hover-lift artifact-card" href="https://zenodo.org/records/19396917" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-dataset">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">AgenticFlict dataset</div>
+                <p class="artifact-desc">Merge conflicts from 142K+ agentic pull requests, with the mining pipeline.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Dataset</span> &middot; Zenodo
+                    
                 </div>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
+        </a>
+        
+        <a class="panel hover-lift artifact-card" href="https://github.com/unlv-evol/RePatch" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-tool">
+                <i class="fas fa-screwdriver-wrench"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">RePatch</div>
+                <p class="artifact-desc">Refactoring-aware patch integrator for diverged Java forks.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Tool</span> &middot; GitHub
+                    <span class="award-badge ml-1"><i class="fas fa-award"></i> Distinguished Artifact Award</span>
                 </div>
             </div>
+        </a>
+        
+        <a class="panel hover-lift artifact-card" href="https://github.com/unlv-evol/PatchTrack" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-code">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">PatchTrack</div>
+                <p class="artifact-desc">Scripts and labeled data for analyzing ChatGPT-assisted pull requests.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Code</span> &middot; GitHub
+                    
+                </div>
+            </div>
+        </a>
+        
+        <a class="panel hover-lift artifact-card" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-tool">
+                <i class="fas fa-screwdriver-wrench"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">PyReprism</div>
+                <p class="artifact-desc">Python library and CLI for lexical analysis across 187 languages.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Tool</span> &middot; arXiv
+                    
+                </div>
+            </div>
+        </a>
+        
+        <a class="panel hover-lift artifact-card" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-dataset">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">Design smells & role-stereotypes</div>
+                <p class="artifact-desc">2,513 Java classes labeled with role-stereotypes and 18 design-smell metrics.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Dataset</span> &middot; Data in Brief
+                    
+                </div>
+            </div>
+        </a>
+        
+        <a class="panel hover-lift artifact-card" href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-dataset">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">AirQo hyperlocal air quality</div>
+                <p class="artifact-desc">Air quality readings from a dense low-cost sensor network across Ugandan cities.</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">Dataset</span> &middot; Data in Brief
+                    
+                </div>
+            </div>
+        </a>
+        
+    </div>
+</section>
+
+<!-- Research journey, built from the publication list -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">Over the years</span><h2 class="section-title">Research journey</h2></div>
+    </div><div class="journey">
+        
+        <div class="journey-year">
+            <div class="journey-label">2026</div>
+            <div class="journey-items"><a class="journey-chip topic-ai4se" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener" title="PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis">
+                    arXiv 2026
+                </a>
+                <a class="journey-chip topic-ai4se" href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener" title="Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development">
+                    arXiv 2026
+                </a>
+                <a class="journey-chip topic-ai4se" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener" title="PatchTrack: A Comprehensive Analysis of ChatGPT&#39;s Influence on Pull Request Outcomes">
+                    EMSE 2026
+                </a>
+                <a class="journey-chip topic-ai4se" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener" title="AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub">
+                    AIware 2026
+                </a>
+                <a class="journey-chip topic-patch" href="https://arxiv.org/abs/2604.01494" target="_blank" rel="noopener" title="MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants">
+                    arXiv 2026
+                </a>
+                <a class="journey-chip topic-ai4se" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener" title="How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests">
+                    MSR 2026
+                </a>
+                <a class="journey-chip topic-other"  title="A Low-Cost Modular Precision Irrigation System for Resource-Constrained Environments">
+                    SmartAgTech 2026
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2025</div>
+            <div class="journey-items"><a class="journey-chip topic-patch" href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener" title="Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks">
+                    <i class="fas fa-trophy"></i> SCAM 2025
+                </a>
+                <a class="journey-chip topic-ecosystems" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener" title="Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings">
+                    SEDE 2025
+                </a>
+                <a class="journey-chip topic-ecosystems" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener" title="Structural and Connectivity Patterns in the Maven Central Software Dependency Network">
+                    SEDE 2025
+                </a>
+                <a class="journey-chip topic-ecosystems"  title="Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda">
+                    JHU Press 2025
+                </a>
+                <a class="journey-chip topic-other"  title="A Collaborative Digital Platform for Green Charcoal Production Data Management">
+                    IJBEST 2025
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2024</div>
+            <div class="journey-items"><a class="journey-chip topic-ai4se" href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener" title="PatchTrack: Analyzing ChatGPT&#39;s Impact on Software Patch Decision-Making in Pull Requests">
+                    ASE 2024
+                </a>
+                <a class="journey-chip topic-smells" href="https://arxiv.org/html/2406.19254v1" target="_blank" rel="noopener" title="Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes">
+                    arXiv 2024
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2022</div>
+            <div class="journey-items"><a class="journey-chip topic-ecosystems" href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener" title="Seeing the Air in Detail: Hyperlocal Air Quality Dataset Collected from Spatially Distributed AirQo Network">
+                    Data in Brief 2022
+                </a>
+                <a class="journey-chip topic-other" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener" title="From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning">
+                    FAMECSE 2022
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2021</div>
+            <div class="journey-items"><a class="journey-chip topic-smells" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener" title="Integration of design smells and role-stereotypes classification dataset">
+                    Data in Brief 2021
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2020</div>
+            <div class="journey-items"><a class="journey-chip topic-smells" href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" rel="noopener" title="Comparison of Occurrence of Design Smells in Desktop and Mobile Applications">
+                    ACSE 2020
+                </a>
+                
+            </div>
+        </div>
+        
+        <div class="journey-year">
+            <div class="journey-label">2019</div>
+            <div class="journey-items"><a class="journey-chip topic-other" href="https://ijotm.utamu.ac.ug/index.php/ijotm/article/view/43" target="_blank" rel="noopener" title="A Rule Induction Attribution Selection Algorithm for Intrusion Detection Systems">
+                    IJOTM 2019
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="journey-legend">
+        <span class="topic-ai4se"><i class="fas fa-circle"></i> AI Coding Agents & LLMs</span><span class="topic-patch"><i class="fas fa-circle"></i> Patch Integration Across Forks</span><span class="topic-ecosystems"><i class="fas fa-circle"></i> Software Ecosystems</span><span class="topic-smells"><i class="fas fa-circle"></i> Code Smells & Quality</span>
+        <span class="topic-other"><i class="fas fa-circle"></i> Other</span>
+    </div>
+</section>
+
+<section class="cta-band reveal">
+    <div class="row align-items-center position-relative" style="z-index: 1;">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+            <h2>Want to build on this work?</h2>
+            <p>I'm glad to help with using these tools and datasets, replication studies, or new collaborations.</p>
+        </div>
+        <div class="col-lg-4 text-lg-right">
+            <a class="btn-brand" href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75"><i class="fas fa-envelope"></i> Get in touch</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+    <div class="container-lg">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
+                </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
+</div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a><a href="/blog">Blog</a>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                <div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
         </div>
     </div>
 </footer>
 
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/bubble_visual_hash.js"></script>
-    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script src="/assets/js/common.js"></script>
+
 </body>
 </html>

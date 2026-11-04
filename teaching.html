@@ -3,318 +3,455 @@
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Teaching - Daniel Ogenrwot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Teaching | Daniel Ogenrwot</title>
 
-    <!-- SEO -->
-    <meta name="description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="author" content="Daniel Ogenrwot">
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Teaching - Daniel Ogenrwot">
-    <meta property="og:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielogen.github.io/teaching.html">
-    <meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
-    <meta property="og:site_name" content="Daniel Ogenrwot">
+<!-- SEO -->
+<meta name="description" content="Teaching experience of Daniel Ogenrwot at UNLV and Gulu University: senior design, algorithms, software re-engineering, databases, mobile and web development...">
+<meta name="author" content="Daniel Ogenrwot">
+<link rel="canonical" href="https://danielogen.github.io/teaching.html">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Teaching - Daniel Ogenrwot">
-    <meta name="twitter:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Teaching | Daniel Ogenrwot">
+<meta property="og:description" content="Teaching experience of Daniel Ogenrwot at UNLV and Gulu University: senior design, algorithms, software re-engineering, databases, mobile and web development...">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://danielogen.github.io/teaching.html">
+<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:site_name" content="Daniel Ogenrwot">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/global.css">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Teaching | Daniel Ogenrwot">
+<meta name="twitter:description" content="Teaching experience of Daniel Ogenrwot at UNLV and Gulu University: senior design, algorithms, software re-engineering, databases, mobile and web development...">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
 </head>
-<body class="bg-light" >
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
+<body >
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
     <div class="container-lg">
-        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">About</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/publications">Publications</a>
+                    <a class="nav-link" href="/" >About</a>
                 </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/research" >Research</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/publications" >Publications</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services" >Service</a>
+                </li>
+                
+                
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/teaching">Teaching</a>
+                    <a class="nav-link" href="/teaching" aria-current="page">Teaching</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/services">Services</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/showcase">Showcase</a>
+                    <a class="nav-link" href="/showcase" >Showcase</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog" >Blog</a>
                 </li>
                 
             </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down"></i> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-    <div class="container-lg">
-        <div class="row">
-    <div class="col-12">
-        <h2 class="pt-2 pb-3">Teaching</h2>
+    <main id="main" class="container-lg">
+        <header class="page-header">
+    <span class="eyebrow">Teaching &amp; mentoring</span>
+    <h1>Teaching</h1>
+    <p class="lead">
+        I have taught software engineering, algorithms, databases, mobile and web development, and parallel computing
+        since 2018: first as an instructor at Gulu University in Uganda, now as a teaching assistant at UNLV.
+    </p>
+</header>
 
-        
-        <div class="my-3 bg-white shadow-sm rounded-xl">
-
-            <!-- Institution header -->
-            <div class="p-4 border-bottom border-gray d-flex align-items-center">
-                
-                <img src="/assets/images/badges/unlv.svg" alt="University of Nevada, Las Vegas (UNLV)" style="width: 36px;" class="mr-3">
-                
-                <div>
-                    <h5 class="mb-0">
-                        <a href="https://unlv.edu" target="_blank" class="text-dark">University of Nevada, Las Vegas (UNLV)</a>
-                    </h5>
-                    <small class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i>Las Vegas, NV, United States</small>
-                </div>
-            </div>
-
-            <!-- Course list -->
-            <div class="px-4 py-2">
-                
-                
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 100px;"><code>CS472/672-1001</code></div>
-                        <div class="flex-grow-1">
-                            <div>Software Product Design I (Senior Design)</div>
-                            <div class="small text-muted">Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Teaching Assistant</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 100px;"><code>CS472/672-1002</code></div>
-                        <div class="flex-grow-1">
-                            <div>Software Product Design I (Senior Design)</div>
-                            <div class="small text-muted">Spring 2024, Fall 2025</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Teaching Assistant</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 100px;"><code>CS477/677</code></div>
-                        <div class="flex-grow-1">
-                            <div>Design and Analysis of Algorithms</div>
-                            <div class="small text-muted">Summer 2023</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Teaching Assistant</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 ">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 100px;"><code>CS789</code></div>
-                        <div class="flex-grow-1">
-                            <div>Software Re-engineering (Masters/PhD)</div>
-                            <div class="small text-muted">Fall 2025</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Teaching Assistant</span>
-                        </div>
-                    </div>
-                    
-                
-            </div>
-
-        </div>
-        
-        <div class="my-3 bg-white shadow-sm rounded-xl">
-
-            <!-- Institution header -->
-            <div class="p-4 border-bottom border-gray d-flex align-items-center">
-                
-                <img src="/assets/images/badges/gulu.svg" alt="Gulu University" style="width: 36px;" class="mr-3">
-                
-                <div>
-                    <h5 class="mb-0">
-                        <a href="https://gu.ac.ug" target="_blank" class="text-dark">Gulu University</a>
-                    </h5>
-                    <small class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i>Main Campus, Uganda</small>
-                </div>
-            </div>
-
-            <!-- Course list -->
-            <div class="px-4 py-2">
-                
-                
-                    
-                    
-                    <div class="mt-3 mb-1">
-                        <span class="text-muted small font-weight-bold text-uppercase">Masters</span>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>MID7104</code></div>
-                        <div class="flex-grow-1">
-                            <div>Database Modeling</div>
-                            <div class="small text-muted">2019, 2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 ">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>MID7109</code></div>
-                        <div class="flex-grow-1">
-                            <div>Mobile Applications Development</div>
-                            <div class="small text-muted">2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="mt-3 mb-1">
-                        <span class="text-muted small font-weight-bold text-uppercase">Undergraduate</span>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GCS3203</code></div>
-                        <div class="flex-grow-1">
-                            <div>Parallel Computation</div>
-                            <div class="small text-muted">2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GIT3104</code></div>
-                        <div class="flex-grow-1">
-                            <div>Integrative Programming</div>
-                            <div class="small text-muted">2019, 2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GIT3101</code></div>
-                        <div class="flex-grow-1">
-                            <div>Web Systems & Technologies II</div>
-                            <div class="small text-muted">2018, 2019, 2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GCS</code></div>
-                        <div class="flex-grow-1">
-                            <div>Mobile Web Application Development in Java</div>
-                            <div class="small text-muted">2018, 2019, 2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 border-bottom border-gray">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GCS</code></div>
-                        <div class="flex-grow-1">
-                            <div>Mobile Web Application Development</div>
-                            <div class="small text-muted">2018, 2019, 2021, 2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex align-items-start py-2 ">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>GAT3201</code></div>
-                        <div class="flex-grow-1">
-                            <div>Web Game Development</div>
-                            <div class="small text-muted">2022</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">Instructor</span>
-                        </div>
-                    </div>
-                    
-                    
-                
-            </div>
-
-        </div>
-        
-
-    </div>
+<div class="panel stats stats-4 mb-5">
+    <div class="stat"><div class="stat-value">8+</div><div class="stat-label">Years teaching</div></div>
+    <div class="stat"><div class="stat-value">11</div><div class="stat-label">Courses</div></div>
+    <div class="stat"><div class="stat-value">2</div><div class="stat-label">Universities</div></div>
+    <div class="stat"><div class="stat-value">BSc–PhD</div><div class="stat-label">Levels taught</div></div>
 </div>
 
+<!-- Approach -->
+<section class="section reveal pt-0">
+    <div class="section-head">
+        <div><span class="eyebrow">How I teach</span><h2 class="section-title">Teaching approach</h2></div>
     </div>
-    <footer class="footer border-top py-2 mt-5 bg-white small">
+    <div class="approach-grid">
+        
+        <div class="panel panel-pad approach-card">
+            <div class="approach-icon"><i class="fas fa-diagram-project"></i></div>
+            <h3>Learning by building</h3>
+            <p>Students learn software engineering best by shipping real products in teams. In senior design I coach teams through requirements, design reviews, sprints, and demos with real stakeholders.</p>
+        </div>
+        
+        <div class="panel panel-pad approach-card">
+            <div class="approach-icon"><i class="fas fa-flask"></i></div>
+            <h3>Research in the classroom</h3>
+            <p>I bring findings from my own research on software evolution, refactoring, and AI coding agents into class, so students see how the tools they use every day are studied and improved.</p>
+        </div>
+        
+        <div class="panel panel-pad approach-card">
+            <div class="approach-icon"><i class="fas fa-hands-helping"></i></div>
+            <h3>Mentoring</h3>
+            <p>I help students move from coursework to research and start-ups, a path I studied in my FAMECSE 2022 paper on turning undergraduate capstone projects into start-ups.</p>
+        </div>
+        
+    </div>
+    <div class="teaching-interests">
+        <span class="label">Teaching interests</span>
+        <span class="chip">Software Engineering</span><span class="chip">Software Evolution & Maintenance</span><span class="chip">Empirical Software Engineering</span><span class="chip">AI for Software Engineering</span><span class="chip">Algorithms</span><span class="chip">Databases</span><span class="chip">Mobile & Web Development</span><span class="chip">Parallel Computing</span>
+    </div>
+</section>
+
+<!-- At a glance matrix -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">2018–2026</span><h2 class="section-title">Teaching at a glance</h2></div>
+    </div>
+    <div class="panel glance-wrap">
+        <table class="glance">
+            <thead>
+                <tr><th scope="col">Course</th><th scope="col">2018</th><th scope="col">2019</th><th scope="col">2020</th><th scope="col">2021</th><th scope="col">2022</th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">2026</th></tr>
+            </thead>
+            <tbody>
+                
+                <tr class="glance-group"><th colspan="10">University of Nevada, Las Vegas &middot; Graduate Teaching Assistant, 2023 – present</th></tr>
+                <tr>
+                    <th scope="row"><span class="course-code">CS 472/672</span> Software Product Design I (Senior Design)</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Product Design I (Senior Design), 2023"></span></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Product Design I (Senior Design), 2024"></span></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Product Design I (Senior Design), 2025"></span></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Product Design I (Senior Design), 2026"></span></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">CS 477/677</span> Design and Analysis of Algorithms</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-unlv" title="Design and Analysis of Algorithms, 2023"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">CS 789</span> Software Re-engineering</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Re-engineering, 2025"></span></td>
+                    <td><span class="glance-dot inst-unlv" title="Software Re-engineering, 2026"></span></td>
+                    
+                </tr>
+                
+                
+                <tr class="glance-group"><th colspan="10">Gulu University &middot; Instructor, 2018 – 2023</th></tr>
+                <tr>
+                    <th scope="row"><span class="course-code">MID 7104</span> Database Modeling</th>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Database Modeling, 2019"></span></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Database Modeling, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Database Modeling, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">MID 7109</span> Mobile Applications Development</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Applications Development, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Applications Development, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GCS 3203</span> Parallel Computation</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Parallel Computation, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Parallel Computation, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GIT 3104</span> Integrative Programming</th>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Integrative Programming, 2019"></span></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Integrative Programming, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Integrative Programming, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GIT 3101</span> Web Systems & Technologies II</th>
+                    <td><span class="glance-dot inst-gulu" title="Web Systems & Technologies II, 2018"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Web Systems & Technologies II, 2019"></span></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Web Systems & Technologies II, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Web Systems & Technologies II, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GCS</span> Mobile Web Application Development in Java</th>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development in Java, 2018"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development in Java, 2019"></span></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development in Java, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development in Java, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GCS</span> Mobile Web Application Development</th>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development, 2018"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development, 2019"></span></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development, 2021"></span></td>
+                    <td><span class="glance-dot inst-gulu" title="Mobile Web Application Development, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row"><span class="course-code">GAT 3201</span> Web Game Development</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="glance-dot inst-gulu" title="Web Game Development, 2022"></span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                
+                
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Scholarship of teaching -->
+
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">Beyond the classroom</span><h2 class="section-title">Computing education</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <div class="panel panel-pad h-100">
+                <div class="panel-title"><i class="fas fa-book"></i> Research on teaching</div>
+                <article class="pub-item" data-type="conference" data-citations="11" data-search="from undergraduate (software) capstone projects to start-ups: challenges and opportunities in higher institutions of learning daniel ogenrwot geoffrey olok tabo kevin aber joyce nakatumba-nabende federated africa and middle east conference on software engineering (famecse) famecse 2022 2022">
+    <div class="pub-venue ">FAMECSE 2022<span class="pub-type">Conference</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener">From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Geoffrey-Olok-Tabo">Geoffrey Olok Tabo</a>, <span class="text-body">
+            Kevin Aber, </span><a class="text-body" target="_blank" href="https://scholar.google.com/citations?user=Joyce-Nakatumba-Nabende">Joyce Nakatumba-Nabende</a></div>
+        <div class="pub-meta">
+            <i>Federated Africa and Middle East Conference on Software Engineering (FAMECSE)</i>, 2022
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 11 citations</a>
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@inproceedings{ogenrwot2022from,
+  title = {From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning},
+  author = {Daniel Ogenrwot and Geoffrey Olok Tabo and Kevin Aber and Joyce Nakatumba-Nabende},
+  booktitle = {Federated Africa and Middle East Conference on Software Engineering (FAMECSE)},
+  year = {2022},
+  url = {https://dl.acm.org/doi/10.1145/3531056.3542775}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="panel panel-pad h-100">
+                <div class="panel-title"><i class="fas fa-pen-nib"></i> Reviewing</div>
+                <p class="mb-0 text-muted">Reviewer for <strong>ACM Transactions on Computing Education (TOCE)</strong>, the ACM journal on computing education research.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    <footer class="site-footer">
     <div class="container-lg">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
                 </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
-                </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
+</div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a><a href="/blog">Blog</a>
+                </nav>
             </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                <div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
         </div>
     </div>
 </footer>
 
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/bubble_visual_hash.js"></script>
-    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script src="/assets/js/common.js"></script>
+
 </body>
 </html>

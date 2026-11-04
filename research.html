@@ -3,219 +3,346 @@
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Research - Daniel Ogenrwot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Research | Daniel Ogenrwot</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
-    <meta name="author" content="Daniel Ogenrwot">
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Research - Daniel Ogenrwot">
-    <meta property="og:description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielogen.github.io/research.html">
-    <meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
-    <meta property="og:site_name" content="Daniel Ogenrwot">
+<!-- SEO -->
+<meta name="description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
+<meta name="author" content="Daniel Ogenrwot">
+<link rel="canonical" href="https://danielogen.github.io/research.html">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Research - Daniel Ogenrwot">
-    <meta name="twitter:description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
-    <meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Research | Daniel Ogenrwot">
+<meta property="og:description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://danielogen.github.io/research.html">
+<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:site_name" content="Daniel Ogenrwot">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/global.css">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research | Daniel Ogenrwot">
+<meta name="twitter:description" content="Daniel Ogenrwot's research agenda in Empirical Software Engineering and AI for SE, studying how software evolves, how bugs are fixed, and how AI is reshaping...">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
 </head>
-<body class="bg-light" >
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
+<body >
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
     <div class="container-lg">
-        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">About</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/publications">Publications</a>
+                    <a class="nav-link" href="/" >About</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/teaching">Teaching</a>
+                
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="/research" aria-current="page">Research</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/services">Services</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/showcase">Showcase</a>
+                    <a class="nav-link" href="/publications" >Publications</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services" >Service</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/teaching" >Teaching</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/showcase" >Showcase</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog" >Blog</a>
                 </li>
                 
             </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down"></i> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-    <div class="container-lg">
-        <div class="row">
-    <div class="col-12">
-        <h2 class="pt-2 pb-2">Research</h2>
-        <p class="text-muted mb-4">
-            I study how software evolves, how defects propagate through codebases and ecosystems, and how
-            AI is changing the way software is built, through large-scale repository mining, program analysis,
-            and empirical methods. My work is grounded in two broad areas:
-            <strong>Empirical Software Engineering</strong> and <strong>AI for Software Engineering</strong>.
-            I work in the <a href="https://github.com/unlv-evol" target="_blank">Software Evolution (EVOL) Lab</a>
-            at UNLV, advised by <a href="https://www.cs.unlv.edu/~busing/" target="_blank">Prof. John Businge</a>.
-        </p>
+    <main id="main" class="container-lg">
+        
 
-        <!-- Theme 1 -->
-        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
-            <h5 class="mb-2">
-                <i class="fas fa-code-branch mr-2" style="color: #B4975A;"></i>
-                Patch Integration in Software Variants
-            </h5>
-            <p class="mb-2">
-                When a bug is fixed in one fork of a software project, that fix rarely makes it automatically
-                into related forks, even when they share the same vulnerable code. The problem worsens over
-                time as forks diverge through independent refactoring: renamed methods, moved classes, and
-                restructured hierarchies cause patch replay to fail silently, leaving users of downstream
-                variants exposed to known bugs.
-            </p>
-            <p class="mb-0 text-muted">
-                My work in this area asks: <em>how do patches propagate across structurally divergent variants,
-                and how can we make that propagation reliable and automated?</em> I build tools and datasets
-                that make patch integration refactoring-aware, and study AI-generated patch adoption at scale
-                across real GitHub fork networks.
-            </p>
+<header class="page-header">
+    <span class="eyebrow">Research agenda</span>
+    <h1>Research</h1>
+    <p class="lead">
+        I study how software evolves, how defects propagate through codebases and ecosystems, and how
+        AI is changing the way software is built, through large-scale repository mining, program analysis,
+        and empirical methods. I work in the <a href="https://github.com/unlv-evol" target="_blank" rel="noopener">Software Evolution (EVOL) Lab</a>
+        at UNLV, advised by <a href="https://www.cs.unlv.edu/~busing/" target="_blank" rel="noopener">Prof. John Businge</a>.
+    </p>
+    <nav class="d-flex flex-wrap mt-3" style="gap: .4rem;" aria-label="Research themes">
+        <a class="chip" href="#ai4se"><i class="fas fa-robot"></i> AI Coding Agents & LLMs</a><a class="chip" href="#patch"><i class="fas fa-code-branch"></i> Patch Integration Across Forks</a><a class="chip" href="#ecosystems"><i class="fas fa-project-diagram"></i> Software Ecosystems</a><a class="chip" href="#smells"><i class="fas fa-microscope"></i> Code Smells & Quality</a>
+    </nav>
+</header>
+
+
+<section class="panel theme-block reveal" id="ai4se">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center mb-2" style="gap: .9rem;">
+                <div class="area-icon mb-0"><i class="fas fa-robot"></i></div>
+                <h2 class="mb-0">AI Coding Agents & LLMs for Software Engineering</h2>
+            </div>
+            <h3>The problem</h3>
+            <p>AI coding agents are moving from assistants to active contributors in real codebases. Yet we have little empirical understanding of how their contributions differ from human work, what failure modes emerge when multiple agents collaborate, or how developers integrate AI-generated code into production.</p>
+            <h3>My approach</h3>
+            <p class="mb-0">I characterize agent-generated pull requests at scale, covering commit patterns, code change semantics, and merge conflict rates, and study the new class of coordination problems that arise when autonomous agents concurrently modify shared repositories.</p>
         </div>
-
-        <!-- Theme 2 -->
-        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
-            <h5 class="mb-2">
-                <i class="fas fa-search-minus mr-2" style="color: #B4975A;"></i>
-                Code Smells &amp; Software Quality
-            </h5>
-            <p class="mb-2">
-                Design smells (structural anti-patterns like God Classes, Long Methods, and Feature Envy)
-                accumulate quietly as software grows, increasing maintenance cost and bug density long before
-                they trigger visible failures. Understanding <em>where</em> smells appear, <em>why</em> they
-                persist, and what role they play in software evolution is essential to building practical
-                detection and remediation tools.
-            </p>
-            <p class="mb-0 text-muted">
-                My work examines how design smells manifest and evolve across desktop and mobile platforms,
-                characterizes the structural roles smells play during software change, and produces reusable
-                benchmark datasets that enable reproducible smell detection research.
-            </p>
+        
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="h-100 p-3 rounded-xl" style="background: var(--surface-2);">
+                <h3 class="mt-0">Highlights</h3>
+                <ul class="highlight-list"><li>142K+ agentic pull requests mined across 59K+ repositories</li><li>336K+ fine-grained merge conflict regions released as an open dataset</li><li>Median adoption of ChatGPT-generated code in PRs is only 25%</li></ul>
+            </div>
         </div>
-
-        <!-- Theme 3 -->
-        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
-            <h5 class="mb-2">
-                <i class="fas fa-robot mr-2" style="color: #B4975A;"></i>
-                AI Coding Agents &amp; LLMs for Software Engineering
-            </h5>
-            <p class="mb-2">
-                AI coding agents are systems like GitHub Copilot, Devin, and Cursor that autonomously write,
-                test, and submit code, moving from assistants to active contributors in real codebases.
-                Yet we have little empirical understanding of how their contributions differ from human work,
-                what failure modes emerge when multiple agents collaborate, or how developers actually integrate
-                AI-generated code into production.
-            </p>
-            <p class="mb-0 text-muted">
-                My research characterizes agent-generated pull requests at scale, covering commit patterns,
-                code change semantics, and merge conflict rates, and studies the new class of coordination
-                problems that arise when autonomous agents concurrently modify shared repositories.
-            </p>
-        </div>
-
-        <!-- Theme 4 -->
-        <div class="my-3 bg-white shadow-sm rounded-xl p-4">
-            <h5 class="mb-2">
-                <i class="fas fa-project-diagram mr-2" style="color: #B4975A;"></i>
-                Software Ecosystems &amp; Data Infrastructure
-            </h5>
-            <p class="mb-2">
-                No package exists in isolation. Library updates ripple through dependency graphs, security
-                vulnerabilities propagate across ecosystems, and the health of a single widely-used artifact
-                can affect thousands of downstream projects. Understanding these ecosystem-level dynamics
-                requires treating software not as individual repositories but as interconnected networks.
-            </p>
-            <p class="mb-0 text-muted">
-                I apply graph mining and repository analysis to map how package ecosystems evolve structurally
-                over time. Separately, I contribute to the <a href="https://www.airqo.net/" target="_blank">AirQo</a>
-                project, where the focus is on building and evaluating reliable data pipelines for
-                large-scale environmental monitoring across Africa.
-            </p>
-        </div>
-
-        <p class="text-muted mt-4 small">
-            For the full list of papers and artifacts, see the
-            <a href="/publications">Publications</a> page.
-            Visual highlights of selected projects are on the
-            <a href="/showcase">Showcase</a> page.
-        </p>
-
+        
     </div>
+    
+    
+    <div class="related-pubs">
+        <h3 class="mt-0">Related publications</h3>
+        <a href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener"><span class="chip">arXiv 2026</span>PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis</a>
+        <a href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener"><span class="chip">arXiv 2026</span>Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development</a>
+        <a href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener"><span class="chip">EMSE 2026</span>PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a>
+        <a href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener"><span class="chip">AIware 2026</span>AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a>
+        <a href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener"><span class="chip">MSR 2026</span>How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a>
+        <a href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener"><span class="chip">ASE 2024</span>PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</a>
+        
+    </div>
+    
+</section>
+
+<section class="panel theme-block reveal" id="patch">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center mb-2" style="gap: .9rem;">
+                <div class="area-icon mb-0"><i class="fas fa-code-branch"></i></div>
+                <h2 class="mb-0">Patch Integration in Software Variants</h2>
+            </div>
+            <h3>The problem</h3>
+            <p>When a bug is fixed in one fork, the fix rarely reaches related forks, even when they share the same vulnerable code. As forks diverge, renamed methods, moved classes, and restructured hierarchies cause patch replay to fail silently, leaving downstream users exposed to known bugs.</p>
+            <h3>My approach</h3>
+            <p class="mb-0">I build refactoring-aware tools and benchmark datasets that make patch integration reliable and automated, and visual analytics that surface missed patches between variants.</p>
+        </div>
+        
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="h-100 p-3 rounded-xl" style="background: var(--surface-2);">
+                <h3 class="mt-0">Highlights</h3>
+                <ul class="highlight-list"><li>RePatch recovers 52.8% of previously failing cross-fork patches</li><li>Distinguished Artifact Award, IEEE SCAM 2025</li></ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="related-pubs">
+        <h3 class="mt-0">Related publications</h3>
+        <a href="https://arxiv.org/abs/2604.01494" target="_blank" rel="noopener"><span class="chip">arXiv 2026</span>MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants</a>
+        <a href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener"><span class="chip">SCAM 2025</span>Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</a>
+        
+    </div>
+    
+</section>
+
+<section class="panel theme-block reveal" id="ecosystems">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center mb-2" style="gap: .9rem;">
+                <div class="area-icon mb-0"><i class="fas fa-project-diagram"></i></div>
+                <h2 class="mb-0">Software Ecosystems & Data Infrastructure</h2>
+            </div>
+            <h3>The problem</h3>
+            <p>No package exists in isolation. Library updates ripple through dependency graphs, vulnerabilities propagate across ecosystems, and the health of one widely-used artifact can affect thousands of downstream projects.</p>
+            <h3>My approach</h3>
+            <p class="mb-0">I apply network science and repository mining to map how package ecosystems evolve. Through the Google.org-funded AirQo project, I also build and evaluate reliable data pipelines for large-scale environmental monitoring across Africa.</p>
+        </div>
+        
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="h-100 p-3 rounded-xl" style="background: var(--surface-2);">
+                <h3 class="mt-0">Highlights</h3>
+                <ul class="highlight-list"><li>Maven Central analyzed as a 1.3M-node, 20.9M-edge dependency network</li><li>Production air-quality data pipeline serving African cities</li></ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="related-pubs">
+        <h3 class="mt-0">Related publications</h3>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener"><span class="chip">SEDE 2025</span>Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</a>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener"><span class="chip">SEDE 2025</span>Structural and Connectivity Patterns in the Maven Central Software Dependency Network</a>
+        <a href="" target="_blank" rel="noopener"><span class="chip">JHU Press 2025</span>Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda</a>
+        <a href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener"><span class="chip">Data in Brief 2022</span>Seeing the Air in Detail: Hyperlocal Air Quality Dataset Collected from Spatially Distributed AirQo Network</a>
+        
+    </div>
+    
+</section>
+
+<section class="panel theme-block reveal" id="smells">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center mb-2" style="gap: .9rem;">
+                <div class="area-icon mb-0"><i class="fas fa-microscope"></i></div>
+                <h2 class="mb-0">Code Smells & Software Quality</h2>
+            </div>
+            <h3>The problem</h3>
+            <p>Design smells such as God Classes and Feature Envy accumulate quietly as software grows, increasing maintenance cost and bug density long before they trigger visible failures.</p>
+            <h3>My approach</h3>
+            <p class="mb-0">I examine how smells manifest across desktop and mobile platforms, relate them to class role-stereotypes, and release benchmark datasets for reproducible detection research.</p>
+        </div>
+        
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="h-100 p-3 rounded-xl" style="background: var(--surface-2);">
+                <h3 class="mt-0">Highlights</h3>
+                <ul class="highlight-list"><li>11,350 classes from 30 repositories analyzed for smell and role-stereotype relationships</li><li>Open dataset of 2,513 classified Java classes</li></ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="related-pubs">
+        <h3 class="mt-0">Related publications</h3>
+        <a href="https://arxiv.org/html/2406.19254v1" target="_blank" rel="noopener"><span class="chip">arXiv 2024</span>Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes</a>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener"><span class="chip">Data in Brief 2021</span>Integration of design smells and role-stereotypes classification dataset</a>
+        <a href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" rel="noopener"><span class="chip">ACSE 2020</span>Comparison of Occurrence of Design Smells in Desktop and Mobile Applications</a>
+        
+    </div>
+    
+</section>
+
+
+<p class="text-muted mt-4">
+    Visual highlights of selected projects are on the <a href="/showcase">Showcase</a> page.
+</p>
+
+    </main>
+    <footer class="site-footer">
+    <div class="container-lg">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
+                </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
 </div>
-
-    </div>
-    <footer class="footer border-top py-2 mt-5 bg-white small">
-    <div class="container-lg">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
-                </div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a><a href="/blog">Blog</a>
+                </nav>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
-                </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                <div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+</div>
             </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
         </div>
     </div>
 </footer>
 
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/bubble_visual_hash.js"></script>
-    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script src="/assets/js/common.js"></script>
+
 </body>
 </html>

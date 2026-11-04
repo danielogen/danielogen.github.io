@@ -3,185 +3,198 @@
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Homepage - Daniel Ogenrwot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Daniel Ogenrwot | PhD Candidate, Empirical Software Engineering & AI for SE</title>
 
-    <!-- SEO -->
-    <meta name="description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="author" content="Daniel Ogenrwot">
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Homepage - Daniel Ogenrwot">
-    <meta property="og:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielogen.github.io/">
-    <meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
-    <meta property="og:site_name" content="Daniel Ogenrwot">
+<!-- SEO -->
+<meta name="description" content="Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical Software Engineering and AI for Software Engineering: AI coding agents, patch integration ac...">
+<meta name="author" content="Daniel Ogenrwot">
+<link rel="canonical" href="https://danielogen.github.io/">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Homepage - Daniel Ogenrwot">
-    <meta name="twitter:description" content="PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE.">
-    <meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<!-- Open Graph -->
+<meta property="og:title" content="Daniel Ogenrwot | PhD Candidate, Empirical Software Engineering & AI for SE">
+<meta property="og:description" content="Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical Software Engineering and AI for Software Engineering: AI coding agents, patch integration ac...">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://danielogen.github.io/">
+<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:site_name" content="Daniel Ogenrwot">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/global.css">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Ogenrwot | PhD Candidate, Empirical Software Engineering & AI for SE">
+<meta name="twitter:description" content="Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical Software Engineering and AI for Software Engineering: AI coding agents, patch integration ac...">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
 </head>
-<body class="bg-light" >
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top mb-5 shadow-sm">
+<body >
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
     <div class="container-lg">
-        <a class="navbar-brand"><strong>Daniel Ogenrwot</strong></a>
-        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
+                
+                
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">About</a>
+                    <a class="nav-link" href="/" aria-current="page">About</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/publications">Publications</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/teaching">Teaching</a>
+                    <a class="nav-link" href="/research" >Research</a>
                 </li>
                 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/services">Services</a>
-                </li>
+                
                 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/showcase">Showcase</a>
+                    <a class="nav-link" href="/publications" >Publications</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services" >Service</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/teaching" >Teaching</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/showcase" >Showcase</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/blog" >Blog</a>
                 </li>
                 
             </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down"></i> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-    <div class="container-lg">
-        <div class="row">
-    <div class="col-lg-3 col-md-4">
-        <div class="row sticky-top" style="top: 80px">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body px-4 pt-4 pb-3">
-                <div class="row">
-                    <div class="col">
-                        
-                        <div class="text-center mb-2 d-none d-md-block">
-                            <img
-                                src="/assets/images/photos/portrait.jpg"
-                                class="rounded img-fluid"
-                                style="max-width: 85%;"
-                                alt="Portrait of Daniel Ogenrwot">
-                            
-                        </div>
-                        <div class="text-center mb-2 d-md-none">
-                            <img
-                                src="/assets/images/photos/portrait.jpg"
-                                class="rounded img-fluid"
-                                style="max-width: 50%;"
-                                alt="Portrait of Daniel Ogenrwot">
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center h4">
-                        Daniel Ogenrwot
-                    </div>
-                </div>
-
-                <div class="row small">
-                    <div class="col text-center">
-                        
-                        PhD Candidate & Graduate Assistant<br/>
-                        
-                        Department of Computer Science<br/>
-                        
-                        University of Nevada, Las Vegas<br/>
-                        
-                    </div>
-                </div>
-
-                <div class="row small">
-                    <div class="col text-center">
-                        <a class="email-text" href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75">
-                            ogenrwot(at)unlv.nevada.edu
-                        </a>
-                    </div>
-                </div>
-
-                
-
-                <div class="row pt-2">
-                    <div class="col text-center h4">
-                        <a class="px-1 no-break" target="_blank" href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ">
-                            <i class="fab fa-google-scholar"></i>
-                        </a>
-                        
-                        
-                        
-                        <a class="px-1 no-break" target="_blank" href="https://dblp.org/pid/275/0016.html">
-                            <i class="ai ai-dblp"></i>
-                        </a>
-                        
-
-                        
-
-                        
-
-                        
-                        <a class="px-1 no-break" target="_blank" href="https://www.linkedin.com/in/daniel-ogenrwot">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        
-
-                        
-                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/0000-0002-0133-8164">
-                            <i class="fab fa-orcid"></i>
-                        </a>
-                        
-                    </div>
-                </div>
+    <main id="main" class="container-lg">
+        <!-- Hero -->
+<section class="hero">
+    <div class="row align-items-center">
+        <div class="col-lg-7 order-2 order-lg-1 mt-4 mt-lg-0">
+            <span class="status-pill"><span class="dot"></span> PhD Candidate &middot; Final year</span>
+            <h1 class="hero-name">Daniel Ogenrwot</h1>
+            <p class="hero-tagline">I study how software evolves, and how AI coding agents are changing the way it is built.</p>
+            <div class="hero-affil mt-3">
+                <img src="/assets/images/badges/unlv.svg" alt="" aria-hidden="true">
+                <span>Department of Computer Science, University of Nevada, Las Vegas &middot;
+                    <a href="https://github.com/unlv-evol" target="_blank" rel="noopener">EVOL Lab</a></span>
+            </div>
+            <p class="hero-summary">Final-year PhD Candidate in Computer Science at UNLV working on Empirical Software Engineering and AI for Software Engineering: patch propagation across forks, AI-generated pull requests, and the health of software ecosystems.</p>
+            
+            <div class="hero-cta">
+                <a class="btn-brand" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+                <a class="btn-ghost" href="/publications"><i class="fas fa-book-open"></i> Publications</a>
+                <a class="btn-ghost" href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75"><i class="fas fa-envelope"></i> Get in touch</a>
+            </div>
+            <div class="hero-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
+</div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2">
+            <div class="portrait-wrap">
+                <img class="portrait" src="/assets/images/photos/portrait.jpg" alt="Portrait of Daniel Ogenrwot" width="675" height="900" fetchpriority="high">
             </div>
         </div>
     </div>
-</div>
+</section>
 
-
-
-
+<!-- Impact strip -->
+<section class="reveal" aria-label="Research at a glance">
+    <div class="panel stats stats-4">
+        <div class="stat"><div class="stat-value" data-count="11">11</div><div class="stat-label">Courses taught</div></div>
+        <div class="stat"><div class="stat-value" data-count="6">6</div><div class="stat-label">Committee roles</div></div>
+        <div class="stat"><div class="stat-value" data-count="9">9</div><div class="stat-label">Awards &amp; grants</div></div>
+        <div class="stat"><div class="stat-value" data-count="6">6</div><div class="stat-label">Open artifacts</div></div>
     </div>
-    <div class="col-lg-9 col-md-8">
+</section>
 
-        <div class="mt-3 d-md-none"></div>
-<div class="row">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body p-4">
-                <div class="row px-3 pt-3">
-                    <div class="col h3">
-                        About Me
-                    </div>
-                </div>
-                <div class="row p-3">
-                    <div class="col">
-                        <div class="text-profile-bio mt-0" >
-                            <p>
+<!-- About -->
+<section class="section reveal" id="about">
+    <div class="row">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title mb-3">Hello, I'm Daniel.</h2>
+            <div class="bio"><p>
   I am a PhD Candidate and Graduate Assistant in the
   <a href="https://www.cs.unlv.edu/" target="_blank">Department of Computer Science</a>
   at the <a href="https://www.unlv.edu/" target="_blank">University of Nevada, Las Vegas (UNLV)</a>,
@@ -193,670 +206,454 @@
   and a BSc in Computer Science from Gulu University, Uganda.
   My research lies at the intersection of <strong>Empirical Software Engineering</strong> and
   <strong>Agentic AI</strong>, with publications in venues including
-  ASE, SCAM, MSR, AIware, MSR, EMSE.
-  I also serve the research community as a reviewer in several top tier software engineering conferences and journals e.g MSR, ESEC/FSE, ICSME, ISSAT, ASE, ACM TOCE, Springer Nature Scientific Reports, Elsevier Data in Brief, the Journal of Advances in Information Technology, etc.
+  ASE, EMSE, MSR, SCAM, and AIware.
+  I also serve the research community on the program and artifact evaluation committees of
+  top software engineering venues, including ESEC/FSE, ASE, ISSTA, ICSME, and MSR, and as a reviewer
+  for journals such as ACM TOCE, Scientific Reports, and Data in Brief.
 </p> <p>
   <em>"And you will know the truth, and the truth will set you free."</em> — John 8:32
-</p>
+</p></div>
+            
+            <div class="d-flex flex-wrap mt-3" style="gap: .4rem;">
+                <span class="chip">Empirical Software Engineering</span><span class="chip">AI for Software Engineering</span><span class="chip">Agentic AI</span><span class="chip">Mining Software Repositories</span><span class="chip">Software Analytics</span>
+            </div>
+            
+        </div>
+        
+        <div class="col-lg-5">
+            <div class="panel panel-pad mb-3">
+                <div class="panel-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                <ul class="timeline">
+                    
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/unlv.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">Aug. 2023 - present</div>
+                            <div class="tl-title">PhD Candidate</div>
+                            <div class="tl-sub">University of Nevada, Las Vegas</div>
                         </div>
-                        
-                            <a target="_blank" href="https://danielogen.github.io/assets/pdf/DanielOgenrwot-CV-20260105.pdf"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
-                        
-                    </div>
-        
-                </div>
-            </div>
-        </div>        
-    </div>
-</div>
-
-
-        
-            <div class="row mt-3">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body p-4">
-                <div class="row" data-masonry='{"percentPosition": true }'>
+                    </li>
                     
-                    <div class="col-lg-6">
-                        <div class="mx-2 my-1">
-                            <h6>Education</h6>
-                            <ul class="list-unstyled mb-1">
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/unlv.svg" alt="University of Nevada, Las Vegas" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>University of Nevada, Las Vegas</div>
-                                        <div class="small">Department of Computer Science</div>
-                                        <div class="small d-flex">
-                                            <div>PhD Candidate</div>
-                                            <div class="mt-auto ml-auto no-break"><em>Aug. 2023 - present</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/makerere.svg" alt="Makerere University, Uganda" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>Makerere University, Uganda</div>
-                                        <div class="small">College of Computing and Information Sciences</div>
-                                        <div class="small d-flex">
-                                            <div>MSc in Computer Science</div>
-                                            <div class="mt-auto ml-auto no-break"><em>2019 - 2021</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/gulu.svg" alt="Gulu University, Uganda" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>Gulu University, Uganda</div>
-                                        <div class="small">Department of Computer Science</div>
-                                        <div class="small d-flex">
-                                            <div>BSc in Computer Science</div>
-                                            <div class="mt-auto ml-auto no-break"><em>2010 - 2013</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                            </ul>
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/makerere.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">2019 - 2021</div>
+                            <div class="tl-title">MSc in Computer Science</div>
+                            <div class="tl-sub">Makerere University, Uganda</div>
                         </div>
-                    </div>
+                    </li>
                     
-
-                    
-                    <div class="col-lg-6">
-                        <div class="mx-2 my-1">
-                            <h6>Experience</h6>
-                            <ul class="list-unstyled mb-1">
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/unlv.svg" alt="University of Nevada, Las Vegas (UNLV)" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>University of Nevada, Las Vegas (UNLV)</div>
-                                        <div class="small">Department of Computer Science</div>
-                                        <div class="small d-flex">
-                                            <div>Graduate Research/Teaching Assistant</div>
-                                            <div class="mt-auto ml-auto no-break"><em>2023 - present</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/airqo.svg" alt="AirQo Project, Makerere University" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>AirQo Project, Makerere University</div>
-                                        <div class="small">Google.org funded</div>
-                                        <div class="small d-flex">
-                                            <div>Ph.D. Research Fellow</div>
-                                            <div class="mt-auto ml-auto no-break"><em>2023 - present</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="media mb-1">
-                                    <img src="/assets/images/badges/gulu.svg" alt="Gulu University, Uganda" style="width: 18px;" class="mr-1 mt-1">
-                                    <div class="media-body">
-                                        <div>Gulu University, Uganda</div>
-                                        <div class="small">Department of Computer Science</div>
-                                        <div class="small d-flex">
-                                            <div>Assistant Lecturer</div>
-                                            <div class="mt-auto ml-auto no-break"><em>2022 - 2023</em></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                            <div class="small text-muted mt-1">
-                                For more details refer to the <a href="https://danielogen.github.io/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank">CV <i class="fas fa-file-pdf"></i></a>.
-                            </div>
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/gulu.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">2010 - 2013</div>
+                            <div class="tl-title">BSc in Computer Science</div>
+                            <div class="tl-sub">Gulu University, Uganda</div>
                         </div>
-                    </div>
+                    </li>
                     
-
-
-                </div>
-
+                </ul>
+            </div>
+            <div class="panel panel-pad">
+                <div class="panel-title"><i class="fas fa-briefcase"></i> Experience</div>
+                <ul class="timeline">
+                    
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/unlv.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">2023 - present</div>
+                            <div class="tl-title">Graduate Research/Teaching Assistant</div>
+                            <div class="tl-sub">University of Nevada, Las Vegas (UNLV) &middot; Department of Computer Science</div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/airqo.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">2023 - present</div>
+                            <div class="tl-title">Ph.D. Research Fellow</div>
+                            <div class="tl-sub">AirQo Project, Makerere University &middot; Google.org funded</div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="tl-logo"><img src="/assets/images/badges/gulu.svg" alt=""></div>
+                        <div>
+                            <div class="tl-date">2022 - 2023</div>
+                            <div class="tl-title">Assistant Lecturer</div>
+                            <div class="tl-sub">Gulu University, Uganda &middot; Department of Computer Science</div>
+                        </div>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
+        
     </div>
+</section>
+
+<!-- Research areas -->
+
+<section class="section reveal" id="research">
+    <div class="section-head">
+        <div><span class="eyebrow">Research</span><h2 class="section-title">What I work on</h2></div>
+        <a class="section-link" href="/research">Research agenda <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-6 col-lg-3 mb-3">
+            <a class="panel hover-lift area-card" href="/research#ai4se">
+                <div class="area-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Coding Agents & LLMs</h3>
+                <p>How autonomous agents such as Copilot, Devin, and Cursor write, submit, and conflict over code in real repositories, and how developers actually adopt AI-generated patches.</p>
+                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
+            </a>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-3">
+            <a class="panel hover-lift area-card" href="/research#patch">
+                <div class="area-icon"><i class="fas fa-code-branch"></i></div>
+                <h3>Patch Integration Across Forks</h3>
+                <p>Making bug fixes propagate reliably across forks that have drifted apart through independent refactoring.</p>
+                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
+            </a>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-3">
+            <a class="panel hover-lift area-card" href="/research#ecosystems">
+                <div class="area-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Software Ecosystems</h3>
+                <p>Treating software as interconnected networks to understand how dependency structure creates systemic risk.</p>
+                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
+            </a>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-3">
+            <a class="panel hover-lift area-card" href="/research#smells">
+                <div class="area-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Code Smells & Quality</h3>
+                <p>Where design smells appear, why they persist, and what roles they play as software evolves.</p>
+                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- Selected publications -->
+
+
+<section class="section reveal" id="selected-publications">
+    <div class="section-head">
+        <div><span class="eyebrow">Selected work</span><h2 class="section-title">Featured publications</h2></div>
+        <a class="section-link" href="/publications">All 19 publications <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-6 col-lg-4 mb-4"><article class="panel hover-lift feature-pub">
+    <img class="feature-pub-img" src="/assets/images/covers/patchtrack-overview.png" alt="Overview figure for PatchTrack: A Comprehensive Analysis of ChatGPT&#39;s Influence on Pull Request Outcomes" loading="lazy">
+    <div class="feature-pub-body">
+        <div class="d-flex flex-wrap" style="gap: .35rem;">
+            <span class="chip chip-accent">EMSE 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19</a>
+        </div>
+        <h3><a href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a></h3>
+        <div class="authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">Paper</a>
+            <a class="pub-link" href="https://arxiv.org/abs/2505.07700" target="_blank" rel="noopener">Preprint</a>
+            <a class="pub-link" href="https://github.com/unlv-evol/PatchTrack" target="_blank" rel="noopener">Code</a>
+        </div>
+    </div>
+</article>
+</div>
+        
+        <div class="col-md-6 col-lg-4 mb-4"><article class="panel hover-lift feature-pub">
+    <img class="feature-pub-img" src="/assets/images/covers/agenticflict-overview.png" alt="Overview figure for AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub" loading="lazy">
+    <div class="feature-pub-body">
+        <div class="d-flex flex-wrap" style="gap: .35rem;">
+            <span class="chip chip-accent">AIware 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 7</a>
+        </div>
+        <h3><a href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a></h3>
+        <div class="authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener">Preprint</a>
+            <a class="pub-link" href="https://zenodo.org/records/19396917" target="_blank" rel="noopener">Dataset & Code</a>
+        </div>
+    </div>
+</article>
+</div>
+        
+        <div class="col-md-6 col-lg-4 mb-4"><article class="panel hover-lift feature-pub">
+    <div class="feature-pub-img placeholder-art" aria-hidden="true">MSR 2026</div>
+    <div class="feature-pub-body">
+        <div class="d-flex flex-wrap" style="gap: .35rem;">
+            <span class="chip chip-accent">MSR 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:-f6ydRqryjwC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19</a>
+        </div>
+        <h3><a href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a></h3>
+        <div class="authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">Paper</a>
+        </div>
+    </div>
+</article>
+</div>
+        
+    </div>
+</section>
+
+
+<!-- News + Awards -->
+<section class="section reveal" id="news">
+    <div class="row">
+        
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="section-head"><div><span class="eyebrow">Updates</span><h2 class="section-title">News</h2></div></div>
+            <div class="panel panel-pad">
+    <ul class="news-list" id="news-list">
+        <li class="news-item ">
+            <div class="news-date">Oct 2026</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>New preprint:</strong> <a href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener">PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis</a>, an open-source library covering 187 languages.</div>
+        </li>
+        <li class="news-item ">
+            <div class="news-date">Sep 2026</div>
+            <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="news-text">Joined the <a href="https://conf.researchr.org/home/msr-2027" target="_blank" rel="noopener">MSR 2027</a> Mining Challenge committee.</div>
+        </li>
+        <li class="news-item ">
+            <div class="news-date">Jul 2026</div>
+            <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="news-text">Serving on the Artifact Evaluation Committees of <a href="https://conf.researchr.org/home/ase-2026" target="_blank" rel="noopener">ASE 2026</a> and <a href="https://conf.researchr.org/home/issta-2026" target="_blank" rel="noopener">ISSTA 2026</a>.</div>
+        </li>
+        <li class="news-item ">
+            <div class="news-date">Jun 2026</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Journal paper published in Empirical Software Engineering (EMSE):</strong> <a href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a>.</div>
+        </li>
+        <li class="news-item ">
+            <div class="news-date">May 2026</div>
+            <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="news-text">Invited to the <a href="https://conf.researchr.org/home/icsme-2026" target="_blank" rel="noopener">ICSME 2026</a> Industry Track program committee.</div>
+        </li>
+        <li class="news-item ">
+            <div class="news-date">Apr 2026</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Paper accepted at ACM AIware 2026:</strong> <a href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Jan 2026</div>
+            <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="news-text">Invited to the <a href="https://conf.researchr.org/home/msr-2026" target="_blank" rel="noopener">MSR 2026</a> Junior Program Committee (Technical Papers).</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Jan 2026</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Paper accepted at MSR 2026 (Mining Challenge):</strong> <a href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Jan 2026</div>
+            <div class="news-icon tag-award" aria-hidden="true"><i class="fas fa-trophy"></i></div>
+            <div class="news-text">Awarded the UNLV College of Engineering <strong>Marjorie &amp; Victor Kunkel Engineering Scholarship</strong>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Jan 2026</div>
+            <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <div class="news-text">Invited to the <a href="https://conf.researchr.org/track/fse-2026/fse-2026-ideas--visions-and-reflections" target="_blank" rel="noopener">ESEC/FSE 2026</a> program committee (Ideas, Visions and Reflections).</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Oct 2025</div>
+            <div class="news-icon tag-award" aria-hidden="true"><i class="fas fa-trophy"></i></div>
+            <div class="news-text">Received the <strong>Distinguished Artifact Award</strong> at <a href="https://conf.researchr.org/home/scam-2025" target="_blank" rel="noopener">SCAM 2025</a> (co-located with ICSME 2025) for <a href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</a>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Aug 2025</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Paper accepted at SEDE 2025:</strong> <a href="https://arxiv.org/abs/2508.14451" target="_blank" rel="noopener">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</a>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Aug 2025</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Paper accepted at SEDE 2025:</strong> <a href="https://arxiv.org/abs/2508.13819" target="_blank" rel="noopener">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</a>.</div>
+        </li>
+        <li class="news-item is-hidden">
+            <div class="news-date">Oct 2024</div>
+            <div class="news-icon tag-paper" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+            <div class="news-text"><strong>Poster paper accepted at ASE 2024:</strong> <a href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</a>.</div>
+        </li>
+    </ul>
+    <button class="btn-ghost btn-sm mt-3 news-toggle" type="button" data-target="#news-list" aria-expanded="false">
+        <i class="fas fa-chevron-down"></i> <span>Show all 14 updates</span>
+    </button>
 </div>
 
-        
-
-        
-            
-
-<div class="my-3 bg-white shadow-sm rounded-xl">
-    <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-trophy"></i> Awards &amp; Grants</h6>
-    <div class="px-3 pb-1 small">
-        
-        <div class="media py-1 ">
-            
-            <div class="mr-3 text-muted my-1">2026</div>
-            <div class="media-body">
-                
-                <div class="my-1">
-                    
-                    <span class="badge badge-pill badge-success mr-1">Latest</span>
-                    
-                    UNLV College of Engineering Marjorie & Victor Kunkel Engineering Scholarship
-                </div>
-                
-            </div>
         </div>
         
-        <div class="media py-1 border-top border-gray">
-            
-            <div class="mr-3 text-muted my-1">2025</div>
-            <div class="media-body">
-                
-                <div class="my-1">
-                    
-                    Distinguished Artifact Award, IEEE SCAM 2025
-                </div>
-                
-                <div class="my-1">
-                    
-                    UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,249.61)
-                </div>
-                
-            </div>
-        </div>
         
-        <div class="media py-1 border-top border-gray">
-            
-            <div class="mr-3 text-muted my-1">2024</div>
-            <div class="media-body">
+        <div class="col-lg-5">
+            <div class="section-head"><div><span class="eyebrow">Recognition</span><h2 class="section-title">Awards &amp; Grants</h2></div></div>
+            <div class="panel panel-pad">
                 
-                <div class="my-1">
-                    
-                    UNLV Access Grant ($2,000)
+                <div class="award-row">
+                    <div class="award-year">2026</div>
+                    <div class="award-name">UNLV College of Engineering Marjorie & Victor Kunkel Engineering Scholarship</div>
                 </div>
                 
-                <div class="my-1">
-                    
-                    UNLV College of Engineering Roy and Helen Kelsall Scholarship Fund ($1,000)
+                <div class="award-row">
+                    <div class="award-year">2025</div>
+                    <div class="award-name">Distinguished Artifact Award, IEEE SCAM 2025</div>
                 </div>
                 
-                <div class="my-1">
-                    
-                    UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,456)
+                <div class="award-row">
+                    <div class="award-year">2025</div>
+                    <div class="award-name">UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,249.61)</div>
                 </div>
                 
-            </div>
-        </div>
-        
-        <div class="media py-1 border-top border-gray">
-            
-            <div class="mr-3 text-muted my-1">2019</div>
-            <div class="media-body">
-                
-                <div class="my-1">
-                    
-                    MTN MoMo Open API Challenge — 1st Runner-up ($2,000)
+                <div class="award-row">
+                    <div class="award-year">2024</div>
+                    <div class="award-name">UNLV Access Grant ($2,000)</div>
                 </div>
                 
-            </div>
-        </div>
-        
-        <div class="media py-1 border-top border-gray">
-            
-            <div class="mr-3 text-muted my-1">2018</div>
-            <div class="media-body">
-                
-                <div class="my-1">
-                    
-                    Makerere University Mak–Sida Bilateral Program Scholarship (~$15,000)
+                <div class="award-row">
+                    <div class="award-year">2024</div>
+                    <div class="award-name">UNLV College of Engineering Roy and Helen Kelsall Scholarship Fund ($1,000)</div>
                 </div>
                 
-            </div>
-        </div>
-        
-        <div class="media py-1 border-top border-gray">
-            
-            <div class="mr-3 text-muted my-1">2013</div>
-            <div class="media-body">
+                <div class="award-row">
+                    <div class="award-year">2024</div>
+                    <div class="award-name">UNLV Graduate Professional and Student Association (GPSA) Research Grant ($1,456)</div>
+                </div>
                 
-                <div class="my-1">
-                    
-                    Gulu University First-Class Honours, BSc Computer Science
+                <div class="award-row">
+                    <div class="award-year">2019</div>
+                    <div class="award-name">MTN MoMo Open API Challenge — 1st Runner-up ($2,000)</div>
+                </div>
+                
+                <div class="award-row">
+                    <div class="award-year">2018</div>
+                    <div class="award-name">Makerere University Mak–Sida Bilateral Program Scholarship (~$15,000)</div>
+                </div>
+                
+                <div class="award-row">
+                    <div class="award-year">2013</div>
+                    <div class="award-name">Gulu University First-Class Honours, BSc Computer Science</div>
                 </div>
                 
             </div>
         </div>
         
     </div>
-</div>
+</section>
 
-        
+<!-- Service snapshot -->
 
+<section class="section reveal" id="service">
+    <div class="section-head">
+        <div><span class="eyebrow">Community</span><h2 class="section-title">Professional service</h2></div>
+        <a class="section-link" href="/services">All service <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-grid">
         
+        <a class="panel hover-lift service-card" href="https://2027.msrconf.org/committee/msr-2027-mining-challenge-mining-challenge" target="_blank" rel="noopener">
+            <div class="service-kind kind-pc">Program Committee</div>
+            <div class="service-venue mt-1">MSR 2027</div>
+            <div class="service-track mb-0">Mining Challenge</div>
+        </a>
         
+        <a class="panel hover-lift service-card" href="https://conf.researchr.org/committee/ase-2026/ase-2026-artifact-evaluation-artifact-evaluation-committee" target="_blank" rel="noopener">
+            <div class="service-kind kind-aec">Artifact Evaluation</div>
+            <div class="service-venue mt-1">ASE 2026</div>
+            <div class="service-track mb-0">Artifact Evaluation</div>
+        </a>
         
+        <a class="panel hover-lift service-card" href="https://conf.researchr.org/committee/issta-2026/issta-2026-artifact-evaluation-artifact-evaluation-committee" target="_blank" rel="noopener">
+            <div class="service-kind kind-aec">Artifact Evaluation</div>
+            <div class="service-venue mt-1">ISSTA 2026</div>
+            <div class="service-track mb-0">Artifact Evaluation</div>
+        </a>
         
-
-
-<div class="my-3 bg-white shadow-sm rounded-xl">
-    <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-rss"></i> News</h6>
-    <div class="px-3 pb-1 small">
+        <a class="panel hover-lift service-card" href="https://conf.researchr.org/committee/icsme-2026/icsme-2026-industry-track-program-committee" target="_blank" rel="noopener">
+            <div class="service-kind kind-pc">Program Committee</div>
+            <div class="service-venue mt-1">ICSME 2026</div>
+            <div class="service-track mb-0">Industry Track</div>
+        </a>
         
+        <a class="panel hover-lift service-card" href="https://conf.researchr.org/committee/fse-2026/fse-2026-ideas-visions-and-reflections-program-committee" target="_blank" rel="noopener">
+            <div class="service-kind kind-pc">Program Committee</div>
+            <div class="service-venue mt-1">ESEC/FSE 2026</div>
+            <div class="service-track mb-0">Ideas, Visions and Reflections</div>
+        </a>
         
-        
-        
-        
-        
-        <div class="media py-1 ">
-            <div class="mr-3 text-muted my-1">2026</div>
-            <div class="media-body">
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        <span class="badge badge-pill badge-success mr-1">Latest</span>
-                        
-                        Invited as program committee member for the <a href="" target="_blank">ISSAT 2026</a> - Artifact Evaluation Track.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Jun 01</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        Invited as program committee member for the <a href="" target="_blank">ICMSE 2026</a> - Industry Track.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>May 01</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        <strong>Paper accepted at ACM Alware 2026</strong> - AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Apr 01</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        Invited as junior program committee member for the <a href="" target="_blank">MSR 2026</a> - Technical Track.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Jan 20</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        🎉 <strong> Paper accepted at MSR 2026</strong>: How AI Coding Agent Modify Code: A Large-Scale Study of Pull Requests.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Jan 15</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        Invited as program committee member for the <a href="https://conf.researchr.org/track/fse-2026/fse-2026-ideas--visions-and-reflections" target="_blank">ESEC/FSE 2026</a> - Ideas, Visions, and Reflections Track.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Jan 01</i></div>
-                </div>
-                
-                
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        <div class="media py-1 border-top border-gray">
-            <div class="mr-3 text-muted my-1">2025</div>
-            <div class="media-body">
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        Received the <strong>🏅Distinguished Artifact Award</strong> at <a href="https://conf.researchr.org/home/scam-2025" target="_blank">SCAM 2025 Co-located with ICSME 2025 </a> for the paper <a href="https://ieeexplore.ieee.org/document/11190222" target="_blank">Refactoring-aware Patch Integration Across Java Forks</a>.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Oct 01</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        🎉 <strong>Paper accepted at SEDE 2025:</strong> <a href="https://arxiv.org/abs/2508.14451">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</a>.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Aug 01</i></div>
-                </div>
-                
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        🎉 <strong>Paper accepted at SEDE 2025:</strong> <a href="https://arxiv.org/abs/2508.13819">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</a>.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Aug 01</i></div>
-                </div>
-                
-                
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        <div class="media py-1 border-top border-gray">
-            <div class="mr-3 text-muted my-1">2024</div>
-            <div class="media-body">
-                
-                
-                <div class="my-1 d-flex">
-                    <div>
-                        
-                        🎉<strong> Poster Paper accepted at MSR 2026</strong>:: <a href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</a>.
-                    </div>
-                    <div class="ml-auto mt-auto text-muted no-break"><i>Oct 01</i></div>
-                </div>
-                
-                
-            </div>
-        </div>
-        
+        <a class="panel hover-lift service-card" href="https://2026.msrconf.org/committee/msr-2026-junior-pc-technical-papers---junior-program-committee" target="_blank" rel="noopener">
+            <div class="service-kind kind-jpc">Junior PC</div>
+            <div class="service-venue mt-1">MSR 2026</div>
+            <div class="service-track mb-0">Technical Papers</div>
+        </a>
         
     </div>
-</div>
+</section>
 
-        
-        
 
-        
-        
-        
-<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        <i class="fas fa-star"></i> Selected Publications 
-        <a href="/publications">(view all <i class="fas fa-angle-double-right"></i>)</a>
-    </h6>
-    
-        
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/patchtrack" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Patchtrack: a comprehensive analysis of chatgpt’s influence on pull request outcomes</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">The rapid adoption of large language models (LLMs) like ChatGPT has introduced new dynamics in software development, particularly within pull request workflows. We analyze 338 pull requests from 255 GitHub repositories containing self-admitted ChatGPT usage, comprising 645 AI-generated snippets and 3,486 developer-authored patches.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                
-                
-                
-                <a target="_blank" href="https://github.com/unlv-evol/PatchTrack">[Dataset & Code]</a>
-                
-                
-            </p>
-
+<!-- Contact -->
+<section class="cta-band reveal" id="contact">
+    <div class="row align-items-center position-relative" style="z-index: 1;">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+            <h2>Let's collaborate.</h2>
+            <p>I'm always happy to talk about empirical software engineering, AI coding agents, research collaborations, or opportunities. The best way to reach me is by email.</p>
+        </div>
+        <div class="col-lg-4 d-flex flex-wrap justify-content-lg-end" style="gap: .6rem;">
+            <a class="btn-brand" href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75"><i class="fas fa-envelope"></i> Email me</a>
+            <a class="btn-ghost" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a>
         </div>
     </div>
-</div>
+</section>
 
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Patchtrack: a comprehensive analysis of chatgpt’s influence on pull request outcomes</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">The rapid adoption of large language models (LLMs) like ChatGPT has introduced new dynamics in software development, particularly within pull request workflows. We analyze 338 pull requests from 255 GitHub repositories containing self-admitted ChatGPT usage, comprising 645 AI-generated snippets and 3,486 developer-authored patches.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://link.springer.com/article/10.1007/s10664-026-10869-5">[Paper]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://github.com/unlv-evol/PatchTrack">[Dataset & Code]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>    
-    
-        
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2026/aiware-agenticflict" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Large-scale dataset of 142K+ agentic pull requests from 59K+ repositories, identifying 29K PRs with merge conflicts and extracting 336K+ fine-grained conflict regions across AI coding agents (Copilot, Devin, Cursor, and others).</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://arxiv.org/abs/2604.03551">[Preprint]</a>
-                
-                
-                
-                <a target="_blank" href="https://zenodo.org/records/19396917">[Dataset & Code]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>AIware 2026 — Benchmark & Dataset Track (co-located with FSE 2026)</i> 2026  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Large-scale dataset of 142K+ agentic pull requests from 59K+ repositories, identifying 29K PRs with merge conflicts and extracting 336K+ fine-grained conflict regions across AI coding agents (Copilot, Devin, Cursor, and others).</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://arxiv.org/abs/2604.03551">[Preprint]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://zenodo.org/records/19396917">[Dataset & Code]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>    
-    
-        
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2025/scam-repatch" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i> 2025  <span class="badge badge-pill badge-publication badge-warning">Distinguished Artifact Award</span> <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">RePatch addresses structural drift in divergent software variants through refactoring-aware patch integration, achieving 52.8% success on previously failing patches.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://ieeexplore.ieee.org/document/11190222">[Paper]</a>
-                
-                
-                
-                <a target="_blank" href="https://github.com/unlv-evol/RePatch">[Code]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i> 2025  <span class="badge badge-pill badge-publication badge-warning">Distinguished Artifact Award</span> <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">RePatch addresses structural drift in divergent software variants through refactoring-aware patch integration, achieving 52.8% success on previously failing patches.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://ieeexplore.ieee.org/document/11190222">[Paper]</a>
-                    
-                    
-                    
-                    <a target="_blank" href="https://github.com/unlv-evol/RePatch">[Code]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>    
-    
-        
-<div class="d-none d-md-block">
-    <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="/publications/2024/ase-patchtrack" viewBox="0 0 300 200"></svg></div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</h5>
-            <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-            <p class="mt-0 mb-0 small"><i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE)</i> 2024  <span data-semantic-scholar-id=""></span></p>
-            <p class="mt-0 mb-0 small text-muted">Empirical study investigating how ChatGPT-generated patches influence pull request acceptance decisions, examining 338 pull requests across open-source projects.</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                
-                
-                <a target="_blank" href="https://dl.acm.org/doi/10.1145/3691620.3695338">[Paper]</a>
-                
-                
-            </p>
-
-        </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none border-bottom border-gray   " data-src="">
-    <div class="w-100  " style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</h5>
-                <p class="mt-0 mb-0 small"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></p>
-                <p class="mt-0 mb-0 small"><i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE)</i> 2024  <span data-semantic-scholar-id=""></span></p>
-                <p class="mt-0 mb-0 small text-muted">Empirical study investigating how ChatGPT-generated patches influence pull request acceptance decisions, examining 338 pull requests across open-source projects.</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    
-                    
-                    <a target="_blank" href="https://dl.acm.org/doi/10.1145/3691620.3695338">[Paper]</a>
-                    
-                    
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>    
-    
-    <h6 class="d-block p-3 mt-0 text-right">
-        <a href="/publications">All publications <i class="fas fa-angle-double-right"></i></a>
-    </h6>
-</div>
-
-
-        
-    </div>
-</div>
-
-    </div>
-    <footer class="footer border-top py-2 mt-5 bg-white small">
+    </main>
+    <footer class="site-footer">
     <div class="container-lg">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
                 </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
-                </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><i class="ai ai-dblp"></i></a>
+</div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a><a href="/blog">Blog</a>
+                </nav>
             </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                <div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+</div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
         </div>
     </div>
 </footer>
 
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js" integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA==" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '$', right: '$', display: false}
-              ],
-              throwOnError : false
-            });
-        });
-    </script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/bubble_visual_hash.js"></script>
-    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script src="/assets/js/common.js"></script>
+
 </body>
 </html>
