@@ -10,6 +10,8 @@ on:
       - master
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1' # every Monday 06:00 UTC: sync Google Scholar and redeploy
 
 permissions:
   contents: write
@@ -20,6 +22,19 @@ jobs:
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
+    - name: Sync Google Scholar and researchr (metrics, publications, committees)
+      if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      continue-on-error: true
+      run: |
+        python3 scripts/update_scholar.py
+        python3 scripts/update_researchr.py
+        git add _data/metrics.yml _data/scholar_citations.yml _data/committees.yml _publications
+        if ! git diff --cached --quiet; then
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync Google Scholar and researchr data"
+          git push
+        fi
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:

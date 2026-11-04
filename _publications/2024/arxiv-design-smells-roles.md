@@ -4,6 +4,9 @@ date: 2024-06-01 00:00:00 +0000
 selected: false
 pub: "arXiv"
 pub_date: "2024"
+type: preprint
+venue_short: "arXiv 2024"
+topics: [smells]
 abstract: >-
   Analysis of 11,350 classes from 30 repositories revealing that design smell prevalence varies
   across role-stereotypes and application ecosystems.

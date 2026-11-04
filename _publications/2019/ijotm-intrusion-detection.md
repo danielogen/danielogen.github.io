@@ -4,6 +4,8 @@ date: 2019-01-01 00:00:00 +0000
 selected: false
 pub: "International Journal of Technology and Management"
 pub_date: "2019"
+type: journal
+venue_short: "IJOTM 2019"
 authors:
   - Anthony A Ashaba
   - Drake Patrick Mirembe

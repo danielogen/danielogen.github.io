@@ -35,6 +35,13 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - backup-06-01-2026T505PM/ # old website, not part of the new site
+  - README.md
+  - scripts/
+  - CONTRIBUTING.md
+  - LICENSE
+  - Dockerfile
+  - docker-compose.yml
+  - docker-local.yml
 
 # timezone: Asia/Shanghai
 

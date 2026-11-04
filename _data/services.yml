@@ -1,36 +1,21 @@
-program_committee:
-  - venue: ISSAT 2026
-    role: PC Member
-    track: Artifact Evaluation
-    year: 2026
-  - venue: ICSME 2026
-    role: PC Member
-    track: Industry Track
-    year: 2026
-  - venue: ESEC/FSE 2026
-    role: PC Member
-    track: Ideas, Visions, and Reflections
-    year: 2026
-  - venue: MSR 2026
-    role: Junior PC Member
-    track: Technical Track
-    year: 2026
-
+# Conference committees are synced weekly from researchr into _data/committees.yml (scripts/update_researchr.py)
 journal_reviewing:
-  - name: ACM Transactions on Computing Education
+  - name: ACM Transactions on Computing Education (TOCE)
     publisher: ACM
   - name: Scientific Reports
     publisher: Springer Nature
   - name: Data in Brief
     publisher: Elsevier
   - name: Journal of Advances in Information Technology
-    publisher: Unknown
+    publisher: JAIT
 
 memberships:
   - name: ACM
     full_name: Association for Computing Machinery
+    url: https://www.acm.org
   - name: IEEE
     full_name: Institute of Electrical and Electronics Engineers
+    url: https://www.ieee.org
   - name: US-RSE
     full_name: United States Research Software Engineer Association
     url: https://us-rse.org

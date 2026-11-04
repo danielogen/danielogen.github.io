@@ -1,88 +1,64 @@
 ---
 layout: default
-title: Services
-navbar_title: Services
+title: Service
+navbar_title: Service
+description: "Professional service by Daniel Ogenrwot: program and artifact evaluation committees at ESEC/FSE, ASE, ISSTA, ICSME, and MSR, plus journal reviewing."
 ---
+{% assign services = site.data.services %}
+{% assign pc_by_year = site.data.committees | group_by: "year" | sort: "name" | reverse %}
 
-<div class="row">
-    <div class="col-12">
-        <h2 class="pt-2 pb-3">Professional Services</h2>
+<header class="page-header">
+    <span class="eyebrow">Community</span>
+    <h1>Professional Service</h1>
+    <p class="lead">
+        I serve on program and artifact evaluation committees of leading software engineering venues and review for journals.
+        A live record is on my <a href="{{ site.data.profile.researchr }}" target="_blank" rel="noopener">researchr profile <i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>.
+    </p>
+</header>
 
-        <!-- Program Committee -->
-        {% if site.data.services.program_committee %}
-        <div class="my-3 bg-white shadow-sm rounded-xl">
-            <h6 class="p-3 mb-0 border-bottom border-gray">
-                <i class="fas fa-users mr-1"></i> Program Committee
-            </h6>
-            <div class="px-4 py-2">
-                {% for item in site.data.services.program_committee %}
-                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
-                    <div class="flex-grow-1">
-                        <div><strong>{{ item.venue }}</strong></div>
-                        {% if item.track %}
-                        <div class="small text-muted">{{ item.track }}</div>
-                        {% endif %}
-                    </div>
-                    <div class="mx-3 text-muted small no-break">{{ item.year }}</div>
-                    <div class="no-break">
-                        <span class="badge badge-pill badge-light border">{{ item.role }}</span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Journal Reviewing -->
-        {% if site.data.services.journal_reviewing %}
-        <div class="my-3 bg-white shadow-sm rounded-xl">
-            <h6 class="p-3 mb-0 border-bottom border-gray">
-                <i class="fas fa-book-open mr-1"></i> Journal Reviewing
-            </h6>
-            <div class="px-4 py-2">
-                {% for item in site.data.services.journal_reviewing %}
-                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
-                    <div class="flex-grow-1">
-                        <div>{{ item.name }}</div>
-                        {% if item.publisher %}
-                        <div class="small text-muted">{{ item.publisher }}</div>
-                        {% endif %}
-                    </div>
-                    <div class="no-break">
-                        <span class="badge badge-pill badge-light border">Reviewer</span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Professional Memberships -->
-        {% if site.data.services.memberships %}
-        <div class="my-3 bg-white shadow-sm rounded-xl">
-            <h6 class="p-3 mb-0 border-bottom border-gray">
-                <i class="fas fa-id-card mr-1"></i> Professional Memberships
-            </h6>
-            <div class="px-4 py-2">
-                {% for item in site.data.services.memberships %}
-                <div class="d-flex align-items-center py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
-                    <div class="flex-grow-1">
-                        <div>
-                            {% if item.url %}
-                            <a href="{{ item.url }}" target="_blank">{{ item.full_name }}</a>
-                            {% else %}
-                            {{ item.full_name }}
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="no-break">
-                        <span class="badge badge-pill badge-secondary">{{ item.name }}</span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
-    </div>
+<div class="service-tabs" role="tablist" aria-label="Service type">
+    <button class="filter-btn active" type="button" role="tab" id="tab-conferences" aria-controls="panel-conferences" aria-selected="true" data-tab="conferences"><i class="fas fa-users"></i> Conference Program Committees <span class="count">{{ site.data.committees | size }}</span></button>
+    <button class="filter-btn" type="button" role="tab" id="tab-journals" aria-controls="panel-journals" aria-selected="false" data-tab="journals"><i class="fas fa-book-open"></i> Journal Reviewing <span class="count">{{ services.journal_reviewing | size }}</span></button>
+    <button class="filter-btn" type="button" role="tab" id="tab-memberships" aria-controls="panel-memberships" aria-selected="false" data-tab="memberships"><i class="fas fa-id-card"></i> Professional Memberships <span class="count">{{ services.memberships | size }}</span></button>
 </div>
+
+<section class="service-panel mb-5" role="tabpanel" id="panel-conferences" aria-labelledby="tab-conferences">
+    {% for year in pc_by_year %}
+    <div class="pub-year"><h2>{{ year.name }}</h2></div>
+    <div class="service-grid">
+        {% for item in year.items %}
+        <a class="panel hover-lift service-card" href="{{ item.url }}" target="_blank" rel="noopener">
+            <div class="service-kind kind-{{ item.kind }}">{% if item.kind == "aec" %}Artifact Evaluation{% elsif item.kind == "jpc" %}Junior PC{% else %}Program Committee{% endif %}</div>
+            <div class="service-venue mt-1">{{ item.venue }}</div>
+            <div class="service-track">{{ item.track }}</div>
+            <div class="small text-muted">{{ item.full_name }}</div>
+            <div class="mt-2"><span class="chip">{{ item.role }}</span></div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</section>
+
+<section class="service-panel mb-5" role="tabpanel" id="panel-journals" aria-labelledby="tab-journals" hidden>
+    <div class="service-grid">
+        {% for item in services.journal_reviewing %}
+        <div class="panel service-card">
+            <div class="service-kind kind-journal">Journal Reviewer</div>
+            <div class="service-venue mt-1">{{ item.name }}</div>
+            <div class="service-track">{{ item.publisher }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="service-panel mb-5" role="tabpanel" id="panel-memberships" aria-labelledby="tab-memberships" hidden>
+    <div class="service-grid">
+        {% for item in services.memberships %}
+        <a class="panel hover-lift service-card" href="{{ item.url }}" target="_blank" rel="noopener">
+            <div class="service-kind kind-membership">Member</div>
+            <div class="service-venue mt-1">{{ item.name }}</div>
+            <div class="service-track">{{ item.full_name }}</div>
+        </a>
+        {% endfor %}
+    </div>
+</section>

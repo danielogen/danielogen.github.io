@@ -48,7 +48,7 @@ group: Research Highlights
                     <div class="col-md-7">
                         <img
                             data-src="{{ '/assets/images/covers/agenticflict-overview.png' | relative_url }}"
-                            src="{{ '/assets/images/css/loading.gif' | relative_url }}"
+                            src="{{ '/assets/css/images/loading.gif' | relative_url }}"
                             class="lazy rounded d-block mx-auto"
                             alt="AgenticFlict dataset curation workflow"
                             style="max-height: 320px; width: auto; background: #f8f9fa;">
@@ -91,7 +91,7 @@ group: Research Highlights
                     <div class="col-md-7">
                         <img
                             data-src="{{ '/assets/images/covers/patchtrack-overview.png' | relative_url }}"
-                            src="{{ '/assets/images/css/loading.gif' | relative_url }}"
+                            src="{{ '/assets/css/images/loading.gif' | relative_url }}"
                             class="lazy w-100 rounded"
                             alt="PatchTrack study method overview"
                             style="background: #f8f9fa;">

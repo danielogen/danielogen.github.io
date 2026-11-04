@@ -1,9 +1,12 @@
 ---
 title: "How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests"
 date: 2026-04-01 00:00:00 +0000
-selected: false
-pub: "MSR 2026 — Mining Challenge Track"
+selected: true
+pub: "23rd International Conference on Mining Software Repositories (MSR), Mining Challenge Track"
 pub_date: "2026"
+type: conference
+venue_short: "MSR 2026"
+topics: [ai4se]
 abstract: >-
   Large-scale empirical comparison of ~24,000 merged agentic pull requests against 5,000
   human-authored PRs using the AIDev dataset, examining additions, deletions, commits, and

@@ -1,54 +1,54 @@
-{% assign item = include.item %}
-<div class="d-none d-md-block">
-    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
-            {%- if item.cover -%}
-            <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+{%- assign item = include.item -%}
+{%- assign type_labels = "conference:Conference|journal:Journal|dataset:Dataset|preprint:Preprint|poster:Poster|chapter:Book Chapter|workshop:Workshop" | split: "|" -%}
+{%- assign type_label = "" -%}
+{%- for pair in type_labels -%}{%- assign kv = pair | split: ":" -%}{%- if kv[0] == item.type -%}{%- assign type_label = kv[1] -%}{%- endif -%}{%- endfor -%}
+{%- assign scholar_key = item.title | slugify -%}
+{%- assign scholar = site.data.scholar_citations[scholar_key] -%}
+{%- capture search_text -%}{{ item.title }} {{ item.authors | join: " " }} {{ item.pub }} {{ item.venue_short }} {{ item.pub_date }}{%- endcapture -%}
+<article class="pub-item" data-type="{{ item.type }}" data-citations="{{ scholar.citations | default: 0 }}" data-search="{{ search_text | downcase | strip_html | escape }}">
+    <div class="pub-venue {% if item.award %}is-award{% endif %}">
+        {%- if item.award %}<i class="fas fa-trophy" aria-hidden="true"></i> {% endif -%}
+        {{ item.venue_short | default: item.pub_date }}
+        {%- if type_label != "" %}<span class="pub-type">{{ type_label }}</span>{% endif %}
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title">
+            {%- assign primary = item.links.Paper | default: item.links.Preprint -%}
+            {%- if primary -%}
+            <a class="text-body" href="{{ primary }}" target="_blank" rel="noopener">{{ item.title }}</a>
             {%- else -%}
-            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+            {{ item.title }}
             {%- endif -%}
+        </h3>
+        <div class="pub-authors">{% include widgets/author_list.html authors=item.authors %}</div>
+        <div class="pub-meta">
+            {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }}, {{ item.pub_date }}
+            {%- if item.award %} <span class="award-badge"><i class="fas fa-award"></i> {{ item.award }}</span>{% endif %}
+            {{ item.pub_last }}
+            {%- if scholar and scholar.citations > 0 %} <a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }} citation{% if scholar.citations != 1 %}s{% endif %}</a>{% endif %}
         </div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-            <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
-            <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                {% for link in item.links %}
-                {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                {% endif %}
-                {% endfor %}
-            </p>
-
+        {%- if item.abstract and include.show_abstract != false %}
+        <p class="pub-abstract">{{ item.abstract }}</p>
+        {%- endif %}
+        <div class="pub-links">
+            {%- for link in item.links -%}
+            {%- assign label = link[0] -%}
+            {%- if link[1].url -%}{%- assign href = link[1].url -%}{%- else -%}{%- assign href = link[1] -%}{%- endif -%}
+            {%- case label -%}
+            {%- when "Paper" -%}{%- assign icon = "fas fa-file-lines" -%}
+            {%- when "Preprint" -%}{%- assign icon = "ai ai-arxiv" -%}
+            {%- when "Code" -%}{%- assign icon = "fab fa-github" -%}
+            {%- when "Dataset & Code" -%}{%- assign icon = "fas fa-database" -%}
+            {%- when "Scholar" -%}{%- assign icon = "ai ai-google-scholar" -%}
+            {%- else -%}{%- assign icon = "fas fa-link" -%}
+            {%- endcase %}
+            <a class="pub-link" href="{{ href }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ label }}</a>
+            {%- endfor %}
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
         </div>
-    </div>
-</div>
-
-<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if item.cover %}lazy{% endif %}" data-src="{{ item.cover | relative_url }}">
-    <div class="w-100 {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %}" style="background-color: rgba(255,255,255,0.9);">
-        <div class="d-flex align-items-start flex-column py-3 px-4">
-            <div class="mb-auto"></div>
-            <div>
-                <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
-                <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-                
-                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                    {% for link in item.links %}
-                    {% if link[1].url %}
-                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                    {% else %}
-                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                    {% endif %}
-                    {% endfor %}
-                </p>
-            </div>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>{% include widgets/bibtex.html item=item %}</pre>
         </div>
     </div>
-
-</div>
+</article>

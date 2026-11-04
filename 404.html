@@ -1,7 +1,15 @@
 ---
-layout: prompt
-title: 404 - Page Not Found
+layout: default
+title: Page Not Found
+permalink: /404.html
+sitemap: false
 ---
-<h1 class="mt-5">404</h1>
-<p class="lead">The requested page could not be found.</p>
-<p><a href="{{ '/' | relative_url }}">Go home</a></p>
+<section class="text-center" style="padding: 6rem 0 3rem;">
+    <span class="eyebrow">Error 404</span>
+    <h1 class="hero-name">This page wandered off.</h1>
+    <p class="lead text-muted mx-auto" style="max-width: 520px;">The page you're looking for doesn't exist or has moved. Like a patch that didn't make it to the right fork.</p>
+    <div class="hero-cta justify-content-center">
+        <a class="btn-brand" href="{{ '/' | relative_url }}"><i class="fas fa-house"></i> Back home</a>
+        <a class="btn-ghost" href="{{ '/publications' | relative_url }}"><i class="fas fa-book-open"></i> Publications</a>
+    </div>
+</section>

@@ -1,16 +1,27 @@
-<footer class="footer border-top py-2 mt-5 bg-white small">
+<footer class="site-footer">
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
-        <div class="row my-3">
-            <div class="col-6">
-                <div class="text-muted">
-                    <i>Last updated: {{ "now" | date: "%b %Y" }}</i>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">{{ site.data.profile.primary_name }}</strong>
                 </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">{{ site.data.profile.email | replace: "@", " [at] " }}</span></div>
             </div>
-            <div class="col-6">
-                <div class="text-right text-muted">
-                    {{ site.data.display.footer_text }}
-                </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social">{% include social_links.html %}</div>
+                <nav class="footer-links" aria-label="Footer">
+                    {% for item in site.data.navigation.pages %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% endfor %}
+                </nav>
             </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                {% include widgets/visitor_map.html %}
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; {{ "now" | date: "%Y" }} {{ site.data.profile.primary_name }} &middot; Last updated {{ "now" | date: "%B %Y" }}</span>
+            <span>{{ site.data.display.footer_text }}</span>
         </div>
     </div>
 </footer>

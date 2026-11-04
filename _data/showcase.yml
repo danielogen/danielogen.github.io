@@ -1,0 +1,124 @@
+# Content for the Showcase page. `paper` is a publication file name (without .md); the page
+# pulls its venue, award, links, and Scholar citations from that entry automatically.
+
+# Large project stories with a figure, shown first
+spotlight:
+  - name: AgenticFlict
+    paper: aiware-agenticflict
+    theme: ai4se
+    tagline: Merge conflicts in pull requests written by AI coding agents
+    problem: >-
+      AI coding agents such as Copilot, Devin, and Cursor now open pull requests in real repositories.
+      When several of them touch the same code, their changes collide, but nobody had measured how often or how badly.
+    numbers:
+      - value: 142K+
+        label: agentic pull requests
+      - value: 29K
+        label: PRs with merge conflicts
+      - value: 336K+
+        label: conflict regions extracted
+    findings:
+      - Mined from 59K+ GitHub repositories, giving a large-scale view of agent-authored merge conflicts.
+      - Conflicts in agentic PRs are both frequent and often substantial in size.
+      - Released openly with the full curation pipeline for follow-up research.
+    figure: /assets/images/covers/agenticflict-overview.png
+    caption: Dataset curation workflow
+  - name: PatchTrack
+    paper: patchtrack
+    theme: ai4se
+    tagline: How developers actually use ChatGPT-generated code in pull requests
+    problem: >-
+      Developers increasingly paste ChatGPT suggestions into their pull requests. Is that code merged as is,
+      reworked, or thrown away, and what does it do to code review?
+    numbers:
+      - value: "338"
+        label: pull requests studied
+      - value: "255"
+        label: GitHub repositories
+      - value: 25%
+        label: median integration rate
+    findings:
+      - Full adoption of AI-generated code is rare; developers extract parts and refine them iteratively.
+      - ChatGPT shapes the whole review conversation, not just the patch itself.
+      - Extends the ASE 2024 poster into a full EMSE journal study.
+    figure: /assets/images/covers/patchtrack-overview-figure.png
+    caption: Overview of the study method
+  - name: RePatch
+    paper: scam-repatch
+    theme: patch
+    tagline: Refactoring-aware patch integration across divergent Java forks
+    problem: >-
+      A bug fixed in one fork rarely reaches its sibling forks. Once forks refactor independently, renamed methods
+      and moved classes make cherry-picking fail, leaving users exposed to bugs that are already fixed elsewhere.
+    numbers:
+      - value: 52.8%
+        label: failing patches recovered
+      - value: Award
+        label: Distinguished Artifact, SCAM 2025
+    findings:
+      - Detects structural drift between forks and inverts refactorings on both sides before replaying the patch.
+      - Evaluated on a benchmark of real cross-fork patches that naive cherry-pick could not apply.
+      - The tool and benchmark are open source and fully reproducible.
+    figure: /assets/images/covers/repatch-divergence.png
+    caption: Patch integration from a source variant to a diverged target variant
+
+# Smaller project cards
+projects:
+  - name: AI Agents vs. Humans
+    paper: msr-ai-coding-agents
+    theme: ai4se
+    tagline: How AI coding agents modify code compared with human developers
+    value: ~24K
+    label: merged agentic PRs vs. 5K human PRs
+  - name: PyReprism
+    paper: arxiv-pyreprism
+    theme: ai4se
+    tagline: One lexical foundation for code analysis in many languages
+    value: "187"
+    label: languages, 3x faster than per-language tools
+  - name: Maven Central Network
+    paper: sede-maven-network
+    theme: ecosystems
+    tagline: Structural risk in the Maven dependency network
+    value: 20.9M
+    label: dependency edges across 1.3M artifacts
+  - name: Design Smells & Roles
+    paper: dib-design-smells-dataset
+    theme: smells
+    tagline: How design smells relate to the role a class plays
+    value: 2,513
+    label: Java classes from 12 open-source projects
+
+# Open-science artifacts others can reuse
+artifacts:
+  - name: AgenticFlict dataset
+    kind: dataset
+    description: Merge conflicts from 142K+ agentic pull requests, with the mining pipeline.
+    url: https://zenodo.org/records/19396917
+    host: Zenodo
+  - name: RePatch
+    kind: tool
+    description: Refactoring-aware patch integrator for diverged Java forks.
+    url: https://github.com/unlv-evol/RePatch
+    host: GitHub
+    award: Distinguished Artifact Award
+  - name: PatchTrack
+    kind: code
+    description: Scripts and labeled data for analyzing ChatGPT-assisted pull requests.
+    url: https://github.com/unlv-evol/PatchTrack
+    host: GitHub
+  - name: PyReprism
+    kind: tool
+    description: Python library and CLI for lexical analysis across 187 languages.
+    url: https://arxiv.org/abs/2610.39224
+    host: arXiv
+  - name: Design smells & role-stereotypes
+    kind: dataset
+    description: 2,513 Java classes labeled with role-stereotypes and 18 design-smell metrics.
+    url: https://www.sciencedirect.com/science/article/pii/S2352340921004091
+    host: Data in Brief
+  - name: AirQo hyperlocal air quality
+    kind: dataset
+    description: Air quality readings from a dense low-cost sensor network across Ugandan cities.
+    url: https://doi.org/10.1016/j.dib.2022.108512
+    host: Data in Brief

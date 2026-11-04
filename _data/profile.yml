@@ -9,13 +9,33 @@ positions:
   logo: /assets/images/badges/unlv.svg
 
 email: "ogenrwot@unlv.nevada.edu"
-cv_link: https://danielogen.github.io/assets/pdf/DanielOgenrwot-CV-20260105.pdf
+cv_link: /assets/pdf/DanielOgenrwot-CV-20260105.pdf
 gscholar: ZpCrmOQAAAAJ
 github: danielogen
 dblp: https://dblp.org/pid/275/0016.html
 # twitter: your_twitter_id
 linkedin: daniel-ogenrwot
+researchr: https://conf.researchr.org/profile/conf/danielogenrwot
+lab_url: https://github.com/unlv-evol
+location: Las Vegas, Nevada, USA
 orcid: 0000-0002-0133-8164
+
+# Hero section on the homepage
+tagline: >-
+  I study how software evolves, and how AI coding agents are changing the way it is built.
+hero_summary: >-
+  Final-year PhD Candidate in Computer Science at UNLV working on Empirical Software Engineering
+  and AI for Software Engineering: patch propagation across forks, AI-generated pull requests,
+  and the health of software ecosystems.
+
+# Optional "open to opportunities" callout shown in the hero. Set `enabled: true` to display it.
+job_market:
+  enabled: false
+  text: >-
+    I am on the job market for 2026–2027 and open to faculty, postdoctoral, and industry research positions.
+
+# Citation metrics live in _data/metrics.yml and are refreshed weekly from Google Scholar
+# by scripts/update_scholar.py (see .github/workflows/deploy.yml).
 
 short_bio_text_justify: false
 short_bio: >-
@@ -31,21 +51,21 @@ short_bio: >-
     and a BSc in Computer Science from Gulu University, Uganda.
     My research lies at the intersection of <strong>Empirical Software Engineering</strong> and
     <strong>Agentic AI</strong>, with publications in venues including
-    ASE, SCAM, MSR, AIware, MSR, EMSE.
-    I also serve the research community as a reviewer in several top tier software engineering conferences and journals e.g MSR, ESEC/FSE, ICSME, ISSAT, ASE, ACM TOCE, Springer Nature Scientific Reports, Elsevier Data in Brief, the Journal of Advances in Information Technology, etc.
+    ASE, EMSE, MSR, SCAM, and AIware.
+    I also serve the research community on the program and artifact evaluation committees of
+    top software engineering venues, including ESEC/FSE, ASE, ISSTA, ICSME, and MSR, and as a reviewer
+    for journals such as ACM TOCE, Scientific Reports, and Data in Brief.
   </p>
   <p>
     <em>"And you will know the truth, and the truth will set you free."</em> — John 8:32
   </p>
 
-# research_interests:
-#   - Empirical SE
-#   - AI for SE
-#   - Agentic AI
-#   - Software Analytics
-#   - Mining Software Repos
-#   - Program Repair
-#   - Bug Localization
+research_interests:
+  - Empirical Software Engineering
+  - AI for Software Engineering
+  - Agentic AI
+  - Mining Software Repositories
+  - Software Analytics
 
 portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-

@@ -15,7 +15,7 @@ group: Research Highlights
     </p>
     <img
         data-src="{{ '/assets/images/covers/repatch-divergence.png' | relative_url }}"
-        src="{{ '/assets/images/css/loading.gif' | relative_url }}"
+        src="{{ '/assets/css/images/loading.gif' | relative_url }}"
         class="lazy w-100 rounded"
         alt="Fig. 1: Illustration of patch integration from source to target variant"
         style="background: #f8f9fa;">
