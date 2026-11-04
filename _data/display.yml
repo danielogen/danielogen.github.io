@@ -3,9 +3,19 @@ homepage:
   show_awards: true
   show_news: true
   show_selected_publications: true
-  num_news: 10
+  show_research_areas: true
+  show_service: true
+  num_news: 6
 
-# Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
+# Feel free to replace the footer text if you would like to, but I will greatly appreciate it
 # if you keep the link to the template so that more people can benefit from it. Thanks!
 footer_text: >-
-  <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> Powered by Jekyll</a>
+  Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a>
+
+# Small visitor map shown in the site footer. Sign up (free) at https://mapmyvisitors.com, register
+# https://danielogen.github.io, and copy the `d=` value from the embed code they give you into `id`.
+# The section stays hidden while `id` is empty.
+visitor_map:
+  style: map             # map | globe (choose the matching widget type when you create it)
+  id: "bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU"
+  width: 220            # widget width in pixels

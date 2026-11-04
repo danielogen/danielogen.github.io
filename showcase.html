@@ -2,31 +2,158 @@
 layout: default
 title : Showcase
 navbar_title: Showcase
-container_class: container-xl
+description: "Research projects and open artifacts by Daniel Ogenrwot: AgenticFlict, PatchTrack, RePatch, PyReprism, and datasets for empirical software engineering."
 ---
+{%- assign sc = site.data.showcase -%}
+{%- assign themes = site.data.research -%}
+{%- assign awards = site.publications | where_exp: "p", "p.award" -%}
+{%- assign datasets = sc.artifacts | where: "kind", "dataset" -%}
+{%- assign tools = sc.artifacts | where_exp: "a", "a.kind != 'dataset'" -%}
 
-{% assign cards_by_group = site.showcase | sort: "date" | reverse | where: "show", true | group_by_exp: "item", "item.group" %}
+<header class="page-header">
+    <span class="eyebrow">Projects &amp; artifacts</span>
+    <h1>Showcase</h1>
+    <p class="lead">
+        The questions behind my research, what we found, and the tools and datasets we released so others can build on them.
+    </p>
+</header>
 
-{% for group in cards_by_group %}
-<h1>{{ group.name }}</h1>
-<div class="row grid mb-4">
-    <div class="grid-sizer col-1"></div>
-    {% for item in group.items %}
-    {% if item.width >= 6 -%}
-        {%- assign width_sm = 12 -%}
-        {%- assign width_xs = 12 -%}
-    {%- elsif item.width >= 2 -%}
-        {%- assign width_sm = 6 -%}
-        {%- assign width_xs = 6 -%}
-    {%- else -%}
-        {%- assign width_sm = item.width | times: 2 | at_most: 12 -%}
-        {%- assign width_xs = item.width | times: 2 | at_most: 12 -%}
-    {%- endif -%}
-    <div class="p-2 grid-item col-md-{{ item.width | at_most: 12 }} col-sm-{{ width_sm }} col-{{ width_xs }}">
-        <div class="{% if item.class != null %}{{ item.class }}{% else %}card border-0 shadow-sm bg-white{% endif %}">
-            {{ item.content }}
+<div class="panel stats stats-4 mb-5">
+    <div class="stat"><div class="stat-value">{{ sc.spotlight.size | plus: sc.projects.size }}</div><div class="stat-label">Projects</div></div>
+    <div class="stat"><div class="stat-value">{{ tools.size }}</div><div class="stat-label">Open tools &amp; code</div></div>
+    <div class="stat"><div class="stat-value">{{ datasets.size }}</div><div class="stat-label">Public datasets</div></div>
+    <div class="stat"><div class="stat-value">{{ awards.size }}</div><div class="stat-label">Awards</div></div>
+</div>
+
+<!-- Spotlight projects -->
+<section class="mb-5">
+    {% for p in sc.spotlight %}
+    {%- assign pub = site.publications | where: "slug", p.paper | first -%}
+    {%- assign theme = themes | where: "id", p.theme | first -%}
+    {%- assign scholar_key = pub.title | slugify -%}
+    {%- assign scholar = site.data.scholar_citations[scholar_key] -%}
+    <article class="spotlight reveal{% cycle '', ' is-flipped' %}" id="{{ p.name | slugify }}">
+        <figure class="spotlight-figure">
+            <img src="{{ p.figure | relative_url }}" alt="{{ p.name }}: {{ p.caption }}" loading="lazy">
+            <figcaption>Fig. {{ forloop.index }}: {{ p.caption }}</figcaption>
+        </figure>
+        <div class="spotlight-body">
+            <div class="spotlight-tags">
+                {% if theme %}<a class="chip" href="{{ '/research' | relative_url }}#{{ theme.id }}"><i class="{{ theme.icon }}"></i> {{ theme.short }}</a>{% endif %}
+                {% if pub.venue_short %}<span class="chip chip-accent">{{ pub.venue_short }}</span>{% endif %}
+                {% if pub.award %}<span class="award-badge"><i class="fas fa-award"></i> {{ pub.award }}</span>{% endif %}
+            </div>
+            <h2 class="spotlight-name">{{ p.name }}</h2>
+            <p class="spotlight-tagline">{{ p.tagline }}</p>
+            <p class="spotlight-problem">{{ p.problem }}</p>
+            <div class="spotlight-numbers">
+                {% for n in p.numbers %}
+                <div><div class="num">{{ n.value }}</div><div class="num-label">{{ n.label }}</div></div>
+                {% endfor %}
+            </div>
+            <ul class="spotlight-findings">
+                {% for f in p.findings %}<li>{{ f }}</li>{% endfor %}
+            </ul>
+            <div class="spotlight-links">
+                {%- for link in pub.links -%}
+                {%- case link[0] -%}
+                {%- when "Paper" -%}{%- assign icon = "fas fa-file-lines" -%}
+                {%- when "Preprint" -%}{%- assign icon = "ai ai-arxiv" -%}
+                {%- when "Code" -%}{%- assign icon = "fab fa-github" -%}
+                {%- else -%}{%- assign icon = "fas fa-database" -%}
+                {%- endcase %}
+                <a class="btn-ghost btn-sm" href="{{ link[1] }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ link[0] }}</a>
+                {%- endfor %}
+                {% if scholar and scholar.citations > 0 %}<a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }} citation{% if scholar.citations != 1 %}s{% endif %}</a>{% endif %}
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>
+
+<!-- More projects -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">More work</span><h2 class="section-title">Other projects</h2></div>
+        <a class="section-link" href="{{ '/publications' | relative_url }}">All publications <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="project-grid">
+        {% for p in sc.projects %}
+        {%- assign pub = site.publications | where: "slug", p.paper | first -%}
+        {%- assign theme = themes | where: "id", p.theme | first -%}
+        {%- assign primary = pub.links.Paper | default: pub.links.Preprint -%}
+        <a class="panel hover-lift project-card" href="{{ primary }}" target="_blank" rel="noopener">
+            <div class="project-meta">{% if theme %}<i class="{{ theme.icon }}"></i>{% endif %} {{ pub.venue_short }}</div>
+            <div class="project-name">{{ p.name }}</div>
+            <p class="project-tagline">{{ p.tagline }}</p>
+            <div class="project-number"><span class="num">{{ p.value }}</span> <span class="num-label">{{ p.label }}</span></div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Open artifacts -->
+<section class="section reveal" id="artifacts">
+    <div class="section-head">
+        <div><span class="eyebrow">Open science</span><h2 class="section-title">Tools &amp; datasets</h2></div>
+        <a class="section-link" href="https://github.com/{{ site.data.profile.github }}" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <p class="text-muted mb-4">Everything below is publicly available. If you use one in your work, please cite the accompanying paper.</p>
+    <div class="artifact-grid">
+        {% for a in sc.artifacts %}
+        <a class="panel hover-lift artifact-card" href="{{ a.url }}" target="_blank" rel="noopener">
+            <div class="artifact-icon kind-{{ a.kind }}">
+                <i class="{% if a.kind == 'dataset' %}fas fa-database{% elsif a.kind == 'tool' %}fas fa-screwdriver-wrench{% else %}fas fa-code{% endif %}"></i>
+            </div>
+            <div class="grow">
+                <div class="artifact-name">{{ a.name }}</div>
+                <p class="artifact-desc">{{ a.description }}</p>
+                <div class="artifact-foot">
+                    <span class="artifact-kind">{{ a.kind | capitalize }}</span> &middot; {{ a.host }}
+                    {% if a.award %}<span class="award-badge ml-1"><i class="fas fa-award"></i> {{ a.award }}</span>{% endif %}
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Research journey, built from the publication list -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">Over the years</span><h2 class="section-title">Research journey</h2></div>
+    </div>
+    {%- assign by_year = site.publications | group_by: "pub_date" | sort: "name" | reverse -%}
+    <div class="journey">
+        {% for year in by_year %}
+        <div class="journey-year">
+            <div class="journey-label">{{ year.name }}</div>
+            <div class="journey-items">
+                {%- assign items = year.items | sort: "date" | reverse -%}
+                {% for pub in items %}
+                {%- assign primary = pub.links.Paper | default: pub.links.Preprint -%}
+                <a class="journey-chip topic-{{ pub.topics | first | default: 'other' }}" {% if primary %}href="{{ primary }}" target="_blank" rel="noopener"{% endif %} title="{{ pub.title | escape }}">
+                    {% if pub.award %}<i class="fas fa-trophy"></i> {% endif %}{{ pub.venue_short | default: pub.pub_date }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="journey-legend">
+        {% for t in themes %}<span class="topic-{{ t.id }}"><i class="fas fa-circle"></i> {{ t.short }}</span>{% endfor %}
+        <span class="topic-other"><i class="fas fa-circle"></i> Other</span>
+    </div>
+</section>
+
+<section class="cta-band reveal">
+    <div class="row align-items-center position-relative" style="z-index: 1;">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+            <h2>Want to build on this work?</h2>
+            <p>I'm glad to help with using these tools and datasets, replication studies, or new collaborations.</p>
+        </div>
+        <div class="col-lg-4 text-lg-right">
+            <a class="btn-brand" href="mailto:{{ site.data.profile.email | encode_email }}"><i class="fas fa-envelope"></i> Get in touch</a>
         </div>
     </div>
-    {% endfor %}
-</div>
-{% endfor %}
+</section>

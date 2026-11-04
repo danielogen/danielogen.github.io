@@ -1,39 +1,200 @@
 ---
 layout: default
-title : Homepage
+title: Home
 navbar_title: About
+description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical Software Engineering and AI for Software Engineering: AI coding agents, patch integration across forks, and software ecosystems."
 ---
+{%- assign profile = site.data.profile -%}
+{%- assign display = site.data.display.homepage -%}
+{%- assign course_count = 0 -%}
+{%- for inst in site.data.teaching.institutions -%}{%- assign course_count = course_count | plus: inst.courses.size -%}{%- endfor -%}
+{%- assign pc_count = site.data.committees | size -%}
+{%- assign award_count = profile.awards | size -%}
+{%- assign artifact_count = site.data.showcase.artifacts | size -%}
 
-<div class="row">
-    <div class="col-lg-3 col-md-4">
-        {% include widgets/profile_card_mini.html %}
+<!-- Hero -->
+<section class="hero">
+    <div class="row align-items-center">
+        <div class="col-lg-7 order-2 order-lg-1 mt-4 mt-lg-0">
+            <span class="status-pill"><span class="dot"></span> PhD Candidate &middot; Final year</span>
+            <h1 class="hero-name">{{ profile.primary_name }}</h1>
+            <p class="hero-tagline">{{ profile.tagline }}</p>
+            <div class="hero-affil mt-3">
+                <img src="{{ '/assets/images/badges/unlv.svg' | relative_url }}" alt="" aria-hidden="true">
+                <span>Department of Computer Science, University of Nevada, Las Vegas &middot;
+                    <a href="{{ profile.lab_url }}" target="_blank" rel="noopener">EVOL Lab</a></span>
+            </div>
+            <p class="hero-summary">{{ profile.hero_summary }}</p>
+            {% if profile.job_market.enabled %}
+            <div class="job-callout"><i class="fas fa-briefcase mr-2 text-accent"></i>{{ profile.job_market.text }}</div>
+            {% endif %}
+            <div class="hero-cta">
+                <a class="btn-brand" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+                <a class="btn-ghost" href="{{ '/publications' | relative_url }}"><i class="fas fa-book-open"></i> Publications</a>
+                <a class="btn-ghost" href="mailto:{{ profile.email | encode_email }}"><i class="fas fa-envelope"></i> Get in touch</a>
+            </div>
+            <div class="hero-social">{% include social_links.html %}</div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2">
+            <div class="portrait-wrap">
+                <img class="portrait" src="{{ profile.portrait_url | relative_url }}" alt="Portrait of {{ profile.primary_name }}" width="675" height="900" fetchpriority="high">
+            </div>
+        </div>
     </div>
-    <div class="col-lg-9 col-md-8">
+</section>
 
-        {% include widgets/profile_card_bio_only.html %}
+<!-- Impact strip -->
+<section class="reveal" aria-label="Research at a glance">
+    <div class="panel stats stats-4">
+        <div class="stat"><div class="stat-value" data-count="{{ course_count }}">{{ course_count }}</div><div class="stat-label">Courses taught</div></div>
+        <div class="stat"><div class="stat-value" data-count="{{ pc_count }}">{{ pc_count }}</div><div class="stat-label">Committee roles</div></div>
+        <div class="stat"><div class="stat-value" data-count="{{ award_count }}">{{ award_count }}</div><div class="stat-label">Awards &amp; grants</div></div>
+        <div class="stat"><div class="stat-value" data-count="{{ artifact_count }}">{{ artifact_count }}</div><div class="stat-label">Open artifacts</div></div>
+    </div>
+</section>
 
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_awards and site.data.profile.awards %}
-            {% include widgets/awards_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
+<!-- About -->
+<section class="section reveal" id="about">
+    <div class="row">
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title mb-3">Hello, I'm Daniel.</h2>
+            <div class="bio">{{ profile.short_bio }}</div>
+            {% if profile.research_interests %}
+            <div class="d-flex flex-wrap mt-3" style="gap: .4rem;">
+                {% for interest in profile.research_interests %}<span class="chip">{{ interest }}</span>{% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% if display.show_experience %}
+        <div class="col-lg-5">
+            <div class="panel panel-pad mb-3">
+                <div class="panel-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                <ul class="timeline">
+                    {% for item in profile.education %}
+                    <li>
+                        <div class="tl-logo">{% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% endif %}</div>
+                        <div>
+                            <div class="tl-date">{{ item.date }}</div>
+                            <div class="tl-title">{{ item.position }}</div>
+                            <div class="tl-sub">{{ item.name }}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="panel panel-pad">
+                <div class="panel-title"><i class="fas fa-briefcase"></i> Experience</div>
+                <ul class="timeline">
+                    {% for item in profile.experience %}
+                    <li>
+                        <div class="tl-logo">{% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="">{% endif %}</div>
+                        <div>
+                            <div class="tl-date">{{ item.date }}</div>
+                            <div class="tl-title">{{ item.position }}</div>
+                            <div class="tl-sub">{{ item.name }}{% if item.dept %} &middot; {{ item.dept }}{% endif %}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         {% endif %}
     </div>
-</div>
+</section>
+
+<!-- Research areas -->
+{% if display.show_research_areas %}
+<section class="section reveal" id="research">
+    <div class="section-head">
+        <div><span class="eyebrow">Research</span><h2 class="section-title">What I work on</h2></div>
+        <a class="section-link" href="{{ '/research' | relative_url }}">Research agenda <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="row">
+        {% for area in site.data.research %}
+        <div class="col-md-6 col-lg-3 mb-3">
+            <a class="panel hover-lift area-card" href="{{ '/research' | relative_url }}#{{ area.id }}">
+                <div class="area-icon"><i class="{{ area.icon }}"></i></div>
+                <h3>{{ area.short }}</h3>
+                <p>{{ area.summary }}</p>
+                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Selected publications -->
+{% if display.show_selected_publications %}
+{% assign pubs = site.publications | where: "selected", true | sort: "date" | reverse %}
+<section class="section reveal" id="selected-publications">
+    <div class="section-head">
+        <div><span class="eyebrow">Selected work</span><h2 class="section-title">Featured publications</h2></div>
+        <a class="section-link" href="{{ '/publications' | relative_url }}">All {{ site.publications | size }} publications <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="row">
+        {% for item in pubs limit: 3 %}
+        <div class="col-md-6 col-lg-4 mb-4">{% include widgets/feature_pub.html item=item %}</div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- News + Awards -->
+<section class="section reveal" id="news">
+    <div class="row">
+        {% if display.show_news %}
+        <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="section-head"><div><span class="eyebrow">Updates</span><h2 class="section-title">News</h2></div></div>
+            {% include widgets/news_card.html limit=display.num_news %}
+        </div>
+        {% endif %}
+        {% if display.show_awards and profile.awards %}
+        <div class="col-lg-5">
+            <div class="section-head"><div><span class="eyebrow">Recognition</span><h2 class="section-title">Awards &amp; Grants</h2></div></div>
+            <div class="panel panel-pad">
+                {% for item in profile.awards %}
+                <div class="award-row">
+                    <div class="award-year">{{ item.date }}</div>
+                    <div class="award-name">{{ item.name }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Service snapshot -->
+{% if display.show_service %}
+<section class="section reveal" id="service">
+    <div class="section-head">
+        <div><span class="eyebrow">Community</span><h2 class="section-title">Professional service</h2></div>
+        <a class="section-link" href="{{ '/services' | relative_url }}">All service <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-grid">
+        {% for item in site.data.committees limit: 8 %}
+        <a class="panel hover-lift service-card" href="{{ item.url }}" target="_blank" rel="noopener">
+            <div class="service-kind kind-{{ item.kind }}">{% if item.kind == "aec" %}Artifact Evaluation{% elsif item.kind == "jpc" %}Junior PC{% else %}Program Committee{% endif %}</div>
+            <div class="service-venue mt-1">{{ item.venue }}</div>
+            <div class="service-track mb-0">{{ item.track }}</div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Contact -->
+<section class="cta-band reveal" id="contact">
+    <div class="row align-items-center position-relative" style="z-index: 1;">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+            <h2>Let's collaborate.</h2>
+            <p>I'm always happy to talk about empirical software engineering, AI coding agents, research collaborations, or opportunities. The best way to reach me is by email.</p>
+        </div>
+        <div class="col-lg-4 d-flex flex-wrap justify-content-lg-end" style="gap: .6rem;">
+            <a class="btn-brand" href="mailto:{{ profile.email | encode_email }}"><i class="fas fa-envelope"></i> Email me</a>
+            <a class="btn-ghost" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a>
+        </div>
+    </div>
+</section>

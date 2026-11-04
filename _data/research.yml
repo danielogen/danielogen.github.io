@@ -1,0 +1,72 @@
+# Research themes. `id` is matched against the `topics` list in each publication's front matter,
+# so the Research page can list related papers automatically.
+- id: ai4se
+  title: AI Coding Agents & LLMs for Software Engineering
+  short: AI Coding Agents & LLMs
+  icon: fas fa-robot
+  summary: >-
+    How autonomous agents such as Copilot, Devin, and Cursor write, submit, and conflict over code
+    in real repositories, and how developers actually adopt AI-generated patches.
+  problem: >-
+    AI coding agents are moving from assistants to active contributors in real codebases. Yet we have
+    little empirical understanding of how their contributions differ from human work, what failure modes
+    emerge when multiple agents collaborate, or how developers integrate AI-generated code into production.
+  approach: >-
+    I characterize agent-generated pull requests at scale, covering commit patterns, code change semantics,
+    and merge conflict rates, and study the new class of coordination problems that arise when autonomous
+    agents concurrently modify shared repositories.
+  highlights:
+    - 142K+ agentic pull requests mined across 59K+ repositories
+    - 336K+ fine-grained merge conflict regions released as an open dataset
+    - Median adoption of ChatGPT-generated code in PRs is only 25%
+
+- id: patch
+  title: Patch Integration in Software Variants
+  short: Patch Integration Across Forks
+  icon: fas fa-code-branch
+  summary: >-
+    Making bug fixes propagate reliably across forks that have drifted apart through independent refactoring.
+  problem: >-
+    When a bug is fixed in one fork, the fix rarely reaches related forks, even when they share the same
+    vulnerable code. As forks diverge, renamed methods, moved classes, and restructured hierarchies cause
+    patch replay to fail silently, leaving downstream users exposed to known bugs.
+  approach: >-
+    I build refactoring-aware tools and benchmark datasets that make patch integration reliable and automated,
+    and visual analytics that surface missed patches between variants.
+  highlights:
+    - RePatch recovers 52.8% of previously failing cross-fork patches
+    - Distinguished Artifact Award, IEEE SCAM 2025
+
+- id: ecosystems
+  title: Software Ecosystems & Data Infrastructure
+  short: Software Ecosystems
+  icon: fas fa-project-diagram
+  summary: >-
+    Treating software as interconnected networks to understand how dependency structure creates systemic risk.
+  problem: >-
+    No package exists in isolation. Library updates ripple through dependency graphs, vulnerabilities
+    propagate across ecosystems, and the health of one widely-used artifact can affect thousands of
+    downstream projects.
+  approach: >-
+    I apply network science and repository mining to map how package ecosystems evolve. Through the
+    Google.org-funded AirQo project, I also build and evaluate reliable data pipelines for large-scale
+    environmental monitoring across Africa.
+  highlights:
+    - Maven Central analyzed as a 1.3M-node, 20.9M-edge dependency network
+    - Production air-quality data pipeline serving African cities
+
+- id: smells
+  title: Code Smells & Software Quality
+  short: Code Smells & Quality
+  icon: fas fa-microscope
+  summary: >-
+    Where design smells appear, why they persist, and what roles they play as software evolves.
+  problem: >-
+    Design smells such as God Classes and Feature Envy accumulate quietly as software grows, increasing
+    maintenance cost and bug density long before they trigger visible failures.
+  approach: >-
+    I examine how smells manifest across desktop and mobile platforms, relate them to class role-stereotypes,
+    and release benchmark datasets for reproducible detection research.
+  highlights:
+    - 11,350 classes from 30 repositories analyzed for smell and role-stereotype relationships
+    - Open dataset of 2,513 classified Java classes

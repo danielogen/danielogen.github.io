@@ -4,6 +4,9 @@ date: 2021-06-01 00:00:00 +0000
 selected: false
 pub: "Data in Brief"
 pub_date: "2021"
+type: dataset
+venue_short: "Data in Brief 2021"
+topics: [smells]
 abstract: >-
   Dataset of 2,513 Java classes classified into 6 role-stereotypes with 18 design smell metrics
   from 12 open-source projects.

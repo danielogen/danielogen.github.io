@@ -1,0 +1,26 @@
+{%- assign item = include.item -%}
+{%- assign primary = item.links.Paper | default: item.links.Preprint -%}
+{%- assign scholar_key = item.title | slugify -%}
+{%- assign scholar = site.data.scholar_citations[scholar_key] -%}
+<article class="panel hover-lift feature-pub">
+    {%- if item.cover %}
+    <img class="feature-pub-img" src="{{ item.cover | relative_url }}" alt="Overview figure for {{ item.title | escape }}" loading="lazy">
+    {%- else %}
+    <div class="feature-pub-img placeholder-art" aria-hidden="true">{{ item.venue_short }}</div>
+    {%- endif %}
+    <div class="feature-pub-body">
+        <div class="d-flex flex-wrap" style="gap: .35rem;">
+            <span class="chip chip-accent">{{ item.venue_short }}</span>
+            {%- if item.award %}<span class="award-badge ml-0"><i class="fas fa-trophy"></i> {{ item.award }}</span>{% endif %}
+            {%- if scholar and scholar.citations > 0 %}<a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }}</a>{% endif %}
+        </div>
+        <h3><a href="{{ primary }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+        <div class="authors">{% include widgets/author_list.html authors=item.authors %}</div>
+        <div class="pub-links">
+            {%- for link in item.links limit: 3 -%}
+            {%- if link[1].url -%}{%- assign href = link[1].url -%}{%- else -%}{%- assign href = link[1] -%}{%- endif %}
+            <a class="pub-link" href="{{ href }}" target="_blank" rel="noopener">{{ link[0] }}</a>
+            {%- endfor %}
+        </div>
+    </div>
+</article>

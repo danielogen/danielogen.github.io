@@ -1,67 +1,126 @@
-- institution: University of Nevada, Las Vegas (UNLV)
-  location: Las Vegas, NV, United States
-  url: https://unlv.edu
-  logo: /assets/images/badges/unlv.svg
-  courses:
-    - code: CS472/672-1001
-      name: Software Product Design I (Senior Design)
-      role: Teaching Assistant
-      terms: Fall/Spring 2023, Fall/Spring 2024, Fall/Spring 2025
-    - code: CS472/672-1002
-      name: Software Product Design I (Senior Design)
-      role: Teaching Assistant
-      terms: Spring 2024, Fall 2025
-    - code: CS477/677
-      name: Design and Analysis of Algorithms
-      role: Teaching Assistant
-      terms: Summer 2023
-    - code: CS789
-      name: Software Re-engineering (Masters/PhD)
-      role: Teaching Assistant
-      terms: Fall 2025
+# Content for the Teaching page.
+# `years` drives the "at a glance" matrix; `terms` is the label shown on each course card.
+# `about` is a one-line description of the course content (please review).
 
-- institution: Gulu University
-  location: Main Campus, Uganda
-  url: https://gu.ac.ug
-  logo: /assets/images/badges/gulu.svg
-  courses:
-    - code: MID7104
-      name: Database Modeling
-      role: Instructor
-      level: Masters
-      terms: "2019, 2021, 2022"
-    - code: MID7109
-      name: Mobile Applications Development
-      role: Instructor
-      level: Masters
-      terms: "2021, 2022"
-    - code: GCS3203
-      name: Parallel Computation
-      role: Instructor
-      level: Undergraduate
-      terms: "2021, 2022"
-    - code: GIT3104
-      name: Integrative Programming
-      role: Instructor
-      level: Undergraduate
-      terms: "2019, 2021, 2022"
-    - code: GIT3101
-      name: Web Systems & Technologies II
-      role: Instructor
-      level: Undergraduate
-      terms: "2018, 2019, 2021, 2022"
-    - code: GCS
-      name: Mobile Web Application Development in Java
-      role: Instructor
-      level: Undergraduate
-      terms: "2018, 2019, 2021, 2022"
-    - code: GCS
-      name: Mobile Web Application Development
-      role: Instructor
-      level: Undergraduate
-      terms: "2018, 2019, 2021, 2022"
-    - code: GAT3201
-      name: Web Game Development
-      role: Instructor
-      level: Undergraduate
-      terms: "2022"
+interests:
+  - Software Engineering
+  - Software Evolution & Maintenance
+  - Empirical Software Engineering
+  - AI for Software Engineering
+  - Algorithms
+  - Databases
+  - Mobile & Web Development
+  - Parallel Computing
+
+approach:
+  - icon: fas fa-diagram-project
+    title: Learning by building
+    text: >-
+      Students learn software engineering best by shipping real products in teams. In senior design I
+      coach teams through requirements, design reviews, sprints, and demos with real stakeholders.
+  - icon: fas fa-flask
+    title: Research in the classroom
+    text: >-
+      I bring findings from my own research on software evolution, refactoring, and AI coding agents
+      into class, so students see how the tools they use every day are studied and improved.
+  - icon: fas fa-hands-helping
+    title: Mentoring
+    text: >-
+      I help students move from coursework to research and start-ups, a path I studied in my FAMECSE 2022
+      paper on turning undergraduate capstone projects into start-ups.
+
+institutions:
+  - name: University of Nevada, Las Vegas
+    short: UNLV
+    location: Las Vegas, NV, United States
+    url: https://www.cs.unlv.edu
+    logo: /assets/images/badges/unlv.svg
+    role: Graduate Teaching Assistant
+    period: 2023 – present
+    courses:
+      - code: CS 472/672
+        name: Software Product Design I (Senior Design)
+        level: Undergraduate & Graduate
+        role: Teaching Assistant
+        terms: "Fall & Spring 2023–2025 (Sec. 1001); Spring 2024, Fall 2025 (Sec. 1002); 2026"
+        years: [2023, 2024, 2025, 2026]
+        about: Team-based capstone where students design, build, and deliver a software product.
+      - code: CS 477/677
+        name: Design and Analysis of Algorithms
+        level: Undergraduate & Graduate
+        role: Teaching Assistant
+        terms: Summer 2023
+        years: [2023]
+        about: Algorithm design techniques, complexity analysis, and proofs of correctness.
+      - code: CS 789
+        name: Software Re-engineering
+        level: Graduate (MS/PhD)
+        role: Teaching Assistant
+        terms: Fall 2025, 2026
+        years: [2025, 2026]
+        about: Understanding, refactoring, and modernizing large existing software systems.
+
+  - name: Gulu University
+    short: Gulu
+    location: Gulu, Uganda
+    url: https://gu.ac.ug
+    logo: /assets/images/badges/gulu.svg
+    role: Instructor
+    period: 2018 – 2023
+    courses:
+      - code: MID 7104
+        name: Database Modeling
+        level: Graduate (Masters)
+        role: Instructor
+        terms: "2019, 2021, 2022"
+        years: [2019, 2021, 2022]
+        about: Conceptual, logical, and physical database design.
+      - code: MID 7109
+        name: Mobile Applications Development
+        level: Graduate (Masters)
+        role: Instructor
+        terms: "2021, 2022"
+        years: [2021, 2022]
+        about: Designing and building native mobile applications.
+      - code: GCS 3203
+        name: Parallel Computation
+        level: Undergraduate
+        role: Instructor
+        terms: "2021, 2022"
+        years: [2021, 2022]
+        about: Parallel architectures, algorithms, and programming models.
+      - code: GIT 3104
+        name: Integrative Programming
+        level: Undergraduate
+        role: Instructor
+        terms: "2019, 2021, 2022"
+        years: [2019, 2021, 2022]
+        about: Integrating systems through scripting, APIs, and data exchange formats.
+      - code: GIT 3101
+        name: Web Systems & Technologies II
+        level: Undergraduate
+        role: Instructor
+        terms: "2018, 2019, 2021, 2022"
+        years: [2018, 2019, 2021, 2022]
+        about: Server-side web development and web application architecture.
+      - code: GCS
+        name: Mobile Web Application Development in Java
+        level: Undergraduate
+        role: Instructor
+        terms: "2018, 2019, 2021, 2022"
+        years: [2018, 2019, 2021, 2022]
+        about: Building mobile and web applications with Java.
+      - code: GCS
+        name: Mobile Web Application Development
+        level: Undergraduate
+        role: Instructor
+        terms: "2018, 2019, 2021, 2022"
+        years: [2018, 2019, 2021, 2022]
+        about: Responsive web applications for mobile devices.
+      - code: GAT 3201
+        name: Web Game Development
+        level: Undergraduate
+        role: Instructor
+        terms: "2022"
+        years: [2022]
+        about: Designing and building browser-based games.

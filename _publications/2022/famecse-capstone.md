@@ -4,6 +4,8 @@ date: 2022-07-01 00:00:00 +0000
 selected: false
 pub: "Federated Africa and Middle East Conference on Software Engineering (FAMECSE)"
 pub_date: "2022"
+type: conference
+venue_short: "FAMECSE 2022"
 authors:
   - Daniel Ogenrwot
   - Geoffrey Olok Tabo

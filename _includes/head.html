@@ -1,0 +1,73 @@
+{%- assign profile = site.data.profile -%}
+{%- if page.url == "/" -%}
+{%- assign full_title = profile.primary_name | append: " | PhD Candidate, Empirical Software Engineering & AI for SE" -%}
+{%- else -%}
+{%- assign full_title = page.title | append: " | " | append: profile.navbar_name -%}
+{%- endif -%}
+{%- assign meta_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{{ full_title }}</title>
+
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
+
+<!-- SEO -->
+<meta name="description" content="{{ meta_description }}">
+<meta name="author" content="{{ profile.primary_name }}">
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:type" content="{% if page.layout == 'blog_post' %}article{% else %}profile{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ profile.portrait_url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ full_title }}">
+<meta name="twitter:description" content="{{ meta_description }}">
+<meta name="twitter:image" content="{{ profile.portrait_url | absolute_url }}">
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ profile.primary_name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "image": {{ profile.portrait_url | absolute_url | jsonify }},
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{% for item in profile.education offset: 1 %}{ "@type": "CollegeOrUniversity", "name": {{ item.name | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "knowsAbout": {{ profile.research_interests | jsonify }},
+    "sameAs": [
+        "https://scholar.google.com/citations?user={{ profile.gscholar }}",
+        "https://github.com/{{ profile.github }}",
+        "https://www.linkedin.com/in/{{ profile.linkedin }}",
+        "https://orcid.org/{{ profile.orcid }}",
+        {{ profile.dblp | jsonify }},
+        {{ profile.researchr | jsonify }}
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">

@@ -2,68 +2,106 @@
 layout: default
 title: Teaching
 navbar_title: Teaching
+description: "Teaching experience of Daniel Ogenrwot at UNLV and Gulu University: senior design, algorithms, software re-engineering, databases, mobile and web development, and parallel computing."
 ---
+{%- assign t = site.data.teaching -%}
+{%- assign all_years = "" -%}
+{%- assign course_count = 0 -%}
+{%- for inst in t.institutions -%}
+    {%- assign course_count = course_count | plus: inst.courses.size -%}
+    {%- for c in inst.courses -%}{%- for y in c.years -%}{%- assign all_years = all_years | append: y | append: "," -%}{%- endfor -%}{%- endfor -%}
+{%- endfor -%}
+{%- assign years_sorted = all_years | split: "," | compact | sort -%}
+{%- assign first_year = years_sorted | first | plus: 0 -%}
+{%- assign last_year = years_sorted | last | plus: 0 -%}
+{%- assign this_year = site.time | date: "%Y" | plus: 0 -%}
+{%- assign span = this_year | minus: first_year -%}
+{%- assign capstone = site.publications | where: "slug", "famecse-capstone" | first -%}
 
-<div class="row">
-    <div class="col-12">
-        <h2 class="pt-2 pb-3">Teaching</h2>
+<header class="page-header">
+    <span class="eyebrow">Teaching &amp; mentoring</span>
+    <h1>Teaching</h1>
+    <p class="lead">
+        I have taught software engineering, algorithms, databases, mobile and web development, and parallel computing
+        since {{ first_year }}: first as an instructor at Gulu University in Uganda, now as a teaching assistant at UNLV.
+    </p>
+</header>
 
-        {% for inst in site.data.teaching %}
-        <div class="my-3 bg-white shadow-sm rounded-xl">
+<div class="panel stats stats-4 mb-5">
+    <div class="stat"><div class="stat-value">{{ span }}+</div><div class="stat-label">Years teaching</div></div>
+    <div class="stat"><div class="stat-value">{{ course_count }}</div><div class="stat-label">Courses</div></div>
+    <div class="stat"><div class="stat-value">{{ t.institutions.size }}</div><div class="stat-label">Universities</div></div>
+    <div class="stat"><div class="stat-value">BSc–PhD</div><div class="stat-label">Levels taught</div></div>
+</div>
 
-            <!-- Institution header -->
-            <div class="p-4 border-bottom border-gray d-flex align-items-center">
-                {% if inst.logo %}
-                <img src="{{ inst.logo | relative_url }}" alt="{{ inst.institution }}" style="width: 36px;" class="mr-3">
-                {% endif %}
-                <div>
-                    <h5 class="mb-0">
-                        <a href="{{ inst.url }}" target="_blank" class="text-dark">{{ inst.institution }}</a>
-                    </h5>
-                    <small class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i>{{ inst.location }}</small>
-                </div>
-            </div>
-
-            <!-- Course list -->
-            <div class="px-4 py-2">
-                {% assign levels = inst.courses | map: "level" | uniq %}
-                {% if levels[0] %}
-                    {% assign grouped = inst.courses | group_by: "level" %}
-                    {% for group in grouped %}
-                    <div class="mt-3 mb-1">
-                        <span class="text-muted small font-weight-bold text-uppercase">{{ group.name }}</span>
-                    </div>
-                    {% for course in group.items %}
-                    <div class="d-flex align-items-start py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 90px;"><code>{{ course.code }}</code></div>
-                        <div class="flex-grow-1">
-                            <div>{{ course.name }}</div>
-                            <div class="small text-muted">{{ course.terms }}</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">{{ course.role }}</span>
-                        </div>
-                    </div>
-                    {% endfor %}
-                    {% endfor %}
-                {% else %}
-                    {% for course in inst.courses %}
-                    <div class="d-flex align-items-start py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
-                        <div class="mr-3 text-muted small no-break" style="min-width: 100px;"><code>{{ course.code }}</code></div>
-                        <div class="flex-grow-1">
-                            <div>{{ course.name }}</div>
-                            <div class="small text-muted">{{ course.terms }}</div>
-                        </div>
-                        <div class="ml-3 no-break">
-                            <span class="badge badge-pill badge-light border">{{ course.role }}</span>
-                        </div>
-                    </div>
-                    {% endfor %}
-                {% endif %}
-            </div>
-
+<!-- Approach -->
+<section class="section reveal pt-0">
+    <div class="section-head">
+        <div><span class="eyebrow">How I teach</span><h2 class="section-title">Teaching approach</h2></div>
+    </div>
+    <div class="approach-grid">
+        {% for a in t.approach %}
+        <div class="panel panel-pad approach-card">
+            <div class="approach-icon"><i class="{{ a.icon }}"></i></div>
+            <h3>{{ a.title }}</h3>
+            <p>{{ a.text }}</p>
         </div>
         {% endfor %}
-
     </div>
-</div>
+    <div class="teaching-interests">
+        <span class="label">Teaching interests</span>
+        {% for i in t.interests %}<span class="chip">{{ i }}</span>{% endfor %}
+    </div>
+</section>
+
+<!-- At a glance matrix -->
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">{{ first_year }}–{{ last_year }}</span><h2 class="section-title">Teaching at a glance</h2></div>
+    </div>
+    <div class="panel glance-wrap">
+        <table class="glance">
+            <thead>
+                <tr><th scope="col">Course</th>{% for y in (first_year..last_year) %}<th scope="col">{{ y }}</th>{% endfor %}</tr>
+            </thead>
+            <tbody>
+                {% for inst in t.institutions %}
+                <tr class="glance-group"><th colspan="{{ last_year | minus: first_year | plus: 2 }}">{{ inst.name }} &middot; {{ inst.role }}, {{ inst.period }}</th></tr>
+                {% for c in inst.courses %}
+                {%- assign cy = c.years | join: "," -%}
+                <tr>
+                    <th scope="row"><span class="course-code">{{ c.code }}</span> {{ c.name }}</th>
+                    {% for y in (first_year..last_year) %}
+                    {%- assign ys = y | append: "" -%}
+                    <td>{% if cy contains ys %}<span class="glance-dot inst-{{ inst.short | slugify }}" title="{{ c.name }}, {{ y }}"></span>{% endif %}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Scholarship of teaching -->
+{% if capstone %}
+<section class="section reveal">
+    <div class="section-head">
+        <div><span class="eyebrow">Beyond the classroom</span><h2 class="section-title">Computing education</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <div class="panel panel-pad h-100">
+                <div class="panel-title"><i class="fas fa-book"></i> Research on teaching</div>
+                {% include widgets/publication_item.html item=capstone show_abstract=false %}
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="panel panel-pad h-100">
+                <div class="panel-title"><i class="fas fa-pen-nib"></i> Reviewing</div>
+                <p class="mb-0 text-muted">Reviewer for <strong>ACM Transactions on Computing Education (TOCE)</strong>, the ACM journal on computing education research.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,12 @@
+{%- comment -%} Third-party visitor map; configured in _data/display.yml under `visitor_map`. {%- endcomment -%}
+{%- assign vm = site.data.display.visitor_map -%}
+{%- if vm.id and vm.id != "" -%}
+<div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
+    {%- if vm.style == "globe" %}
+    <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d={{ vm.id }}&w={{ vm.width | default: 220 }}"></script>
+    {%- else %}
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ vm.id }}&cl=ffffff&w={{ vm.width | default: 220 }}"></script>
+    {%- endif %}
+</div>
+{%- endif -%}

@@ -1,46 +1,58 @@
 ---
 layout: default
-title : Publications
+title: Publications
 navbar_title: Publications
-body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+description: "Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality."
 ---
-
 {% assign all_pubs = site.publications | sort: "date" | reverse %}
-{% assign filtered_pubs = all_pubs | where_exp: "item", "item.pub_date >= '2022'" %}
-{% assign pubs_by_year = filtered_pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign pubs_by_year = all_pubs | group_by: "pub_date" %}
+{% assign type_order = "conference:Conference|journal:Journal|dataset:Dataset|poster:Poster|chapter:Book Chapter|preprint:Preprint" | split: "|" %}
 
-<div class="row">
-    <div class="col-12 col-lg-10">
+<header class="page-header">
+    <span class="eyebrow">Research output</span>
+    <h1>Publications</h1>
+    <p class="lead">
+        {{ all_pubs | size }} papers, datasets, and preprints. Citation counts are synced weekly from
+        <a href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}" target="_blank" rel="noopener">Google Scholar</a>.
+        Also on <a href="{{ site.data.profile.dblp }}" target="_blank" rel="noopener">DBLP</a>.
+    </p>
+</header>
 
-        <div class="my-3 px-1 d-flex align-items-center justify-content-between flex-wrap" style="gap: 0.5rem;">
-            <p class="mb-0 text-muted small">
-                <!-- Showing <strong>{{ filtered_pubs | size }}</strong> publications from 2022 onwards
-                ({{ all_pubs | size }} total) &mdash; -->
-                <b Showing <strong>{{ filtered_pubs | size }}</strong> publications from 2022 onwards &mdash;
-                <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank">
-                    For the latest publication list, please refer to Googe Scholar <i class="fas fa-external-link-alt fa-xs"></i></b>
-                </a>
-            </p>
+<div class="pub-toolbar">
+    <div class="d-flex flex-wrap align-items-center" style="gap: .75rem;">
+        <label class="pub-search mb-0">
+            <span class="sr-only">Search publications</span>
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="search" id="pub-search" placeholder="Search by title, author, or venue…" autocomplete="off">
+        </label>
+        <div class="filter-group" role="group" aria-label="Filter by type">
+            <button class="filter-btn active" type="button" data-filter="all">All <span class="count">{{ all_pubs | size }}</span></button>
+            {% for pair in type_order %}
+            {% assign kv = pair | split: ":" %}
+            {% assign n = all_pubs | where: "type", kv[0] | size %}
+            {% if n > 0 %}
+            <button class="filter-btn" type="button" data-filter="{{ kv[0] }}">{{ kv[1] }} <span class="count">{{ n }}</span></button>
+            {% endif %}
+            {% endfor %}
         </div>
+        <div class="filter-group ml-lg-auto" role="group" aria-label="Sort order">
+            <button class="filter-btn sort-btn active" type="button" data-sort="year"><i class="fas fa-calendar"></i> Newest</button>
+            <button class="filter-btn sort-btn" type="button" data-sort="cited"><i class="fas fa-arrow-trend-up"></i> Most cited</button>
+        </div>
+    </div>
+</div>
 
-        {% for year in pubs_by_year %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+<div id="pub-list">
+    {% for year in pubs_by_year %}
+    <section class="pub-year-group" data-year="{{ year.name }}">
+        <div class="pub-year" id="year-{{ year.name }}"><h2>{{ year.name }}</h2></div>
+        <div class="panel">
             {% for item in year.items %}
-                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% include widgets/publication_item.html item=item %}
             {% endfor %}
         </div>
-        {% endfor %}
-
-    </div>
-
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
-        </div>
-    </div>
-
+    </section>
+    {% endfor %}
+    <div class="panel" id="pub-flat" style="display: none;"></div>
+    <div class="pub-empty panel" id="pub-empty"><i class="fas fa-magnifying-glass fa-2x mb-3 d-block"></i>No publications match your search.</div>
 </div>

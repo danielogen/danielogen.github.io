@@ -4,6 +4,9 @@ date: 2020-10-01 00:00:00 +0000
 selected: false
 pub: "2020 African Conference on Software Engineering (ACSE)"
 pub_date: "2020"
+type: conference
+venue_short: "ACSE 2020"
+topics: [smells]
 authors:
   - Daniel Ogenrwot
   - Joyce Nakatumba-Nabende

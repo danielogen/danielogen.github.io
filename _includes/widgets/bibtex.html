@@ -1,0 +1,19 @@
+{%- comment -%} Builds a BibTeX entry from a publication's front matter. {%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign first_author = item.authors | first | split: " " | last | slugify -%}
+{%- assign first_word = item.title | slugify | split: "-" | first -%}
+{%- assign key = first_author | append: item.pub_date | append: first_word -%}
+{%- case item.type -%}
+{%- when "journal" -%}{%- assign entry = "article" -%}{%- assign venue_field = "journal" -%}
+{%- when "preprint" -%}{%- assign entry = "misc" -%}{%- assign venue_field = "howpublished" -%}
+{%- when "chapter" -%}{%- assign entry = "incollection" -%}{%- assign venue_field = "booktitle" -%}
+{%- else -%}{%- assign entry = "inproceedings" -%}{%- assign venue_field = "booktitle" -%}
+{%- endcase -%}
+{%- assign url = item.links.Paper | default: item.links.Preprint -%}
+@{{ entry }}{ {{- key }},
+  title = { {{- item.title -}} },
+  author = { {{- item.authors | join: " and " | replace: "et al.", "others" -}} },
+  {{ venue_field }} = { {{- item.pub -}} },
+  year = { {{- item.pub_date -}} }{% if url %},
+  url = { {{- url -}} }{% endif %}
+}
