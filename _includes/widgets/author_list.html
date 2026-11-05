@@ -2,6 +2,11 @@
 {%- assign has_eq_contrib = false -%}
 {%- assign has_corresponding = false -%}
 
+{%- assign max_shown = 6 -%}
+{%- assign long_list = false -%}
+{%- if authors.size > 15 -%}{%- assign long_list = true -%}{%- endif -%}
+{%- assign skipped = false -%}
+
 {%- for _key in authors -%}
     {%- assign last_char = _key | slice: -1, 1%}
     {%- assign last_2chars = _key | slice: -2, 2%}
@@ -37,6 +42,15 @@
         {%- assign display_name = name | append: mark -%}
     {%- endif -%}
     
+    {%- if long_list and forloop.index > max_shown and info['bold'] != true -%}
+        {%- assign skipped = true -%}
+        {%- continue -%}
+    {%- endif -%}
+    {%- if long_list and forloop.index >= max_shown -%}
+        {%- if skipped %}, &hellip;, {% endif -%}
+        <span class="text-body">{{ display_name }}</span>
+        {%- continue -%}
+    {%- endif -%}
     {%- if info['url'] -%}
         <a class="text-body" target="_blank" href="{{ info['url'] }}">{{ display_name }}</a>{%- if forloop.index < authors.size -%}, {% endif -%}
     {%- else -%}
@@ -46,6 +60,7 @@
     {%- endif -%}
 
 {%- endfor -%}
+{%- if long_list %} et al. <span class="text-muted">({{ authors.size }} authors)</span>{% endif -%}
 
 {%- if has_eq_contrib or has_corresponding %}
 <mark>(

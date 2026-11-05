@@ -61,6 +61,13 @@ $(function () {
         $(this).data('label', $(this).find('span').text());
     });
 
+    // Publications: abstract toggle
+    $('.abstract-toggle').on('click', function () {
+        var $box = $(this).closest('.pub-body').find('.pub-abstract');
+        $box.toggleClass('open');
+        $(this).attr('aria-expanded', $box.hasClass('open'));
+    });
+
     // Publications: BibTeX toggle and copy
     $('.bibtex-toggle').on('click', function () {
         var $box = $(this).closest('.pub-body').find('.pub-bibtex');

@@ -6,13 +6,13 @@ description: "Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware an
 ---
 {% assign all_pubs = site.publications | sort: "date" | reverse %}
 {% assign pubs_by_year = all_pubs | group_by: "pub_date" %}
-{% assign type_order = "conference:Conference|journal:Journal|dataset:Dataset|poster:Poster|chapter:Book Chapter|preprint:Preprint" | split: "|" %}
+{% assign type_order = "conference:Conference|journal:Journal|dataset:Dataset|poster:Poster|chapter:Book Chapter|book:Book|abstract:Conference Abstract|preprint:Preprint" | split: "|" %}
 
 <header class="page-header">
     <span class="eyebrow">Research output</span>
     <h1>Publications</h1>
     <p class="lead">
-        {{ all_pubs | size }} papers, datasets, and preprints. Citation counts are synced weekly from
+        {{ all_pubs | size }} publications, including papers, datasets, book chapters, and preprints. Citation counts are synced weekly from
         <a href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}" target="_blank" rel="noopener">Google Scholar</a>.
         Also on <a href="{{ site.data.profile.dblp }}" target="_blank" rel="noopener">DBLP</a>.
     </p>

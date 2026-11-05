@@ -2,12 +2,7 @@
 # (the `citation_for_view=...` value in a Scholar paper URL). Remove a line to have it imported.
 - "ZpCrmOQAAAAJ:hFOr9nPyWt4C" # SEDE 2025 proceedings volume (editors' entry)
 - "ZpCrmOQAAAAJ:ZeXyd9-uunAC" # duplicate of "Structural and Connectivity Patterns in the Maven Central..."
-- "ZpCrmOQAAAAJ:r0BpntZqJG4C" # "Urban Health in Africa" book (editors' entry)
-- "ZpCrmOQAAAAJ:Wp0gIr-vW9MC" # "Urban Health in Africa" book (editors' entry)
-- "ZpCrmOQAAAAJ:4TOpqqG69KYC" # "Part One: History and Background" of the book
-- "ZpCrmOQAAAAJ:UeHWp8X0CEIC" # EGU 2023 conference abstract
-- "ZpCrmOQAAAAJ:9yKSN-GCB0IC" # AGU 2022 conference abstract
-- "ZpCrmOQAAAAJ:u-x6o8ySG0sC" # AGU 2022 conference abstract
+- "ZpCrmOQAAAAJ:r0BpntZqJG4C" # duplicate of the "Urban Health in Africa" book entry
 - "ZpCrmOQAAAAJ:d1gkVwhDpl0C" # MSc thesis, Makerere University (2021)
 - "ZpCrmOQAAAAJ:qUcmZB5y_30C" # Zenodo replication package for the SCAM 2025 paper
 - "ZpCrmOQAAAAJ:IWHjjKOFINEC" # SCAM 2025 front matter

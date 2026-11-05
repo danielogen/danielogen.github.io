@@ -8,8 +8,25 @@ type: conference
 venue_short: "SEDE 2025"
 topics: [ecosystems]
 abstract: >-
-  Cloud-native ETL system leveraging Apache Airflow, Kafka, and BigQuery for processing air quality
-  data across African urban deployments.
+  The increasing adoption of low-cost environmental sensors and AI-enabled applications has
+  accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce
+  and resource-constrained regions. This paper presents the design, implementation, and evaluation of
+  the AirQo data pipeline: a modular, cloud-native Extract-Transform-Load (ETL) system engineered to
+  support both real-time and batch processing of heterogeneous air quality data across urban
+  deployments in Africa. It is Built using open-source technologies such as Apache Airflow, Apache
+  Kafka, and Google BigQuery. The pipeline integrates diverse data streams from low-cost sensors,
+  third-party weather APIs, and reference-grade monitors to enable automated calibration, forecasting,
+  and accessible analytics. We demonstrate the pipeline's ability to ingest, transform, and distribute
+  millions of air quality measurements monthly from over 400 monitoring devices while achieving low
+  latency, high throughput, and robust data availability, even under constrained power and
+  connectivity conditions. The paper details key architectural features, including workflow
+  orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and
+  observability frameworks. Performance is evaluated across operational metrics such as resource
+  utilization, ingestion throughput, calibration accuracy, and data availability, offering practical
+  insights into building sustainable environmental data platforms. By open-sourcing the platform and
+  documenting deployment experiences, this work contributes a reusable blueprint for similar
+  initiatives seeking to advance environmental intelligence through data engineering in low-resource
+  settings.
 authors:
   - Richard Sserunjogi
   - Daniel Ogenrwot

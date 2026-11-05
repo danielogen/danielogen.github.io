@@ -8,12 +8,21 @@ type: preprint
 venue_short: "arXiv 2026"
 topics: [patch]
 abstract: >-
-  An interactive desktop tool that surfaces missed-opportunity patches between a source and a target
-  software variant, placing patched and buggy code side by side so developers can find overlooked fixes.
+  Clone-and-own development produces families of related software variants that evolve independently.
+  As variants diverge, important fixes applied in one repository are often missing in others. PaReco
+  has shown that thousands of such missed opportunity (MO) patches exist across real ecosystems, yet
+  its textual output provides limited support for understanding where and how these fixes should be
+  propagated. We present MOVis, a lightweight, interactive desktop tool that visualizes MO patches
+  between a source and target variant. MOVis loads PaReco's MO classifications and presents patched
+  and buggy hunks side-by-side, highlighting corresponding regions and exposing structural differences
+  that hinder reuse. This design enables developers to quickly locate missed fixes, understand
+  required adaptations, and more efficiently maintain consistency across software variants.
 authors:
   - Jorge Gonzalo Delgado Cervantes
   - John Businge
   - Daniel Ogenrwot
 links:
   Preprint: https://arxiv.org/abs/2604.01494
+  Tool & Data: https://zenodo.org/records/18356553
+  Video: https://youtu.be/Ac-gjBxHJ3Y
 ---
