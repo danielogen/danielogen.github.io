@@ -1,10 +1,10 @@
 {%- assign item = include.item -%}
-{%- assign type_labels = "conference:Conference|journal:Journal|dataset:Dataset|preprint:Preprint|poster:Poster|chapter:Book Chapter|workshop:Workshop" | split: "|" -%}
+{%- assign type_labels = "conference:Conference|journal:Journal|dataset:Dataset|preprint:Preprint|poster:Poster|chapter:Book Chapter|book:Book|abstract:Conference Abstract|workshop:Workshop" | split: "|" -%}
 {%- assign type_label = "" -%}
 {%- for pair in type_labels -%}{%- assign kv = pair | split: ":" -%}{%- if kv[0] == item.type -%}{%- assign type_label = kv[1] -%}{%- endif -%}{%- endfor -%}
 {%- assign scholar_key = item.title | slugify -%}
 {%- assign scholar = site.data.scholar_citations[scholar_key] -%}
-{%- capture search_text -%}{{ item.title }} {{ item.authors | join: " " }} {{ item.pub }} {{ item.venue_short }} {{ item.pub_date }}{%- endcapture -%}
+{%- capture search_text -%}{{ item.title }} {{ item.authors | join: " " }} {{ item.pub }} {{ item.venue_short }} {{ item.pub_date }} {{ item.abstract }}{%- endcapture -%}
 <article class="pub-item" data-type="{{ item.type }}" data-citations="{{ scholar.citations | default: 0 }}" data-search="{{ search_text | downcase | strip_html | escape }}">
     <div class="pub-venue {% if item.award %}is-award{% endif %}">
         {%- if item.award %}<i class="fas fa-trophy" aria-hidden="true"></i> {% endif -%}
@@ -27,9 +27,6 @@
             {{ item.pub_last }}
             {%- if scholar and scholar.citations > 0 %} <a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }} citation{% if scholar.citations != 1 %}s{% endif %}</a>{% endif %}
         </div>
-        {%- if item.abstract and include.show_abstract != false %}
-        <p class="pub-abstract">{{ item.abstract }}</p>
-        {%- endif %}
         <div class="pub-links">
             {%- for link in item.links -%}
             {%- assign label = link[0] -%}
@@ -40,12 +37,21 @@
             {%- when "Code" -%}{%- assign icon = "fab fa-github" -%}
             {%- when "Dataset & Code" -%}{%- assign icon = "fas fa-database" -%}
             {%- when "Scholar" -%}{%- assign icon = "ai ai-google-scholar" -%}
+            {%- when "Book" -%}{%- assign icon = "fas fa-book" -%}
+            {%- when "Video" -%}{%- assign icon = "fab fa-youtube" -%}
+            {%- when "Tool & Data" -%}{%- assign icon = "fas fa-database" -%}
             {%- else -%}{%- assign icon = "fas fa-link" -%}
             {%- endcase %}
             <a class="pub-link" href="{{ href }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ label }}</a>
             {%- endfor %}
+            {%- if item.abstract and include.show_abstract != false %}
+            <button class="pub-link abstract-toggle" type="button" aria-expanded="false"><i class="fas fa-align-left"></i> Abstract</button>
+            {%- endif %}
             <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
         </div>
+        {%- if item.abstract and include.show_abstract != false %}
+        <p class="pub-abstract">{{ item.abstract }}</p>
+        {%- endif %}
         <div class="pub-bibtex">
             <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
             <pre>{% include widgets/bibtex.html item=item %}</pre>

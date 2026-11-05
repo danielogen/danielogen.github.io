@@ -7,6 +7,8 @@ pub_post: ", 102309"
 pub_date: "2026"
 type: journal
 venue_short: "SmartAgTech 2026"
+abstract: >-
+
 authors:
   - B Oyo
   - AJ Asiku

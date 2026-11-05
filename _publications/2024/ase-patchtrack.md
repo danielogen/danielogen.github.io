@@ -8,8 +8,12 @@ type: poster
 venue_short: "ASE 2024"
 topics: [ai4se]
 abstract: >-
-  Empirical study investigating how ChatGPT-generated patches influence pull request acceptance
-  decisions, examining 338 pull requests across open-source projects.
+  In recent years, the integration of AI tools such as ChatGPT into software development has grown
+  significantly, reflecting broader trends in AI-assisted workflows. These tools have great potential
+  to improve decision making related to software patches in pull requests (PR), which are vital
+  components of collaborative software development. Specifically, developers are using features such
+  as link sharing in ChatGPT to enhance collaborative practices, streamline code reviews, and make
+  more informed patch integration decisions.
 authors:
   - Daniel Ogenrwot
   - John Businge

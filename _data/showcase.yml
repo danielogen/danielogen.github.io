@@ -110,8 +110,13 @@ artifacts:
   - name: PyReprism
     kind: tool
     description: Python library and CLI for lexical analysis across 187 languages.
-    url: https://arxiv.org/abs/2610.39224
-    host: arXiv
+    url: https://github.com/unlv-evol/PyReprism
+    host: GitHub
+  - name: MOVis
+    kind: tool
+    description: Visual analytics tool that surfaces patches missed between software variants.
+    url: https://zenodo.org/records/18356553
+    host: Zenodo
   - name: Design smells & role-stereotypes
     kind: dataset
     description: 2,513 Java classes labeled with role-stereotypes and 18 design-smell metrics.

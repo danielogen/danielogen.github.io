@@ -119,6 +119,8 @@ def guess_type(venue):
     v = venue.lower()
     if "arxiv" in v:
         return "preprint"
+    if "abstracts" in v or "general assembly" in v:
+        return "abstract"
     if any(k in v for k in ("journal", "transactions", "data in brief", "empirical software engineering", "letters", "review")):
         return "journal"
     return "conference"
