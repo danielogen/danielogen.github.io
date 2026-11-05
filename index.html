@@ -110,18 +110,15 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
         <div><span class="eyebrow">Research</span><h2 class="section-title">What I work on</h2></div>
         <a class="section-link" href="{{ '/research' | relative_url }}">Research agenda <i class="fas fa-arrow-right"></i></a>
     </div>
-    <div class="row">
-        {% for area in site.data.research %}
-        <div class="col-md-6 col-lg-3 mb-3">
-            <a class="panel hover-lift area-card" href="{{ '/research' | relative_url }}#{{ area.id }}">
-                <div class="area-icon"><i class="{{ area.icon }}"></i></div>
-                <h3>{{ area.short }}</h3>
-                <p>{{ area.summary }}</p>
-                <span class="area-more">Learn more <i class="fas fa-arrow-right fa-xs"></i></span>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
+    <figure class="agenda-figure">
+        <a href="{{ '/research' | relative_url }}" aria-label="Read the full research agenda">
+        <picture>
+        <source media="(max-width: 575.98px)" srcset="{{ '/assets/images/research-agenda-mobile.svg' | relative_url }}" width="360" height="864">
+        <img src="{{ '/assets/images/research-agenda.svg' | relative_url }}" width="1200" height="436" loading="lazy"
+             alt="Research agenda: dependable software evolution in the age of AI coding agents. Four stages in the life of a code change: humans and AI agents write it, fixes are integrated across diverged forks, changes ripple through dependency networks, and code quality is sustained, all built on repository mining, empirical studies, tools, and open datasets.">
+        </picture>
+        </a>
+    </figure>
 </section>
 {% endif %}
 

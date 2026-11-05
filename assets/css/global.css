@@ -619,3 +619,8 @@ img.lazy, div.lazy {
 .service-tabs .filter-btn i { margin-right: .3rem; }
 .service-kind.kind-journal { color: var(--tag-paper); }
 .service-kind.kind-membership { color: var(--accent); }
+
+/* Homepage research agenda figure */
+.agenda-figure { margin: 0; }
+.agenda-figure img { display: block; width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow-sm); transition: box-shadow .15s; }
+.agenda-figure a:hover img { box-shadow: var(--shadow-md); }
