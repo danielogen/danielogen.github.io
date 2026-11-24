@@ -5,7 +5,8 @@ Writes:
   _data/metrics.yml            total citations, h-index, i10-index
   _data/scholar_citations.yml  per-paper citation counts, keyed by slugified title
   _publications/<year>/*.md    a new entry for each Scholar paper the site does not have yet
-                               (skipping ids listed in _data/scholar_ignore.yml)
+                               (skipping ids listed in _data/scholar_ignore.yml); arXiv papers
+                               get full author names, abstract, date and links from the arXiv API
 
 Uses plain requests only. If Scholar refuses a request or the page layout changes, the script
 leaves existing files untouched, so the site keeps the last known values.
@@ -36,6 +37,38 @@ def fetch(url):
     })
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", errors="replace")
+
+
+ARXIV_ID = re.compile(r"arXiv:(\d{4}\.\d{4,5})", re.I)
+
+
+def arxiv_metadata(venue):
+    """Full authors, abstract, date and links from the arXiv API for an arXiv-hosted paper.
+
+    Scholar only gives abbreviated authors ("J Businge") and no abstract; arXiv has both.
+    Returns None if the venue has no arXiv id or the API cannot be reached.
+    """
+    m = ARXIV_ID.search(venue)
+    if not m:
+        return None
+    aid = m.group(1)
+    try:
+        time.sleep(3)  # arXiv asks API clients to wait 3 seconds between requests
+        feed = fetch(f"https://export.arxiv.org/api/query?id_list={aid}")
+    except Exception as exc:
+        print(f"Could not fetch arXiv metadata for {aid} ({exc}); using Scholar data.")
+        return None
+    entry = feed.split("<entry>", 1)[1] if "<entry>" in feed else ""
+    field = lambda tag: [re.sub(r"\s+", " ", text(x)) for x in re.findall(rf"<{tag}[^>]*>(.*?)</{tag}>", entry, re.S)]
+    authors, summary, published = field("name"), field("summary"), field("published")
+    if not authors:
+        return None
+    return {
+        "id": aid,
+        "authors": authors,
+        "abstract": summary[0] if summary else "",
+        "date": published[0][:10] if published else "",
+    }
 
 
 def text(fragment):
@@ -162,25 +195,37 @@ def import_new(rows):
 
         ptype = guess_type(r["venue"])
         venue_short = f"arXiv {r['year']}" if ptype == "preprint" else ""
+        date = f"{r['year']}-01-01"
+        abstract = ""
+        links = []
+        arxiv = arxiv_metadata(r["venue"])
+        if arxiv:
+            authors = ["Daniel Ogenrwot" if "Ogenrwot" in a else a for a in arxiv["authors"]]
+            abstract = arxiv["abstract"]
+            date = arxiv["date"] or date
+            links.append(f"  {'Preprint' if ptype == 'preprint' else 'arXiv'}: {q('https://arxiv.org/abs/' + arxiv['id'])}\n")
+            links.append(f"  PDF: {q('https://arxiv.org/pdf/' + arxiv['id'])}\n")
+            paper_link = None if ptype == "preprint" else paper_link  # the arXiv links cover a preprint
         out_dir = PUBS / r["year"]
         out_dir.mkdir(exist_ok=True)
         path = out_dir / f"scholar-{key[:60].rstrip('-')}.md"
-        links = []
         if paper_link:
             links.append(f"  {'Preprint' if ptype == 'preprint' else 'Paper'}: {q(paper_link)}\n")
-        links.append(f"  Scholar: {q(r['url'])}\n")
+        if not arxiv:
+            links.append(f"  Scholar: {q(r['url'])}\n")
         path.write_text(
             "---\n"
-            f"# Auto-imported from Google Scholar on {datetime.date.today()}. Review and enrich\n"
-            "# (venue_short, abstract, topics, links), then delete the `auto_imported` line.\n"
+            f"# Auto-imported from Google Scholar{' and arXiv' if arxiv else ''} on {datetime.date.today()}. Review\n"
+            "# (topics, venue_short, extra links such as code or data), then delete the `auto_imported` line.\n"
             "auto_imported: true\n"
             f"title: {q(r['title'])}\n"
-            f"date: {r['year']}-01-01 12:00:00 +0000\n"
+            f"date: {date} 12:00:00 +0000\n"
             "selected: false\n"
             f"pub: {q(r['venue'])}\n"
             f"pub_date: {q(r['year'])}\n"
             f"type: {ptype}\n"
             + (f"venue_short: {q(venue_short)}\n" if venue_short else "")
+            + (f"abstract: {q(abstract)}\n" if abstract else "")
             + "authors:\n" + "".join(f"  - {q(a)}\n" for a in authors)
             + "links:\n" + "".join(links)
             + "---\n"
