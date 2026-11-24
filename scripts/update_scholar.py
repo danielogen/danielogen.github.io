@@ -86,7 +86,7 @@ def parse_rows(page):
 def update_metrics(page):
     cells = re.findall(r'<td class="gsc_rsb_std">(\d+)</td>', page)
     if len(cells) < 6:
-        print("Metrics table not found; keeping existing metrics.")
+        print("::warning::Scholar metrics table not found; keeping existing metrics.")
         return
     # Table order: citations (all, since), h-index (all, since), i10-index (all, since)
     content = (
@@ -194,11 +194,12 @@ def main():
     try:
         page = fetch(PROFILE_URL)
     except Exception as exc:  # network error, HTTP 429, etc.
-        print(f"Could not fetch Scholar profile ({exc}); keeping existing data.")
+        # `::warning::` lines show up as annotations on the GitHub Actions run summary
+        print(f"::warning::Could not fetch Scholar profile ({exc}); keeping existing data.")
         return 0
     rows = parse_rows(page)
     if not rows:
-        print("No publications found on the page (blocked or layout changed); keeping existing data.")
+        print("::warning::No Scholar publications found on the page (blocked or layout changed); keeping existing data.")
         return 0
     update_metrics(page)
     update_citations(rows)
