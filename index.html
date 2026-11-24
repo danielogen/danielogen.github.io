@@ -20,7 +20,7 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
             <h1 class="hero-name">{{ profile.primary_name }}</h1>
             <p class="hero-tagline">{{ profile.tagline }}</p>
             <div class="hero-affil mt-3">
-                <img src="{{ '/assets/images/badges/unlv.svg' | relative_url }}" alt="" aria-hidden="true">
+                <img src="{{ '/assets/images/badges/unlv.svg' | relative_url }}" alt="" aria-hidden="true" width="22" height="22">
                 <span>Department of Computer Science, University of Nevada, Las Vegas &middot;
                     <a href="{{ profile.lab_url }}" target="_blank" rel="noopener">EVOL Lab</a></span>
             </div>
@@ -37,7 +37,10 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
         </div>
         <div class="col-lg-5 order-1 order-lg-2">
             <div class="portrait-wrap">
-                <img class="portrait" src="{{ profile.portrait_url | relative_url }}" alt="Portrait of {{ profile.primary_name }}" width="675" height="900" fetchpriority="high">
+                <picture>
+                    <source type="image/webp" srcset="{{ '/assets/images/photos/portrait-480.webp' | relative_url }} 480w, {{ '/assets/images/photos/portrait.webp' | relative_url }} 675w" sizes="(max-width: 991.98px) 240px, 340px">
+                    <img class="portrait" src="{{ profile.portrait_url | relative_url }}" alt="Portrait of {{ profile.primary_name }}" width="675" height="900" fetchpriority="high">
+                </picture>
             </div>
         </div>
     </div>

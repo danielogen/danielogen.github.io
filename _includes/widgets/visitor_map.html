@@ -1,12 +1,43 @@
-{%- comment -%} Third-party visitor map; configured in _data/display.yml under `visitor_map`. {%- endcomment -%}
+{%- comment -%}
+Third-party visitor map; configured in _data/display.yml under `visitor_map`.
+The widget script is injected only when the footer scrolls near the viewport, so it
+never blocks page rendering. map.js / globe.js locate their own <script> tag by id and
+render the map right after it, so the injected tag keeps the id the vendor expects.
+{%- endcomment -%}
 {%- assign vm = site.data.display.visitor_map -%}
 {%- if vm.id and vm.id != "" -%}
+{%- if vm.style == "globe" -%}
+{%- capture vm_src %}https://mapmyvisitors.com/globe.js?d={{ vm.id }}&w={{ vm.width | default: 220 }}{% endcapture -%}
+{%- assign vm_tag_id = "mmvst_globe" -%}
+{%- else -%}
+{%- capture vm_src %}https://mapmyvisitors.com/map.js?d={{ vm.id }}&cl=ffffff&w={{ vm.width | default: 220 }}{% endcapture -%}
+{%- assign vm_tag_id = "mapmyvisitors" -%}
+{%- endif %}
 <div class="visitor-map" aria-label="Map of site visitors">
     <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
-    {%- if vm.style == "globe" %}
-    <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d={{ vm.id }}&w={{ vm.width | default: 220 }}"></script>
-    {%- else %}
-    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ vm.id }}&cl=ffffff&w={{ vm.width | default: 220 }}"></script>
-    {%- endif %}
+    <div class="visitor-map-slot" data-src="{{ vm_src }}" data-tag-id="{{ vm_tag_id }}"></div>
 </div>
+<script>
+    (function () {
+        var slot = document.querySelector('.visitor-map-slot');
+        if (!slot) return;
+        var load = function () {
+            if (slot.dataset.loaded) return;
+            slot.dataset.loaded = '1';
+            var s = document.createElement('script');
+            s.id = slot.dataset.tagId;
+            s.src = slot.dataset.src;
+            s.async = true;
+            slot.appendChild(s);
+        };
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); load(); }
+            }, { rootMargin: '300px 0px' });
+            io.observe(slot);
+        } else {
+            window.addEventListener('load', load);
+        }
+    })();
+</script>
 {%- endif -%}
