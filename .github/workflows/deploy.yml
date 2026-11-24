@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Sync Google Scholar and researchr (metrics, publications, committees)
       if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
       continue-on-error: true
@@ -38,7 +38,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2.1'
+        ruby-version: '3.2'
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
