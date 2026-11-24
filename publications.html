@@ -26,15 +26,17 @@
 <meta property="og:title" content="Publications | Daniel Ogenrwot">
 <meta property="og:description" content="Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality.">
 <meta property="og:type" content="profile">
-<meta property="og:url" content="https://danielogen.github.io/publications">
-<meta property="og:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta property="og:url" content="https://danielogen.github.io/publications"><meta property="og:image" content="https://danielogen.github.io/assets/images/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Daniel Ogenrwot: PhD Candidate in Empirical Software Engineering and AI for SE at UNLV">
 <meta property="og:site_name" content="Daniel Ogenrwot">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Publications | Daniel Ogenrwot">
 <meta name="twitter:description" content="Publications by Daniel Ogenrwot in ASE, EMSE, MSR, SCAM, AIware and more, on AI coding agents, patch integration, software ecosystems, and code quality.">
-<meta name="twitter:image" content="https://danielogen.github.io/assets/images/photos/portrait.jpg">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/social-card.jpg">
 
 <!-- Structured data, so search engines can show a rich profile result -->
 <script type="application/ld+json">
@@ -154,7 +156,7 @@
     <span class="eyebrow">Research output</span>
     <h1>Publications</h1>
     <p class="lead">
-        24 publications, including papers, datasets, book chapters, and preprints. Citation counts are synced weekly from
+        25 publications, including papers, datasets, book chapters, and preprints. Citation counts are synced weekly from
         <a href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
         Also on <a href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener">DBLP</a>.
     </p>
@@ -168,7 +170,7 @@
             <input type="search" id="pub-search" placeholder="Search by title, author, or venue…" autocomplete="off">
         </label>
         <div class="filter-group" role="group" aria-label="Filter by type">
-            <button class="filter-btn active" type="button" data-filter="all">All <span class="count">24</span></button>
+            <button class="filter-btn active" type="button" data-filter="all">All <span class="count">25</span></button>
             
             
             
@@ -215,7 +217,7 @@
             
             
             
-            <button class="filter-btn" type="button" data-filter="preprint">Preprint <span class="count">4</span></button>
+            <button class="filter-btn" type="button" data-filter="preprint">Preprint <span class="count">5</span></button>
             
             
         </div>
@@ -232,13 +234,47 @@
         <div class="pub-year" id="year-2026"><h2>2026</h2></div>
         <div class="panel">
             
+            <article class="pub-item" data-type="preprint" data-citations="0" data-search="ghagentci: a dataset of coding-agent invocations in ci workflow histories daniel ogenrwot jorge gonzalo delgado cervantes woojoong kim john businge arxiv preprint arxiv:2611.15522 arxiv 2026 2026 coding agents are increasingly integrated into github actions to review pull requests, triage issues and modify code. identifying these integrations is challenging because agentic workflows often resemble ordinary ci files, with evidence appearing in action references, shell commands and workflow conventions. we present ghagentci, a dataset of 15k+ workflow histories from 6k+ of 196k+ mined github repositories, comprising 159k+ revisions and 205k+ agent-evidence records linked to workflow triggers and declared execution constraints. our open-source extractor, cai-miner, detects agent-related evidence using an extensible catalogue. manual validation of 576 stratified records confirmed 96.1% of dedicated-action matches and 98.8% of github agentic workflow matches, with lower rates for other evidence kinds. exploratory analyses reveal a shift toward command-line and github agentic workflow integrations, differences in declared safeguards, and frequent removal of detected agentic workflows. ghagentci supports longitudinal studies of coding-agent integration into ci.">
+    <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-body">
+        <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2611.15522" target="_blank" rel="noopener">GHAgentCI: A Dataset of Coding-Agent Invocations in CI Workflow Histories</a></h3>
+        <div class="pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <span class="text-body">
+            Woojoong Kim, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
+        <div class="pub-meta">
+            <i>arXiv preprint arXiv:2611.15522</i>, 2026
+            
+        </div>
+        <div class="pub-links">
+            <a class="pub-link" href="https://arxiv.org/abs/2611.15522" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
+            <a class="pub-link" href="https://arxiv.org/pdf/2611.15522" target="_blank" rel="noopener"><i class="fas fa-link"></i> PDF</a>
+            <button class="pub-link abstract-toggle" type="button" aria-expanded="false"><i class="fas fa-align-left"></i> Abstract</button>
+            <button class="pub-link bibtex-toggle" type="button" aria-expanded="false"><i class="fas fa-quote-right"></i> BibTeX</button>
+        </div>
+        <p class="pub-abstract">Coding agents are increasingly integrated into GitHub Actions to review pull requests, triage issues and modify code. Identifying these integrations is challenging because agentic workflows often resemble ordinary CI files, with evidence appearing in action references, shell commands and workflow conventions. We present GHAgentCI, a dataset of 15K+ workflow histories from 6K+ of 196K+ mined GitHub repositories, comprising 159K+ revisions and 205K+ agent-evidence records linked to workflow triggers and declared execution constraints. Our open-source extractor, cai-miner, detects agent-related evidence using an extensible catalogue. Manual validation of 576 stratified records confirmed 96.1% of dedicated-action matches and 98.8% of GitHub Agentic Workflow matches, with lower rates for other evidence kinds. Exploratory analyses reveal a shift toward command-line and GitHub Agentic Workflow integrations, differences in declared safeguards, and frequent removal of detected agentic workflows. GHAgentCI supports longitudinal studies of coding-agent integration into CI.</p>
+        <div class="pub-bibtex">
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <pre>@misc{ogenrwot2026ghagentci,
+  title = {GHAgentCI: A Dataset of Coding-Agent Invocations in CI Workflow Histories},
+  author = {Daniel Ogenrwot and Jorge Gonzalo Delgado Cervantes and Woojoong Kim and John Businge},
+  howpublished = {arXiv preprint arXiv:2611.15522},
+  year = {2026},
+  url = {https://arxiv.org/abs/2611.15522}
+}
+</pre>
+        </div>
+    </div>
+</article>
+
+            
             <article class="pub-item" data-type="preprint" data-citations="0" data-search="pyreprism: a shared lexical foundation for polyglot code analysis daniel ogenrwot jorge gonzalo delgado cervantes richard sserunjogi john businge arxiv preprint arxiv:2610.39224 arxiv 2026 2026 empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, normalizing identifiers, and screening for duplicated code. assembling them from specialized tools introduces differences in language coverage, measurement conventions, and workflows. we present pyreprism, an open-source python library and command-line tool that separates language-specific lexical processing from reusable analyses: each language declares its lexical surface, which yields a lossless stream of typed tokens, and every analysis is implemented once on that stream. across 187 built-in languages, language-specific declarations have a median length of 16 lines, and no language overrides a shared analysis. against a reference parser, comment and string classification reach f1 scores of 0.994 and 0.958 on 1,412 files in 12 languages that were never used to develop the tokenizer. in a study of a polyglot repository, one tool replaces three; with matched inputs and analysis operations, it takes 2.9s instead of 8.7s on one core. we also characterize where lexical analysis falls short, in complexity estimation and clone screening.">
     <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener">PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>arXiv preprint arXiv:2610.39224</i>, 2026
             
@@ -266,16 +302,16 @@
 </article>
 
             
-            <article class="pub-item" data-type="preprint" data-citations="1" data-search="prompt quality and pull request outcomes: a stage-based empirical study of llm-assisted development richard sserunjogi daniel ogenrwot john businge arxiv preprint arxiv:2606.19644 arxiv 2026 2026 large language model (llm)-powered tools such as chatgpt are increasingly used in collaborative software engineering workflows, yet little is known about how prompt structure influences downstream pull request (pr) outcomes. prior studies primarily examine conversational helpfulness, productivity, or coarse-grained adoption metrics, leaving the role of prompt structure in collaborative integration behavior insufficiently understood. we analyze 265 manually validated developer-chatgpt interactions derived from self-admitted chatgpt usage in open-source pull requests. building on prior research on developer-facing artifacts and prompt engineering, we operationalize prompt structure using three dimensions: context, specificity, and verification. we first evaluate whether llm-assisted annotation can reliably reproduce human judgments of prompt structure, finding substantial variation across dimensions and workflow contexts. specificity shows the most stable agreement with human judgments; context is systematically under-scored by the llm; and verification remains difficult to assess consistently, motivating a hybrid human-llm annotation strategy. using this validated framework, we then examine how prompt structure influences actionable code generation, code adoption, and integration depth across ai-assisted pr workflows. specificity and context are most strongly associated with actionable code generation; verification emerges as the primary predictor of code adoption; and integration depth is most strongly associated with context. overall, our findings show that prompt characteristics exert distinct, stage-dependent effects across ai-assisted software engineering workflows, influencing downstream adoption and integration through contextual grounding, task specificity, and evaluability cues.">
+            <article class="pub-item" data-type="preprint" data-citations="2" data-search="prompt quality and pull request outcomes: a stage-based empirical study of llm-assisted development richard sserunjogi daniel ogenrwot john businge arxiv preprint arxiv:2606.19644 arxiv 2026 2026 large language model (llm)-powered tools such as chatgpt are increasingly used in collaborative software engineering workflows, yet little is known about how prompt structure influences downstream pull request (pr) outcomes. prior studies primarily examine conversational helpfulness, productivity, or coarse-grained adoption metrics, leaving the role of prompt structure in collaborative integration behavior insufficiently understood. we analyze 265 manually validated developer-chatgpt interactions derived from self-admitted chatgpt usage in open-source pull requests. building on prior research on developer-facing artifacts and prompt engineering, we operationalize prompt structure using three dimensions: context, specificity, and verification. we first evaluate whether llm-assisted annotation can reliably reproduce human judgments of prompt structure, finding substantial variation across dimensions and workflow contexts. specificity shows the most stable agreement with human judgments; context is systematically under-scored by the llm; and verification remains difficult to assess consistently, motivating a hybrid human-llm annotation strategy. using this validated framework, we then examine how prompt structure influences actionable code generation, code adoption, and integration depth across ai-assisted pr workflows. specificity and context are most strongly associated with actionable code generation; verification emerges as the primary predictor of code adoption; and integration depth is most strongly associated with context. overall, our findings show that prompt characteristics exert distinct, stage-dependent effects across ai-assisted software engineering workflows, influencing downstream adoption and integration through contextual grounding, task specificity, and evaluability cues.">
     <div class="pub-venue ">arXiv 2026<span class="pub-type">Preprint</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener">Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development</a></h3>
-        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>arXiv preprint arXiv:2606.19644</i>, 2026
-             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:4JMBOYKVnBMC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 1 citation</a>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:4JMBOYKVnBMC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
         </div>
         <div class="pub-links">
             <a class="pub-link" href="https://arxiv.org/abs/2606.19644" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
@@ -298,16 +334,16 @@
 </article>
 
             
-            <article class="pub-item" data-type="journal" data-citations="20" data-search="patchtrack: a comprehensive analysis of chatgpt&#39;s influence on pull request outcomes daniel ogenrwot john businge empirical software engineering (emse) emse 2026 2026 the rapid adoption of large language models (llms) like chatgpt has introduced new dynamics in software development, particularly within pull request workflows. while prior research has examined the quality of ai-generated code, less is known about how developers evaluate, adapt, and integrate these suggestions in real-world collaboration. we analyze 338 pull requests from 255 github repositories containing self-admitted chatgpt usage, comprising 645 ai-generated snippets and 3,486 developer-authored patches. to support this analysis at scale, we use patchtrack, an automated classifier that identifies whether ai-generated patches were applied, partially reused, or not integrated. our findings reveal that full adoption of chatgpt-generated code is uncommon: the median integration rate is 25%. qualitative analysis of 89 pull requests with integrated patches reveals recurring patterns of structural integration, selective extraction, and iterative refinement, indicating that developers typically treat ai output as a starting point rather than a final implementation. even when code is not directly adopted, chatgpt influences workflows through conceptual guidance, documentation, and debugging strategies. integration decisions reflect contextual fit, integration effort, maintainer trust, and established pull request review norms rather than serving as direct indicators of code correctness. overall, this study provides empirical insight into ai-mediated decision-making in collaborative software development, showing that the influence of generative ai extends beyond patch generation to how developers reason about, adapt, and negotiate code during review within pull request workflows. these findings inform the design of ai-assisted tools and support more transparent and effective use of llms in practice.">
+            <article class="pub-item" data-type="journal" data-citations="24" data-search="patchtrack: a comprehensive analysis of chatgpt&#39;s influence on pull request outcomes daniel ogenrwot john businge empirical software engineering (emse) emse 2026 2026 the rapid adoption of large language models (llms) like chatgpt has introduced new dynamics in software development, particularly within pull request workflows. while prior research has examined the quality of ai-generated code, less is known about how developers evaluate, adapt, and integrate these suggestions in real-world collaboration. we analyze 338 pull requests from 255 github repositories containing self-admitted chatgpt usage, comprising 645 ai-generated snippets and 3,486 developer-authored patches. to support this analysis at scale, we use patchtrack, an automated classifier that identifies whether ai-generated patches were applied, partially reused, or not integrated. our findings reveal that full adoption of chatgpt-generated code is uncommon: the median integration rate is 25%. qualitative analysis of 89 pull requests with integrated patches reveals recurring patterns of structural integration, selective extraction, and iterative refinement, indicating that developers typically treat ai output as a starting point rather than a final implementation. even when code is not directly adopted, chatgpt influences workflows through conceptual guidance, documentation, and debugging strategies. integration decisions reflect contextual fit, integration effort, maintainer trust, and established pull request review norms rather than serving as direct indicators of code correctness. overall, this study provides empirical insight into ai-mediated decision-making in collaborative software development, showing that the influence of generative ai extends beyond patch generation to how developers reason about, adapt, and negotiate code during review within pull request workflows. these findings inform the design of ai-assisted tools and support more transparent and effective use of llms in practice.">
     <div class="pub-venue ">EMSE 2026<span class="pub-type">Journal</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>Empirical Software Engineering (EMSE)</i>, 31(5), 136, 2026
-             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 20 citations</a>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 24 citations</a>
         </div>
         <div class="pub-links">
             <a class="pub-link" href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
@@ -332,16 +368,16 @@
 </article>
 
             
-            <article class="pub-item" data-type="dataset" data-citations="7" data-search="agenticflict: a large-scale dataset of merge conflicts in ai coding agent pull requests on github daniel ogenrwot john businge 3rd acm international conference on ai-powered software (aiware), benchmark &amp; dataset track aiware 2026 2026 software engineering 3.0 marks a paradigm shift in software development, in which ai coding agents are no longer just assistive tools but active contributors. while prior empirical studies have examined productivity gains and acceptance patterns in ai-assisted development, the challenges associated with integrating agent-generated contributions remain less understood. in particular, merge conflicts, a fundamental aspect of collaborative software development, remain underexplored in this context. in this paper, we present agenticflict, a large-scale dataset of textual merge conflicts in ai coding agent pull requests (agentic prs). the dataset comprises 142k+ agentic prs collected from 59k+ repositories, of which 107k+ are successfully processed through deterministic merge simulation. our pipeline identifies 29k+ prs exhibiting merge conflicts, yielding a conflict rate of 27.67%, and extracts 336k+ fine-grained conflict regions across these instances. our preliminary exploratory analysis indicates that merge conflicts are both frequent and often substantial in ai-generated contributions, with noticeable variation across agents, emphasizing the need to better understand and manage integration challenges in ai-assisted software development.">
+            <article class="pub-item" data-type="dataset" data-citations="8" data-search="agenticflict: a large-scale dataset of merge conflicts in ai coding agent pull requests on github daniel ogenrwot john businge 3rd acm international conference on ai-powered software (aiware), benchmark &amp; dataset track aiware 2026 2026 software engineering 3.0 marks a paradigm shift in software development, in which ai coding agents are no longer just assistive tools but active contributors. while prior empirical studies have examined productivity gains and acceptance patterns in ai-assisted development, the challenges associated with integrating agent-generated contributions remain less understood. in particular, merge conflicts, a fundamental aspect of collaborative software development, remain underexplored in this context. in this paper, we present agenticflict, a large-scale dataset of textual merge conflicts in ai coding agent pull requests (agentic prs). the dataset comprises 142k+ agentic prs collected from 59k+ repositories, of which 107k+ are successfully processed through deterministic merge simulation. our pipeline identifies 29k+ prs exhibiting merge conflicts, yielding a conflict rate of 27.67%, and extracts 336k+ fine-grained conflict regions across these instances. our preliminary exploratory analysis indicates that merge conflicts are both frequent and often substantial in ai-generated contributions, with noticeable variation across agents, emphasizing the need to better understand and manage integration challenges in ai-assisted software development.">
     <div class="pub-venue ">AIware 2026<span class="pub-type">Dataset</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>3rd ACM International Conference on AI-Powered Software (AIware), Benchmark & Dataset Track</i>, 2026
-             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 7 citations</a>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 8 citations</a>
         </div>
         <div class="pub-links">
             <a class="pub-link" href="https://arxiv.org/abs/2604.03551" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> Preprint</a>
@@ -370,7 +406,7 @@
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/abs/2604.01494" target="_blank" rel="noopener">MOVis: A Visual Analytics Tool for Surfacing Missed Patches Across Software Variants</a></h3>
-        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <span class="text-body">
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a>, <span class="text-body">
             <strong>Daniel Ogenrwot</strong></span></div>
         <div class="pub-meta">
             <i>arXiv preprint arXiv:2604.01494</i>, 2026
@@ -405,7 +441,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>23rd International Conference on Mining Software Repositories (MSR), Mining Challenge Track</i>, 2026
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:-f6ydRqryjwC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 20 citations</a>
@@ -480,7 +516,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://ieeexplore.ieee.org/document/11190222" target="_blank" rel="noopener">Refactoring-Aware Patch Integration Across Structurally Divergent Java Forks</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>2025 IEEE International Conference on Source Code Analysis & Manipulation (SCAM)</i>, 2025 <span class="award-badge"><i class="fas fa-award"></i> Distinguished Artifact Award</span>
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:QIV2ME_5wuYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 6 citations</a>
@@ -507,12 +543,12 @@
 </article>
 
             
-            <article class="pub-item" data-type="conference" data-citations="12" data-search="design and evaluation of a scalable data pipeline for ai-driven air quality monitoring in low-resource settings richard sserunjogi daniel ogenrwot nicholas niwamanya noah nsimbe martin bbaale benjamin ssempala noble mutabazi raja fidel wabinyai deo okure engineer bainomugisha 34th international conference on software engineering and data engineering (sede) sede 2025 2025 the increasing adoption of low-cost environmental sensors and ai-enabled applications has accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce and resource-constrained regions. this paper presents the design, implementation, and evaluation of the airqo data pipeline: a modular, cloud-native extract-transform-load (etl) system engineered to support both real-time and batch processing of heterogeneous air quality data across urban deployments in africa. it is built using open-source technologies such as apache airflow, apache kafka, and google bigquery. the pipeline integrates diverse data streams from low-cost sensors, third-party weather apis, and reference-grade monitors to enable automated calibration, forecasting, and accessible analytics. we demonstrate the pipeline&#39;s ability to ingest, transform, and distribute millions of air quality measurements monthly from over 400 monitoring devices while achieving low latency, high throughput, and robust data availability, even under constrained power and connectivity conditions. the paper details key architectural features, including workflow orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and observability frameworks. performance is evaluated across operational metrics such as resource utilization, ingestion throughput, calibration accuracy, and data availability, offering practical insights into building sustainable environmental data platforms. by open-sourcing the platform and documenting deployment experiences, this work contributes a reusable blueprint for similar initiatives seeking to advance environmental intelligence through data engineering in low-resource settings.">
+            <article class="pub-item" data-type="conference" data-citations="13" data-search="design and evaluation of a scalable data pipeline for ai-driven air quality monitoring in low-resource settings richard sserunjogi daniel ogenrwot nicholas niwamanya noah nsimbe martin bbaale benjamin ssempala noble mutabazi raja fidel wabinyai deo okure engineer bainomugisha 34th international conference on software engineering and data engineering (sede) sede 2025 2025 the increasing adoption of low-cost environmental sensors and ai-enabled applications has accelerated the demand for scalable and resilient data infrastructures, particularly in data-scarce and resource-constrained regions. this paper presents the design, implementation, and evaluation of the airqo data pipeline: a modular, cloud-native extract-transform-load (etl) system engineered to support both real-time and batch processing of heterogeneous air quality data across urban deployments in africa. it is built using open-source technologies such as apache airflow, apache kafka, and google bigquery. the pipeline integrates diverse data streams from low-cost sensors, third-party weather apis, and reference-grade monitors to enable automated calibration, forecasting, and accessible analytics. we demonstrate the pipeline&#39;s ability to ingest, transform, and distribute millions of air quality measurements monthly from over 400 monitoring devices while achieving low latency, high throughput, and robust data availability, even under constrained power and connectivity conditions. the paper details key architectural features, including workflow orchestration, decoupled ingestion layers, machine learning-driven sensor calibration, and observability frameworks. performance is evaluated across operational metrics such as resource utilization, ingestion throughput, calibration accuracy, and data availability, offering practical insights into building sustainable environmental data platforms. by open-sourcing the platform and documenting deployment experiences, this work contributes a reusable blueprint for similar initiatives seeking to advance environmental intelligence through data engineering in low-resource settings.">
     <div class="pub-venue ">SEDE 2025<span class="pub-type">Conference</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener">Design and Evaluation of a Scalable Data Pipeline for AI-Driven Air Quality Monitoring in Low-Resource Settings</a></h3>
-        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
             Nicholas Niwamanya, </span><span class="text-body">
             Noah Nsimbe, </span><span class="text-body">
@@ -523,7 +559,7 @@
             Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Engineer+Bainomugisha">Engineer Bainomugisha</a></div>
         <div class="pub-meta">
             <i>34th International Conference on Software Engineering and Data Engineering (SEDE)</i>, 2025
-             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:dhFuZR0502QC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 12 citations</a>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:dhFuZR0502QC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 13 citations</a>
         </div>
         <div class="pub-links">
             <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_14" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
@@ -552,7 +588,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://link.springer.com/chapter/10.1007/978-3-032-08649-5_9" target="_blank" rel="noopener">Structural and Connectivity Patterns in the Maven Central Software Dependency Network</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~arifuzza/">Shaikh Arifuzzaman</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~arifuzza/">Shaikh Arifuzzaman</a></div>
         <div class="pub-meta">
             <i>34th International Conference on Software Engineering and Data Engineering (SEDE)</i>, 2025
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:7PzlFSSx8tAC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
@@ -650,7 +686,7 @@
         <h3 class="pub-title">Case Study of Participatory Data-Driven Approaches to Improve Urban Air Quality in Kampala, Uganda</h3>
         <div class="pub-authors"><span class="text-body">
             Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Engineer+Bainomugisha">Engineer Bainomugisha</a>, <span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             Priscah Adrine, </span><span class="text-body">
             Gabriel Okello</span></div>
         <div class="pub-meta">
@@ -718,16 +754,16 @@
         <div class="pub-year" id="year-2024"><h2>2024</h2></div>
         <div class="panel">
             
-            <article class="pub-item" data-type="poster" data-citations="14" data-search="patchtrack: analyzing chatgpt&#39;s impact on software patch decision-making in pull requests daniel ogenrwot john businge 39th ieee/acm international conference on automated software engineering (ase), posters track ase 2024 2024 in recent years, the integration of ai tools such as chatgpt into software development has grown significantly, reflecting broader trends in ai-assisted workflows. these tools have great potential to improve decision making related to software patches in pull requests (pr), which are vital components of collaborative software development. specifically, developers are using features such as link sharing in chatgpt to enhance collaborative practices, streamline code reviews, and make more informed patch integration decisions.">
+            <article class="pub-item" data-type="poster" data-citations="15" data-search="patchtrack: analyzing chatgpt&#39;s impact on software patch decision-making in pull requests daniel ogenrwot john businge 39th ieee/acm international conference on automated software engineering (ase), posters track ase 2024 2024 in recent years, the integration of ai tools such as chatgpt into software development has grown significantly, reflecting broader trends in ai-assisted workflows. these tools have great potential to improve decision making related to software patches in pull requests (pr), which are vital components of collaborative software development. specifically, developers are using features such as link sharing in chatgpt to enhance collaborative practices, streamline code reviews, and make more informed patch integration decisions.">
     <div class="pub-venue ">ASE 2024<span class="pub-type">Poster</span>
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener">PatchTrack: Analyzing ChatGPT's Impact on Software Patch Decision-Making in Pull Requests</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></div>
         <div class="pub-meta">
             <i>39th IEEE/ACM International Conference on Automated Software Engineering (ASE), Posters Track</i>, 2024
-             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 14 citations</a>
+             <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 15 citations</a>
         </div>
         <div class="pub-links">
             <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3691620.3695338" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Paper</a>
@@ -756,7 +792,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://arxiv.org/html/2406.19254v1" target="_blank" rel="noopener">Empirical Investigation of the Relationship Between Design Smells and Role Stereotypes</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Joyce+Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.cs.unlv.edu/~busing/">John Businge</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Michel+R.V.+Chaudron">Michel R.V. Chaudron</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://sites.google.com/view/jnabende/home">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a>, <a class="text-body" target="_blank" href="https://www.tue.nl/en/research/researchers/michel-chaudron">Michel R.V. Chaudron</a></div>
         <div class="pub-meta">
             <i>arXiv</i>, 2024
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:Tyk-4Ss8FVUC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
@@ -799,7 +835,7 @@
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
             Noah Nsimbe, </span><span class="text-body">
             Lillian Muyama, </span><span class="text-body">
-            Priscilla Adong, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            Priscilla Adong, </span><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             Martin Bbaale, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Engineer+Bainomugisha">Engineer Bainomugisha</a></div>
         <div class="pub-meta">
             <i>EGU General Assembly 2023, Abstract EGU23-16697</i>, 2023
@@ -843,7 +879,7 @@
             Deo Okure, </span><span class="text-body">
             Noah Nsimbe, </span><span class="text-body">
             Joseph Odur, </span><span class="text-body">
-            Joel Ssematimba, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            Joel Ssematimba, </span><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             Deo Okedi, </span><span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
             Martin Bbaale, </span><span class="text-body">
@@ -880,7 +916,7 @@
         <h3 class="pub-title"><a class="text-body" href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.A15O1436O/abstract" target="_blank" rel="noopener">Building an Africa-focused Framework for Air Quality Management: The Role of Low-cost Sensors and Digital Platforms for Effective Data Management and Engagement for Action</a></h3>
         <div class="pub-authors"><span class="text-body">
             Deo Okure, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Engineer+Bainomugisha">Engineer Bainomugisha</a>, <span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             Priscah Adrine, </span><span class="text-body">
             Gabriel Okello, </span><span class="text-body">
             Priscilla Adong, </span><span class="text-body">
@@ -916,7 +952,7 @@
     </div>
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://doi.org/10.1016/j.dib.2022.108512" target="_blank" rel="noopener">Seeing the Air in Detail: Hyperlocal Air Quality Dataset Collected from Spatially Distributed AirQo Network</a></h3>
-        <div class="pub-authors"><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Richard+Sserunjogi">Richard Sserunjogi</a>, <span class="text-body">
+        <div class="pub-authors"><a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <span class="text-body">
             Joel Ssematimba, </span><span class="text-body">
             Deo Okure, </span><span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><span class="text-body">
@@ -956,7 +992,7 @@
         <h3 class="pub-title"><a class="text-body" href="https://dl.acm.org/doi/10.1145/3531056.3542775" target="_blank" rel="noopener">From Undergraduate (Software) Capstone Projects to Start-ups: Challenges and Opportunities in Higher Institutions of Learning</a></h3>
         <div class="pub-authors"><span class="text-body">
             <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Geoffrey+Olok+Tabo">Geoffrey Olok Tabo</a>, <span class="text-body">
-            Kevin Aber, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Joyce+Nakatumba-Nabende">Joyce Nakatumba-Nabende</a></div>
+            Kevin Aber, </span><a class="text-body" target="_blank" href="https://sites.google.com/view/jnabende/home">Joyce Nakatumba-Nabende</a></div>
         <div class="pub-meta">
             <i>Federated Africa and Middle East Conference on Software Engineering (FAMECSE)</i>, 2022
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 11 citations</a>
@@ -995,7 +1031,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://www.sciencedirect.com/science/article/pii/S2352340921004091" target="_blank" rel="noopener">Integration of design smells and role-stereotypes classification dataset</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Joyce+Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Michel+R.V.+Chaudron">Michel R.V. Chaudron</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://sites.google.com/view/jnabende/home">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.tue.nl/en/research/researchers/michel-chaudron">Michel R.V. Chaudron</a></div>
         <div class="pub-meta">
             <i>Data in Brief</i>, 2021
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 2 citations</a>
@@ -1034,7 +1070,7 @@
     <div class="pub-body">
         <h3 class="pub-title"><a class="text-body" href="https://ceur-ws.org/Vol-2689/paper2.pdf" target="_blank" rel="noopener">Comparison of Occurrence of Design Smells in Desktop and Mobile Applications</a></h3>
         <div class="pub-authors"><span class="text-body">
-            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Joyce+Nakatumba-Nabende">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Michel+R.V.+Chaudron">Michel R.V. Chaudron</a></div>
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://sites.google.com/view/jnabende/home">Joyce Nakatumba-Nabende</a>, <a class="text-body" target="_blank" href="https://www.tue.nl/en/research/researchers/michel-chaudron">Michel R.V. Chaudron</a></div>
         <div class="pub-meta">
             <i>2020 African Conference on Software Engineering (ACSE)</i>, 2020
              <a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 4 citations</a>
