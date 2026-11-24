@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+  Source for assets/images/social-card.jpg, the 1200x630 preview shown when the site is
+  shared on LinkedIn, Slack, X, etc. Regenerate after editing (see scripts/render_social_card.cjs).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,700&display=block" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1200px; height: 630px; }
+    body {
+        font-family: "Inter", sans-serif; color: #fff; overflow: hidden; position: relative;
+        background:
+            radial-gradient(700px 420px at 92% 8%, rgba(180, 151, 90, .28), transparent 70%),
+            radial-gradient(600px 500px at 0% 100%, rgba(45, 90, 143, .55), transparent 70%),
+            #142a47;
+    }
+    .grid {
+        position: absolute; inset: 0; opacity: .07;
+        background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+    .wrap { position: relative; display: flex; align-items: center; height: 100%; padding: 0 72px 0 80px; gap: 64px; }
+    .text { flex: 1; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+    .mark {
+        width: 46px; height: 46px; border-radius: 12px; background: #fff; color: #1E3A5F;
+        display: grid; place-items: center; font-family: "Source Serif 4", serif; font-weight: 700; font-size: 20px;
+    }
+    .domain { font-size: 22px; font-weight: 500; color: #c9d6e8; letter-spacing: .01em; }
+    .pill {
+        display: inline-block; font-size: 19px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+        color: #e2c98f; margin-bottom: 18px;
+    }
+    h1 { font-family: "Source Serif 4", serif; font-size: 76px; line-height: 1.02; font-weight: 700; letter-spacing: -.01em; }
+    .tagline { margin-top: 26px; font-size: 29px; line-height: 1.38; color: #dbe4f0; max-width: 640px; }
+    .affil { margin-top: 36px; display: flex; align-items: center; gap: 14px; font-size: 21px; color: #b7c5d9; font-weight: 500; }
+    .affil .bar { width: 36px; height: 3px; background: #B4975A; border-radius: 2px; }
+    .photo { position: relative; flex: 0 0 330px; height: 440px; }
+    .photo::before {
+        content: ""; position: absolute; inset: 18px -18px -18px 18px; border-radius: 30px;
+        border: 3px solid #B4975A; opacity: .7;
+    }
+    .photo img {
+        position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;
+        border-radius: 30px; box-shadow: 0 24px 60px -12px rgba(0, 0, 0, .55);
+    }
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="wrap">
+    <div class="text">
+        <div class="brand"><span class="mark">DO</span><span class="domain">danielogen.github.io</span></div>
+        <div class="pill">PhD Candidate · Computer Science</div>
+        <h1>Daniel Ogenrwot</h1>
+        <p class="tagline">Empirical Software Engineering &amp; AI for SE: how software evolves, and how AI coding agents are changing the way it is built.</p>
+        <div class="affil"><span class="bar"></span>University of Nevada, Las Vegas · EVOL Lab</div>
+    </div>
+    <div class="photo"><img src="../assets/images/photos/portrait.jpg" alt=""></div>
+</div>
+</body>
+</html>
