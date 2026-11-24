@@ -19,8 +19,7 @@
 
 <!-- SEO -->
 <meta name="description" content="Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical Software Engineering and AI for Software Engineering: AI coding agents, patch integration ac...">
-<meta name="author" content="Daniel Ogenrwot">
-<link rel="canonical" href="https://danielogen.github.io/">
+<meta name="author" content="Daniel Ogenrwot"><link rel="canonical" href="https://danielogen.github.io/">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
 <!-- Open Graph -->
@@ -62,11 +61,15 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<!-- Icon sets load without blocking first paint -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous"></noscript>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous" /></noscript>
 <link rel="stylesheet" href="/assets/css/global.css">
 
 </head>
@@ -151,7 +154,7 @@
             <h1 class="hero-name">Daniel Ogenrwot</h1>
             <p class="hero-tagline">I study how software evolves, and how AI coding agents are changing the way it is built.</p>
             <div class="hero-affil mt-3">
-                <img src="/assets/images/badges/unlv.svg" alt="" aria-hidden="true">
+                <img src="/assets/images/badges/unlv.svg" alt="" aria-hidden="true" width="22" height="22">
                 <span>Department of Computer Science, University of Nevada, Las Vegas &middot;
                     <a href="https://github.com/unlv-evol" target="_blank" rel="noopener">EVOL Lab</a></span>
             </div>
@@ -172,7 +175,10 @@
         </div>
         <div class="col-lg-5 order-1 order-lg-2">
             <div class="portrait-wrap">
-                <img class="portrait" src="/assets/images/photos/portrait.jpg" alt="Portrait of Daniel Ogenrwot" width="675" height="900" fetchpriority="high">
+                <picture>
+                    <source type="image/webp" srcset="/assets/images/photos/portrait-480.webp 480w, /assets/images/photos/portrait.webp 675w" sizes="(max-width: 991.98px) 240px, 340px">
+                    <img class="portrait" src="/assets/images/photos/portrait.jpg" alt="Portrait of Daniel Ogenrwot" width="675" height="900" fetchpriority="high">
+                </picture>
             </div>
         </div>
     </div>
@@ -201,8 +207,8 @@
   working in the <a href="https://github.com/unlv-evol" target="_blank">Software Evolution (EVOL) Lab</a>
   under the supervision of <a href="https://www.cs.unlv.edu/~busing/" target="_blank">Professor John Businge</a>.
   I hold an MSc in Computer Science from Makerere University, Uganda (advised by
-  <a href="https://scholar.google.com/citations?user=jnFtPmIAAAAJ" target="_blank">Dr. Joyce Nakatumba-Nabende</a>
-  and <a href="https://scholar.google.com/citations?user=3nyGpX4AAAAJ" target="_blank">Prof. Michel R.V. Chaudron</a>)
+  <a href="https://scholar.google.com/scholar?q=Joyce+Nakatumba-Nabende" target="_blank">Dr. Joyce Nakatumba-Nabende</a>
+  and <a href="https://scholar.google.com/scholar?q=Michel+R.V.+Chaudron" target="_blank">Prof. Michel R.V. Chaudron</a>)
   and a BSc in Computer Science from Gulu University, Uganda.
   My research lies at the intersection of <strong>Empirical Software Engineering</strong> and
   <strong>Agentic AI</strong>, with publications in venues including
@@ -325,7 +331,7 @@
     <img class="feature-pub-img" src="/assets/images/covers/patchtrack-overview.png" alt="Overview figure for PatchTrack: A Comprehensive Analysis of ChatGPT&#39;s Influence on Pull Request Outcomes" loading="lazy">
     <div class="feature-pub-body">
         <div class="d-flex flex-wrap" style="gap: .35rem;">
-            <span class="chip chip-accent">EMSE 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19</a>
+            <span class="chip chip-accent">EMSE 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:mVmsd5A6BfQC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 20</a>
         </div>
         <h3><a href="https://link.springer.com/article/10.1007/s10664-026-10869-5" target="_blank" rel="noopener">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a></h3>
         <div class="authors"><span class="text-body">
@@ -340,7 +346,7 @@
 </div>
         
         <div class="col-md-6 col-lg-4 mb-4"><article class="panel hover-lift feature-pub">
-    <img class="feature-pub-img" src="/assets/images/covers/agenticflict-overview.png" alt="Overview figure for AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub" loading="lazy">
+    <img class="feature-pub-img" src="/assets/images/covers/agenticflict-overview.webp" alt="Overview figure for AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub" loading="lazy">
     <div class="feature-pub-body">
         <div class="d-flex flex-wrap" style="gap: .35rem;">
             <span class="chip chip-accent">AIware 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 7</a>
@@ -360,7 +366,7 @@
     <div class="feature-pub-img placeholder-art" aria-hidden="true">MSR 2026</div>
     <div class="feature-pub-body">
         <div class="d-flex flex-wrap" style="gap: .35rem;">
-            <span class="chip chip-accent">MSR 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:-f6ydRqryjwC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 19</a>
+            <span class="chip chip-accent">MSR 2026</span><a class="cite-badge" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZpCrmOQAAAAJ&citation_for_view=ZpCrmOQAAAAJ:-f6ydRqryjwC" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> 20</a>
         </div>
         <h3><a href="https://2026.msrconf.org/details/msr-2026-mining-challenge/43/How-AI-Coding-Agents-Modify-Code-A-Large-Scale-Study-of-GitHub-Pull-Requests" target="_blank" rel="noopener">How AI Coding Agents Modify Code: A Large-Scale Study of GitHub Pull Requests</a></h3>
         <div class="authors"><span class="text-body">
@@ -432,7 +438,7 @@
         <li class="news-item is-hidden">
             <div class="news-date">Jan 2026</div>
             <div class="news-icon tag-service" aria-hidden="true"><i class="fas fa-users"></i></div>
-            <div class="news-text">Invited to the <a href="https://conf.researchr.org/track/fse-2026/fse-2026-ideas--visions-and-reflections" target="_blank" rel="noopener">ESEC/FSE 2026</a> program committee (Ideas, Visions and Reflections).</div>
+            <div class="news-text">Invited to the <a href="https://conf.researchr.org/committee/fse-2026/fse-2026-ideas-visions-and-reflections-program-committee" target="_blank" rel="noopener">ESEC/FSE 2026</a> program committee (Ideas, Visions and Reflections).</div>
         </li>
         <li class="news-item is-hidden">
             <div class="news-date">Oct 2025</div>
@@ -606,10 +612,34 @@
                 </nav>
             </div>
             <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
-                <div class="visitor-map" aria-label="Map of site visitors">
+                
+<div class="visitor-map" aria-label="Map of site visitors">
     <div class="visitor-map-label"><i class="fas fa-earth-americas"></i> Visitors</div>
-    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220"></script>
+    <div class="visitor-map-slot" data-src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220" data-tag-id="mapmyvisitors"></div>
 </div>
+<script>
+    (function () {
+        var slot = document.querySelector('.visitor-map-slot');
+        if (!slot) return;
+        var load = function () {
+            if (slot.dataset.loaded) return;
+            slot.dataset.loaded = '1';
+            var s = document.createElement('script');
+            s.id = slot.dataset.tagId;
+            s.src = slot.dataset.src;
+            s.async = true;
+            slot.appendChild(s);
+        };
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); load(); }
+            }, { rootMargin: '300px 0px' });
+            io.observe(slot);
+        } else {
+            window.addEventListener('load', load);
+        }
+    })();
+</script>
             </div>
         </div>
         <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
@@ -619,11 +649,11 @@
     </div>
 </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-<script src="/assets/js/common.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script defer src="/assets/js/common.js"></script>
 
 </body>
 </html>
