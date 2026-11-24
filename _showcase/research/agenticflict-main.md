@@ -24,7 +24,7 @@ group: Research Highlights
         and often substantial in AI-generated contributions.
     </p>
     <img
-        data-src="{{ '/assets/images/covers/agenticflict-overview.png' | relative_url }}"
+        data-src="{{ '/assets/images/covers/agenticflict-overview.webp' | relative_url }}"
         src="{{ '/assets/css/images/loading.gif' | relative_url }}"
         class="lazy w-100 rounded mb-3"
         alt="AgenticFlict dataset curation workflow"

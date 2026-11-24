@@ -21,7 +21,7 @@ spotlight:
       - Mined from 59K+ GitHub repositories, giving a large-scale view of agent-authored merge conflicts.
       - Conflicts in agentic PRs are both frequent and often substantial in size.
       - Released openly with the full curation pipeline for follow-up research.
-    figure: /assets/images/covers/agenticflict-overview.png
+    figure: /assets/images/covers/agenticflict-overview.webp
     caption: Dataset curation workflow
   - name: PatchTrack
     paper: patchtrack

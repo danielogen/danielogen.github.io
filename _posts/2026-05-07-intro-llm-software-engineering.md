@@ -13,13 +13,13 @@ Large Language Models (LLMs) have rapidly moved from research curiosity to every
 
 This post offers a grounded introduction to LLMs in the context of Software Engineering (SE): what they are, how they are applied, what the empirical evidence says, and what open problems remain.
 
-# What is a Large Language Model?
+## What is a Large Language Model?
 
 A Large Language Model is a neural network trained on vast corpora of text — including source code from public repositories like GitHub — to predict the next token in a sequence. Through this deceptively simple objective, models such as GPT-4, Claude, Llama, and CodeLlama develop emergent capabilities: they can generate syntactically correct code, explain logic, translate between programming languages, and reason about software artifacts.
 
 At their core, LLMs are **probabilistic text generators**. They do not "understand" code in the way a compiler does; they model statistical patterns over tokens. This distinction matters enormously when reasoning about their reliability in SE tasks.
 
-## Key architectural ideas
+### Key architectural ideas
 
 Modern LLMs share a few common properties relevant to SE use:
 
@@ -28,11 +28,11 @@ Modern LLMs share a few common properties relevant to SE use:
 - **Instruction tuning**: fine-tuning on (instruction, response) pairs to make models follow natural-language directives
 - **Retrieval Augmented Generation (RAG)**: grounding model outputs in retrieved documents — especially useful for codebase-aware assistants
 
-# LLMs Across the Software Engineering Lifecycle
+## LLMs Across the Software Engineering Lifecycle
 
 LLMs are not a single tool for a single task. They cut across nearly every phase of the SE lifecycle.
 
-## Code generation
+### Code generation
 
 The most visible application. Given a natural-language description — or a partial code context — LLMs generate code completions or full implementations.
 
@@ -45,29 +45,29 @@ def is_palindrome(s: str) -> bool:
 
 Empirical studies show that LLMs achieve high pass rates on competitive programming benchmarks (HumanEval, MBPP), but performance degrades sharply on real-world tasks requiring deep repository context, uncommon APIs, or security awareness.
 
-## Automated program repair
+### Automated program repair
 
 Automated Program Repair (APR) aims to fix bugs without human intervention. LLMs have become dominant here, surpassing prior template-based and search-based approaches on benchmarks like Defects4J. The intuition is straightforward: a model trained on millions of commit diffs has seen many patterns of "broken code → fixed code."
 
 My own work — [RePatch](https://ieeexplore.ieee.org/document/11190222) — explores a related challenge: **patch integration across structurally divergent forks**. When two software variants have drifted apart through independent refactoring, simply replaying a patch fails. We showed that refactoring-aware strategies can recover 52.8% of previously failing patches, a problem where LLMs alone struggle due to the structural mismatch.
 
-## Code review and pull request analysis
+### Code review and pull request analysis
 
 LLMs are increasingly used to assist code review — summarising changes, flagging potential issues, and suggesting improvements. In [PatchTrack](https://dl.acm.org/doi/10.1145/3691620.3695338), we studied how ChatGPT-generated patches influence pull request outcomes across open-source projects. We found a median code adoption rate of just 25%, with developers frequently engaging in iterative refinement rather than direct acceptance — suggesting that LLM suggestions function more as a **starting point** than a final answer.
 
-## Test generation
+### Test generation
 
 LLMs can generate unit tests from function signatures and docstrings. Tools like CodiumAI and EvoSuite-LLM combine evolutionary search with LLM-generated test seeds. The challenge is achieving meaningful coverage rather than trivially passing tests.
 
-## Documentation and code summarisation
+### Documentation and code summarisation
 
 Generating docstrings, README files, and inline comments from code is a task LLMs handle well. Unlike generation (where correctness must be verified), summarisation is easier to evaluate qualitatively.
 
-## Bug localisation
+### Bug localisation
 
 Given a bug report and a codebase, can an LLM identify the faulty file or function? Recent work (SWE-bench) shows that frontier models can resolve a fraction of real GitHub issues end-to-end — a significant milestone, though far from reliable for production use.
 
-# What the Empirical Evidence Says
+## What the Empirical Evidence Says
 
 A growing body of empirical SE research examines LLMs rigorously rather than treating benchmark scores as ground truth. A few key findings worth noting:
 
@@ -83,7 +83,7 @@ Generated code can be syntactically correct and pass tests while containing subt
 **4. Prompt sensitivity is a reliability concern.**  
 Small changes in prompt phrasing can cause dramatically different — and sometimes opposite — outputs. This brittleness complicates reproducibility and deployment in automated pipelines.
 
-# Agentic LLM Systems for SE
+## Agentic LLM Systems for SE
 
 The frontier is moving beyond single-turn prompting toward **agentic systems**: LLMs equipped with tools (code execution, file read/write, search) that can autonomously plan and execute multi-step SE tasks.
 
@@ -95,7 +95,7 @@ SWE-agent, Devin, and similar systems attempt to resolve GitHub issues end-to-en
 
 These are active research questions in my current work.
 
-# Open Problems
+## Open Problems
 
 Despite rapid progress, several fundamental problems remain open:
 
@@ -107,7 +107,7 @@ Despite rapid progress, several fundamental problems remain open:
 | Fork-aware patching | Structural divergence breaks naive patch replay |
 | Evaluation methodology | Benchmarks don't reflect real developer tasks or acceptance criteria |
 
-# Getting Started
+## Getting Started
 
 If you want to explore LLMs for SE in your own research or practice, a few practical entry points:
 

@@ -8,6 +8,6 @@ sitemap: false
     <url><loc>{{ page.url | replace: ".html", "" | replace: "index", "" | absolute_url }}</loc><lastmod>{{ site.time | date_to_xmlschema }}</lastmod></url>
 {%- endif %}{% endif %}{% endfor %}
 {%- for post in site.posts %}
-    <url><loc>{{ post.url | absolute_url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod></url>
+    <url><loc>{{ post.url | replace: ".html", "" | absolute_url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod></url>
 {%- endfor %}
 </urlset>

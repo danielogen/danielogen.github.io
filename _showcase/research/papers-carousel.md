@@ -47,7 +47,7 @@ group: Research Highlights
                     </div>
                     <div class="col-md-7">
                         <img
-                            data-src="{{ '/assets/images/covers/agenticflict-overview.png' | relative_url }}"
+                            data-src="{{ '/assets/images/covers/agenticflict-overview.webp' | relative_url }}"
                             src="{{ '/assets/css/images/loading.gif' | relative_url }}"
                             class="lazy rounded d-block mx-auto"
                             alt="AgenticFlict dataset curation workflow"

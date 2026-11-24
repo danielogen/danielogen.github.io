@@ -27,5 +27,5 @@ authors:
 links:
   Preprint: https://arxiv.org/abs/2604.03551
   Dataset & Code: https://zenodo.org/records/19396917
-cover: /assets/images/covers/agenticflict-overview.png
+cover: /assets/images/covers/agenticflict-overview.webp
 ---
