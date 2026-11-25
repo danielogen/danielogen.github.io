@@ -147,19 +147,21 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
         {% if display.show_news %}
         <div class="col-lg-7 mb-4 mb-lg-0">
             <div class="section-head"><div><span class="eyebrow">Updates</span><h2 class="section-title">News</h2></div></div>
-            {% include widgets/news_card.html limit=display.num_news %}
+            {% include widgets/news_card.html %}
         </div>
         {% endif %}
         {% if display.show_awards and profile.awards %}
         <div class="col-lg-5">
             <div class="section-head"><div><span class="eyebrow">Recognition</span><h2 class="section-title">Awards &amp; Grants</h2></div></div>
-            <div class="panel panel-pad">
+            <div class="panel scroll-panel">
+                <div class="scroll-area" tabindex="0" role="region" aria-label="Awards and grants, newest first">
                 {% for item in profile.awards %}
                 <div class="award-row">
                     <div class="award-year">{{ item.date }}</div>
                     <div class="award-name">{{ item.name }}</div>
                 </div>
                 {% endfor %}
+                </div>
             </div>
         </div>
         {% endif %}
