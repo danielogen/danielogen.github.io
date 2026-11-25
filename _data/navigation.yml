@@ -12,5 +12,7 @@ pages:
   url: /teaching
 - name: Showcase
   url: /showcase
-- name: Blog
-  url: /blog
+# Blog is hidden for now; to bring it back, restore these two lines and remove
+# blog.html and _posts from `exclude` in _config.yml.
+# - name: Blog
+#   url: /blog

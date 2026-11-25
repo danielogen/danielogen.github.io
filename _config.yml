@@ -43,6 +43,9 @@ exclude:
   - docker-compose.yml
   - docker-local.yml
   - lighthouserc.json
+  # Blog hidden for now (see _data/navigation.yml)
+  - blog.html
+  - _posts
 
 # timezone: Asia/Shanghai
 

@@ -6,8 +6,7 @@
         "http://localhost/index.html",
         "http://localhost/publications.html",
         "http://localhost/research.html",
-        "http://localhost/showcase.html",
-        "http://localhost/blog.html"
+        "http://localhost/showcase.html"
       ],
       "numberOfRuns": 1,
       "settings": { "chromeFlags": "--no-sandbox --headless=new" }
