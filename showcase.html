@@ -21,8 +21,8 @@ description: "Research projects and open artifacts by Daniel Ogenrwot: AgenticFl
 <div class="panel stats stats-4 mb-5">
     <div class="stat"><div class="stat-value">{{ sc.spotlight.size | plus: sc.projects.size }}</div><div class="stat-label">Projects</div></div>
     <div class="stat"><div class="stat-value">{{ tools.size }}</div><div class="stat-label">Open tools &amp; code</div></div>
-    <div class="stat"><div class="stat-value">{{ datasets.size }}</div><div class="stat-label">Public datasets</div></div>
-    <div class="stat"><div class="stat-value">{{ awards.size }}</div><div class="stat-label">Awards</div></div>
+    <div class="stat"><div class="stat-value">{{ datasets.size }}</div><div class="stat-label">{% if datasets.size == 1 %}Public dataset{% else %}Public datasets{% endif %}</div></div>
+    <div class="stat"><div class="stat-value">{{ awards.size }}</div><div class="stat-label">{% if awards.size == 1 %}Paper award{% else %}Paper awards{% endif %}</div></div>
 </div>
 
 <!-- Spotlight projects -->
