@@ -1,0 +1,89 @@
+---
+layout: default
+navbar_title: Publications
+---
+{%- comment -%}
+One page per publication, built from the files in _publications/. Google Scholar reads the
+citation_* meta tags that _includes/head.html adds for these pages.
+{%- endcomment -%}
+{%- assign item = page -%}
+{%- assign type_labels = "conference:Conference paper|journal:Journal article|dataset:Dataset|preprint:Preprint|poster:Poster|chapter:Book chapter|book:Book|abstract:Conference abstract|workshop:Workshop paper" | split: "|" -%}
+{%- assign type_label = "" -%}
+{%- for pair in type_labels -%}{%- assign kv = pair | split: ":" -%}{%- if kv[0] == item.type -%}{%- assign type_label = kv[1] -%}{%- endif -%}{%- endfor -%}
+{%- assign scholar_key = item.title | slugify -%}
+{%- assign scholar = site.data.scholar_citations[scholar_key] -%}
+{%- capture doi -%}{% include widgets/pub_doi.html item=item %}{%- endcapture -%}
+
+<nav class="pub-crumb" aria-label="Breadcrumb">
+    <a href="{{ '/publications' | relative_url }}"><i class="fas fa-arrow-left"></i> All publications</a>
+</nav>
+
+<article class="pub-page">
+    <header class="page-header">
+        <span class="eyebrow">{{ type_label }}{% if item.venue_short %} · {{ item.venue_short }}{% endif %}</span>
+        <h1>{{ item.title }}</h1>
+        <p class="pub-page-authors pub-authors">{% include widgets/author_list.html authors=item.authors %}</p>
+        <p class="pub-page-venue">
+            {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }}, {{ item.pub_date }}{{ item.pub_last }}
+        </p>
+        {%- if item.award or scholar.citations > 0 or doi != "" %}
+        <p class="pub-page-facts">
+            {%- if item.award %}<span class="award-badge"><i class="fas fa-trophy"></i> {{ item.award }}</span>{% endif %}
+            {%- if scholar and scholar.citations > 0 %}<a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }} citation{% if scholar.citations != 1 %}s{% endif %}</a>{% endif %}
+            {%- if doi != "" %}<span class="pub-doi">DOI <a href="https://doi.org/{{ doi }}" target="_blank" rel="noopener">{{ doi }}</a></span>{% endif %}
+        </p>
+        {%- endif %}
+        <div class="pub-links">{% include widgets/pub_links.html item=item %}</div>
+    </header>
+
+    {%- if item.cover %}
+    <figure class="pub-cover panel">
+        <img src="{{ item.cover | relative_url }}" alt="Overview figure from “{{ item.title }}”" loading="lazy">
+    </figure>
+    {%- endif %}
+
+    <div class="pub-page-grid">
+        <div>
+            {%- if item.abstract %}
+            <section class="panel pub-section">
+                <h2 class="pub-section-title">Abstract</h2>
+                <p class="pub-page-abstract">{{ item.abstract }}</p>
+            </section>
+            {%- endif %}
+
+            <section class="panel pub-section">
+                <h2 class="pub-section-title">Cite this {% if item.type == "dataset" %}dataset{% elsif item.type == "book" %}book{% elsif item.type == "chapter" %}chapter{% else %}paper{% endif %}</h2>
+                <div class="pub-bibtex open">
+                    <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i><i class="fas fa-check"></i> <span class="copy-label">Copy</span></button>
+                    <pre>{% include widgets/bibtex.html item=item %}</pre>
+                </div>
+            </section>
+        </div>
+
+        {%- assign related = "" | split: "" -%}
+        {%- assign theme = nil -%}
+        {%- if item.topics and item.topics.size > 0 -%}
+            {%- assign topic = item.topics | first -%}
+            {%- assign theme = site.data.research | where: "id", topic | first -%}
+            {%- assign others = site.publications | sort: "date" | reverse -%}
+            {%- for p in others -%}
+                {%- if p.url != item.url and p.topics contains topic and related.size < 4 -%}
+                    {%- assign related = related | push: p -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endif %}
+        {%- if related.size > 0 %}
+        <aside class="panel pub-section pub-related">
+            <h2 class="pub-section-title">More on {{ theme.short | default: "this topic" }}</h2>
+            <ul>
+                {%- for p in related %}
+                <li><a class="related-link" href="{{ p.url | relative_url }}">{{ p.title }}</a><span>{{ p.venue_short | default: p.pub_date }}</span></li>
+                {%- endfor %}
+            </ul>
+            {%- if theme %}
+            <a class="section-link" href="{{ '/research' | relative_url }}#{{ theme.id }}">About this research theme <i class="fas fa-arrow-right"></i></a>
+            {%- endif %}
+        </aside>
+        {%- endif %}
+    </div>
+</article>

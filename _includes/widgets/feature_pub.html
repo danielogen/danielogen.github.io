@@ -14,7 +14,7 @@
             {%- if item.award %}<span class="award-badge ml-0"><i class="fas fa-trophy"></i> {{ item.award }}</span>{% endif %}
             {%- if scholar and scholar.citations > 0 %}<a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }}</a>{% endif %}
         </div>
-        <h3><a href="{{ primary }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
         <div class="authors">{% include widgets/author_list.html authors=item.authors %}</div>
         <div class="pub-links">
             {%- for link in item.links limit: 3 -%}

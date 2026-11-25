@@ -1,0 +1,9 @@
+{%- comment -%} Prints the DOI found in a publication's links (doi.org/... or .../doi/...), if any. {%- endcomment -%}
+{%- assign found = "" -%}
+{%- for link in include.item.links -%}
+{%- if link[1].url -%}{%- assign href = link[1].url -%}{%- else -%}{%- assign href = link[1] -%}{%- endif -%}
+{%- if found == "" and href contains "doi.org/10." -%}{%- assign found = href | split: "doi.org/" | last -%}
+{%- elsif found == "" and href contains "/doi/10." -%}{%- assign found = href | split: "/doi/" | last -%}
+{%- endif -%}
+{%- endfor -%}
+{{- found -}}

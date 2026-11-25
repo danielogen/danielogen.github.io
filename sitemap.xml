@@ -7,6 +7,9 @@ sitemap: false
 {%- for page in site.pages %}{% if page.sitemap != false and page.layout != null and page.url contains ".html" or page.url == "/" %}{% if page.sitemap != false %}
     <url><loc>{{ page.url | replace: ".html", "" | replace: "index", "" | absolute_url }}</loc><lastmod>{{ site.time | date_to_xmlschema }}</lastmod></url>
 {%- endif %}{% endif %}{% endfor %}
+{%- for pub in site.publications %}
+    <url><loc>{{ pub.url | absolute_url }}</loc><lastmod>{{ pub.date | date_to_xmlschema }}</lastmod></url>
+{%- endfor %}
 {%- for post in site.posts %}
     <url><loc>{{ post.url | replace: ".html", "" | absolute_url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod></url>
 {%- endfor %}

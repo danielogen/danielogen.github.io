@@ -4,7 +4,9 @@
 {%- else -%}
 {%- assign full_title = page.title | append: " | " | append: profile.navbar_name -%}
 {%- endif -%}
-{%- assign meta_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
+{%- assign is_pub = false -%}{%- if page.collection == "publications" -%}{%- assign is_pub = true -%}{%- endif -%}
+{%- if is_pub and page.abstract == nil -%}{%- capture pub_summary -%}{{ page.title }}. {{ page.pub | strip_html }}, {{ page.pub_date }}.{%- endcapture -%}{%- endif -%}
+{%- assign meta_description = page.description | default: page.abstract | default: pub_summary | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>{{ full_title }}</title>
@@ -30,7 +32,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ full_title }}">
 <meta property="og:description" content="{{ meta_description }}">
-<meta property="og:type" content="{% if page.layout == 'blog_post' %}article{% else %}profile{% endif %}">
+<meta property="og:type" content="{% if page.layout == 'blog_post' or is_pub %}article{% else %}profile{% endif %}">
 <meta property="og:url" content="{{ canonical_url }}">
 {%- assign share_image = page.image | default: '/assets/images/social-card.jpg' -%}
 <meta property="og:image" content="{{ share_image | absolute_url }}">
@@ -46,6 +48,58 @@
 <meta name="twitter:title" content="{{ full_title }}">
 <meta name="twitter:description" content="{{ meta_description }}">
 <meta name="twitter:image" content="{{ share_image | absolute_url }}">
+
+{%- if is_pub %}
+{%- comment -%} Google Scholar indexing tags (https://scholar.google.com/intl/en/scholar/inclusion.html#indexing) {%- endcomment -%}
+{%- capture pub_doi -%}{% include widgets/pub_doi.html item=page %}{%- endcapture %}
+<!-- Google Scholar -->
+<meta name="citation_title" content="{{ page.title | escape }}">
+{%- for a in page.authors %}
+{%- assign akey = a | remove: "*" | remove: "#" | strip -%}
+{%- unless akey contains "et al" %}
+<meta name="citation_author" content="{{ site.data.authors[akey].name | default: akey | remove: " (Ed.)" | escape }}">
+{%- endunless %}
+{%- endfor %}
+<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+{%- assign venue = page.pub | strip_html | strip | escape -%}
+{%- case page.type -%}
+{%- when "journal", "dataset" %}
+<meta name="citation_journal_title" content="{{ venue }}">
+{%- when "chapter" %}
+<meta name="citation_inbook_title" content="{{ venue }}">
+{%- when "book" %}
+<meta name="citation_publisher" content="{{ venue }}">
+{%- when "preprint" %}
+<meta name="citation_technical_report_institution" content="{% if venue contains 'arXiv' %}arXiv{% else %}{{ venue }}{% endif %}">
+{%- else %}
+<meta name="citation_conference_title" content="{{ venue }}">
+{%- endcase %}
+{%- if pub_doi != "" %}
+<meta name="citation_doi" content="{{ pub_doi }}">
+{%- endif %}
+{%- if page.links.PDF %}
+<meta name="citation_pdf_url" content="{{ page.links.PDF }}">
+{%- endif %}
+<meta name="citation_abstract_html_url" content="{{ canonical_url }}">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": {{ page.title | jsonify }},
+    "name": {{ page.title | jsonify }},
+    "author": [{% for a in page.authors %}{% assign akey = a | remove: "*" | remove: "#" | strip %}{% unless akey contains "et al" %}{ "@type": "Person", "name": {{ site.data.authors[akey].name | default: akey | remove: " (Ed.)" | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endunless %}{% endfor %}],
+    "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    "isPartOf": {{ page.pub | strip_html | strip | jsonify }},
+    {%- if page.abstract %}
+    "abstract": {{ page.abstract | strip | jsonify }},
+    {%- endif %}
+    {%- if pub_doi != "" %}
+    "sameAs": {{ "https://doi.org/" | append: pub_doi | jsonify }},
+    {%- endif %}
+    "url": {{ canonical_url | jsonify }}
+}
+</script>
+{%- endif %}
 
 <!-- Structured data, so search engines can show a rich profile result -->
 <script type="application/ld+json">

@@ -6,7 +6,8 @@
         "http://localhost/index.html",
         "http://localhost/publications.html",
         "http://localhost/research.html",
-        "http://localhost/showcase.html"
+        "http://localhost/showcase.html",
+        "http://localhost/papers/scam-repatch.html"
       ],
       "numberOfRuns": 1,
       "settings": { "chromeFlags": "--no-sandbox --headless=new" }
