@@ -11,10 +11,12 @@
 {%- else -%}{%- assign entry = "inproceedings" -%}{%- assign venue_field = "booktitle" -%}
 {%- endcase -%}
 {%- assign url = item.links.Paper | default: item.links.Preprint -%}
+{%- capture doi -%}{% include widgets/pub_doi.html item=item %}{%- endcapture -%}
 @{{ entry }}{ {{- key }},
   title = { {{- item.title -}} },
   {% if item.editors %}editor = { {{- item.editors | join: " and " -}} }{% else %}author = { {{- item.authors | join: " and " | replace: "et al.", "others" -}} }{% endif %},
   {{ venue_field }} = { {{- item.pub -}} },
-  year = { {{- item.pub_date -}} }{% if url %},
+  year = { {{- item.pub_date -}} }{% if doi != "" %},
+  doi = { {{- doi -}} }{% endif %}{% if url %},
   url = { {{- url -}} }{% endif %}
 }
