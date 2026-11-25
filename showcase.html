@@ -132,9 +132,13 @@ description: "Research projects and open artifacts by Daniel Ogenrwot: AgenticFl
                 {%- assign items = year.items | sort: "date" | reverse -%}
                 {% for pub in items %}
                 {%- assign primary = pub.links.Paper | default: pub.links.Preprint -%}
-                <a class="journey-chip topic-{{ pub.topics | first | default: 'other' }}" {% if primary %}href="{{ primary }}" target="_blank" rel="noopener"{% endif %} title="{{ pub.title | escape }}">
-                    {% if pub.award %}<i class="fas fa-trophy"></i> {% endif %}{{ pub.venue_short | default: pub.pub_date }}
-                </a>
+                {%- unless primary -%}{%- for l in pub.links limit: 1 -%}{%- assign primary = l[1] -%}{%- endfor -%}{%- endunless -%}
+                {%- capture chip_label %}{% if pub.award %}<i class="fas fa-trophy"></i> {% endif %}{{ pub.venue_short | default: pub.pub_date }}{% endcapture -%}
+                {%- if primary %}
+                <a class="journey-chip topic-{{ pub.topics | first | default: 'other' }}" href="{{ primary }}" target="_blank" rel="noopener" title="{{ pub.title | escape }}">{{ chip_label }}</a>
+                {%- else %}
+                <span class="journey-chip topic-{{ pub.topics | first | default: 'other' }}" title="{{ pub.title | escape }}">{{ chip_label }}</span>
+                {%- endif %}
                 {% endfor %}
             </div>
         </div>
