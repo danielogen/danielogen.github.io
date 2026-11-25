@@ -1,0 +1,45 @@
+name: checks
+
+# Quality gate for pull requests, plus a weekly external-link report.
+#   PRs:    internal links/anchors/alt text/<h1> (scripts/check_site.py) and Lighthouse
+#           (accessibility must be 100, SEO >= 95; performance and best practices only warn).
+#   Weekly: dead external links, reported as warnings on the run summary.
+
+on:
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7 * * 1' # Monday 07:00 UTC, after the deploy workflow's Scholar sync
+
+permissions:
+  contents: read
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.4'
+        bundler-cache: true
+
+    - name: Build
+      run: bundle exec jekyll build
+
+    - name: Check links and markup
+      run: python3 scripts/check_site.py ${{ github.event_name == 'schedule' && '--external' || '' }}
+
+    - name: Lighthouse
+      if: github.event_name != 'schedule'
+      run: npx -y @lhci/cli@0.14.0 autorun
+
+    - name: Upload Lighthouse reports
+      if: always() && github.event_name != 'schedule'
+      uses: actions/upload-artifact@v4
+      with:
+        name: lighthouse-reports
+        path: .lighthouseci-reports
+        if-no-files-found: ignore

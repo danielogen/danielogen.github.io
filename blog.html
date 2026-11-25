@@ -2,8 +2,7 @@
 layout: default
 title : Blog
 navbar_title: Blog
-body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+description: "Notes on empirical software engineering, LLMs, and research practice by Daniel Ogenrwot."
 ---
 
 <header class="page-header">
@@ -14,25 +13,11 @@ body_attr: >-
 
 {% assign blogs_by_year = site.posts | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-<div class="row">
-    <div class="col-12 col-lg-10">
-        {% for year in blogs_by_year %}
-        {% assign num_blogs = year.items | size %}
-        <div class="pub-year" id="year-{{ year.name }}"><h2>{{ year.name }}</h2></div>
-        <div class="panel">
-            {% for item in year.items %}
-                {% include widgets/blog_card.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </div>
-
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in blogs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
-        </div>
-    </div>
-
+{% for year in blogs_by_year %}
+<div class="pub-year" id="year-{{ year.name }}"><h2>{{ year.name }}</h2></div>
+<div class="post-list">
+    {% for item in year.items %}
+    {% include widgets/blog_card.html item=item %}
+    {% endfor %}
 </div>
+{% endfor %}

@@ -1,39 +1,18 @@
-{% assign item = include.item %}
-{% assign hide_bottom_border = include.hide_bottom_border %}
-{% assign first = include.first %}
-{% assign last = include.last %}
-
-<div class="border-bottom border-gray p-3 {% if hide_bottom_border %}border-0{% endif %}">
-    <div class="row">
-        <div class="col-12">
-            <h5 class="mb-2">
-                <a href="{{ item.url | relative_url }}" class="text-dark text-decoration-none">
-                    {{ item.title }}
-                </a>
-            </h5>
-            <div class="text-muted small mb-2">
-                <i class="fas fa-calendar-alt"></i> {{ item.date | date: "%B %d, %Y" }}
-                {% if item.tags %}
-                    <span class="ml-3">
-                        <i class="fas fa-tags"></i>
-                        {% for tag in item.tags %}
-                            <span class="badge badge-light">{{ tag }}</span>
-                        {% endfor %}
-                    </span>
-                {% endif %}
-            </div>
-            <div class="text-muted small">
-                {% if item.excerpt %}
-                    {{ item.excerpt | strip_html | truncate: 500 }}
-                {% else %}
-                    {{ item.content | strip_html | truncate: 500 }}
-                {% endif %} 
-            </div>
-            <div class="mt-2">
-                <a href="{{ item.url | relative_url }}">
-                    Read more <i class="fas fa-angle-double-right"></i>
-                </a>
-            </div>
-        </div>
+{%- assign item = include.item -%}
+{%- assign words = item.content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | at_least: 1 -%}
+<article class="panel hover-lift post-card">
+    <div class="post-meta">
+        <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%B %-d, %Y" }}</time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ minutes }} min read</span>
     </div>
-</div>
+    <h3 class="post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+    <p class="post-excerpt">{{ item.excerpt | strip_html | strip | truncatewords: 55 }}</p>
+    <div class="post-foot">
+        {%- if item.tags %}
+        <div class="post-tags">{% for tag in item.tags %}<span class="chip">{{ tag }}</span>{% endfor %}</div>
+        {%- endif %}
+        <a class="post-more" href="{{ item.url | relative_url }}" aria-label="Read: {{ item.title | escape }}">Read post <i class="fas fa-arrow-right"></i></a>
+    </div>
+</article>
