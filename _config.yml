@@ -16,6 +16,9 @@
 baseurl: "" # empty for root GitHub Pages (username.github.io)
 url: "https://danielogen.github.io"
 title: "Daniel Ogenrwot"
+# Privacy-friendly visitor stats (no cookies): https://danielogen.goatcounter.com
+# Remove this line to turn them off.
+goatcounter: https://danielogen.goatcounter.com/count
 description: "PhD Candidate in Computer Science at UNLV. Empirical Software Engineering & AI for SE."
 
 # Build settings

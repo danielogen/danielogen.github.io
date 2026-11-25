@@ -7,3 +7,10 @@
 <script defer src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 {%- endif %}
 <script defer src="{{ '/assets/js/common.js' | relative_url }}"></script>
+{%- if site.goatcounter %}
+{%- comment -%}
+GoatCounter: cookie-free page views. It skips localhost, so local and CI builds aren't counted.
+Elements with data-goatcounter-click (CV buttons, paper links) are counted as events.
+{%- endcomment %}
+<script data-goatcounter="{{ site.goatcounter }}" async src="https://gc.zgo.at/count.js"></script>
+{%- endif %}
