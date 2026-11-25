@@ -27,7 +27,9 @@ authors:
   - Daniel Ogenrwot
   - John Businge
 links:
-  Paper: https://ieeexplore.ieee.org/document/11190222
+  Paper: https://doi.org/10.1109/SCAM67354.2025.00010
+  Preprint: https://arxiv.org/abs/2508.06718
+  PDF: https://arxiv.org/pdf/2508.06718
   Code: https://github.com/unlv-evol/RePatch
 cover: /assets/images/covers/repatch-divergence.png
 ---

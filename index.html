@@ -29,7 +29,7 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
             <div class="job-callout"><i class="fas fa-briefcase mr-2 text-accent"></i>{{ profile.job_market.text }}</div>
             {% endif %}
             <div class="hero-cta">
-                <a class="btn-brand" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+                <a class="btn-brand" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener" data-goatcounter-click="cv-download" data-goatcounter-title="CV download"><i class="fas fa-file-arrow-down"></i> Download CV</a>
                 <a class="btn-ghost" href="{{ '/publications' | relative_url }}"><i class="fas fa-book-open"></i> Publications</a>
                 <a class="btn-ghost" href="mailto:{{ profile.email | encode_email }}"><i class="fas fa-envelope"></i> Get in touch</a>
             </div>
@@ -196,7 +196,7 @@ description: "Daniel Ogenrwot is a PhD Candidate at UNLV researching Empirical S
         </div>
         <div class="col-lg-4 d-flex flex-wrap justify-content-lg-end" style="gap: .6rem;">
             <a class="btn-brand" href="mailto:{{ profile.email | encode_email }}"><i class="fas fa-envelope"></i> Email me</a>
-            <a class="btn-ghost" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a>
+            <a class="btn-ghost" href="{{ profile.cv_link | relative_url }}" target="_blank" rel="noopener" data-goatcounter-click="cv-download" data-goatcounter-title="CV download"><i class="fas fa-file-arrow-down"></i> CV</a>
         </div>
     </div>
 </section>

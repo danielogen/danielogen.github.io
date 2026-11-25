@@ -14,5 +14,5 @@
 {%- when "Tool & Data" -%}{%- assign icon = "fas fa-database" -%}
 {%- else -%}{%- assign icon = "fas fa-link" -%}
 {%- endcase %}
-<a class="pub-link" href="{{ href }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ label }}</a>
+<a class="pub-link" href="{{ href }}" target="_blank" rel="noopener" data-goatcounter-click="paper/{{ include.item.slug }}/{{ label | slugify }}" data-goatcounter-title="{{ label }}: {{ include.item.title | escape }}"><i class="{{ icon }}"></i> {{ label }}</a>
 {%- endfor -%}
