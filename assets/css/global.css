@@ -470,8 +470,35 @@ mark { background: var(--accent-soft); color: var(--text); }
 .news-icon.tag-award { color: var(--tag-award); background: color-mix(in srgb, var(--tag-award) 14%, transparent); }
 .news-icon.tag-service { color: var(--tag-service); background: color-mix(in srgb, var(--tag-service) 12%, transparent); }
 .news-text { font-size: .93rem; color: var(--text-soft); }
-.news-item.is-hidden { display: none; }
-.news-list.expanded .news-item.is-hidden { display: flex; }
+@media (max-width: 575.98px) {
+    /* phones: date on its own line so the text gets the full width */
+    .news-item { flex-wrap: wrap; column-gap: .75rem; row-gap: .35rem; }
+    .news-date { flex-basis: 100%; padding-top: 0; }
+    .news-text { flex: 1; min-width: 0; }
+    .scroll-area { padding-left: 1.1rem; padding-right: 1.1rem; }
+}
+
+/* Scrollable panels (News, Awards & Grants on the homepage).
+   Visitors scroll them; nothing moves on its own. The bottom fade hints at more content
+   and is removed (by common.js) once the list is scrolled to the end. */
+.scroll-panel { padding: 0; overflow: hidden; }
+.scroll-area {
+    max-height: min(60vh, 520px); overflow-y: auto; overscroll-behavior: contain;
+    padding: .6rem 1.5rem .9rem; scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    border-radius: inherit;
+}
+@media (min-width: 992px) {
+    /* side by side: same fixed height so the two columns line up */
+    .scroll-area { height: 34rem; max-height: none; }
+}
+.scroll-area:focus-visible { outline-offset: -2px; }
+.scroll-area::-webkit-scrollbar { width: 8px; }
+.scroll-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+.scroll-area::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+.js .scroll-area.has-more {
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 56px), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 56px), transparent);
+}
 
 /* Awards */
 .award-row { display: flex; gap: .9rem; padding: .7rem 0; border-bottom: 1px dashed var(--border); align-items: flex-start; }
