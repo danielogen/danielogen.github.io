@@ -1,0 +1,18 @@
+{%- comment -%} One button per entry in a publication's `links`, with an icon matched to the label. {%- endcomment -%}
+{%- for link in include.item.links -%}
+{%- assign label = link[0] -%}
+{%- if link[1].url -%}{%- assign href = link[1].url -%}{%- else -%}{%- assign href = link[1] -%}{%- endif -%}
+{%- case label -%}
+{%- when "Paper" -%}{%- assign icon = "fas fa-file-lines" -%}
+{%- when "Preprint" -%}{%- assign icon = "ai ai-arxiv" -%}
+{%- when "PDF" -%}{%- assign icon = "fas fa-file-pdf" -%}
+{%- when "Code" -%}{%- assign icon = "fab fa-github" -%}
+{%- when "Dataset & Code" -%}{%- assign icon = "fas fa-database" -%}
+{%- when "Scholar" -%}{%- assign icon = "ai ai-google-scholar" -%}
+{%- when "Book" -%}{%- assign icon = "fas fa-book" -%}
+{%- when "Video" -%}{%- assign icon = "fab fa-youtube" -%}
+{%- when "Tool & Data" -%}{%- assign icon = "fas fa-database" -%}
+{%- else -%}{%- assign icon = "fas fa-link" -%}
+{%- endcase %}
+<a class="pub-link" href="{{ href }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ label }}</a>
+{%- endfor -%}

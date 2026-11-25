@@ -43,11 +43,20 @@ exclude:
   - docker-compose.yml
   - docker-local.yml
   - lighthouserc.json
+  # Blog hidden for now (see _data/navigation.yml)
+  - blog.html
+  - _posts
 
-# timezone: Asia/Shanghai
+timezone: UTC # match the GitHub Actions build, so dates don't shift by a day locally
 
 collections:
-  - publications
-  - news
-  - showcase
-  - posts
+  publications:
+    output: true            # one page per paper at /papers/<file name>
+    permalink: /papers/:name
+  news: {}
+  showcase: {}
+  posts: {}
+
+defaults:
+  - scope: { path: "", type: publications }
+    values: { layout: publication }

@@ -13,12 +13,7 @@
     </div>
     <div class="pub-body">
         <h3 class="pub-title">
-            {%- assign primary = item.links.Paper | default: item.links.Preprint -%}
-            {%- if primary -%}
-            <a class="text-body" href="{{ primary }}" target="_blank" rel="noopener">{{ item.title }}</a>
-            {%- else -%}
-            {{ item.title }}
-            {%- endif -%}
+            <a class="text-body" href="{{ item.url | relative_url }}">{{ item.title }}</a>
         </h3>
         <div class="pub-authors">{% include widgets/author_list.html authors=item.authors %}</div>
         <div class="pub-meta">
@@ -28,22 +23,7 @@
             {%- if scholar and scholar.citations > 0 %} <a class="cite-badge" href="{{ scholar.url }}" target="_blank" rel="noopener" title="Citations on Google Scholar"><i class="ai ai-google-scholar"></i> {{ scholar.citations }} citation{% if scholar.citations != 1 %}s{% endif %}</a>{% endif %}
         </div>
         <div class="pub-links">
-            {%- for link in item.links -%}
-            {%- assign label = link[0] -%}
-            {%- if link[1].url -%}{%- assign href = link[1].url -%}{%- else -%}{%- assign href = link[1] -%}{%- endif -%}
-            {%- case label -%}
-            {%- when "Paper" -%}{%- assign icon = "fas fa-file-lines" -%}
-            {%- when "Preprint" -%}{%- assign icon = "ai ai-arxiv" -%}
-            {%- when "Code" -%}{%- assign icon = "fab fa-github" -%}
-            {%- when "Dataset & Code" -%}{%- assign icon = "fas fa-database" -%}
-            {%- when "Scholar" -%}{%- assign icon = "ai ai-google-scholar" -%}
-            {%- when "Book" -%}{%- assign icon = "fas fa-book" -%}
-            {%- when "Video" -%}{%- assign icon = "fab fa-youtube" -%}
-            {%- when "Tool & Data" -%}{%- assign icon = "fas fa-database" -%}
-            {%- else -%}{%- assign icon = "fas fa-link" -%}
-            {%- endcase %}
-            <a class="pub-link" href="{{ href }}" target="_blank" rel="noopener"><i class="{{ icon }}"></i> {{ label }}</a>
-            {%- endfor %}
+            {%- include widgets/pub_links.html item=item %}
             {%- if item.abstract and include.show_abstract != false %}
             <button class="pub-link abstract-toggle" type="button" aria-expanded="false"><i class="fas fa-align-left"></i> Abstract</button>
             {%- endif %}
@@ -53,7 +33,7 @@
         <p class="pub-abstract">{{ item.abstract }}</p>
         {%- endif %}
         <div class="pub-bibtex">
-            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i><i class="fas fa-check"></i> <span class="copy-label">Copy</span></button>
             <pre>{% include widgets/bibtex.html item=item %}</pre>
         </div>
     </div>
