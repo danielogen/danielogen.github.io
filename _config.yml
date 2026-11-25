@@ -42,6 +42,7 @@ exclude:
   - Dockerfile
   - docker-compose.yml
   - docker-local.yml
+  - lighthouserc.json
 
 # timezone: Asia/Shanghai
 

@@ -8,3 +8,7 @@ _site
 .tweet-cache
 vendor
 
+.lighthouseci
+.lighthouseci-reports
+__pycache__
+backup-06-01-2026T505PM/Gemfile.lock
