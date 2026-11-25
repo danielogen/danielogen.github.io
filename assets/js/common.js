@@ -50,15 +50,14 @@ $(function () {
         localStorage.setItem('theme', next);
     });
 
-    // News: reveal older items
-    $('.news-toggle').on('click', function () {
-        var $list = $($(this).data('target'));
-        var expanded = $list.toggleClass('expanded').hasClass('expanded');
-        $(this).attr('aria-expanded', expanded);
-        $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
-        $(this).find('span').text(expanded ? 'Show fewer' : $(this).data('label') || 'Show all updates');
-    }).each(function () {
-        $(this).data('label', $(this).find('span').text());
+    // Scrollable panels: show the bottom fade only while there is more to scroll to
+    document.querySelectorAll('.scroll-area').forEach(function (el) {
+        var update = function () {
+            el.classList.toggle('has-more', el.scrollTop + el.clientHeight < el.scrollHeight - 4);
+        };
+        el.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
     });
 
     // Publications: abstract toggle
