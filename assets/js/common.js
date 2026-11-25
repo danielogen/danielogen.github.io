@@ -77,8 +77,8 @@ $(function () {
         var $btn = $(this);
         var text = $btn.siblings('pre').text().trim();
         navigator.clipboard.writeText(text).then(function () {
-            $btn.html('<i class="fas fa-check"></i> Copied');
-            setTimeout(function () { $btn.html('<i class="far fa-copy"></i> Copy'); }, 1600);
+            $btn.addClass('copied').find('.copy-label').text('Copied');
+            setTimeout(function () { $btn.removeClass('copied').find('.copy-label').text('Copy'); }, 1600);
         });
     });
 

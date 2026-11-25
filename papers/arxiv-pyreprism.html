@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Template: https://github.com/luost26/academic-homepage -->
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis | Daniel Ogenrwot</title>
+
+<!-- Theme: applied before first paint to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+        document.documentElement.classList.add('js');
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+</script>
+<meta name="theme-color" content="#1E3A5F">
+
+<!-- SEO -->
+<meta name="description" content="Empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, n...">
+<meta name="author" content="Daniel Ogenrwot"><link rel="canonical" href="https://danielogen.github.io/papers/arxiv-pyreprism">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis | Daniel Ogenrwot">
+<meta property="og:description" content="Empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, n...">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://danielogen.github.io/papers/arxiv-pyreprism"><meta property="og:image" content="https://danielogen.github.io/assets/images/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Daniel Ogenrwot: PhD Candidate in Empirical Software Engineering and AI for SE at UNLV">
+<meta property="og:site_name" content="Daniel Ogenrwot">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis | Daniel Ogenrwot">
+<meta name="twitter:description" content="Empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, n...">
+<meta name="twitter:image" content="https://danielogen.github.io/assets/images/social-card.jpg">
+<!-- Google Scholar -->
+<meta name="citation_title" content="PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis">
+<meta name="citation_author" content="Daniel Ogenrwot">
+<meta name="citation_author" content="Jorge Gonzalo Delgado Cervantes">
+<meta name="citation_author" content="Richard Sserunjogi">
+<meta name="citation_author" content="John Businge">
+<meta name="citation_publication_date" content="2026/10/29">
+<meta name="citation_technical_report_institution" content="arXiv">
+<meta name="citation_abstract_html_url" content="https://danielogen.github.io/papers/arxiv-pyreprism">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis",
+    "name": "PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis",
+    "author": [{ "@type": "Person", "name": "Daniel Ogenrwot" }, { "@type": "Person", "name": "Jorge Gonzalo Delgado Cervantes" }, { "@type": "Person", "name": "Richard Sserunjogi" }, { "@type": "Person", "name": "John Businge" }],
+    "datePublished": "2026-10-29",
+    "isPartOf": "arXiv preprint arXiv:2610.39224",
+    "abstract": "Empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, normalizing identifiers, and screening for duplicated code. Assembling them from specialized tools introduces differences in language coverage, measurement conventions, and workflows. We present PYREPRISM, an open-source Python library and command-line tool that separates language-specific lexical processing from reusable analyses: each language declares its lexical surface, which yields a lossless stream of typed tokens, and every analysis is implemented once on that stream. Across 187 built-in languages, language-specific declarations have a median length of 16 lines, and no language overrides a shared analysis. Against a reference parser, comment and string classification reach F1 scores of 0.994 and 0.958 on 1,412 files in 12 languages that were never used to develop the tokenizer. In a study of a polyglot repository, one tool replaces three; with matched inputs and analysis operations, it takes 2.9s instead of 8.7s on one core. We also characterize where lexical analysis falls short, in complexity estimation and clone screening.",
+    "url": "https://danielogen.github.io/papers/arxiv-pyreprism"
+}
+</script>
+
+<!-- Structured data, so search engines can show a rich profile result -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Ogenrwot",
+    "url": "https://danielogen.github.io",
+    "image": "https://danielogen.github.io/assets/images/photos/portrait.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Nevada, Las Vegas", "url": "https://www.unlv.edu" },
+    "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Makerere University, Uganda" }, { "@type": "CollegeOrUniversity", "name": "Gulu University, Uganda" }],
+    "knowsAbout": ["Empirical Software Engineering","AI for Software Engineering","Agentic AI","Mining Software Repositories","Software Analytics"],
+    "sameAs": [
+        "https://scholar.google.com/citations?user=ZpCrmOQAAAAJ",
+        "https://github.com/danielogen",
+        "https://www.linkedin.com/in/daniel-ogenrwot",
+        "https://orcid.org/0000-0002-0133-8164",
+        "https://dblp.org/pid/275/0016.html",
+        "https://conf.researchr.org/profile/conf/danielogenrwot"
+    ]
+}
+</script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/global.css">
+
+</head>
+<body ><svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true"><!-- Icons: Font Awesome Free 6.5.1 (CC BY 4.0), Academicons 1.9.1 (SIL OFL 1.1) --><symbol id="i-solid-bars" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></symbol><symbol id="i-solid-file-arrow-down" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></symbol><symbol id="i-solid-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol><symbol id="i-solid-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol><symbol id="i-solid-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol><symbol id="i-ai-arxiv" viewBox="0 0 448 512"><path d="m 195.58936,208.73772 c 0,15.55383 -5.86902,28.16291 -13.10872,28.16291 -7.23968,0 -13.10867,-12.60908 -13.10867,-28.16291 0,-15.55387 5.86899,-28.16291 13.10867,-28.16291 7.2397,0 13.10872,12.60904 13.10872,28.16291 z m 83.04548,0 c 0,15.55383 -5.862,28.16291 -13.09252,28.16291 -7.2305,0 -13.09249,-12.60908 -13.09249,-28.16291 0,-15.55387 5.86199,-28.16291 13.09249,-28.16291 7.23052,0 13.09252,12.60904 13.09252,28.16291 z m 21.96974,61.46161 h -13.87517 c 0,7.29744 2.7024,13.98368 7.09441,19.32768 -4.72014,11.84302 -32.98544,26.65577 -69.8283,26.65577 -36.82843,0 -65.10814,-14.81275 -69.82831,-26.65577 4.37454,-5.344 7.11019,-12.03024 7.11019,-19.32768 h -13.89092 c 0,9.78066 -8.65587,17.73435 -19.28133,17.73435 v 13.89093 c 5.37419,0 10.40628,-1.36019 14.90551,-3.54725 10.18882,17.10874 41.62511,31.79636 80.98486,31.79636 39.37421,0 70.79606,-14.68806 80.98313,-31.79636 4.50098,2.18706 9.5313,3.54725 14.90725,3.54725 v -13.89093 c -10.62545,0 -19.28132,-7.95369 -19.28132,-17.73435 z m 117.28038,109.71743 c -4.15663,-7.71829 -7.75029,-9.26573 -14.50079,-11.35825 -5.79681,-1.75045 -15.98394,-0.93758 -24.76446,2.48321 -1.99981,0.78224 -3.8128,2.04791 -5.71982,3.07822 -5.68618,3.04633 -9.1087,2.45258 -13.43684,-2.17129 -2.48499,-2.67179 -10.28161,-9.71986 -20.98357,-19.87502 21.84286,-25.99994 35.03161,-59.46839 35.03161,-96.0776 0,-36.59347 -13.18705,-70.07766 -35.03161,-96.07762 10.70245,-10.14072 18.48285,-17.17083 20.96781,-19.85749 4.32822,-4.62564 7.75024,-5.21934 13.43816,-2.15684 1.90574,1.01584 3.71831,2.28153 5.7185,3.06245 8.76483,3.42254 18.96761,4.23495 24.76445,2.4688 6.73441,-2.07679 10.34372,-3.6238 14.50087,-11.34209 2.54709,-5.95344 3.48458,-11.20295 1.62571,-17.8752 -1.86068,-6.64165 -9.46874,-10.90724 -19.03197,-12.56316 -7.6719,-1.34397 -4.51493,-2.59213 -4.65583,-9.468711 -0.18747,-10.311783 -3.89115,-18.419016 -12.68781,-23.921393 -6.6561,-4.124714 -14.28158,-4.452841 -21.6556,-4.187273 -10.14079,0.328256 -20.59338,5.344023 -23.15669,11.374448 -3.04628,7.124642 0.37754,11.718326 3.17276,16.812531 3.6097,6.515201 1.84315,13.046118 -2.82889,18.484628 -5.0465,5.92152 -17.45257,18.65572 -24.51508,26.17102 -25.06193,-18.99999 -56.23486,-30.4191 -90.12417,-30.4191 -33.90681,0 -65.07794,11.41911 -90.15608,30.4366 -7.06252,-7.53413 -19.46858,-20.26876 -24.51509,-26.19024 -4.67202,-5.43851 -6.42246,-11.969465 -2.82885,-18.500849 2.79689,-5.078456 6.21901,-9.671709 3.18715,-16.796782 -2.57774,-6.046201 -13.030368,-11.046317 -23.171111,-11.374445 -7.374426,-0.281805 -15.015709,0.04641 -21.671779,4.18727 -8.780534,5.48487 -12.499272,13.60961 -12.687824,23.905221 -0.124726,6.890999 3.031854,8.140915 -4.655843,9.484885 -9.561485,1.6415 -17.155086,5.92152 -19.03019,12.54695 -1.859358,6.67182 -0.921823,11.93754 1.62575,17.87522 4.155321,7.71831 7.76465,9.2815 14.499032,11.35828 5.796817,1.76616 15.999662,0.93756 24.780653,-2.4688 1.999796,-0.79666 3.812763,-2.06236 5.718512,-3.06246 5.687867,-3.06248 9.094227,-2.48325 13.436804,2.14068 2.498994,2.70415 10.281618,9.73427 20.967886,19.87498 -21.841565,25.99993 -35.028558,59.48413 -35.028558,96.07763 0,36.60922 13.203203,70.10827 35.031598,96.09335 -10.688023,10.13896 -18.468447,17.18704 -20.967846,19.85879 -4.343895,4.6239 -7.750271,5.21761 -13.436834,2.17133 -1.905707,-1.0321 -3.718281,-2.29772 -5.718504,-3.07822 -8.780534,-3.42078 -18.98381,-4.23365 -24.780657,-2.48324 -6.734352,2.09299 -10.343688,3.63995 -14.49904,11.35822 -2.547104,5.95348 -3.484635,11.20474 -1.62575,17.8752 1.875142,6.63988 9.468751,10.90547 19.031982,12.56312 7.688094,1.34227 4.531117,2.59343 4.655816,9.4687 0.187316,10.31178 3.905529,18.42078 12.687821,23.92142 6.656065,4.1248 14.29739,4.45283 21.671813,4.18732 10.140709,-0.31182 20.593369,-5.34406 23.171069,-11.37445 3.03186,-7.11021 -0.39022,-11.73414 -3.18714,-16.81256 -3.59358,-6.50076 -1.84318,-13.03168 2.82885,-18.48462 5.0465,-5.90577 17.45257,-18.65568 24.51508,-26.18674 25.07815,19.01568 56.24927,30.43657 90.15609,30.43657 33.90552,0 65.06181,-11.42089 90.1242,-30.43657 7.06248,7.53106 19.48473,20.28134 24.53083,26.18674 4.67198,5.45294 6.42242,11.98386 2.82883,18.48462 -2.81265,5.07842 -6.21902,9.70235 -3.18892,16.81256 2.58078,6.03171 13.03171,11.06206 23.17239,11.37445 7.37448,0.2657 15.01576,-0.0624 21.67363,-4.18732 8.78048,-5.50064 12.48295,-13.60964 12.67204,-23.92142 0.13947,-6.87527 -3.01614,-8.12643 4.67197,-9.4687 9.54574,-1.65765 17.15515,-5.92324 19.01406,-12.56312 1.86893,-6.67186 0.91523,-11.92127 -1.63058,-17.8752 z M 224.0117,396.26067 c -77.34318,0 -140.264262,-62.92105 -140.264262,-140.26421 0,-77.3274 62.921082,-140.24852 140.264262,-140.24852 77.31126,0 140.24858,62.92112 140.24858,140.24852 0,77.34316 -62.93689,140.26421 -140.24858,140.26421 z"/></symbol><symbol id="i-brands-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol><symbol id="i-brands-youtube" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></symbol><symbol id="i-regular-copy" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"/></symbol><symbol id="i-solid-check" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></symbol><symbol id="i-solid-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol><symbol id="i-solid-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol><symbol id="i-ai-google-scholar" viewBox="0 0 384 512"><path d="M 343.75868,106.66243 V 79.430205 L 363.52365,63.999997 H 149.63354 L 20.476345,176.2736 h 85.656075 c -0.15534,2.12494 -0.21914,4.04644 -0.21914,6.22563 0,20.84472 7.2192,38.08662 21.67203,51.86089 14.45284,13.79702 32.25124,20.64784 53.32651,20.64784 4.92319,0 9.75059,-0.36794 14.43842,-1.02419 -2.90722,6.50082 -4.37457,12.52302 -4.37457,18.14228 0,9.87526 4.49924,20.4304 13.46715,31.6418 -39.23377,2.6705 -68.06112,9.73264 -86.43702,21.16322 -10.53108,6.49907 -19.000207,14.70396 -25.390349,24.5311 -6.390569,9.89933 -9.577754,20.51525 -9.577754,31.9616 0,9.64822 2.062375,18.33611 6.21907,26.06233 4.156694,7.7263 9.577757,14.07047 16.312223,18.98408 6.71825,4.96781 14.46899,9.10088 23.219,12.46874 8.73429,3.34378 17.40643,5.71858 26.06106,7.06258 8.62707,1.34222 17.20471,1.9985 25.70579,1.9985 13.46887,0 26.95353,-1.73428 40.54711,-5.18707 13.56165,-3.48461 26.28022,-8.64143 38.17105,-15.4927 11.85935,-6.80488 21.51545,-16.0865 28.9219,-27.7183 7.39024,-11.67998 11.09457,-24.80499 11.09457,-39.33613 0,-11.01584 -2.24964,-21.03852 -6.7502,-30.14073 -4.46864,-9.07202 -9.93785,-16.54102 -16.45271,-22.34403 -6.5008,-5.81263 -12.99987,-11.15539 -19.51512,-15.9679 -6.50083,-4.84488 -12.00021,-9.75058 -16.46884,-14.8129 -4.4848,-5.04657 -6.73444,-10.05419 -6.73444,-14.98395 0,-4.92145 1.73422,-9.67183 5.21588,-14.26559 3.45451,-4.6095 7.67376,-9.04795 12.60967,-13.30571 4.93756,-4.24944 9.87523,-8.96788 14.79665,-14.13302 4.92147,-5.14719 9.14072,-11.82739 12.60971,-20.00822 3.48467,-8.17907 5.20318,-17.44489 5.20318,-27.75679 0,-13.4527 -2.54714,-24.46065 -7.54735,-33.31348 -0.59369,-1.02243 -1.21757,-1.80338 -1.87511,-3.02225 l 56.90745,-46.672136 v 17.118526 c -7.39373,0.92969 -6.62422,5.34582 -6.62422,10.6352 v 128.66719 c 0,5.95832 4.8751,10.83382 10.83386,10.83382 h 3.98869 c 5.95835,0 10.83386,-4.87506 10.83386,-10.83382 V 117.29282 c 0,-5.27669 0.77741,-9.68801 -6.56167,-10.63039 z M 236.39865,329.14114 c 1.14099,0.7503 3.7039,2.78075 7.7184,6.03838 4.0495,3.24319 6.797,5.69582 8.26567,7.41432 1.43851,1.66381 3.5792,4.16501 6.37617,7.54734 2.81268,3.3744 4.7184,6.30394 5.71853,8.73425 1.00016,2.4767 2.01603,5.46089 3.04636,8.94556 0.98567,3.44488 1.48486,6.97595 1.48486,10.56169 0,17.04813 -6.56338,29.68007 -19.65604,37.85915 -13.125,8.18083 -28.76651,12.27368 -46.93767,12.27368 -9.18709,0 -18.2031,-1.09289 -27.06247,-3.1951 -8.84322,-2.11665 -17.31192,-5.3362 -25.39035,-9.60185 -8.07846,-4.25771 -14.57754,-10.20337 -19.50072,-17.79659 -4.93764,-7.64012 -7.40645,-16.41464 -7.40645,-26.24962 0,-10.32022 2.79692,-19.28987 8.42233,-26.90588 5.59343,-7.62564 12.93774,-13.3919 22.03208,-17.3154 9.0624,-3.94582 18.24946,-6.74232 27.56166,-8.39827 9.31221,-1.7023 18.79679,-2.555 28.43842,-2.555 4.46862,0 7.93582,0.25115 10.40465,0.69607 0.45456,0.21918 3.03188,2.07025 7.73456,5.56326 4.70401,3.46237 7.62565,5.59519 8.75047,6.38401 z m -3.35823,-100.5779 c -7.40648,8.85938 -17.73454,13.2882 -30.95363,13.2882 -11.85933,0 -22.29766,-4.76482 -31.26554,-14.31195 -8.99984,-9.52309 -15.42235,-20.32803 -19.34408,-32.43061 -3.93752,-12.10871 -5.90585,-23.98423 -5.90585,-35.648 0,-13.6942 3.59542,-25.35184 10.7809,-34.97598 7.18727,-9.64952 17.49915,-14.48477 30.93786,-14.48477 11.87507,0 22.37423,5.03825 31.43704,15.15677 9.09434,10.08482 15.60961,21.41303 19.5169,33.96799 3.92176,12.5392 5.87345,24.52979 5.87345,35.98399 0,13.44658 -3.70256,24.60984 -11.07663,33.45436 z"/></symbol><symbol id="i-brands-linkedin-in" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol><symbol id="i-brands-orcid" viewBox="0 0 512 512"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></symbol><symbol id="i-ai-dblp" viewBox="0 0 384 512"><path d="m 32.247025,40.012819 c -2.2428,-0.15223 -3.88806,1.01161 -2.64918,5.63608 l 35.79017,133.561671 -0.006,0.003 -33.65224,15.63787 c 0,0 -10.07439,4.68192 -7.24107,15.25055 l 44.17766,164.87452 c 0,0 2.82977,10.56543 12.90503,5.88394 70.217005,-32.6353 111.107235,-51.63872 111.107235,-51.63872 l 23.56059,-10.95302 c 0,0 9.31217,-4.3568 7.47035,-14.12271 -0.0698,-0.3744 -0.12453,-0.73759 -0.22928,-1.12784 L 203.1111,226.99466 191.32151,183.0029 c -1.31859,-4.69013 0,0 -12.15521,-45.64012 0,0 -2.83181,-10.56955 -15.06775,-18.07325 L 39.001635,42.581439 c 0,0 -3.87101,-2.37289 -6.75461,-2.56862 z M 307.35817,130.16525 c -1.40848,-0.0243 -3.0411,0.31822 -4.92962,1.196 l -100.86067,46.58206 15.48604,57.76125 -0.0279,-0.0186 19.59148,73.4394 c 0.10312,0.38867 0.15484,0.75503 0.22619,1.12784 0.92144,8.4105 -7.46725,14.12272 -7.46725,14.12272 l -33.74519,15.77729 9.06605,33.92491 0.13945,0.55771 c 0,0 2.83181,10.56955 15.06775,18.07325 l 125.09672,76.70827 c 0,0 12.23242,7.50274 9.40069,-3.06747 -24.9628,-93.15868 -0.003,-0.01 -35.73439,-133.36028 l 33.60575,-15.61926 c -0.002,0 10.0713,-4.68193 7.23798,-15.25056 L 315.33357,137.2483 c 0,0 -1.87194,-6.97773 -7.9754,-7.08305 z"/></symbol><symbol id="i-solid-earth-americas" viewBox="0 0 512 512"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></symbol></svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+<nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+    <div class="container-lg">
+        <a class="navbar-brand" href="/">
+            <span class="brand-mark" aria-hidden="true">DO</span>
+            <span>Daniel Ogenrwot</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="icon fa-bars" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-solid-bars"/></svg>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/" >About</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/research" >Research</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/publications" >Publications</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/services" >Service</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/teaching" >Teaching</a>
+                </li>
+                
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/showcase" >Showcase</a>
+                </li>
+                
+            </ul>
+            <div class="nav-actions">
+                
+                <a class="btn-brand btn-sm" href="/assets/pdf/DanielOgenrwot-CV-20260105.pdf" target="_blank" rel="noopener">
+                    <svg class="icon fa-file-arrow-down" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#i-solid-file-arrow-down"/></svg> CV
+                </a>
+                
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <svg class="icon fa-moon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#i-solid-moon"/></svg><svg class="icon fa-sun" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-solid-sun"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main id="main" class="container-lg">
+        <nav class="pub-crumb" aria-label="Breadcrumb">
+    <a href="/publications"><svg class="icon fa-arrow-left" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-solid-arrow-left"/></svg> All publications</a>
+</nav>
+
+<article class="pub-page">
+    <header class="page-header">
+        <span class="eyebrow">Preprint · arXiv 2026</span>
+        <h1>PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis</h1>
+        <p class="pub-page-authors pub-authors"><span class="text-body">
+            <strong>Daniel Ogenrwot</strong>, </span><a class="text-body" target="_blank" href="https://scholar.google.com/scholar?q=Jorge+Gonzalo+Delgado+Cervantes">Jorge Gonzalo Delgado Cervantes</a>, <a class="text-body" target="_blank" href="https://sserunjogirichard.mystrikingly.com/">Richard Sserunjogi</a>, <a class="text-body" target="_blank" href="https://johnxu21.github.io/">John Businge</a></p>
+        <p class="pub-page-venue">
+            <i>arXiv preprint arXiv:2610.39224</i>, 2026
+        </p>
+        <div class="pub-links">
+<a class="pub-link" href="https://arxiv.org/abs/2610.39224" target="_blank" rel="noopener"><svg class="icon ai-arxiv" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-ai-arxiv"/></svg> Preprint</a>
+<a class="pub-link" href="https://github.com/unlv-evol/PyReprism" target="_blank" rel="noopener"><svg class="icon fa-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false"><use href="#i-brands-github"/></svg> Code</a>
+<a class="pub-link" href="https://youtu.be/IXc-NP5t4GU" target="_blank" rel="noopener"><svg class="icon fa-youtube" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-brands-youtube"/></svg> Video</a></div>
+    </header>
+
+    <div class="pub-page-grid">
+        <div>
+            <section class="panel pub-section">
+                <h2 class="pub-section-title">Abstract</h2>
+                <p class="pub-page-abstract">Empirical studies of polyglot repositories apply the same analyses to every language of a corpus, such as separating code from comments, computing metrics, normalizing identifiers, and screening for duplicated code. Assembling them from specialized tools introduces differences in language coverage, measurement conventions, and workflows. We present PYREPRISM, an open-source Python library and command-line tool that separates language-specific lexical processing from reusable analyses: each language declares its lexical surface, which yields a lossless stream of typed tokens, and every analysis is implemented once on that stream. Across 187 built-in languages, language-specific declarations have a median length of 16 lines, and no language overrides a shared analysis. Against a reference parser, comment and string classification reach F1 scores of 0.994 and 0.958 on 1,412 files in 12 languages that were never used to develop the tokenizer. In a study of a polyglot repository, one tool replaces three; with matched inputs and analysis operations, it takes 2.9s instead of 8.7s on one core. We also characterize where lexical analysis falls short, in complexity estimation and clone screening.</p>
+            </section>
+
+            <section class="panel pub-section">
+                <h2 class="pub-section-title">Cite this paper</h2>
+                <div class="pub-bibtex open">
+                    <button class="pub-link copy-btn" type="button"><svg class="icon fa-copy" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-regular-copy"/></svg><svg class="icon fa-check" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-solid-check"/></svg> <span class="copy-label">Copy</span></button>
+                    <pre>@misc{ogenrwot2026pyreprism,
+  title = {PyReprism: A Shared Lexical Foundation for Polyglot Code Analysis},
+  author = {Daniel Ogenrwot and Jorge Gonzalo Delgado Cervantes and Richard Sserunjogi and John Businge},
+  howpublished = {arXiv preprint arXiv:2610.39224},
+  year = {2026},
+  url = {https://arxiv.org/abs/2610.39224}
+}
+</pre>
+                </div>
+            </section>
+        </div>
+        <aside class="panel pub-section pub-related">
+            <h2 class="pub-section-title">More on AI Coding Agents & LLMs</h2>
+            <ul>
+                <li><a class="related-link" href="/papers/arxiv-ghagentci">GHAgentCI: A Dataset of Coding-Agent Invocations in CI Workflow Histories</a><span>arXiv 2026</span></li>
+                <li><a class="related-link" href="/papers/arxiv-prompt-quality">Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development</a><span>arXiv 2026</span></li>
+                <li><a class="related-link" href="/papers/patchtrack">PatchTrack: A Comprehensive Analysis of ChatGPT's Influence on Pull Request Outcomes</a><span>EMSE 2026</span></li>
+                <li><a class="related-link" href="/papers/aiware-agenticflict">AgenticFlict: A Large-Scale Dataset of Merge Conflicts in AI Coding Agent Pull Requests on GitHub</a><span>AIware 2026</span></li>
+            </ul>
+            <a class="section-link" href="/research#ai4se">About this research theme <svg class="icon fa-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-solid-arrow-right"/></svg></a>
+        </aside>
+    </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+    <div class="container-lg">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <div class="d-flex align-items-center mb-2" style="gap: .6rem;">
+                    <span class="brand-mark" aria-hidden="true">DO</span>
+                    <strong class="text-body">Daniel Ogenrwot</strong>
+                </div>
+                <div>PhD Candidate &middot; Department of Computer Science &middot; University of Nevada, Las Vegas</div>
+                <div class="mt-1"><span class="email-text">ogenrwot [at] unlv.nevada.edu</span></div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-md-end align-items-lg-start" style="gap: .75rem;">
+                <div class="footer-social"><a class="icon-btn " href="mailto:%6F%67%65%6E%72%77%6F%74@%75%6E%6C%76.%6E%65%76%61%64%61.%65%64%75" aria-label="Email" title="Email"><svg class="icon fa-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-solid-envelope"/></svg></a>
+<a class="icon-btn " href="https://scholar.google.com/citations?user=ZpCrmOQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg class="icon ai-google-scholar" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#i-ai-google-scholar"/></svg></a>
+<a class="icon-btn " href="https://github.com/danielogen" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="icon fa-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false"><use href="#i-brands-github"/></svg></a>
+<a class="icon-btn " href="https://www.linkedin.com/in/daniel-ogenrwot" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon fa-linkedin-in" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-brands-linkedin-in"/></svg></a>
+<a class="icon-btn " href="https://orcid.org/0000-0002-0133-8164" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg class="icon fa-orcid" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-brands-orcid"/></svg></a>
+<a class="icon-btn " href="https://dblp.org/pid/275/0016.html" target="_blank" rel="noopener" aria-label="DBLP" title="DBLP"><svg class="icon ai-dblp" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><use href="#i-ai-dblp"/></svg></a>
+</div>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/">About</a><a href="/research">Research</a><a href="/publications">Publications</a><a href="/services">Service</a><a href="/teaching">Teaching</a><a href="/showcase">Showcase</a>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-12 d-flex justify-content-lg-end">
+                
+<div class="visitor-map" aria-label="Map of site visitors">
+    <div class="visitor-map-label"><svg class="icon fa-earth-americas" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-solid-earth-americas"/></svg> Visitors</div>
+    <div class="visitor-map-slot" data-src="https://mapmyvisitors.com/map.js?d=bivp1gHPvWkdra2UrWUEI_v5Gi-ySiiZpZ2ivZjgZXU&cl=ffffff&w=220" data-tag-id="mapmyvisitors"></div>
+</div>
+<script>
+    (function () {
+        var slot = document.querySelector('.visitor-map-slot');
+        if (!slot) return;
+        var load = function () {
+            if (slot.dataset.loaded) return;
+            slot.dataset.loaded = '1';
+            var s = document.createElement('script');
+            s.id = slot.dataset.tagId;
+            s.src = slot.dataset.src;
+            s.async = true;
+            slot.appendChild(s);
+        };
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); load(); }
+            }, { rootMargin: '300px 0px' });
+            io.observe(slot);
+        } else {
+            window.addEventListener('load', load);
+        }
+    })();
+</script>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mt-4 pt-3 border-top small" style="gap: .5rem;">
+            <span>&copy; 2026 Daniel Ogenrwot &middot; Last updated November 2026</span>
+            <span>Built with Jekyll &middot; based on <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener">academic-homepage</a></span>
+        </div>
+    </div>
+</footer>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+<script defer src="/assets/js/common.js"></script>
+
+</body>
+</html>
