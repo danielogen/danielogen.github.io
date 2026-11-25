@@ -53,7 +53,7 @@
         <p class="pub-abstract">{{ item.abstract }}</p>
         {%- endif %}
         <div class="pub-bibtex">
-            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i> Copy</button>
+            <button class="pub-link copy-btn" type="button"><i class="far fa-copy"></i><i class="fas fa-check"></i> <span class="copy-label">Copy</span></button>
             <pre>{% include widgets/bibtex.html item=item %}</pre>
         </div>
     </div>
